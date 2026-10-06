@@ -1,0 +1,15 @@
+{
+  "evidence_id": "EVD-XPEX-API-FABRIC-HTTP-001",
+  "system_id": "XPEX-API-FABRIC-001",
+  "claim": "The verified public alias returned HTTP 200 OK.",
+  "source_type": "RUNTIME",
+  "url": "https://remix-of-remix-of-remix-of-remix-of-xpex-api-hub-87-xpex-neural.vercel.app",
+  "http_status": 200,
+  "status_text": "OK",
+  "observed_title": "XPEX Neural - API Marketplace Premium",
+  "observed_brand_status": "LEGACY_BRANDING_PRESENT",
+  "robots_indexing": "noindex",
+  "verification_status": "VERIFIED",
+  "observed_at": "2026-10-05T23:35:00-03:00",
+  "public_safe": true
+}
