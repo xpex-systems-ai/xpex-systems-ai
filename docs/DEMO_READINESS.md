@@ -55,10 +55,12 @@ Provider evidence: Railway deployment SUCCESS with PostgreSQL present.
 
 Blocker: current environment is intentionally staging and is not promoted as a public production flagship.
 
-### XPeX Academy — RED / RECOVERY
-The product is strategically important, but multiple duplicate Vercel projects were observed and the latest relevant deployments were CANCELED.
+### XPeX Academy — AMBER / RUNTIME CORRELATION
+Multiple legacy Vercel project copies were observed with CANCELED deployments. The deployment metadata itself states that this was intentional: the legacy Vercel Git build path was decommissioned and the canonical stack moved toward GitHub + Firebase + Railway.
 
-Do not use it in an external live demo until one canonical project is selected and a clean production smoke test passes.
+Do **not** interpret the canceled Vercel projects as a broken Academy and do not revive them by default.
+
+Before using Academy in an external live demo, connect and verify the canonical Firebase/Railway runtime and run a clean student/Polo smoke test.
 
 ## Demo discipline
 
