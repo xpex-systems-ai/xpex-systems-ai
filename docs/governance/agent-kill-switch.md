@@ -30,6 +30,17 @@ Additional actions may include:
 
 Current GXEON persistent-agent roles remain in `DESIGN` until runtime infrastructure exists.
 
+## Runtime assurance state machine
+
+The validator treats runtime state as an explicit state machine instead of relying on a blacklist.
+
+- **Design / not deployed** — policy and containment design may remain documented-only.
+- **Staging** — requires an `ACTIVE` manifest, a `READY` or `TESTED` kill switch, and runtime evidence in the Trust Passport.
+- **Production / verified live** — requires an `ACTIVE` manifest, a `TESTED` kill switch with test timestamp, `TP3_VERIFIED` or stronger overall trust, and verified evidence for runtime, containment, evaluation and human oversight.
+- **Unknown runtime state** — fails closed.
+
+This keeps future runtime promotion possible without weakening today's non-production truth.
+
 ## Authority
 
 Kill-switch activation is controlled by authorized XPeX human operators.
