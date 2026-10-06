@@ -56,6 +56,24 @@ for item in index.get("systems", []):
             errors.append(f"{sid}: missing system README: {readme_path.relative_to(ROOT)}")
 
         card = load_json(card_path)
+        passport_ref = card.get("trust_passport_ref")
+        aibom_ref = card.get("ai_bom_ref")
+        if not passport_ref:
+            errors.append(f"{sid}: missing trust_passport_ref")
+        elif not (ROOT / passport_ref).exists():
+            errors.append(f"{sid}: trust passport missing: {passport_ref}")
+        else:
+            passport = load_json(ROOT / passport_ref)
+            if passport.get("system_id") != sid:
+                errors.append(f"{sid}: trust passport system_id mismatch")
+        if not aibom_ref:
+            errors.append(f"{sid}: missing ai_bom_ref")
+        elif not (ROOT / aibom_ref).exists():
+            errors.append(f"{sid}: AI-BOM missing: {aibom_ref}")
+        else:
+            aibom = load_json(ROOT / aibom_ref)
+            if aibom.get("system_id") != sid:
+                errors.append(f"{sid}: AI-BOM system_id mismatch")
         if card.get("system_id") != sid:
             errors.append(f"{sid}: index/card system_id mismatch")
         if card.get("product_id") != slug:
