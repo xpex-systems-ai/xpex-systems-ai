@@ -1,0 +1,433 @@
+{
+  "framework": "XAGF",
+  "version": "1.0",
+  "status": "PROPOSED_CORPORATE_STANDARD",
+  "principle": "EVIDENCE_FIRST",
+  "prime_rule": "THE EXECUTOR DOES NOT APPROVE ITS OWN DELIVERY.",
+  "risk_tiers": [
+    "R0",
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "domains": [
+    {
+      "id": "GOV",
+      "name": "Governance & Accountability",
+      "controls": [
+        {
+          "id": "GOV-01",
+          "title": "AI system owner assigned",
+          "required": true,
+          "evidence": [
+            "system_registry",
+            "owner_record"
+          ]
+        },
+        {
+          "id": "GOV-02",
+          "title": "Risk tier assigned before production",
+          "required": true,
+          "evidence": [
+            "risk_assessment"
+          ]
+        },
+        {
+          "id": "GOV-03",
+          "title": "Independent verification for material actions",
+          "required": true,
+          "evidence": [
+            "verification_record"
+          ]
+        },
+        {
+          "id": "GOV-04",
+          "title": "Public claims mapped to evidence",
+          "required": true,
+          "evidence": [
+            "claim_evidence_map"
+          ]
+        },
+        {
+          "id": "GOV-05",
+          "title": "Exception approval and expiry tracked",
+          "required": true,
+          "evidence": [
+            "exception_register"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IAM",
+      "name": "Identity & Access",
+      "controls": [
+        {
+          "id": "IAM-01",
+          "title": "Privileged human MFA",
+          "required": true,
+          "evidence": [
+            "provider_configuration"
+          ]
+        },
+        {
+          "id": "IAM-02",
+          "title": "Separate human and machine identities",
+          "required": true,
+          "evidence": [
+            "identity_inventory"
+          ]
+        },
+        {
+          "id": "IAM-03",
+          "title": "Least-privilege agent/tool scopes",
+          "required": true,
+          "evidence": [
+            "capability_manifest"
+          ]
+        },
+        {
+          "id": "IAM-04",
+          "title": "Credential revocation path tested",
+          "required": true,
+          "evidence": [
+            "revocation_test"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AGT",
+      "name": "Agentic AI",
+      "controls": [
+        {
+          "id": "AGT-01",
+          "title": "Unique Agent ID and owner",
+          "required": true,
+          "evidence": [
+            "agent_manifest"
+          ]
+        },
+        {
+          "id": "AGT-02",
+          "title": "Tool allowlist and explicit denylist",
+          "required": true,
+          "evidence": [
+            "agent_manifest"
+          ]
+        },
+        {
+          "id": "AGT-03",
+          "title": "Autonomy loop has max steps/time/budget",
+          "required": true,
+          "evidence": [
+            "agent_policy"
+          ]
+        },
+        {
+          "id": "AGT-04",
+          "title": "Kill switch exists",
+          "required": true,
+          "evidence": [
+            "containment_runbook"
+          ]
+        },
+        {
+          "id": "AGT-05",
+          "title": "Critical self-approval prohibited",
+          "required": true,
+          "evidence": [
+            "workflow_definition"
+          ]
+        },
+        {
+          "id": "AGT-06",
+          "title": "External content treated as untrusted",
+          "required": true,
+          "evidence": [
+            "prompt_tool_policy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "MOD",
+      "name": "Model & Provider",
+      "controls": [
+        {
+          "id": "MOD-01",
+          "title": "Production model/provider registered",
+          "required": true,
+          "evidence": [
+            "model_registry"
+          ]
+        },
+        {
+          "id": "MOD-02",
+          "title": "Sensitive-data provider eligibility enforced",
+          "required": true,
+          "evidence": [
+            "routing_policy"
+          ]
+        },
+        {
+          "id": "MOD-03",
+          "title": "Material model changes re-evaluated",
+          "required": true,
+          "evidence": [
+            "evaluation_run"
+          ]
+        },
+        {
+          "id": "MOD-04",
+          "title": "Fallback preserves policy restrictions",
+          "required": true,
+          "evidence": [
+            "fallback_test"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DAT",
+      "name": "Data & Privacy",
+      "controls": [
+        {
+          "id": "DAT-01",
+          "title": "Data classification assigned",
+          "required": true,
+          "evidence": [
+            "data_inventory"
+          ]
+        },
+        {
+          "id": "DAT-02",
+          "title": "Tenant isolation enforced",
+          "required": true,
+          "evidence": [
+            "isolation_test"
+          ]
+        },
+        {
+          "id": "DAT-03",
+          "title": "Retention/deletion policy defined",
+          "required": true,
+          "evidence": [
+            "retention_policy"
+          ]
+        },
+        {
+          "id": "DAT-04",
+          "title": "RAG provenance and authorization enforced",
+          "required": true,
+          "evidence": [
+            "retrieval_test"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SEC",
+      "name": "Application & Platform Security",
+      "controls": [
+        {
+          "id": "SEC-01",
+          "title": "Secrets excluded from source control",
+          "required": true,
+          "evidence": [
+            "secret_scan"
+          ]
+        },
+        {
+          "id": "SEC-02",
+          "title": "Dependency/vulnerability review",
+          "required": true,
+          "evidence": [
+            "dependency_scan"
+          ]
+        },
+        {
+          "id": "SEC-03",
+          "title": "Staging and production separated",
+          "required": true,
+          "evidence": [
+            "environment_inventory"
+          ]
+        },
+        {
+          "id": "SEC-04",
+          "title": "Rollback path tested",
+          "required": true,
+          "evidence": [
+            "rollback_test"
+          ]
+        },
+        {
+          "id": "SEC-05",
+          "title": "Public endpoints rate/abuse protected where needed",
+          "required": true,
+          "evidence": [
+            "runtime_configuration"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EVA",
+      "name": "Evaluation & Red Team",
+      "controls": [
+        {
+          "id": "EVA-01",
+          "title": "Functional acceptance suite exists",
+          "required": true,
+          "evidence": [
+            "evaluation_suite"
+          ]
+        },
+        {
+          "id": "EVA-02",
+          "title": "Prompt-injection/tool-abuse testing",
+          "required": true,
+          "evidence": [
+            "red_team_run"
+          ]
+        },
+        {
+          "id": "EVA-03",
+          "title": "Cross-tenant leakage test",
+          "required": true,
+          "evidence": [
+            "security_test"
+          ]
+        },
+        {
+          "id": "EVA-04",
+          "title": "Critical failures block release",
+          "required": true,
+          "evidence": [
+            "release_gate"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "OBS",
+      "name": "Observability & Evidence",
+      "controls": [
+        {
+          "id": "OBS-01",
+          "title": "Material actions attributable to identity/agent/tool",
+          "required": true,
+          "evidence": [
+            "audit_log"
+          ]
+        },
+        {
+          "id": "OBS-02",
+          "title": "Deployment linked to source commit",
+          "required": true,
+          "evidence": [
+            "deployment_evidence"
+          ]
+        },
+        {
+          "id": "OBS-03",
+          "title": "Cost/result telemetry for autonomous workflows",
+          "required": false,
+          "evidence": [
+            "usage_telemetry"
+          ]
+        },
+        {
+          "id": "OBS-04",
+          "title": "Evidence retention defined",
+          "required": true,
+          "evidence": [
+            "evidence_policy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IR",
+      "name": "Incident Response",
+      "controls": [
+        {
+          "id": "IR-01",
+          "title": "AI incident severity model defined",
+          "required": true,
+          "evidence": [
+            "incident_policy"
+          ]
+        },
+        {
+          "id": "IR-02",
+          "title": "Containment workflow includes agent/tool revocation",
+          "required": true,
+          "evidence": [
+            "incident_runbook"
+          ]
+        },
+        {
+          "id": "IR-03",
+          "title": "Post-incident control updates tracked",
+          "required": true,
+          "evidence": [
+            "postmortem"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TPR",
+      "name": "Third-Party Risk",
+      "controls": [
+        {
+          "id": "TPR-01",
+          "title": "Privileged providers/connectors inventoried",
+          "required": true,
+          "evidence": [
+            "third_party_register"
+          ]
+        },
+        {
+          "id": "TPR-02",
+          "title": "Connector privilege starts at lowest practical scope",
+          "required": true,
+          "evidence": [
+            "permission_review"
+          ]
+        },
+        {
+          "id": "TPR-03",
+          "title": "Critical dependency exit/fallback considered",
+          "required": true,
+          "evidence": [
+            "dependency_risk_record"
+          ]
+        }
+      ]
+    }
+  ],
+  "release_gate": {
+    "verified_live_requires": [
+      "GOV-01",
+      "GOV-02",
+      "GOV-03",
+      "IAM-03",
+      "AGT-04",
+      "MOD-01",
+      "DAT-01",
+      "SEC-01",
+      "SEC-03",
+      "SEC-04",
+      "EVA-01",
+      "EVA-02",
+      "EVA-04",
+      "OBS-01",
+      "OBS-02",
+      "IR-01"
+    ]
+  }
+}
