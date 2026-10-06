@@ -24,6 +24,9 @@ This page summarizes only status supported by current repository, workflow and d
 | Enterprise Control Plane V2 | **Established / validated on main** |
 | System admission gates | **G0→G7 established** |
 | Public Trust Center | Engineering view established; product implementation pending |
+| Portfolio Registry V1 | **Established / evidence-gated** |
+| Vercel provider inventory | **3 connected accounts / 103 observed projects** |
+| Consolidation target | **20 asset lineages → 10 systems → 5–7 flagships** |
 
 ## Automated assurance
 
@@ -36,6 +39,7 @@ Main-branch verification has passed these core checks on the current trust/secur
 - **Agent Policy Validation — PASS**
 - **Agent Security Validation — PASS**
 - **Enterprise Control Plane Validation — PASS**
+- **Portfolio Registry Validation — PASS**
 - **Secret Hygiene Validation — PASS**
 - **Secret Pattern Scan — PASS**
 - **Assurance Tests — PASS**
@@ -58,7 +62,7 @@ A passing badge means the corresponding workflow executed successfully. It is no
 - Canonical status: `CANONICAL`
 - Environment: staging
 - Provider: Railway
-- Verified deployment: `13013067-a3e1-45fa-b2a7-124fd5198797`
+- Verified deployment: `13013067-a3e1-45b5-8bab-c747e87c3c35`
 - State at verification: `SUCCESS`
 - Trust Passport: `TP1_DOCUMENTED`
 - AI-BOM: present
@@ -67,13 +71,19 @@ A passing badge means the corresponding workflow executed successfully. It is no
 - Canonical status: `CANONICAL_CANDIDATE`
 - Environment: production
 - Provider: Vercel
-- Deployment: `dpl_2Shq2ceHdj12tZzJ6HPv8RdPYPJb`
+- Latest verified production deployment: `dpl_F3m3QDdobj76KgM7iBNYi4udEwyZ`
 - State at verification: `READY`
-- HTTP verification: `200 OK`
-- Source commit: `5ba2e886a997c97c410e4bbabada659187912538`
+- Source commit: `eb76188996c00604cd2d50aa89e7fd7bf9417f3c`
 - Trust Passport: `TP1_DOCUMENTED`
 - AI-BOM: present
 - Brand-ready: **No** — legacy branding/domain cleanup remains
+
+### Demo-ready portfolio signals
+- **GXEON Audit OS:** Vercel production READY; no runtime error group observed in the latest 7-day query.
+- **XPeX Studio AI:** Vercel production READY; no runtime error group observed in the latest 7-day query.
+- **XPeX Plugin Factory / GXEON Agent Gateway:** Railway deployment SUCCESS; public Railway domains present.
+- **GXEON Wallet Command Center:** Vercel production READY; one repeated Node `url.parse()` deprecation warning remains a demo hardening item.
+- **XPeX Academy:** legacy Vercel deployments are intentionally CANCELED after decommissioning that path; canonical Firebase/Railway runtime still requires provider-backed correlation.
 
 ## Agent truth
 
@@ -121,8 +131,9 @@ BUILD → CONNECT → OPERATE → PROVE → IMPROVE
 ## Next gates
 
 1. Enable/verify GitHub admin security controls and required main-branch enforcement.
-2. Start provider-backed system admission from Vercel/GitHub/Railway/database inventory.
-3. Admit **GXEON Agent Marketplace** first through G0→G7 with source, runtime, data and security evidence.
-4. Continue with XPeX Plugin Factory, XPeX Academy and Wallet Command Center according to the admission queue.
-5. Convert verified System Packs and Trust Passports into the public XPeX Systems Command / Trust Center dashboard.
-6. Run release provenance attestation on the first versioned enterprise-assurance release.
+2. Consolidate 103 observed Vercel projects into 20 material lineages, 10 portfolio systems and 5–7 flagships.
+3. Remove the Wallet Command Center runtime deprecation warning and run a clean external-demo smoke pass.
+4. Resolve XPeX API/Marketplace canonical identity + Supabase lineage and connect/verify the canonical XPeX Academy Firebase/Railway runtime.
+5. Build public case pages for the flagship set and the founder engineering profile.
+6. Convert verified System Packs and Trust Passports into the public XPeX Systems Command / Trust Center dashboard.
+7. Run release provenance attestation on the first versioned enterprise-assurance release.

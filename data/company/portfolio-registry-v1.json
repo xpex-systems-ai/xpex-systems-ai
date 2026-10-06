@@ -1,0 +1,313 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-10-06T15:23:00-03:00",
+  "company": "XPeX Systems AI",
+  "founder_profile": {
+    "name": "Junior Sena",
+    "title": "Applied AI / Agentic Systems Engineer",
+    "company_role": "Founder, XPeX Systems AI"
+  },
+  "operating_position": "Enterprise engineering foundation / pre-seed commercial maturity",
+  "inventory_snapshot": {
+    "connected_vercel_accounts": 3,
+    "vercel_projects_observed": 103,
+    "railway_projects_observed": 2,
+    "note": "Counts are provider inventory observations, not counts of canonical products."
+  },
+  "portfolio_strategy": {
+    "funnel": "103 provider projects -> 20 material asset lineages -> 10 portfolio systems -> 5-7 flagship surfaces",
+    "rule": "A system enters the public flagship set only when identity, source, runtime, security and demo evidence support the claim."
+  },
+  "flagship_set": [
+    {
+      "id": "XPEX-SYSTEMS-COMMAND",
+      "name": "XPeX Systems Command",
+      "role": "Company Intelligence & Evidence OS",
+      "tier": "FLAGSHIP",
+      "public_demo_status": "STAGING_NOT_PUBLIC_FLAGSHIP",
+      "source": "xpex-systems-ai/xpex-systems-command",
+      "source_visibility": "PRIVATE",
+      "runtime": {
+        "provider": "RAILWAY",
+        "project": "xpex-systems-command-staging",
+        "service": "xpex-systems-command-staging-web",
+        "deployment_id": "13013067-a3e1-45b5-8bab-c747e87c3c35",
+        "state": "SUCCESS",
+        "domain": "xpex-systems-command-staging-web-production.up.railway.app",
+        "environment_label": "staging"
+      },
+      "strengths": [
+        "provider inventory",
+        "evidence registry",
+        "provenance-first architecture",
+        "PostgreSQL/Prisma control plane"
+      ],
+      "blockers": [
+        "public product website not launched",
+        "production promotion intentionally gated"
+      ],
+      "next_action": "Finish public-safe Trust Center/dashboard shell and keep provider writes disabled until independently approved."
+    },
+    {
+      "id": "GXEON-WALLET-COMMAND",
+      "name": "GXEON Wallet Command Center",
+      "role": "Agent marketplace, wallet intelligence and machine-discovery surface",
+      "tier": "FLAGSHIP",
+      "public_demo_status": "DEMO_READY_WITH_WARNING",
+      "source": "xpex-systems-ai/GXEON-Wallet-Command-Center",
+      "source_visibility": "PUBLIC",
+      "runtime": {
+        "provider": "VERCEL",
+        "project_id": "prj_GRGA7dhQ0lLnyWN7ixIJ8MGlPrhe",
+        "production_state": "READY",
+        "production_source_branch": "main",
+        "production_source_sha": "c1b6c73613b87591e79d8708b85436133d2901c2",
+        "primary_domain": "gxeon-wallet-command-center.vercel.app"
+      },
+      "strengths": [
+        "public MCP discovery",
+        "OpenAI Agents/LangChain/CrewAI integration docs",
+        "Stripe/Web3 boundaries",
+        "evidence-first money truth"
+      ],
+      "blockers": [
+        "Node url.parse deprecation warning observed in runtime",
+        "custom branded domain pending"
+      ],
+      "next_action": "Remove deprecated URL parsing path and run a clean demo smoke pass."
+    },
+    {
+      "id": "GXEON-AUDIT-OS",
+      "name": "GXEON Audit OS",
+      "role": "AI-assisted digital asset audit and evidence workflow",
+      "tier": "FLAGSHIP",
+      "public_demo_status": "DEMO_READY",
+      "source": "xpex-systems-ai/GXEON-AI",
+      "source_visibility": "PUBLIC",
+      "runtime": {
+        "provider": "VERCEL",
+        "project_id": "prj_owdXFSlvK1GBrWVuYCqeHpTlYjP4",
+        "production_state": "READY",
+        "primary_domain": "gxeon-audit-os.vercel.app",
+        "runtime_errors_7d": "NONE_OBSERVED"
+      },
+      "strengths": [
+        "manual-first execution",
+        "evidence-led audit workflow",
+        "public launch framing",
+        "active production deployment"
+      ],
+      "blockers": [
+        "GXEON-AI lineage is deployed into multiple Vercel project names and requires canonical consolidation"
+      ],
+      "next_action": "Make Audit OS the canonical public deployment for this product line and demote duplicate shells."
+    },
+    {
+      "id": "XPEX-STUDIO-AI",
+      "name": "XPeX Studio AI",
+      "role": "AI creation/control-plane frontend",
+      "tier": "FLAGSHIP",
+      "public_demo_status": "DEMO_READY",
+      "source": "xpex-systems-ai/xpex-studio-ai",
+      "source_visibility": "PRIVATE",
+      "runtime": {
+        "provider": "VERCEL",
+        "project_id": "prj_Vz5ENExQovKTZKVqG35Cet9rExUl",
+        "production_state": "READY",
+        "production_source_branch": "main",
+        "production_source_sha": "88f7ea3bb5c4e501105d0e37b5ade9a9557e73e5",
+        "primary_domain": "xpex-studio-ai.vercel.app",
+        "runtime_errors_7d": "NONE_OBSERVED"
+      },
+      "strengths": [
+        "Next.js control-plane foundation",
+        "Supabase-auth readiness",
+        "clear modular shell"
+      ],
+      "blockers": [
+        "source is private",
+        "auth/data runtime must be correlated before stronger claims"
+      ],
+      "next_action": "Add public product case page and provider-backed auth/data evidence."
+    },
+    {
+      "id": "XPEX-PLUGIN-FACTORY",
+      "name": "XPeX Plugin Factory",
+      "role": "Plugin, MCP, skill and agent-package compiler",
+      "tier": "FLAGSHIP",
+      "public_demo_status": "DEMO_READY",
+      "source": "xpex-systems-ai/XPeX-Plugin-Factory-",
+      "source_visibility": "PUBLIC",
+      "runtime": {
+        "provider": "RAILWAY",
+        "project": "xpex-systems-command-staging",
+        "service": "gxeon-agent-gateway",
+        "deployment_id": "20b15638-e776-420e-82ef-d9ab5ed80d15",
+        "state": "SUCCESS",
+        "domains": [
+          "gxeon-agent-gateway-production.up.railway.app",
+          "xpex-plugin-factory-production.up.railway.app"
+        ]
+      },
+      "strengths": [
+        "deterministic package generation",
+        "security policy gates",
+        "MCP surface",
+        "framework interoperability evidence"
+      ],
+      "blockers": [
+        "custom corporate domain pending",
+        "commercial conversion evidence is separate from deployment readiness"
+      ],
+      "next_action": "Create polished public case page with one deterministic end-to-end plugin build demonstration."
+    },
+    {
+      "id": "XPEX-API-FABRIC",
+      "name": "XPeX API Fabric / Agent Marketplace Lineage",
+      "role": "API marketplace and machine-service distribution lineage",
+      "tier": "FLAGSHIP_CANDIDATE",
+      "public_demo_status": "TECHNICALLY_READY_BRAND_BLOCKED",
+      "source": "xpex-systems-ai/remix-of-remix-of-remix-of-remix-of-xpex-api-hub-87",
+      "source_visibility": "PUBLIC",
+      "runtime": {
+        "provider": "VERCEL",
+        "project_id": "prj_3gcH2XkcpFatpPEAZZF56IBCqvsZ",
+        "production_state": "READY",
+        "production_source_branch": "main",
+        "production_source_sha": "eb76188996c00604cd2d50aa89e7fd7bf9417f3c",
+        "runtime_errors_7d": "NONE_OBSERVED"
+      },
+      "strengths": [
+        "source hardening merged",
+        "CodeQL/source assurance",
+        "Supabase/Stripe/API implementation",
+        "production deployment"
+      ],
+      "blockers": [
+        "legacy repository/project naming",
+        "canonical GXEON Agent Marketplace identity not yet proven",
+        "Supabase runtime ownership correlation incomplete"
+      ],
+      "next_action": "Resolve canonical identity and database lineage before public rebrand."
+    },
+    {
+      "id": "XPEX-ACADEMY",
+      "name": "XPeX Academy",
+      "role": "AI learning and applied-project platform",
+      "tier": "FLAGSHIP_CANDIDATE",
+      "public_demo_status": "RECOVERY_REQUIRED",
+      "source": "xpex-systems-ai/XPEX-ACADEMY",
+      "source_visibility": "PUBLIC",
+      "runtime": {
+        "provider": "FIREBASE_AND_RAILWAY_DECLARED_IN_SOURCE",
+        "legacy_vercel_project_copies_observed": 6,
+        "legacy_vercel_latest_states": "CANCELED",
+        "source_branch": "dev",
+        "source_evidence": "Recent deployment metadata states the legacy Vercel build path was intentionally decommissioned and the canonical production stack moved to GitHub + Firebase + Railway.",
+        "provider_verification_status": "CURRENT_CONNECTORS_DO_NOT_YET_CORROBORATE_CANONICAL_FIREBASE_RAILWAY_RUNTIME"
+      },
+      "strengths": [
+        "learning platform baseline",
+        "Polo/Student Enterprise model",
+        "AI Lab/project workspace",
+        "substantial product scope"
+      ],
+      "blockers": [
+        "Canonical Firebase/Railway runtime is not visible through the currently connected provider inventory.",
+        "Public demo URL and current production health still require provider-backed corroboration."
+      ],
+      "next_action": "Recover provider-backed runtime verification for the canonical Firebase/Railway stack and run a student/Polo smoke test; do not revive quarantined Vercel copies unless architecture changes."
+    }
+  ],
+  "portfolio_systems": [
+    {
+      "rank": 1,
+      "name": "XPeX Systems Command",
+      "status": "FLAGSHIP",
+      "evidence": "SOURCE_AND_RAILWAY"
+    },
+    {
+      "rank": 2,
+      "name": "GXEON Wallet Command Center",
+      "status": "FLAGSHIP",
+      "evidence": "SOURCE_AND_VERCEL"
+    },
+    {
+      "rank": 3,
+      "name": "GXEON Audit OS",
+      "status": "FLAGSHIP",
+      "evidence": "SOURCE_AND_VERCEL"
+    },
+    {
+      "rank": 4,
+      "name": "XPeX Plugin Factory",
+      "status": "FLAGSHIP",
+      "evidence": "SOURCE_AND_RAILWAY"
+    },
+    {
+      "rank": 5,
+      "name": "XPeX Studio AI",
+      "status": "FLAGSHIP",
+      "evidence": "SOURCE_AND_VERCEL"
+    },
+    {
+      "rank": 6,
+      "name": "XPeX API Fabric / Marketplace Lineage",
+      "status": "FLAGSHIP_CANDIDATE",
+      "evidence": "SOURCE_AND_VERCEL"
+    },
+    {
+      "rank": 7,
+      "name": "XPeX Academy",
+      "status": "RUNTIME_CORRELATION",
+      "evidence": "SOURCE_AND_VERCEL"
+    },
+    {
+      "rank": 8,
+      "name": "GXEON App Forge",
+      "status": "FOUNDER_PREVIEW",
+      "evidence": "SOURCE"
+    },
+    {
+      "rank": 9,
+      "name": "Synapse Revenue Hub",
+      "status": "PORTFOLIO_CANDIDATE",
+      "evidence": "VERCEL_ONLY_CURRENT_CONNECTOR"
+    },
+    {
+      "rank": 10,
+      "name": "Product Forge AI",
+      "status": "PORTFOLIO_CANDIDATE",
+      "evidence": "VERCEL_ONLY_CURRENT_CONNECTOR"
+    }
+  ],
+  "material_asset_lineages": [
+    "XPeX Systems Command",
+    "GXEON Wallet Command Center",
+    "XPeX Plugin Factory",
+    "GXEON Agent Gateway",
+    "XPeX API Fabric / GoldMail lineage",
+    "GXEON Audit OS",
+    "GXEON AI core/API",
+    "XPeX Studio AI",
+    "XPeX Academy",
+    "GXEON App Forge",
+    "GXEON Media Center",
+    "Cenara",
+    "Synapse Revenue Hub",
+    "Product Forge AI",
+    "AutomAI XPeX Systems",
+    "XPeX Commander",
+    "XPeX Monetary Dashboard",
+    "XPeX Creator Commerce OS",
+    "XPeX OS",
+    "XPeX Lead Flow"
+  ],
+  "portfolio_exclusions_policy": [
+    "Duplicate Vercel shells do not become separate products.",
+    "Forks/upstream projects are not represented as original XPeX products without explicit derivative/ownership disclosure.",
+    "ERROR/CANCELED deployments are not shown as live demos.",
+    "A READY deployment alone is not enough for VERIFIED_LIVE.",
+    "Revenue, customers, partnerships and certifications require separate evidence."
+  ]
+}

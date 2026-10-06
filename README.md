@@ -8,6 +8,7 @@
 
 [![Governance](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/governance-validation.yml/badge.svg)](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/governance-validation.yml)
 [![Enterprise Control Plane](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/enterprise-control-plane-validation.yml/badge.svg)](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/enterprise-control-plane-validation.yml)
+[![Portfolio Registry](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/portfolio-registry-validation.yml/badge.svg)](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/portfolio-registry-validation.yml)
 [![Public Truth](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/public-truth-validation.yml/badge.svg)](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/public-truth-validation.yml)
 [![System Registry](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/system-registry-validation.yml/badge.svg)](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/system-registry-validation.yml)
 [![Trust Passport](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/trust-passport-validation.yml/badge.svg)](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/trust-passport-validation.yml)
@@ -25,7 +26,7 @@
 
 An AI-native systems company building an evidence-driven control plane for intelligent software, autonomous agents, infrastructure and enterprise operations.
 
-[Showcase](docs/SHOWCASE.md) · [Verified Systems](systems/README.md) · [Enterprise Control Plane](docs/ENTERPRISE_CONTROL_PLANE.md) · [Admission Gates](docs/SYSTEM_ADMISSION_GATES.md) · [Trust Center](docs/TRUST_CENTER.md) · [Architecture](docs/ARCHITECTURE.md) · [Agents](docs/AGENTS.md) · [Trust Passport](docs/TRUST_PASSPORT.md) · [Assurance](docs/ASSURANCE.md) · [Status](STATUS.md) · [Investor Brief](docs/INVESTOR_BRIEF.md)
+[Portfolio](docs/PORTFOLIO.md) · [Flagship Cases](docs/FLAGSHIP_CASES.md) · [Demo Readiness](docs/DEMO_READINESS.md) · [Public Launch](docs/PUBLIC_LAUNCH_CHECKLIST.md) · [Founder Profile](docs/FOUNDER_PROFILE.md) · [Showcase](docs/SHOWCASE.md) · [Verified Systems](systems/README.md) · [Enterprise Control Plane](docs/ENTERPRISE_CONTROL_PLANE.md) · [Admission Gates](docs/SYSTEM_ADMISSION_GATES.md) · [Trust Center](docs/TRUST_CENTER.md) · [Architecture](docs/ARCHITECTURE.md) · [Agents](docs/AGENTS.md) · [Assurance](docs/ASSURANCE.md) · [Status](STATUS.md)
 
 </div>
 
@@ -45,6 +46,23 @@ An AI-native systems company building an evidence-driven control plane for intel
 | **Governed GXEON target roles** | **6** |
 
 These numbers are intentionally conservative. They represent what the public registry can currently prove — not the total number of historical projects discovered across the wider XPeX ecosystem.
+
+### Portfolio consolidation snapshot
+
+Provider discovery currently observes **3 connected Vercel accounts and 103 Vercel projects**. Those are not presented as 103 products.
+
+The public consolidation target is:
+
+```text
+103 provider projects
+   → 20 material asset lineages
+   → 10 portfolio systems
+   → 5–7 flagship surfaces
+```
+
+Current flagship/demo work is centered on **XPeX Systems Command, GXEON Wallet Command Center, GXEON Audit OS, XPeX Plugin Factory, XPeX Studio AI, the XPeX API/Marketplace lineage and XPeX Academy**.
+
+[Portfolio Registry →](docs/PORTFOLIO.md) · [Demo Readiness →](docs/DEMO_READINESS.md) · [Founder Engineering Profile →](docs/FOUNDER_PROFILE.md)
 
 [Explore the Company Showcase →](docs/SHOWCASE.md)  
 [Technical Due Diligence →](docs/TECHNICAL_DUE_DILIGENCE.md)

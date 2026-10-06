@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0",
+  "observed_at": "2026-10-06T15:23:00-03:00",
+  "source": "Vercel connected account inventory",
+  "accounts": [
+    {
+      "label": "xpexoss / xpex-neural",
+      "team": "xpex-neural",
+      "projects_observed": 61,
+      "notable_lineages": [
+        "XPeX API Hub / API Fabric",
+        "GXEON Wallet Command Center",
+        "GXEON-AI family",
+        "XPeX Academy",
+        "XPeX Monetary",
+        "XPeX Commander",
+        "XPeX OS",
+        "Maestro Core"
+      ]
+    },
+    {
+      "label": "xpexcentral",
+      "projects_observed": 26,
+      "notable_lineages": [
+        "GXEON-AI family",
+        "Synapse Revenue Hub",
+        "AutomAI XPeX Systems",
+        "Product Forge AI",
+        "XPeX Command Nexus"
+      ]
+    },
+    {
+      "label": "GXEON",
+      "team": "GXEON",
+      "projects_observed": 16,
+      "notable_lineages": [
+        "GXEON Audit OS",
+        "GXEON-AI API Server",
+        "XPeX Academy",
+        "XPeX Studio AI",
+        "XPeX Creator Commerce OS"
+      ]
+    }
+  ],
+  "total_projects_observed": 103,
+  "consolidation_findings": [
+    {
+      "finding": "GXEON-AI source lineage is deployed into multiple Vercel projects and more than one connected account.",
+      "decision": "Treat these as deployment shells of one source lineage until product identity proves otherwise."
+    },
+    {
+      "finding": "XPeX Academy has multiple legacy Vercel projects with canceled production deployments.",
+      "decision": "Do not mark Academy broken solely from Vercel. Deployment metadata states the legacy Vercel path was decommissioned in favor of GitHub + Firebase + Railway; canonical runtime still requires provider corroboration."
+    },
+    {
+      "finding": "Several historical XPeX dashboards/task-agent projects are duplicated by suffix or generated shell.",
+      "decision": "Do not promote duplicate shells into the public product portfolio."
+    },
+    {
+      "finding": "Some READY projects resolve to source organizations not currently covered by the connected GitHub installation.",
+      "decision": "Keep them as provider-evidenced portfolio candidates until source ownership/lineage is independently correlated."
+    }
+  ],
+  "provider_verified_demo_signals": [
+    {
+      "system": "GXEON Audit OS",
+      "state": "READY",
+      "runtime_errors_7d": "NONE_OBSERVED"
+    },
+    {
+      "system": "XPeX Studio AI",
+      "state": "READY",
+      "runtime_errors_7d": "NONE_OBSERVED"
+    },
+    {
+      "system": "XPeX API Fabric / Marketplace lineage",
+      "state": "READY",
+      "runtime_errors_7d": "NONE_OBSERVED"
+    },
+    {
+      "system": "GXEON Wallet Command Center",
+      "state": "READY",
+      "runtime_note": "Repeated Node url.parse deprecation warning observed on production API routes."
+    }
+  ],
+  "rule": "Provider inventory is discovery evidence. It does not by itself prove canonical identity, ownership, commercial readiness or external certification.",
+  "privacy_note": "Connected account identities are intentionally omitted from the public audit summary; only portfolio-relevant scope labels and counts are published."
+}
