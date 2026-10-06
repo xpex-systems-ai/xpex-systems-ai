@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="assets/xpex-systems-ai-hero.svg" alt="XPeX Systems AI — Intelligence that can operate and prove it" width="100%" />
+
 # XPeX Systems AI
 
 ### AI Systems · Agents · Company Intelligence
@@ -11,9 +13,28 @@
 
 An AI-native systems company building an evidence-aware operating layer for intelligent software, autonomous agents, infrastructure and enterprise operations.
 
-[Architecture](docs/ARCHITECTURE.md) · [Verified Systems](systems/README.md) · [Products](docs/PRODUCTS.md) · [Agents](docs/AGENTS.md) · [Trust & Governance](docs/TRUST.md) · [Status](STATUS.md) · [Investor Brief](docs/INVESTOR_BRIEF.md) · [Roadmap](docs/company/roadmap.md)
+[Showcase](docs/SHOWCASE.md) · [Verified Systems](systems/README.md) · [Architecture](docs/ARCHITECTURE.md) · [Agents](docs/AGENTS.md) · [Trust](docs/TRUST.md) · [Status](STATUS.md) · [Investor Brief](docs/INVESTOR_BRIEF.md) · [Accelerator Profile](docs/ACCELERATOR_PROFILE.md)
 
 </div>
+
+---
+
+## At a glance
+
+| Verified company signal | Current evidence-backed state |
+| --- | ---: |
+| **Verified live systems** | **1** |
+| **Verified staging systems** | **1** |
+| **Public System Packs** | **2** |
+| **XAGF governance controls** | **59** |
+| **Governance domains** | **11** |
+| **Automated validation gates** | **3** |
+| **Governed GXEON target roles** | **6** |
+
+These numbers are intentionally conservative. They represent what the public registry can currently prove — not the total number of historical projects discovered across the wider XPeX ecosystem.
+
+[Explore the Company Showcase →](docs/SHOWCASE.md)  
+[Technical Due Diligence →](docs/TECHNICAL_DUE_DILIGENCE.md)
 
 ---
 
