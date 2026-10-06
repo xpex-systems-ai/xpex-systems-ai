@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xpex.systems/schemas/kill-switch.schema.json",
+  "title": "XPeX Agent Kill Switch",
+  "type": "object",
+  "required": [
+    "kill_switch_id",
+    "agent_id",
+    "owner",
+    "actions",
+    "status"
+  ],
+  "properties": {
+    "kill_switch_id": {
+      "type": "string"
+    },
+    "agent_id": {
+      "type": "string"
+    },
+    "owner": {
+      "type": "string"
+    },
+    "actions": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "DISABLE_AGENT",
+          "REVOKE_TOOLS",
+          "REVOKE_TOKENS",
+          "FREEZE_WRITES",
+          "STOP_SCHEDULES",
+          "QUARANTINE_MEMORY",
+          "PRESERVE_LOGS"
+        ]
+      },
+      "uniqueItems": true,
+      "minItems": 1
+    },
+    "activation_authority": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "status": {
+      "enum": [
+        "DESIGN",
+        "READY",
+        "TESTED",
+        "RETIRED"
+      ]
+    },
+    "last_tested_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    }
+  },
+  "additionalProperties": true
+}
