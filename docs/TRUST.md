@@ -81,3 +81,43 @@ The public Trust Center is planned to include:
 - control coverage;
 - verification dates;
 - certifications only when actually earned.
+
+
+## Trust Passports
+
+XPeX now maintains machine-readable Trust Passports for:
+
+- verified system packs;
+- governed GXEON agent roles.
+
+The passport records identity, source/ownership, permissions, policy, secrets, evaluation, containment, runtime, evidence, supply chain and human oversight.
+
+See:
+- `docs/TRUST_PASSPORT.md`
+- `data/trust/system-passports/`
+- `data/trust/agent-passports/`
+
+## Executable assurance
+
+Current executable controls include:
+- Governance Validation;
+- Public Truth Validation;
+- System Registry Validation;
+- Trust Passport Validation;
+- Agent Policy Validation;
+- Secret Hygiene Validation;
+- Assurance Tests;
+- Action Supply-chain Validation;
+- CodeQL.
+
+OpenSSF Scorecard and release provenance are configured as additional supply-chain / release controls.
+
+See `docs/VALIDATION_BADGES.md` for the exact meaning of a passing badge.
+
+## Improvement loop
+
+```text
+BUILD → CONNECT → OPERATE → PROVE → IMPROVE
+```
+
+See `docs/governance/continuous-assurance.md`.
