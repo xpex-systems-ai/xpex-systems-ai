@@ -1,5 +1,6 @@
 import './styles.css';
 import './gx.css';
+import './system-intelligence.css';
 import { initGX } from './gx.js';
 import { SYSTEM_INTELLIGENCE } from './data/system-intelligence.js';
 
