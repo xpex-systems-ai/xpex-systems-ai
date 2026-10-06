@@ -20,7 +20,7 @@ This page summarizes only status supported by current repository, workflow and d
 | Governed GXEON target roles | **6** |
 | Public product registry | Established |
 | Provider relationship registry | Established |
-| Public website | Not yet launched |
+| Public website | **LIVE / Vercel production READY** |
 | Enterprise Control Plane V2 | **Established / validated on main** |
 | System admission gates | **G0→G7 established** |
 | Public Trust Center | Engineering view established; product implementation pending |
@@ -57,6 +57,24 @@ Additional controls:
 A passing badge means the corresponding workflow executed successfully. It is not an external certification.
 
 ## Runtime evidence
+
+## Corporate public website
+
+- Provider: Vercel
+- Team: `xpex-neural`
+- Project: `xpex-systems-ai`
+- Project ID: `prj_9TzNOpz6Uzz34uHfLrlYAXzXcfgw`
+- Production deployment: `dpl_3NTiihVHeQPbP4Kx9SYK5fKw7UpD`
+- State: `READY`
+- Canonical Vercel alias: `https://xpex-systems-ai.vercel.app`
+- Source commit: `4cb02888ba2f8a3ded135166cbebe376f61555bb`
+- Framework: Vite
+- Node build baseline: 22.x
+- Vercel SSO protection: disabled for the public corporate surface
+- Git fork protection: enabled
+
+The corporate site exposes portfolio, Trust Layer, founder profile and external-review paths. Public claims remain bounded by the corporate evidence registry.
+
 
 ### XPeX Systems Command
 - Canonical status: `CANONICAL`

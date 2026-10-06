@@ -309,5 +309,17 @@
     "ERROR/CANCELED deployments are not shown as live demos.",
     "A READY deployment alone is not enough for VERIFIED_LIVE.",
     "Revenue, customers, partnerships and certifications require separate evidence."
-  ]
+  ],
+  "corporate_public_site": {
+    "provider": "VERCEL",
+    "team": "xpex-neural",
+    "project_id": "prj_9TzNOpz6Uzz34uHfLrlYAXzXcfgw",
+    "project_name": "xpex-systems-ai",
+    "canonical_alias": "https://xpex-systems-ai.vercel.app",
+    "deployment_id": "dpl_3NTiihVHeQPbP4Kx9SYK5fKw7UpD",
+    "deployment_state": "READY",
+    "source_commit": "4cb02888ba2f8a3ded135166cbebe376f61555bb",
+    "framework": "vite",
+    "public_access": "VERCEL_SSO_DISABLED"
+  }
 }
