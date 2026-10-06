@@ -1,0 +1,19 @@
+name: Trust Passport Validation
+on:
+  pull_request:
+    paths: ["data/trust/**","systems/**/ai-bom.json","schemas/*trust-passport*.json","schemas/ai-bom.schema.json","scripts/validate-trust-passports.py","docs/TRUST_PASSPORT.md"]
+  push:
+    branches: [main]
+    paths: ["data/trust/**","systems/**/ai-bom.json","schemas/*trust-passport*.json","schemas/ai-bom.schema.json","scripts/validate-trust-passports.py","docs/TRUST_PASSPORT.md"]
+permissions:
+  contents: read
+jobs:
+  validate:
+    name: Validate Trust Passports and AI-BOMs
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: python scripts/validate-trust-passports.py
