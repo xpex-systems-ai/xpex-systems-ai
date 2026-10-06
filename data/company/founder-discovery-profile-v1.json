@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-10-06T17:15:00-03:00",
+  "subject": "Junior Sena",
+  "canonical_role": "Applied AI / Agentic Systems Engineer",
+  "company_role": "Founder, XPeX Systems AI",
+  "linkedin": {
+    "canonical_url": "https://www.linkedin.com/in/ceojuniorsena",
+    "lookup_status": "RESOLVED",
+    "current_profile_observation": {
+      "display_name_observed": "Senna Junior",
+      "headline_observed": "AI Product Foundry Operator",
+      "city_observed": "Brasília, Distrito Federal, Brasil"
+    },
+    "target_positioning": "Applied AI / Agentic Systems Engineer | Founder, XPeX Systems AI",
+    "update_state": "COPY_PREPARED_NOT_APPLIED_BY_CONNECTOR"
+  },
+  "public_proof": {
+    "corporate_site": "https://xpex-systems-ai.vercel.app",
+    "github_org": "https://github.com/xpex-systems-ai",
+    "corporate_repo": "https://github.com/xpex-systems-ai/xpex-systems-ai",
+    "flagship_cases": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/main/docs/FLAGSHIP_CASES.md"
+  },
+  "discovery_funnel": [
+    "LINKEDIN",
+    "FOUNDER_IDENTITY",
+    "XPEX_SYSTEMS_AI",
+    "CORPORATE_SITE",
+    "FLAGSHIP_CASE",
+    "LIVE_SYSTEM",
+    "SOURCE_DEPLOYMENT_TRUST",
+    "CONVERSATION"
+  ],
+  "truth_boundary": "LinkedIn is a discovery layer. Technical and commercial claims remain subordinate to the evidence-backed XPeX registry."
+}
