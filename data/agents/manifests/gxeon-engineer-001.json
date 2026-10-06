@@ -11,11 +11,14 @@
     "pull_request.create"
   ],
   "denied_capabilities": [
-    "secret.read_plaintext",
-    "critical.merge",
-    "production.delete",
     "payment.execute",
-    "trade.execute"
+    "wallet.transfer",
+    "trade.execute",
+    "credential.rotate",
+    "repository.delete",
+    "database.delete",
+    "production.delete",
+    "account.owner.change"
   ],
   "approved_data_classes": [
     "D0",
@@ -23,7 +26,6 @@
     "D2"
   ],
   "approved_environments": [
-    "development",
     "staging"
   ],
   "human_approval": {
@@ -35,14 +37,12 @@
     ]
   },
   "limits": {
-    "max_steps": 80,
-    "max_runtime_seconds": 3600,
+    "max_steps": 20,
+    "max_runtime_seconds": 1800,
     "max_retries": 2,
-    "daily_budget_usd": 10
+    "daily_budget_usd": 5
   },
-  "kill_switch": "Disable agent identity, revoke connector scopes, stop scheduled executions, preserve audit evidence.",
+  "kill_switch": "KS-GXEON-ENGINEER-001",
   "status": "DRAFT",
-  "governance_identity_status": "ACTIVE_POLICY_PROFILE",
-  "runtime_activation_gate": "REQUIRES_RUNTIME_IDENTITY + TOOL_SCOPES + EVALUATION + KILL_SWITCH_TEST + APPROVAL",
-  "last_reviewed_at": "2026-10-06T01:30:00-03:00"
+  "last_reviewed_at": "2026-10-06T02:15:00-03:00"
 }
