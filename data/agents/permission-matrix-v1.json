@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0",
+  "policy": "DENY_BY_DEFAULT",
+  "high_risk_action_classes": [
+    "payment.execute",
+    "trade.execute",
+    "fund.transfer",
+    "credential.rotate",
+    "credential.change",
+    "production.delete",
+    "resource.delete",
+    "critical.merge",
+    "contract.commit"
+  ],
+  "rule": "A capability not explicitly allowed is denied. High-risk actions require explicit policy and applicable human approval.",
+  "agents": [
+    {
+      "agent_id": "GXEON-AUDITOR-001",
+      "risk_tier": "R1",
+      "allow": [
+        "source.read",
+        "deployment.read",
+        "evidence.write_draft",
+        "audit.report"
+      ],
+      "deny": [
+        "credential.rotate",
+        "production.write",
+        "resource.delete",
+        "payment.execute",
+        "trade.execute"
+      ],
+      "human_approval_required": [
+        "production.write",
+        "credential.change",
+        "destructive.action",
+        "external.publish"
+      ]
+    },
+    {
+      "agent_id": "GXEON-ENGINEER-001",
+      "risk_tier": "R2",
+      "allow": [
+        "code.change_scoped",
+        "test.run",
+        "branch.create",
+        "pull_request.create"
+      ],
+      "deny": [
+        "secret.read_plaintext",
+        "critical.merge",
+        "production.delete",
+        "payment.execute",
+        "trade.execute"
+      ],
+      "human_approval_required": [
+        "production.promote",
+        "critical.merge",
+        "secret.change",
+        "destructive.action"
+      ]
+    },
+    {
+      "agent_id": "GXEON-SECURITY-001",
+      "risk_tier": "R2",
+      "allow": [
+        "security.read",
+        "scan.run",
+        "finding.create",
+        "remediation.draft",
+        "evidence.write_draft"
+      ],
+      "deny": [
+        "credential.exfiltrate",
+        "production.delete",
+        "payment.execute",
+        "trade.execute"
+      ],
+      "human_approval_required": [
+        "credential.rotate",
+        "production.block",
+        "destructive.action",
+        "external.publish"
+      ]
+    },
+    {
+      "agent_id": "GXEON-RESEARCH-001",
+      "risk_tier": "R1",
+      "allow": [
+        "public.research",
+        "source.read",
+        "evidence.summarize"
+      ],
+      "deny": [
+        "credential.read",
+        "production.write",
+        "payment.execute",
+        "trade.execute"
+      ],
+      "human_approval_required": [
+        "external.publish"
+      ]
+    },
+    {
+      "agent_id": "GXEON-REVENUE-001",
+      "risk_tier": "R2",
+      "allow": [
+        "pipeline.read",
+        "proposal.draft",
+        "pricing.read",
+        "analytics.read"
+      ],
+      "deny": [
+        "contract.commit",
+        "payment.execute",
+        "trade.execute",
+        "credential.change"
+      ],
+      "human_approval_required": [
+        "contract.commit",
+        "payment.execute",
+        "external.send",
+        "pricing.change"
+      ]
+    },
+    {
+      "agent_id": "GXEON-OPERATIONS-001",
+      "risk_tier": "R2",
+      "allow": [
+        "runtime.read",
+        "logs.read",
+        "health.check",
+        "incident.draft",
+        "deployment.read"
+      ],
+      "deny": [
+        "resource.delete",
+        "credential.change",
+        "payment.execute",
+        "trade.execute"
+      ],
+      "human_approval_required": [
+        "production.change",
+        "resource.delete",
+        "credential.change",
+        "external.publish"
+      ]
+    }
+  ]
+}

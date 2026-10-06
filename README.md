@@ -6,14 +6,22 @@
 
 ### AI Systems · Agents · Company Intelligence
 
-[![Governance Validation](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/governance-validation.yml/badge.svg)](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/governance-validation.yml)
-[![Public Truth Validation](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/public-truth-validation.yml/badge.svg)](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/public-truth-validation.yml)
+[![Governance](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/governance-validation.yml/badge.svg)](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/governance-validation.yml)
+[![Public Truth](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/public-truth-validation.yml/badge.svg)](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/public-truth-validation.yml)
+[![System Registry](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/system-registry-validation.yml/badge.svg)](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/system-registry-validation.yml)
+[![Trust Passport](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/trust-passport-validation.yml/badge.svg)](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/trust-passport-validation.yml)
+[![Agent Policy](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/agent-policy-validation.yml/badge.svg)](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/agent-policy-validation.yml)
+[![Secret Hygiene](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/secret-hygiene.yml/badge.svg)](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/secret-hygiene.yml)
+[![Assurance Tests](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/assurance-tests.yml/badge.svg)](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/assurance-tests.yml)
+[![Action Supply Chain](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/action-supply-chain-validation.yml/badge.svg)](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/action-supply-chain-validation.yml)
+[![CodeQL](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/codeql.yml/badge.svg)](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/codeql.yml)
+[![OpenSSF Scorecard](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/scorecard.yml/badge.svg)](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/scorecard.yml)
 
 **Build. Connect. Operate. Prove.**
 
 An AI-native systems company building an evidence-aware operating layer for intelligent software, autonomous agents, infrastructure and enterprise operations.
 
-[Showcase](docs/SHOWCASE.md) · [Verified Systems](systems/README.md) · [Architecture](docs/ARCHITECTURE.md) · [Agents](docs/AGENTS.md) · [Trust](docs/TRUST.md) · [Status](STATUS.md) · [Investor Brief](docs/INVESTOR_BRIEF.md) · [Accelerator Profile](docs/ACCELERATOR_PROFILE.md)
+[Showcase](docs/SHOWCASE.md) · [Verified Systems](systems/README.md) · [System Standard](docs/SYSTEM_STANDARD.md) · [Architecture](docs/ARCHITECTURE.md) · [Agents](docs/AGENTS.md) · [Agent Trust](docs/AGENT_TRUST.md) · [Trust](docs/TRUST.md) · [Trust Passport](docs/TRUST_PASSPORT.md) · [Status](STATUS.md) · [Investor Brief](docs/INVESTOR_BRIEF.md) · [Accelerator Profile](docs/ACCELERATOR_PROFILE.md)
 
 </div>
 
@@ -28,7 +36,8 @@ An AI-native systems company building an evidence-aware operating layer for inte
 | **Public System Packs** | **2** |
 | **XAGF governance controls** | **59** |
 | **Governance domains** | **11** |
-| **Automated validation gates** | **3** |
+| **Automated assurance checks** | **9 core PR checks** |
+| **Trust Passports** | **8** (2 systems · 6 agents) |
 | **Governed GXEON target roles** | **6** |
 
 These numbers are intentionally conservative. They represent what the public registry can currently prove — not the total number of historical projects discovered across the wider XPeX ecosystem.

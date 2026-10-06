@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0",
+  "snapshot_at": "2026-10-06T01:55:00-03:00",
+  "repository": "xpex-systems-ai/xpex-systems-ai",
+  "visibility": "PUBLIC",
+  "assurance_statement": "This snapshot records observed/configured controls and explicitly avoids claiming unverified repository-admin settings.",
+  "controls": [
+    {
+      "control": "GOVERNANCE_VALIDATION",
+      "status": "VERIFIED_PREMERGE",
+      "evidence": ".github/workflows/governance-validation.yml",
+      "workflow_run_id": 37415825480
+    },
+    {
+      "control": "PUBLIC_TRUTH_VALIDATION",
+      "status": "VERIFIED_PREMERGE",
+      "evidence": ".github/workflows/public-truth-validation.yml",
+      "workflow_run_id": 37415825532
+    },
+    {
+      "control": "SYSTEM_REGISTRY_VALIDATION",
+      "status": "VERIFIED_PREMERGE",
+      "evidence": ".github/workflows/system-registry-validation.yml",
+      "workflow_run_id": 37415825698
+    },
+    {
+      "control": "TRUST_PASSPORT_VALIDATION",
+      "status": "VERIFIED_PREMERGE",
+      "evidence": ".github/workflows/trust-passport-validation.yml",
+      "workflow_run_id": 37415825479
+    },
+    {
+      "control": "AGENT_POLICY_VALIDATION",
+      "status": "VERIFIED_PREMERGE",
+      "evidence": ".github/workflows/agent-policy-validation.yml",
+      "workflow_run_id": 37415825945
+    },
+    {
+      "control": "SECRET_HYGIENE_VALIDATION",
+      "status": "VERIFIED_PREMERGE",
+      "evidence": ".github/workflows/secret-hygiene.yml",
+      "workflow_run_id": 37415825523
+    },
+    {
+      "control": "ASSURANCE_INVARIANT_TESTS",
+      "status": "VERIFIED_PREMERGE",
+      "evidence": ".github/workflows/assurance-tests.yml",
+      "workflow_run_id": 37415825476
+    },
+    {
+      "control": "ACTION_SUPPLY_CHAIN_VALIDATION",
+      "status": "VERIFIED_PREMERGE",
+      "evidence": ".github/workflows/action-supply-chain-validation.yml",
+      "workflow_run_id": 37415825437,
+      "observation": "All external GitHub Actions in workflow files are pinned to immutable 40-character commit SHAs and current publisher allowlist."
+    },
+    {
+      "control": "CODEQL",
+      "status": "VERIFIED_PREMERGE",
+      "evidence": ".github/workflows/codeql.yml",
+      "workflow_run_id": 37415825477
+    },
+    {
+      "control": "DEPENDENCY_REVIEW",
+      "status": "BLOCKED_BY_REPOSITORY_SETTING",
+      "evidence": ".github/workflows/dependency-review.yml",
+      "observation": "Official GitHub Dependency Review action reported that Dependency Graph is not enabled."
+    },
+    {
+      "control": "OPENSSF_SCORECARD",
+      "status": "CONFIGURED_PENDING_EXECUTION",
+      "evidence": ".github/workflows/scorecard.yml"
+    },
+    {
+      "control": "RELEASE_ATTESTATION",
+      "status": "CONFIGURED_ON_TAG_OR_MANUAL",
+      "evidence": ".github/workflows/release-attestation.yml"
+    },
+    {
+      "control": "DEPENDABOT_GITHUB_ACTIONS",
+      "status": "CONFIGURED",
+      "evidence": ".github/dependabot.yml"
+    },
+    {
+      "control": "REPOSITORY_RULESETS",
+      "status": "NOT_ENFORCED_AT_SNAPSHOT",
+      "observation": "GitHub rulesets API returned an empty collection."
+    },
+    {
+      "control": "BRANCH_PROTECTION",
+      "status": "NOT_VERIFIED",
+      "observation": "Connected GitHub integration lacks administration access required to read or mutate branch-protection settings."
+    },
+    {
+      "control": "GITHUB_SECRET_SCANNING",
+      "status": "NOT_VERIFIED",
+      "observation": "Repository setting is not exposed through the connected integration."
+    },
+    {
+      "control": "GITHUB_PUSH_PROTECTION",
+      "status": "NOT_VERIFIED",
+      "observation": "Repository setting is not exposed through the connected integration."
+    },
+    {
+      "control": "PRIVATE_VULNERABILITY_REPORTING",
+      "status": "NOT_VERIFIED",
+      "observation": "Repository setting is not exposed through the connected integration."
+    }
+  ],
+  "external_certifications_claimed": []
+}

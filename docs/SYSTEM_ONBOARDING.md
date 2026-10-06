@@ -142,3 +142,18 @@ The same pipeline is intended for:
 - other approved engineering/data providers.
 
 The company registry accumulates evidence; it does not accumulate duplicate products.
+
+
+## XPeX Verified System Standard V1
+
+Any system promoted to `VERIFIED_STAGING` or `VERIFIED_LIVE` must now include:
+
+- System Pack README;
+- `system-card.json`;
+- `ai-bom.json`;
+- public-safe evidence records;
+- matching system Trust Passport;
+- XAGF governance reference;
+- explicit blockers/unknowns instead of inferred claims.
+
+See `docs/SYSTEM_STANDARD.md`.

@@ -1,0 +1,23 @@
+{
+  "aibom_id": "AIBOM-XPEX-COMMAND-001",
+  "system_id": "XPEX-SYS-COMMAND-001",
+  "version": "1.0",
+  "source_commit": null,
+  "deployment_id": "13013067-a3e1-45b5-8bab-c747e87c3c35",
+  "models": [],
+  "agents": [],
+  "tools": [],
+  "providers": [
+    "GitHub",
+    "Railway"
+  ],
+  "data_sources": [],
+  "policies": [
+    "XAGF",
+    "EVIDENCE_FIRST"
+  ],
+  "unknowns": [
+    "Model/provider runtime dependencies are not asserted in this public AI-BOM without current evidence."
+  ],
+  "generated_at": "2026-10-06T01:20:00-03:00"
+}

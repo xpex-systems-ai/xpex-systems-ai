@@ -25,5 +25,8 @@
   "evidence": [
     "evidence/railway-deployment.json"
   ],
-  "updated_at": "2026-10-05T23:35:00-03:00"
+  "updated_at": "2026-10-06T01:45:00-03:00",
+  "trust_passport": "data/trust/system-passports/xpex-systems-command.json",
+  "ai_bom": "systems/xpex-systems-command/ai-bom.json",
+  "standard": "XPEX_VERIFIED_SYSTEM_STANDARD_V1"
 }

@@ -1,0 +1,31 @@
+name: Release Provenance Attestation
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+  attestations: write
+
+jobs:
+  attest:
+    name: Attest public assurance bundle
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Build public assurance bundle
+        shell: bash
+        run: |
+          tar -czf xpex-assurance-bundle.tgz             README.md STATUS.md SECURITY.md AI_GOVERNANCE_CHARTER.md             docs/TRUST.md docs/TRUST_PASSPORT.md docs/ASSURANCE_MATRIX.md             data/company data/governance data/products data/agents data/providers data/trust             systems schemas
+
+      - name: Attest build provenance
+        uses: actions/attest-build-provenance@4d101475d8b20a2381f78447822ac1eab6504dd8 # v4.2.2
+        with:
+          subject-path: xpex-assurance-bundle.tgz

@@ -1,30 +1,28 @@
-name: Public Truth Validation
+name: Agent Policy Validation
 
 on:
   pull_request:
     paths:
-      - "README.md"
-      - "docs/**"
-      - "data/products/**"
       - "data/agents/**"
-      - "data/providers/**"
-      - "scripts/validate-public-company.py"
+      - "schemas/agent-*.json"
+      - "docs/governance/agent-governance.md"
+      - "docs/governance/autonomy-levels.md"
+      - "scripts/validate-agent-policy.py"
   push:
     branches: [main]
     paths:
-      - "README.md"
-      - "docs/**"
-      - "data/products/**"
       - "data/agents/**"
-      - "data/providers/**"
-      - "scripts/validate-public-company.py"
+      - "schemas/agent-*.json"
+      - "docs/governance/agent-governance.md"
+      - "docs/governance/autonomy-levels.md"
+      - "scripts/validate-agent-policy.py"
 
 permissions:
   contents: read
 
 jobs:
   validate:
-    name: Validate public company claims
+    name: Validate governed agent permissions
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -35,4 +33,4 @@ jobs:
         with:
           python-version: "3.12"
       - name: Validate
-        run: python scripts/validate-public-company.py
+        run: python scripts/validate-agent-policy.py

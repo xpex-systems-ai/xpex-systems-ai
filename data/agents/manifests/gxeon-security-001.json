@@ -1,0 +1,49 @@
+{
+  "agent_id": "GXEON-SECURITY-001",
+  "name": "GXEON Security",
+  "owner": "XPeX Systems AI",
+  "risk_tier": "R2",
+  "purpose": "Run governance/security checks, evidence collection and remediation workflows.",
+  "capabilities": [
+    "security.read",
+    "scan.run",
+    "finding.create",
+    "remediation.draft",
+    "evidence.write_draft"
+  ],
+  "denied_capabilities": [
+    "credential.exfiltrate",
+    "production.delete",
+    "payment.execute",
+    "trade.execute"
+  ],
+  "approved_data_classes": [
+    "D0",
+    "D1",
+    "D2",
+    "D3"
+  ],
+  "approved_environments": [
+    "staging",
+    "production-read-only"
+  ],
+  "human_approval": {
+    "required_for": [
+      "credential.rotate",
+      "production.block",
+      "destructive.action",
+      "external.publish"
+    ]
+  },
+  "limits": {
+    "max_steps": 80,
+    "max_runtime_seconds": 3600,
+    "max_retries": 2,
+    "daily_budget_usd": 10
+  },
+  "kill_switch": "Disable agent identity, revoke connector scopes, stop scheduled executions, preserve audit evidence.",
+  "status": "DRAFT",
+  "governance_identity_status": "ACTIVE_POLICY_PROFILE",
+  "runtime_activation_gate": "REQUIRES_RUNTIME_IDENTITY + TOOL_SCOPES + EVALUATION + KILL_SWITCH_TEST + APPROVAL",
+  "last_reviewed_at": "2026-10-06T01:30:00-03:00"
+}

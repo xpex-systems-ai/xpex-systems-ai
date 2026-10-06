@@ -1,0 +1,41 @@
+{
+  "framework": "XPeX Trust Passport",
+  "version": "1.0",
+  "states": [
+    {
+      "id": "TP0_UNASSESSED",
+      "meaning": "Subject has not completed baseline trust assessment."
+    },
+    {
+      "id": "TP1_DOCUMENTED",
+      "meaning": "Identity, purpose, ownership and required controls are documented."
+    },
+    {
+      "id": "TP2_CONTROLLED",
+      "meaning": "Material controls are implemented but independent verification is incomplete."
+    },
+    {
+      "id": "TP3_VERIFIED",
+      "meaning": "Material trust dimensions are independently verified with evidence."
+    },
+    {
+      "id": "TP4_CONTINUOUSLY_ASSURED",
+      "meaning": "Verified controls are continuously monitored with current evidence."
+    }
+  ],
+  "dimensions": [
+    "IDENTITY",
+    "SOURCE_OWNERSHIP",
+    "PERMISSIONS",
+    "POLICY",
+    "SECRETS",
+    "EVALUATION",
+    "CONTAINMENT",
+    "RUNTIME",
+    "EVIDENCE",
+    "SUPPLY_CHAIN",
+    "HUMAN_OVERSIGHT"
+  ],
+  "rule": "Overall state is conservative and cannot exceed the weakest material dimension required by the subject risk tier.",
+  "certification_claim": false
+}
