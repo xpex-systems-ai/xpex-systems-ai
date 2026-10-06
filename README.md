@@ -7,6 +7,7 @@
 ### AI Systems · Agents · Company Intelligence
 
 [![Governance](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/governance-validation.yml/badge.svg)](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/governance-validation.yml)
+[![Enterprise Control Plane](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/enterprise-control-plane-validation.yml/badge.svg)](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/enterprise-control-plane-validation.yml)
 [![Public Truth](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/public-truth-validation.yml/badge.svg)](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/public-truth-validation.yml)
 [![System Registry](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/system-registry-validation.yml/badge.svg)](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/system-registry-validation.yml)
 [![Trust Passport](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/trust-passport-validation.yml/badge.svg)](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/trust-passport-validation.yml)
@@ -22,9 +23,9 @@
 
 **Build. Connect. Operate. Prove.**
 
-An AI-native systems company building an evidence-aware operating layer for intelligent software, autonomous agents, infrastructure and enterprise operations.
+An AI-native systems company building an evidence-driven control plane for intelligent software, autonomous agents, infrastructure and enterprise operations.
 
-[Showcase](docs/SHOWCASE.md) · [Verified Systems](systems/README.md) · [System Standard](docs/SYSTEM_STANDARD.md) · [Architecture](docs/ARCHITECTURE.md) · [Agents](docs/AGENTS.md) · [Agent Trust](docs/AGENT_TRUST.md) · [Trust](docs/TRUST.md) · [Trust Passport](docs/TRUST_PASSPORT.md) · [Assurance](docs/ASSURANCE.md) · [Status](STATUS.md) · [Investor Brief](docs/INVESTOR_BRIEF.md) · [Accelerator Profile](docs/ACCELERATOR_PROFILE.md)
+[Showcase](docs/SHOWCASE.md) · [Verified Systems](systems/README.md) · [Enterprise Control Plane](docs/ENTERPRISE_CONTROL_PLANE.md) · [Admission Gates](docs/SYSTEM_ADMISSION_GATES.md) · [Trust Center](docs/TRUST_CENTER.md) · [Architecture](docs/ARCHITECTURE.md) · [Agents](docs/AGENTS.md) · [Trust Passport](docs/TRUST_PASSPORT.md) · [Assurance](docs/ASSURANCE.md) · [Status](STATUS.md) · [Investor Brief](docs/INVESTOR_BRIEF.md)
 
 </div>
 
@@ -39,7 +40,7 @@ An AI-native systems company building an evidence-aware operating layer for inte
 | **Public System Packs** | **2** |
 | **XAGF governance controls** | **59** |
 | **Governance domains** | **11** |
-| **Automated assurance checks** | **9 core PR checks** |
+| **Assurance model** | **multi-layer CI + policy-as-code + evidence gates** |
 | **Trust Passports** | **8** (2 systems · 6 agents) |
 | **Governed GXEON target roles** | **6** |
 
@@ -67,6 +68,27 @@ XPeX connects those pieces into one operational model:
 - **know what evidence proves it**.
 
 We call that operating principle **Evidence First**.
+
+### Enterprise operating mode
+
+The enterprise control plane adds explicit security and promotion boundaries across identity, policy, agent execution, models, data, runtime and evidence.
+
+A system is not promoted because it looks complete. It advances through evidence-backed admission gates:
+
+```text
+DISCOVER
+  -> IDENTIFY
+  -> BOUND ACCESS & DATA
+  -> VERIFY SUPPLY CHAIN
+  -> VERIFY RUNTIME
+  -> VERIFY AI / AGENTS
+  -> ASSURE PRODUCTION
+  -> PUBLISH / COMMERCIALIZE
+```
+
+The next onboarding wave is queued for provider discovery, led by the **GXEON Agent Marketplace**. Candidate status is deliberately separated from verified production status.
+
+[Enterprise Control Plane →](docs/ENTERPRISE_CONTROL_PLANE.md) · [System Admission Gates →](docs/SYSTEM_ADMISSION_GATES.md) · [Trust Center →](docs/TRUST_CENTER.md)
 
 ---
 
