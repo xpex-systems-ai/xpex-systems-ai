@@ -140,6 +140,32 @@ See [Products](docs/PRODUCTS.md).
 
 ---
 
+## Policy → Test → Execution → Result
+
+XPeX treats assurance as an evidence chain:
+
+```text
+POLICY
+  ↓
+CONTROL
+  ↓
+TEST
+  ↓
+EXECUTION
+  ↓
+RESULT
+  ↓
+EVIDENCE
+  ↓
+INDEPENDENT VERIFICATION
+```
+
+That model is implemented through XAGF controls, GitHub Actions, System Packs, Trust Passports, AI-BOMs and runtime evidence.
+
+[Explore the assurance model →](docs/POLICY_TEST_EXECUTION_RESULT.md)
+
+---
+
 ## Governance by architecture
 
 XPeX is being designed so governance is not a PDF sitting beside the product.
