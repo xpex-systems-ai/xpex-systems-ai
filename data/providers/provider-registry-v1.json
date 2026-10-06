@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0",
+  "relationship_truth_rule": "Usage or planned integration does not imply formal partnership.",
+  "providers": [
+    {
+      "provider_id": "openai",
+      "name": "OpenAI",
+      "category": "AI_MODELS_AND_AGENTS",
+      "relationship_status": "TECHNOLOGY_USED_OR_INTEGRATION_TARGET",
+      "public_partner_claim": false
+    },
+    {
+      "provider_id": "huggingface",
+      "name": "Hugging Face",
+      "category": "MODEL_ECOSYSTEM",
+      "relationship_status": "INTEGRATION_TARGET",
+      "public_partner_claim": false
+    },
+    {
+      "provider_id": "openrouter",
+      "name": "OpenRouter",
+      "category": "MODEL_ROUTING",
+      "relationship_status": "INTEGRATION_TARGET",
+      "public_partner_claim": false
+    },
+    {
+      "provider_id": "vercel",
+      "name": "Vercel",
+      "category": "DEPLOYMENT",
+      "relationship_status": "TECHNOLOGY_USED",
+      "public_partner_claim": false
+    },
+    {
+      "provider_id": "railway",
+      "name": "Railway",
+      "category": "CLOUD_RUNTIME",
+      "relationship_status": "TECHNOLOGY_USED",
+      "public_partner_claim": false
+    },
+    {
+      "provider_id": "supabase",
+      "name": "Supabase",
+      "category": "DATA_PLATFORM",
+      "relationship_status": "TECHNOLOGY_USED_IN_AUDITED_SYSTEMS",
+      "public_partner_claim": false
+    },
+    {
+      "provider_id": "github",
+      "name": "GitHub",
+      "category": "SOURCE_CONTROL",
+      "relationship_status": "TECHNOLOGY_USED",
+      "public_partner_claim": false
+    }
+  ]
+}
