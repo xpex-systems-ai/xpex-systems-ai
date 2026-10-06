@@ -11,6 +11,7 @@ This page summarizes only status supported by current repository, workflow and d
 | --- | --- |
 | Official corporate repository | **PUBLIC / Established** |
 | Corporate manifesto | Established |
+| Neural Workforce manifesto | **V1 established / human-capability expansion doctrine** |
 | Product architecture | Established |
 | XAGF governance framework | **59 controls / 11 domains** |
 | Verified System Standard | Established |
@@ -173,6 +174,21 @@ No external certification is currently claimed.
 ```text
 BUILD → CONNECT → OPERATE → PROVE → IMPROVE
 ```
+
+## Neural Workforce operationalization
+
+The manifesto is doctrine, not a production claim.
+
+The next implementation phase will translate it into:
+- capability graph;
+- Agent / Plugin / Skill registry;
+- GXO reusable skills;
+- Plugin Factory digital-worker blueprint;
+- authenticated Operator GX boundary;
+- policy + approval + evidence contracts;
+- marketplace packaging for reusable digital professions.
+
+No item above is represented as production-ready merely because it is in the manifesto.
 
 ## Next gates
 
