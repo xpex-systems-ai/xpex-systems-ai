@@ -21,6 +21,8 @@ This page summarizes only status supported by current repository, workflow and d
 | Public product registry | Established |
 | Provider relationship registry | Established |
 | Public website | **LIVE / Vercel production READY** |
+| GX Public Evidence Concierge | **IMPLEMENTED / evidence-only default** |
+| Media Evidence Governance | **V1 established / seed triage complete** |
 | Enterprise Control Plane V2 | **Established / validated on main** |
 | System admission gates | **G0→G7 established** |
 | Public Trust Center | Engineering view established; product implementation pending |
