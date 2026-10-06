@@ -25,7 +25,7 @@ This page summarizes only status supported by current repository, workflow and d
 
 ## Automated assurance
 
-PR #9 pre-merge verification has passed these core checks on the current trust/security foundation:
+Main-branch verification has passed these core checks on the current trust/security foundation:
 
 - **Governance Validation — PASS**
 - **Public Truth Validation — PASS**
@@ -39,7 +39,7 @@ PR #9 pre-merge verification has passed these core checks on the current trust/s
 
 Additional controls:
 
-- **OpenSSF Scorecard** — configured; first main-branch execution pending.
+- **OpenSSF Scorecard — PASS** on main.
 - **Release Provenance Attestation** — configured for version tags/manual execution.
 - **GitHub Dependency Review** — workflow prepared, but GitHub Dependency Graph is not currently enabled for this repository; the official action correctly refused to run.
 - **Dependabot for GitHub Actions** — configured.
@@ -115,8 +115,7 @@ BUILD → CONNECT → OPERATE → PROVE → IMPROVE
 ## Next gates
 
 1. Enable/verify GitHub admin security controls.
-2. Complete first OpenSSF Scorecard run on `main`.
-3. Run release provenance attestation on the first versioned assurance release.
-4. Harden the public flagship runtime/brand.
-5. Launch the public XPeX platform + Trust Center.
-6. Apply the Verified System Standard to every new Vercel/Replit/Railway/Supabase system.
+2. Run release provenance attestation on the first versioned assurance release.
+3. Harden the public flagship runtime/brand.
+4. Launch the public XPeX platform + Trust Center.
+5. Apply the Verified System Standard to every new Vercel/Replit/Railway/Supabase system.
