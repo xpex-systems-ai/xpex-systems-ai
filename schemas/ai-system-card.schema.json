@@ -1,0 +1,141 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "XPeX AI System Card",
+  "type": "object",
+  "required": [
+    "system_id",
+    "name",
+    "owner",
+    "intended_use",
+    "risk_tier",
+    "status",
+    "evidence"
+  ],
+  "properties": {
+    "system_id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "owner": {
+      "type": "string"
+    },
+    "business_owner": {
+      "type": "string"
+    },
+    "technical_owner": {
+      "type": "string"
+    },
+    "intended_use": {
+      "type": "string"
+    },
+    "prohibited_use": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "users": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "affected_parties": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "risk_tier": {
+      "enum": [
+        "R0",
+        "R1",
+        "R2",
+        "R3",
+        "R4"
+      ]
+    },
+    "data_classes": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "D0",
+          "D1",
+          "D2",
+          "D3",
+          "D4"
+        ]
+      }
+    },
+    "models": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "agents": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "tools": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "providers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "status": {
+      "enum": [
+        "DISCOVERED",
+        "CLASSIFIED",
+        "CORROBORATED",
+        "CANONICAL_CANDIDATE",
+        "CANONICAL",
+        "DEPLOYED",
+        "VERIFIED_LIVE",
+        "COMMERCIAL",
+        "LEGACY",
+        "ARCHIVED"
+      ]
+    },
+    "evaluations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "security_findings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "human_oversight": {
+      "type": "string"
+    },
+    "rollback": {
+      "type": "string"
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "last_verified_at": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}
