@@ -1,0 +1,44 @@
+name: Public Truth Validation
+
+on:
+  pull_request:
+    paths:
+      - "README.md"
+      - "docs/ARCHITECTURE.md"
+      - "docs/PRODUCTS.md"
+      - "docs/AGENTS.md"
+      - "docs/TRUST.md"
+      - "docs/PARTNERS.md"
+      - "docs/INVESTOR_BRIEF.md"
+      - "data/products/**"
+      - "data/agents/**"
+      - "data/providers/**"
+      - "scripts/validate-public-company.py"
+  push:
+    branches:
+      - main
+    paths:
+      - "README.md"
+      - "docs/**"
+      - "data/products/**"
+      - "data/agents/**"
+      - "data/providers/**"
+      - "scripts/validate-public-company.py"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate public company claims
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate public registries and claims
+        run: python scripts/validate-public-company.py

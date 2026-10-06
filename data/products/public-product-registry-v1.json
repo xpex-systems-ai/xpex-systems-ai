@@ -1,0 +1,124 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-10-05T23:35:00-03:00",
+  "public_claim_policy": "EVIDENCE_FIRST",
+  "products": [
+    {
+      "product_id": "xpex-systems-command",
+      "name": "XPeX Systems Command",
+      "category": "COMPANY_INTELLIGENCE",
+      "role": "Company Intelligence & Evidence OS",
+      "status": "VERIFIED_STAGING",
+      "source": {
+        "organization": "xpex-systems-ai",
+        "repository": "xpex-systems-command",
+        "evidence": "VERIFIED"
+      },
+      "runtime": {
+        "provider": "Railway",
+        "deployment_id": "13013067-a3e1-45b5-8bab-c747e87c3c35",
+        "state": "SUCCESS",
+        "environment": "staging"
+      },
+      "public_flagship_candidate": true,
+      "blockers": [
+        "Dedicated public product surface not yet launched."
+      ]
+    },
+    {
+      "product_id": "xpex-api-infrastructure",
+      "name": "XPeX API Infrastructure / Marketplace Lineage",
+      "category": "AI_INFRASTRUCTURE",
+      "role": "API & AI infrastructure",
+      "status": "VERIFIED_LIVE",
+      "source": {
+        "organization": "xpex-systems-ai",
+        "repository": "remix-of-remix-of-remix-of-remix-of-xpex-api-hub-87",
+        "commit": "5ba2e886a997c97c410e4bbabada659187912538",
+        "evidence": "VERIFIED"
+      },
+      "runtime": {
+        "provider": "Vercel",
+        "deployment_id": "dpl_2Shq2ceHdj12tZzJ6HPv8RdPYPJb",
+        "state": "READY",
+        "target": "production",
+        "public_alias": "https://remix-of-remix-of-remix-of-remix-of-xpex-api-hub-87-xpex-neural.vercel.app"
+      },
+      "public_flagship_candidate": true,
+      "blockers": [
+        "Canonical public product name/domain still needs consolidation."
+      ]
+    },
+    {
+      "product_id": "gxeon",
+      "name": "GXEON",
+      "category": "AGENTIC_SYSTEMS",
+      "role": "Agent execution & automation",
+      "status": "CONSOLIDATION",
+      "public_flagship_candidate": true,
+      "blockers": [
+        "Unified governed runtime identity and production agent manifests not yet completed."
+      ]
+    },
+    {
+      "product_id": "xpex-academy",
+      "name": "XPeX Academy",
+      "category": "EDUCATION",
+      "role": "AI education, learning operations and certification",
+      "status": "RUNTIME_CORROBORATION_IN_PROGRESS",
+      "source": {
+        "organization": "xpex-systems-ai",
+        "repository": "XPEX-ACADEMY",
+        "evidence": "VERIFIED_REPOSITORY"
+      },
+      "public_flagship_candidate": true,
+      "blockers": [
+        "Canonical non-Vercel runtime still requires current independent corroboration."
+      ]
+    },
+    {
+      "product_id": "xpex-revenue",
+      "name": "XPeX Revenue",
+      "category": "REVENUE_INTELLIGENCE",
+      "role": "Sales, growth and commercial automation",
+      "status": "CONSOLIDATION_TARGET",
+      "public_flagship_candidate": false,
+      "blockers": [
+        "Multiple product candidates must be canonicalized into a single public product line."
+      ]
+    },
+    {
+      "product_id": "xpex-web3",
+      "name": "XPeX Web3",
+      "category": "AGENT_ECONOMY",
+      "role": "Wallet operations, digital assets and settlement",
+      "status": "SECURITY_HARDENING",
+      "public_flagship_candidate": false,
+      "blockers": [
+        "Selected live candidates retain unresolved environment-security review findings."
+      ]
+    },
+    {
+      "product_id": "xpex-media",
+      "name": "XPeX Media / Creator",
+      "category": "CREATIVE_AI",
+      "role": "AI media and creator operations",
+      "status": "CONSOLIDATION_TARGET",
+      "public_flagship_candidate": false,
+      "blockers": [
+        "Canonical product identity and runtime need consolidation."
+      ]
+    },
+    {
+      "product_id": "nexara",
+      "name": "NEXARA Intelligence Fabric",
+      "category": "AI_ROUTING",
+      "role": "Model/provider routing, evaluation and fallback",
+      "status": "DESIGN_TARGET",
+      "public_flagship_candidate": false,
+      "blockers": [
+        "Architecture target; implementation and verification not yet complete."
+      ]
+    }
+  ]
+}

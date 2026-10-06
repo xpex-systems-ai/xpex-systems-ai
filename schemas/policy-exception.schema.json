@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xpex.systems/schemas/policy-exception.schema.json",
+  "title": "XPeX Policy Exception",
+  "type": "object",
+  "required": [
+    "exception_id",
+    "control_id",
+    "system_id",
+    "reason",
+    "risk_tier",
+    "owner",
+    "status",
+    "expires_at"
+  ],
+  "properties": {
+    "exception_id": {
+      "type": "string"
+    },
+    "control_id": {
+      "type": "string"
+    },
+    "system_id": {
+      "type": "string"
+    },
+    "reason": {
+      "type": "string"
+    },
+    "business_justification": {
+      "type": "string"
+    },
+    "risk_tier": {
+      "enum": [
+        "R0",
+        "R1",
+        "R2",
+        "R3",
+        "R4"
+      ]
+    },
+    "compensating_controls": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "residual_risk": {
+      "enum": [
+        "LOW",
+        "MEDIUM",
+        "HIGH",
+        "CRITICAL"
+      ]
+    },
+    "owner": {
+      "type": "string"
+    },
+    "approved_by": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "status": {
+      "enum": [
+        "PROPOSED",
+        "REVIEWING",
+        "ACCEPTED_TEMPORARILY",
+        "REMEDIATED",
+        "EXPIRED",
+        "REJECTED"
+      ]
+    },
+    "expires_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "remediation_plan": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xpex.systems/schemas/risk-assessment.schema.json",
+  "title": "XPeX AI Risk Assessment",
+  "type": "object",
+  "required": [
+    "assessment_id",
+    "system_id",
+    "owner",
+    "risk_tier",
+    "risk_domains",
+    "decision",
+    "reviewed_at"
+  ],
+  "properties": {
+    "assessment_id": {
+      "type": "string"
+    },
+    "system_id": {
+      "type": "string"
+    },
+    "owner": {
+      "type": "string"
+    },
+    "risk_tier": {
+      "enum": [
+        "R0",
+        "R1",
+        "R2",
+        "R3",
+        "R4"
+      ]
+    },
+    "risk_domains": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "SAFETY",
+          "SECURITY",
+          "PRIVACY",
+          "FINANCIAL",
+          "LEGAL",
+          "OPERATIONAL",
+          "REPUTATIONAL",
+          "RIGHTS",
+          "SUPPLY_CHAIN"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "hazards": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "description",
+          "likelihood",
+          "impact"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "likelihood": {
+            "enum": [
+              "LOW",
+              "MEDIUM",
+              "HIGH"
+            ]
+          },
+          "impact": {
+            "enum": [
+              "LOW",
+              "MEDIUM",
+              "HIGH",
+              "CRITICAL"
+            ]
+          },
+          "controls": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "residual_risk": {
+            "enum": [
+              "LOW",
+              "MEDIUM",
+              "HIGH",
+              "CRITICAL"
+            ]
+          }
+        }
+      }
+    },
+    "decision": {
+      "enum": [
+        "APPROVE",
+        "APPROVE_WITH_CONDITIONS",
+        "REJECT",
+        "REASSESS"
+      ]
+    },
+    "conditions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "reviewed_by": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "reviewed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "next_review_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    }
+  },
+  "additionalProperties": true
+}

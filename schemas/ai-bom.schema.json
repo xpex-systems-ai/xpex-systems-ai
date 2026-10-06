@@ -1,0 +1,177 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xpex.systems/schemas/ai-bom.schema.json",
+  "title": "XPeX AI Bill of Materials",
+  "description": "Inventory of the AI-specific dependencies and authorities of a deployed system.",
+  "type": "object",
+  "required": [
+    "aibom_id",
+    "system_id",
+    "version",
+    "models",
+    "agents",
+    "tools",
+    "providers",
+    "data_sources",
+    "generated_at"
+  ],
+  "properties": {
+    "aibom_id": {
+      "type": "string"
+    },
+    "system_id": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "source_commit": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "deployment_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "models": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "provider"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "version": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "provider": {
+            "type": "string"
+          },
+          "purpose": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "agents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "agent_id"
+        ],
+        "properties": {
+          "agent_id": {
+            "type": "string"
+          },
+          "manifest_ref": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "risk_tier": {
+            "enum": [
+              "R0",
+              "R1",
+              "R2",
+              "R3",
+              "R4"
+            ]
+          }
+        }
+      }
+    },
+    "tools": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "provider": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "write_capable": {
+            "type": "boolean"
+          },
+          "scope_summary": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "providers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "data_sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "data_class"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "data_class": {
+            "enum": [
+              "D0",
+              "D1",
+              "D2",
+              "D3",
+              "D4"
+            ]
+          },
+          "purpose": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "policies": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "additionalProperties": true
+}

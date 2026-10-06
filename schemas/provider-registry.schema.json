@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xpex.systems/schemas/provider-registry.schema.json",
+  "title": "XPeX AI Provider Record",
+  "type": "object",
+  "required": [
+    "provider_id",
+    "name",
+    "relationship_status",
+    "approved_data_classes",
+    "status"
+  ],
+  "properties": {
+    "provider_id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "relationship_status": {
+      "enum": [
+        "TECHNOLOGY_USED",
+        "INTEGRATION_AVAILABLE",
+        "MARKETPLACE_LISTED",
+        "PROGRAM_MEMBER",
+        "FORMAL_PARTNER",
+        "COSELL_PARTNER"
+      ]
+    },
+    "services": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "approved_data_classes": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "D0",
+          "D1",
+          "D2",
+          "D3",
+          "D4"
+        ]
+      }
+    },
+    "restricted_use_cases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "fallback_provider_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "security_review_status": {
+      "enum": [
+        "NOT_STARTED",
+        "IN_REVIEW",
+        "ACCEPTED",
+        "ACCEPTED_WITH_CONDITIONS",
+        "REJECTED"
+      ]
+    },
+    "status": {
+      "enum": [
+        "ACTIVE",
+        "RESTRICTED",
+        "PAUSED",
+        "RETIRED"
+      ]
+    },
+    "last_reviewed_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    }
+  },
+  "additionalProperties": true
+}

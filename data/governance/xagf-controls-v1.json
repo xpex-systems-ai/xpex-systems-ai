@@ -1,0 +1,515 @@
+{
+  "framework": "XAGF",
+  "version": "1.0",
+  "status": "PROPOSED_CORPORATE_STANDARD",
+  "governance_rule": "THE EXECUTOR DOES NOT APPROVE ITS OWN DELIVERY.",
+  "domains": [
+    {
+      "id": "GOV",
+      "name": "Governance & Accountability",
+      "controls": [
+        {
+          "id": "XAGF-GOV-001",
+          "statement": "Every material AI system has an accountable owner.",
+          "evidence": [
+            "system_card",
+            "owner_record"
+          ]
+        },
+        {
+          "id": "XAGF-GOV-002",
+          "statement": "Risk tier is assigned before production promotion.",
+          "evidence": [
+            "risk_assessment"
+          ]
+        },
+        {
+          "id": "XAGF-GOV-003",
+          "statement": "Material exceptions require documented risk acceptance.",
+          "evidence": [
+            "exception_record"
+          ]
+        },
+        {
+          "id": "XAGF-GOV-004",
+          "statement": "Executor and approver are separated for material actions.",
+          "evidence": [
+            "approval_record",
+            "audit_log"
+          ]
+        },
+        {
+          "id": "XAGF-GOV-005",
+          "statement": "Public claims are evidence-backed.",
+          "evidence": [
+            "evidence_record"
+          ]
+        },
+        {
+          "id": "XAGF-GOV-006",
+          "statement": "Governance is re-triggered after material changes.",
+          "evidence": [
+            "change_record",
+            "review_record"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IAM",
+      "name": "Identity & Access",
+      "controls": [
+        {
+          "id": "XAGF-IAM-001",
+          "statement": "Privileged human accounts use MFA where supported.",
+          "evidence": [
+            "iam_review"
+          ]
+        },
+        {
+          "id": "XAGF-IAM-002",
+          "statement": "Human and machine identities are separated.",
+          "evidence": [
+            "identity_inventory"
+          ]
+        },
+        {
+          "id": "XAGF-IAM-003",
+          "statement": "Agent capabilities are allowlisted.",
+          "evidence": [
+            "agent_manifest"
+          ]
+        },
+        {
+          "id": "XAGF-IAM-004",
+          "statement": "Credentials are scoped to least privilege.",
+          "evidence": [
+            "scope_review"
+          ]
+        },
+        {
+          "id": "XAGF-IAM-005",
+          "statement": "Privileged access is periodically reviewed.",
+          "evidence": [
+            "access_review"
+          ]
+        },
+        {
+          "id": "XAGF-IAM-006",
+          "statement": "Production agents have a revocation or kill-switch path.",
+          "evidence": [
+            "containment_test"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SEC",
+      "name": "Secrets & Key Management",
+      "controls": [
+        {
+          "id": "XAGF-SEC-001",
+          "statement": "Secrets are not committed to source control.",
+          "evidence": [
+            "secret_scan"
+          ]
+        },
+        {
+          "id": "XAGF-SEC-002",
+          "statement": "Production and non-production credentials are separated.",
+          "evidence": [
+            "environment_review"
+          ]
+        },
+        {
+          "id": "XAGF-SEC-003",
+          "statement": "Exposed secrets trigger rotation and incident review.",
+          "evidence": [
+            "incident_record"
+          ]
+        },
+        {
+          "id": "XAGF-SEC-004",
+          "statement": "Sensitive credentials are not placed into general-purpose model prompts.",
+          "evidence": [
+            "prompt_policy",
+            "test_result"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AGT",
+      "name": "Agentic AI",
+      "controls": [
+        {
+          "id": "XAGF-AGT-001",
+          "statement": "Every production agent has a unique Agent ID.",
+          "evidence": [
+            "agent_registry"
+          ]
+        },
+        {
+          "id": "XAGF-AGT-002",
+          "statement": "Agent tool permissions are explicit and bounded.",
+          "evidence": [
+            "agent_manifest"
+          ]
+        },
+        {
+          "id": "XAGF-AGT-003",
+          "statement": "Autonomous loops have step, time and budget limits.",
+          "evidence": [
+            "runtime_policy"
+          ]
+        },
+        {
+          "id": "XAGF-AGT-004",
+          "statement": "High-risk tool calls use approval policy.",
+          "evidence": [
+            "approval_policy",
+            "audit_log"
+          ]
+        },
+        {
+          "id": "XAGF-AGT-005",
+          "statement": "Material agent actions generate an audit trail.",
+          "evidence": [
+            "audit_log"
+          ]
+        },
+        {
+          "id": "XAGF-AGT-006",
+          "statement": "Delegated agents cannot exceed parent authorization.",
+          "evidence": [
+            "delegation_test"
+          ]
+        },
+        {
+          "id": "XAGF-AGT-007",
+          "statement": "Critical actions are independently verified.",
+          "evidence": [
+            "verification_record"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "MDL",
+      "name": "Models & Providers",
+      "controls": [
+        {
+          "id": "XAGF-MDL-001",
+          "statement": "Production models and providers are registered.",
+          "evidence": [
+            "model_registry",
+            "provider_registry"
+          ]
+        },
+        {
+          "id": "XAGF-MDL-002",
+          "statement": "Sensitive workloads restrict eligible providers.",
+          "evidence": [
+            "routing_policy"
+          ]
+        },
+        {
+          "id": "XAGF-MDL-003",
+          "statement": "Material model changes trigger re-evaluation.",
+          "evidence": [
+            "evaluation_record"
+          ]
+        },
+        {
+          "id": "XAGF-MDL-004",
+          "statement": "Routing considers capability and policy, not price alone.",
+          "evidence": [
+            "routing_policy"
+          ]
+        },
+        {
+          "id": "XAGF-MDL-005",
+          "statement": "Fallback models inherit data and permission restrictions.",
+          "evidence": [
+            "fallback_test"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DAT",
+      "name": "Data & Privacy",
+      "controls": [
+        {
+          "id": "XAGF-DAT-001",
+          "statement": "Data is classified before sensitive AI use.",
+          "evidence": [
+            "data_inventory"
+          ]
+        },
+        {
+          "id": "XAGF-DAT-002",
+          "statement": "Collection is minimized to defined purpose.",
+          "evidence": [
+            "data_flow_review"
+          ]
+        },
+        {
+          "id": "XAGF-DAT-003",
+          "statement": "Tenant boundaries are enforced.",
+          "evidence": [
+            "isolation_test"
+          ]
+        },
+        {
+          "id": "XAGF-DAT-004",
+          "statement": "RAG retrieval is authorization-aware.",
+          "evidence": [
+            "retrieval_test"
+          ]
+        },
+        {
+          "id": "XAGF-DAT-005",
+          "statement": "Training and evaluation datasets preserve provenance.",
+          "evidence": [
+            "dataset_card"
+          ]
+        },
+        {
+          "id": "XAGF-DAT-006",
+          "statement": "Sensitive data has retention and deletion rules.",
+          "evidence": [
+            "retention_policy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AIS",
+      "name": "AI Security & Evaluation",
+      "controls": [
+        {
+          "id": "XAGF-AIS-001",
+          "statement": "Prompt-injection tests exist for systems using untrusted content.",
+          "evidence": [
+            "red_team_result"
+          ]
+        },
+        {
+          "id": "XAGF-AIS-002",
+          "statement": "Tool parameters are validated before side effects.",
+          "evidence": [
+            "test_result"
+          ]
+        },
+        {
+          "id": "XAGF-AIS-003",
+          "statement": "Output is validated before material external action.",
+          "evidence": [
+            "validation_test"
+          ]
+        },
+        {
+          "id": "XAGF-AIS-004",
+          "statement": "Privileged agents are tested for excessive agency.",
+          "evidence": [
+            "red_team_result"
+          ]
+        },
+        {
+          "id": "XAGF-AIS-005",
+          "statement": "Memory poisoning and cross-tenant leakage are tested where applicable.",
+          "evidence": [
+            "red_team_result"
+          ]
+        },
+        {
+          "id": "XAGF-AIS-006",
+          "statement": "Critical evaluation failure blocks production promotion.",
+          "evidence": [
+            "release_gate"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SDL",
+      "name": "Software Supply Chain",
+      "controls": [
+        {
+          "id": "XAGF-SDL-001",
+          "statement": "Critical changes use reviewed pull requests.",
+          "evidence": [
+            "pr_record"
+          ]
+        },
+        {
+          "id": "XAGF-SDL-002",
+          "statement": "Dependencies are inventoried and scanned.",
+          "evidence": [
+            "dependency_scan"
+          ]
+        },
+        {
+          "id": "XAGF-SDL-003",
+          "statement": "Fork and upstream lineage is preserved.",
+          "evidence": [
+            "repository_metadata"
+          ]
+        },
+        {
+          "id": "XAGF-SDL-004",
+          "statement": "Build and deploy provenance links release to source commit.",
+          "evidence": [
+            "deployment_record"
+          ]
+        },
+        {
+          "id": "XAGF-SDL-005",
+          "statement": "Enterprise releases should produce an SBOM where practical.",
+          "evidence": [
+            "sbom"
+          ]
+        },
+        {
+          "id": "XAGF-SDL-006",
+          "statement": "Untrusted generated code is isolated before privileged execution.",
+          "evidence": [
+            "sandbox_test"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "RUN",
+      "name": "Runtime & Resilience",
+      "controls": [
+        {
+          "id": "XAGF-RUN-001",
+          "statement": "Staging and production are separated.",
+          "evidence": [
+            "environment_inventory"
+          ]
+        },
+        {
+          "id": "XAGF-RUN-002",
+          "statement": "Material deployments have rollback.",
+          "evidence": [
+            "rollback_test"
+          ]
+        },
+        {
+          "id": "XAGF-RUN-003",
+          "statement": "Critical services define recovery objectives.",
+          "evidence": [
+            "continuity_plan"
+          ]
+        },
+        {
+          "id": "XAGF-RUN-004",
+          "statement": "Public endpoints have appropriate abuse and rate controls.",
+          "evidence": [
+            "runtime_review"
+          ]
+        },
+        {
+          "id": "XAGF-RUN-005",
+          "statement": "High-risk autonomous systems can be contained quickly.",
+          "evidence": [
+            "kill_switch_test"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IR",
+      "name": "Incident Response",
+      "controls": [
+        {
+          "id": "XAGF-IR-001",
+          "statement": "AI and security incidents have severity classification.",
+          "evidence": [
+            "incident_record"
+          ]
+        },
+        {
+          "id": "XAGF-IR-002",
+          "statement": "Logs and evidence are preserved during containment.",
+          "evidence": [
+            "incident_evidence"
+          ]
+        },
+        {
+          "id": "XAGF-IR-003",
+          "statement": "Recovery requires independent verification for material incidents.",
+          "evidence": [
+            "recovery_verification"
+          ]
+        },
+        {
+          "id": "XAGF-IR-004",
+          "statement": "Post-incident controls are updated from lessons learned.",
+          "evidence": [
+            "postmortem"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TPR",
+      "name": "Third Party",
+      "controls": [
+        {
+          "id": "XAGF-TPR-001",
+          "statement": "Material providers are registered.",
+          "evidence": [
+            "provider_registry"
+          ]
+        },
+        {
+          "id": "XAGF-TPR-002",
+          "statement": "Provider security and data terms are reviewed according to risk.",
+          "evidence": [
+            "vendor_review"
+          ]
+        },
+        {
+          "id": "XAGF-TPR-003",
+          "statement": "Critical dependencies have exit or fallback considerations.",
+          "evidence": [
+            "continuity_plan"
+          ]
+        },
+        {
+          "id": "XAGF-TPR-004",
+          "statement": "Technology usage is not represented as formal partnership without evidence.",
+          "evidence": [
+            "partner_status_record"
+          ]
+        }
+      ]
+    }
+  ],
+  "assurance_levels": [
+    {
+      "id": "AL0",
+      "name": "UNASSESSED"
+    },
+    {
+      "id": "AL1",
+      "name": "DOCUMENTED"
+    },
+    {
+      "id": "AL2",
+      "name": "CONTROLLED"
+    },
+    {
+      "id": "AL3",
+      "name": "VERIFIED"
+    },
+    {
+      "id": "AL4",
+      "name": "CONTINUOUSLY_ASSURED"
+    }
+  ]
+}

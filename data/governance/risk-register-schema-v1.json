@@ -1,0 +1,112 @@
+{
+  "schema_version": "1.0",
+  "title": "XAGF AI Risk Register Entry",
+  "fields": {
+    "risk_id": {
+      "type": "string",
+      "required": true
+    },
+    "system_id": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "risk_domain": {
+      "enum": [
+        "SAFETY",
+        "SECURITY",
+        "PRIVACY",
+        "LEGAL",
+        "FINANCIAL",
+        "REPUTATION",
+        "RELIABILITY",
+        "THIRD_PARTY",
+        "MODEL",
+        "AGENTIC"
+      ]
+    },
+    "likelihood": {
+      "enum": [
+        "RARE",
+        "UNLIKELY",
+        "POSSIBLE",
+        "LIKELY",
+        "ALMOST_CERTAIN"
+      ]
+    },
+    "impact": {
+      "enum": [
+        "NEGLIGIBLE",
+        "MINOR",
+        "MODERATE",
+        "MAJOR",
+        "SEVERE"
+      ]
+    },
+    "inherent_rating": {
+      "enum": [
+        "LOW",
+        "MEDIUM",
+        "HIGH",
+        "CRITICAL"
+      ]
+    },
+    "controls": {
+      "type": "array"
+    },
+    "residual_rating": {
+      "enum": [
+        "LOW",
+        "MEDIUM",
+        "HIGH",
+        "CRITICAL"
+      ]
+    },
+    "owner": {
+      "type": "string",
+      "required": true
+    },
+    "treatment": {
+      "enum": [
+        "MITIGATE",
+        "ACCEPT",
+        "AVOID",
+        "TRANSFER"
+      ]
+    },
+    "due_date": {
+      "type": "date"
+    },
+    "status": {
+      "enum": [
+        "OPEN",
+        "MITIGATING",
+        "ACCEPTED",
+        "CLOSED",
+        "MONITORING"
+      ]
+    },
+    "evidence_ids": {
+      "type": "array"
+    },
+    "last_reviewed_at": {
+      "type": "datetime"
+    },
+    "next_review_at": {
+      "type": "datetime"
+    }
+  },
+  "rules": [
+    "CRITICAL residual risk requires explicit authorized human acceptance before production.",
+    "HIGH residual risk requires documented owner and mitigation plan.",
+    "Risk acceptance must expire or have a review date.",
+    "Material architecture/model/tool changes trigger reassessment."
+  ]
+}

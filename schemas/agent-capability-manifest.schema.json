@@ -1,0 +1,142 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "XPeX Agent Capability Manifest",
+  "type": "object",
+  "required": [
+    "agent_id",
+    "name",
+    "owner",
+    "risk_tier",
+    "capabilities",
+    "denied_capabilities",
+    "human_approval",
+    "limits",
+    "kill_switch"
+  ],
+  "properties": {
+    "agent_id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "owner": {
+      "type": "string"
+    },
+    "purpose": {
+      "type": "string"
+    },
+    "risk_tier": {
+      "enum": [
+        "R0",
+        "R1",
+        "R2",
+        "R3",
+        "R4"
+      ]
+    },
+    "capabilities": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "denied_capabilities": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "data_classes": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "D0",
+          "D1",
+          "D2",
+          "D3",
+          "D4"
+        ]
+      }
+    },
+    "tools": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "environments": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "human_approval": {
+      "type": "object",
+      "properties": {
+        "required_for": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "approver_roles": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "limits": {
+      "type": "object",
+      "properties": {
+        "max_steps": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "max_runtime_seconds": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "max_retries": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "daily_budget_usd": {
+          "type": "number",
+          "minimum": 0
+        }
+      }
+    },
+    "kill_switch": {
+      "type": "object",
+      "properties": {
+        "mechanism": {
+          "type": "string"
+        },
+        "owner": {
+          "type": "string"
+        },
+        "tested_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "evidence_policy": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "DRAFT",
+        "APPROVED",
+        "ACTIVE",
+        "PAUSED",
+        "RETIRED"
+      ]
+    }
+  }
+}

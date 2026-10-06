@@ -1,0 +1,38 @@
+{
+  "agent_id": "GXEON-EXAMPLE-001",
+  "name": "Example Bounded Operator",
+  "owner": "XPeX Systems AI",
+  "risk_tier": "R1",
+  "purpose": "Demonstrate the minimum production agent manifest.",
+  "capabilities": [
+    "registry.read",
+    "evidence.read"
+  ],
+  "denied_capabilities": [
+    "payment.execute",
+    "credential.rotate",
+    "production.delete"
+  ],
+  "approved_data_classes": [
+    "D0",
+    "D1"
+  ],
+  "approved_environments": [
+    "staging"
+  ],
+  "human_approval": {
+    "required_for": [
+      "external.write",
+      "production.change"
+    ]
+  },
+  "limits": {
+    "max_steps": 20,
+    "max_runtime_seconds": 900,
+    "max_retries": 2,
+    "daily_budget_usd": 5
+  },
+  "kill_switch": "Disable agent identity and revoke connector scopes.",
+  "status": "DRAFT",
+  "last_reviewed_at": null
+}
