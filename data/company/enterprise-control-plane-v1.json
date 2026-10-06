@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-10-06T03:40:00-03:00",
+  "owner": "XPeX Systems AI",
+  "operating_model": "EVIDENCE_DRIVEN_ENTERPRISE_CONTROL_PLANE",
+  "external_equivalence_claimed": false,
+  "external_certifications_claimed": [],
+  "governance_rule": "THE EXECUTOR DOES NOT APPROVE ITS OWN DELIVERY.",
+  "planes": [
+    {
+      "id": "IDENTITY",
+      "status": "DEFINED",
+      "purpose": "Stable human, machine, agent and system identity with accountable ownership."
+    },
+    {
+      "id": "POLICY",
+      "status": "IMPLEMENTED_REPOSITORY",
+      "purpose": "XAGF policy and default-deny authorization boundaries."
+    },
+    {
+      "id": "AGENT_EXECUTION",
+      "status": "CONTROLLED_DESIGN",
+      "purpose": "Bounded GXEON execution with explicit permissions, approvals and containment gates."
+    },
+    {
+      "id": "INTELLIGENCE",
+      "status": "DESIGN_TARGET",
+      "purpose": "Policy-aware model/provider routing through NEXARA target architecture."
+    },
+    {
+      "id": "DATA",
+      "status": "ADMISSION_REQUIRED",
+      "purpose": "Classification, access boundaries, tenancy, retention and provenance per admitted system."
+    },
+    {
+      "id": "RUNTIME",
+      "status": "ADMISSION_REQUIRED",
+      "purpose": "Source-to-deployment correlation, health, rollback and containment evidence."
+    },
+    {
+      "id": "EVIDENCE",
+      "status": "IMPLEMENTED_REPOSITORY",
+      "purpose": "Evidence records, Trust Passports and assurance chain."
+    }
+  ],
+  "security_invariants": [
+    "DENY_BY_DEFAULT",
+    "LEAST_PRIVILEGE",
+    "SEPARATION_OF_DUTIES",
+    "FAIL_CLOSED_HIGH_RISK_AUTHORIZATION",
+    "BOUNDED_AUTONOMY",
+    "SOURCE_TO_RUNTIME_PROVENANCE",
+    "NO_PUBLIC_CLAIM_ABOVE_EVIDENCE",
+    "TESTED_CONTAINMENT_BEFORE_PRIVILEGED_PRODUCTION_AGENT",
+    "SECRETS_OUTSIDE_SOURCE_CONTROL",
+    "MATERIAL_ACTIONS_ARE_AUDITABLE"
+  ],
+  "repository_admin_enforcement": {
+    "rulesets": "NOT_ENFORCED_AT_LAST_VERIFIED_SNAPSHOT",
+    "branch_protection": "NOT_VERIFIED",
+    "native_secret_scanning": "NOT_VERIFIED",
+    "push_protection": "NOT_VERIFIED",
+    "private_vulnerability_reporting": "NOT_VERIFIED"
+  },
+  "next_phase": "SYSTEM_ADMISSION_FROM_PROVIDER_INVENTORY"
+}
