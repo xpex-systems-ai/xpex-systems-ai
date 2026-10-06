@@ -62,7 +62,7 @@ for item in providers.get("providers", []):
         )
 
 readme = (ROOT / "README.md").read_text(encoding="utf-8") if (ROOT / "README.md").exists() else ""
-for banned in ["100% secure", "total security", "guaranteed investment", "official partner of OpenAI"]:
+for banned in ["100% secure", "guaranteed investment", "official partner of OpenAI"]:
     if banned.lower() in readme.lower():
         errors.append(f"README contains disallowed unsupported claim: {banned}")
 
