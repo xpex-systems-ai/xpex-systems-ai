@@ -1,0 +1,91 @@
+{
+  "passport_version": "1.0",
+  "passport_id": "TP-AGENT-GXEON-AUDITOR-001",
+  "subject_type": "AGENT",
+  "agent_id": "GXEON-AUDITOR-001",
+  "name": "GXEON Auditor",
+  "risk_tier": "R1",
+  "runtime_status": "NOT_DEPLOYED_AS_PERSISTENT_AUTONOMOUS_SERVICE",
+  "overall_trust_state": "TP1_DOCUMENTED",
+  "dimensions": {
+    "IDENTITY": {
+      "status": "VERIFIED",
+      "summary": "Unique Agent ID and governed registry entry exist.",
+      "evidence_refs": [
+        "data/agents/agent-registry-v1.json"
+      ]
+    },
+    "SOURCE_OWNERSHIP": {
+      "status": "NOT_APPLICABLE",
+      "summary": "Agent is a governed role definition; dedicated runtime package/source is not yet assigned.",
+      "evidence_refs": []
+    },
+    "PERMISSIONS": {
+      "status": "POLICY_DEFINED",
+      "summary": "Allowed actions and approval-required actions are explicitly documented.",
+      "evidence_refs": [
+        "data/agents/agent-registry-v1.json"
+      ]
+    },
+    "POLICY": {
+      "status": "VERIFIED",
+      "summary": "Agent is governed by XAGF agent and autonomy policies.",
+      "evidence_refs": [
+        "docs/governance/agent-governance.md",
+        "docs/governance/autonomy-levels.md"
+      ]
+    },
+    "SECRETS": {
+      "status": "POLICY_DEFINED",
+      "summary": "Agent secret-handling policy is defined; no persistent runtime is active.",
+      "evidence_refs": [
+        "SECURITY.md"
+      ]
+    },
+    "EVALUATION": {
+      "status": "NOT_VERIFIED",
+      "summary": "Dedicated agent security/evaluation suite has not yet produced runtime evidence.",
+      "evidence_refs": []
+    },
+    "CONTAINMENT": {
+      "status": "POLICY_DEFINED",
+      "summary": "Kill-switch/containment is mandatory before production activation.",
+      "evidence_refs": [
+        "docs/governance/agent-governance.md"
+      ]
+    },
+    "RUNTIME": {
+      "status": "NOT_VERIFIED",
+      "summary": "Agent is not represented as a persistent autonomous production service.",
+      "evidence_refs": [
+        "data/agents/agent-registry-v1.json"
+      ]
+    },
+    "EVIDENCE": {
+      "status": "POLICY_DEFINED",
+      "summary": "Material actions must generate evidence once runtime is activated.",
+      "evidence_refs": [
+        "docs/governance/audit-evidence-standard.md"
+      ]
+    },
+    "SUPPLY_CHAIN": {
+      "status": "NOT_VERIFIED",
+      "summary": "Runtime package/tool supply chain is not yet assigned.",
+      "evidence_refs": []
+    },
+    "HUMAN_OVERSIGHT": {
+      "status": "VERIFIED",
+      "summary": "Approval-required action boundaries are explicitly listed.",
+      "evidence_refs": [
+        "data/agents/agent-registry-v1.json"
+      ]
+    }
+  },
+  "approval_required": [
+    "destructive.action",
+    "credential.change",
+    "production.write"
+  ],
+  "issued_at": "2026-10-06T01:20:00-03:00",
+  "last_verified_at": null
+}

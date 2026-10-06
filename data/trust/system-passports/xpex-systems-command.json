@@ -1,0 +1,91 @@
+{
+  "passport_version": "1.0",
+  "passport_id": "TP-SYSTEM-XPEX-COMMAND-001",
+  "subject_type": "SYSTEM",
+  "system_id": "XPEX-SYS-COMMAND-001",
+  "name": "XPeX Systems Command",
+  "overall_trust_state": "TP1_DOCUMENTED",
+  "dimensions": {
+    "IDENTITY": {
+      "status": "VERIFIED",
+      "summary": "Canonical system identity and System Pack are present.",
+      "evidence_refs": [
+        "systems/xpex-systems-command/system-card.json"
+      ]
+    },
+    "SOURCE_OWNERSHIP": {
+      "status": "VERIFIED",
+      "summary": "Official source repository is recorded under xpex-systems-ai.",
+      "evidence_refs": [
+        "systems/xpex-systems-command/system-card.json"
+      ]
+    },
+    "PERMISSIONS": {
+      "status": "NOT_VERIFIED",
+      "summary": "Enterprise production IAM controls are not yet independently verified.",
+      "evidence_refs": []
+    },
+    "POLICY": {
+      "status": "POLICY_DEFINED",
+      "summary": "Governed by XAGF and Evidence First policy.",
+      "evidence_refs": [
+        "AI_GOVERNANCE_CHARTER.md"
+      ]
+    },
+    "SECRETS": {
+      "status": "NOT_VERIFIED",
+      "summary": "Repository/runtime secret posture requires dedicated current verification.",
+      "evidence_refs": []
+    },
+    "EVALUATION": {
+      "status": "CONDITIONAL",
+      "summary": "Staging importer/verifier workflows have been exercised; broader security evaluation remains pending.",
+      "evidence_refs": [
+        "systems/xpex-systems-command/evidence/railway-deployment.json"
+      ]
+    },
+    "CONTAINMENT": {
+      "status": "NOT_VERIFIED",
+      "summary": "Public rollback/containment evidence not yet attached.",
+      "evidence_refs": []
+    },
+    "RUNTIME": {
+      "status": "VERIFIED",
+      "summary": "Railway staging deployment observed in SUCCESS state.",
+      "evidence_refs": [
+        "systems/xpex-systems-command/evidence/railway-deployment.json"
+      ]
+    },
+    "EVIDENCE": {
+      "status": "VERIFIED",
+      "summary": "Runtime evidence is linked in the System Pack.",
+      "evidence_refs": [
+        "systems/xpex-systems-command/evidence/railway-deployment.json"
+      ]
+    },
+    "SUPPLY_CHAIN": {
+      "status": "CONDITIONAL",
+      "summary": "Official source and runtime are linked; release SBOM/provenance attestation is pending.",
+      "evidence_refs": [
+        "systems/xpex-systems-command/system-card.json"
+      ]
+    },
+    "HUMAN_OVERSIGHT": {
+      "status": "POLICY_DEFINED",
+      "summary": "XAGF separation-of-duties policy applies.",
+      "evidence_refs": [
+        "AI_GOVERNANCE_CHARTER.md"
+      ]
+    }
+  },
+  "blockers": [
+    "Production IAM/security assurance pending.",
+    "SBOM/provenance attestation pending.",
+    "Rollback/containment evidence pending."
+  ],
+  "evidence_refs": [
+    "systems/xpex-systems-command/system-card.json"
+  ],
+  "issued_at": "2026-10-06T01:20:00-03:00",
+  "last_verified_at": "2026-10-05T23:35:00-03:00"
+}

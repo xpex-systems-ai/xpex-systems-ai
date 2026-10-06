@@ -1,0 +1,69 @@
+{
+  "passport_version": "1.0",
+  "passport_id": "TP-SYSTEM-REPLACE-ME",
+  "subject_type": "SYSTEM",
+  "system_id": "REPLACE-ME",
+  "name": "Replace Me",
+  "overall_trust_state": "TP0_UNASSESSED",
+  "dimensions": {
+    "IDENTITY": {
+      "status": "NOT_VERIFIED",
+      "summary": "",
+      "evidence_refs": []
+    },
+    "SOURCE_OWNERSHIP": {
+      "status": "NOT_VERIFIED",
+      "summary": "",
+      "evidence_refs": []
+    },
+    "PERMISSIONS": {
+      "status": "NOT_VERIFIED",
+      "summary": "",
+      "evidence_refs": []
+    },
+    "POLICY": {
+      "status": "NOT_VERIFIED",
+      "summary": "",
+      "evidence_refs": []
+    },
+    "SECRETS": {
+      "status": "NOT_VERIFIED",
+      "summary": "",
+      "evidence_refs": []
+    },
+    "EVALUATION": {
+      "status": "NOT_VERIFIED",
+      "summary": "",
+      "evidence_refs": []
+    },
+    "CONTAINMENT": {
+      "status": "NOT_VERIFIED",
+      "summary": "",
+      "evidence_refs": []
+    },
+    "RUNTIME": {
+      "status": "NOT_VERIFIED",
+      "summary": "",
+      "evidence_refs": []
+    },
+    "EVIDENCE": {
+      "status": "NOT_VERIFIED",
+      "summary": "",
+      "evidence_refs": []
+    },
+    "SUPPLY_CHAIN": {
+      "status": "NOT_VERIFIED",
+      "summary": "",
+      "evidence_refs": []
+    },
+    "HUMAN_OVERSIGHT": {
+      "status": "NOT_VERIFIED",
+      "summary": "",
+      "evidence_refs": []
+    }
+  },
+  "blockers": [],
+  "evidence_refs": [],
+  "issued_at": null,
+  "last_verified_at": null
+}

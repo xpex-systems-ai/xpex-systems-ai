@@ -1,0 +1,17 @@
+{
+  "aibom_id": "AIBOM-REPLACE-ME",
+  "system_id": "REPLACE-ME",
+  "version": "1.0",
+  "source_commit": null,
+  "deployment_id": null,
+  "models": [],
+  "agents": [],
+  "tools": [],
+  "providers": [],
+  "data_sources": [],
+  "policies": [
+    "XAGF"
+  ],
+  "unknowns": [],
+  "generated_at": null
+}

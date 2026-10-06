@@ -1,0 +1,97 @@
+{
+  "passport_version": "1.0",
+  "passport_id": "TP-SYSTEM-XPEX-API-FABRIC-001",
+  "subject_type": "SYSTEM",
+  "system_id": "XPEX-API-FABRIC-001",
+  "name": "XPeX API Fabric",
+  "overall_trust_state": "TP1_DOCUMENTED",
+  "dimensions": {
+    "IDENTITY": {
+      "status": "VERIFIED",
+      "summary": "Stable system ID and System Pack are present.",
+      "evidence_refs": [
+        "systems/xpex-api-fabric/system-card.json"
+      ]
+    },
+    "SOURCE_OWNERSHIP": {
+      "status": "VERIFIED",
+      "summary": "Source repository and commit are recorded under the official XPeX GitHub organization.",
+      "evidence_refs": [
+        "systems/xpex-api-fabric/evidence/github-source.json"
+      ]
+    },
+    "PERMISSIONS": {
+      "status": "NOT_VERIFIED",
+      "summary": "Application runtime permission model has not yet been independently verified.",
+      "evidence_refs": []
+    },
+    "POLICY": {
+      "status": "POLICY_DEFINED",
+      "summary": "Subject is governed by XAGF; system-specific control implementation remains under assessment.",
+      "evidence_refs": [
+        "AI_GOVERNANCE_CHARTER.md"
+      ]
+    },
+    "SECRETS": {
+      "status": "CONDITIONAL",
+      "summary": "Prior Vercel account audit reported no environment-security issue for this project, but repository-wide secret assurance is not yet complete.",
+      "evidence_refs": [
+        "systems/xpex-api-fabric/system-card.json"
+      ]
+    },
+    "EVALUATION": {
+      "status": "NOT_VERIFIED",
+      "summary": "Functional HTTP availability is verified; dedicated AI/security evaluation is not yet complete.",
+      "evidence_refs": [
+        "systems/xpex-api-fabric/evidence/http-verification.json"
+      ]
+    },
+    "CONTAINMENT": {
+      "status": "NOT_VERIFIED",
+      "summary": "Rollback/kill-switch evidence has not yet been attached to this public passport.",
+      "evidence_refs": []
+    },
+    "RUNTIME": {
+      "status": "VERIFIED",
+      "summary": "Production Vercel deployment and HTTP 200 were independently observed.",
+      "evidence_refs": [
+        "systems/xpex-api-fabric/evidence/vercel-deployment.json",
+        "systems/xpex-api-fabric/evidence/http-verification.json"
+      ]
+    },
+    "EVIDENCE": {
+      "status": "VERIFIED",
+      "summary": "Public-safe source, deployment and HTTP evidence records are linked.",
+      "evidence_refs": [
+        "systems/xpex-api-fabric/evidence/github-source.json",
+        "systems/xpex-api-fabric/evidence/vercel-deployment.json",
+        "systems/xpex-api-fabric/evidence/http-verification.json"
+      ]
+    },
+    "SUPPLY_CHAIN": {
+      "status": "CONDITIONAL",
+      "summary": "Source-to-deployment commit provenance is recorded; dependency/SBOM assurance is pending.",
+      "evidence_refs": [
+        "systems/xpex-api-fabric/evidence/vercel-deployment.json"
+      ]
+    },
+    "HUMAN_OVERSIGHT": {
+      "status": "POLICY_DEFINED",
+      "summary": "XAGF requires separation of execution, verification and approval.",
+      "evidence_refs": [
+        "AI_GOVERNANCE_CHARTER.md"
+      ]
+    }
+  },
+  "blockers": [
+    "System-specific security evaluation pending.",
+    "Dependency/SBOM assurance pending.",
+    "Rollback/containment evidence pending.",
+    "Canonical public brand/domain finalization pending."
+  ],
+  "evidence_refs": [
+    "systems/xpex-api-fabric/system-card.json"
+  ],
+  "issued_at": "2026-10-06T01:20:00-03:00",
+  "last_verified_at": "2026-10-05T23:35:00-03:00"
+}
