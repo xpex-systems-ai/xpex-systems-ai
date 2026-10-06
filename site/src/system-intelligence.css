@@ -1,0 +1,24 @@
+
+.system-intelligence{position:relative}
+.dossier-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.dossier-card{border:1px solid var(--line);border-radius:22px;overflow:hidden;background:#0a0d12;transition:.3s ease}
+.dossier-card:hover{transform:translateY(-4px);border-color:rgba(226,178,72,.3);box-shadow:0 28px 70px rgba(0,0,0,.28)}
+.dossier-cover{min-height:285px;padding:24px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;background:radial-gradient(360px 240px at 75% 15%,rgba(226,178,72,.16),transparent 65%),linear-gradient(145deg,#121823,#080b10)}
+.dossier-cover:after{content:"";position:absolute;width:280px;height:280px;border:1px solid rgba(226,178,72,.09);border-radius:50%;right:-90px;top:-90px}
+.dossier-number{font-size:10px;letter-spacing:.16em;color:#6f7886}.dossier-cover>.status{position:absolute;right:24px;top:20px}
+.dossier-glyph{position:absolute;right:30px;top:76px;font-size:76px;font-weight:800;letter-spacing:-.08em;color:rgba(226,178,72,.08)}
+.dossier-cover small{color:#7e8794;text-transform:uppercase;letter-spacing:.1em;font-size:9px}
+.dossier-cover h3{font-size:34px;line-height:1;margin:9px 0 7px;letter-spacing:-.045em;max-width:75%}
+.dossier-cover p{color:var(--gold);font-size:11px;text-transform:uppercase;letter-spacing:.08em;margin:0}
+.dossier-body{padding:25px}.dossier-body>p{color:#aab2be;line-height:1.65;min-height:70px}
+.dossier-proof{margin:22px 0;padding:17px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.018)}
+.dossier-proof b{font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#d6dbe3}
+.dossier-proof ul{margin:12px 0 0;padding-left:18px;color:#838d9a;font-size:11px;line-height:1.65}
+.dossier-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:18px 0}
+.dossier-meta span{border-top:1px solid var(--line);padding-top:10px;color:#697381;font-size:9px;text-transform:uppercase;letter-spacing:.07em}
+.dossier-meta b{display:block;color:#b9c1cb;font-size:10px;margin-top:5px;overflow-wrap:anywhere}
+.dossier-actions{display:flex;gap:8px;flex-wrap:wrap}.dossier-actions button{color:inherit;cursor:pointer;font-family:inherit}
+.brain-contract{margin-top:18px;border:1px solid rgba(84,220,138,.18);border-radius:18px;padding:22px 25px;display:grid;grid-template-columns:.35fr 1fr;gap:25px;background:rgba(84,220,138,.025)}
+.brain-contract span{color:var(--green);font-size:10px;letter-spacing:.14em;font-weight:800}.brain-contract p{margin:0;color:#89938f;line-height:1.6;font-size:12px}
+@media(max-width:900px){.dossier-grid{grid-template-columns:1fr}.brain-contract{grid-template-columns:1fr;gap:8px}}
+@media(max-width:560px){.dossier-cover{min-height:250px}.dossier-cover h3{font-size:28px}.dossier-meta{grid-template-columns:1fr}.dossier-body>p{min-height:0}}
