@@ -22,6 +22,7 @@ This page summarizes only status supported by current repository, workflow and d
 | Provider relationship registry | Established |
 | Public website | **LIVE / Vercel production READY** |
 | GX Public Evidence Concierge | **IMPLEMENTED / evidence-only default** |
+| GX Neural Copilot Plugin | **V1 CREATED / PRIVATE / MCP production READY** |
 | GX Knowledge Plane V1 | **7 detailed systems / 20 material lineages** |
 | System Intelligence Pages | **7 evidence-backed detail surfaces** |
 | Media Evidence Governance | **V1 established / seed triage complete** |
@@ -113,6 +114,22 @@ GX production verification:
 - **XPeX Plugin Factory / GXEON Agent Gateway:** Railway deployment SUCCESS; public Railway domains present.
 - **GXEON Wallet Command Center:** Vercel production READY; one repeated Node `url.parse()` deprecation warning remains a demo hardening item.
 - **XPeX Academy:** legacy Vercel deployments are intentionally CANCELED after decommissioning that path; canonical Firebase/Railway runtime still requires provider-backed correlation.
+
+## GX Neural Copilot
+
+- Plugin package: `xpex-gx-neural-copilot`
+- Version: `1.0.0`
+- Scope/discoverability: `USER / PRIVATE`
+- MCP endpoint: `https://xpex-systems-ai.vercel.app/api/mcp/gx`
+- Production deployment: `dpl_GEkcSKyKJaPVKkUNxPejoiLozQEi`
+- Production state: `READY`
+- Production health check: `200 OK`
+- Tools: **11 read-only MCP tools**
+- Knowledge coverage: **7 detailed systems / 20 material lineages / 19 evidence nodes**
+- Source commit: `f5ffafd43517f5363d2034a959ffe7a63abf528f`
+- Release evidence: `data/company/gx-neural-copilot-release-v1.json`
+
+Knowledge access does not grant action permission. Operator/write capabilities remain a separate authenticated future layer.
 
 ## Agent truth
 
