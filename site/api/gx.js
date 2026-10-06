@@ -1,4 +1,5 @@
 import { GX_EVIDENCE, GX_PUBLIC_RULES } from '../src/data/gx-evidence.js';
+import neuralCatalog from '../../data/company/neural-system-catalog-v2.json' with { type: 'json' };
 
 const buckets = globalThis.__gxRateBuckets || new Map();
 globalThis.__gxRateBuckets = buckets;
@@ -36,13 +37,40 @@ function scoreEvidence(query, item) {
   return score;
 }
 
+function neuralEvidence(query) {
+  const q = tokens(query);
+  return neuralCatalog.systems
+    .map(system => {
+      const hay = normalize([
+        system.name, system.role, system.state, system.tier, system.description,
+        ...(system.stack || []), ...(system.open_gates || [])
+      ].join(' '));
+      let score = 0;
+      for (const token of q) if (hay.includes(token)) score += token.length > 5 ? 3 : 1;
+      return {system, score};
+    })
+    .filter(x => x.score > 0)
+    .sort((a,b) => b.score - a.score)
+    .slice(0,3)
+    .map(({system}) => ({
+      id: 'neural:' + system.id,
+      title: system.name,
+      kind: 'neural-system-record',
+      keywords: [system.name, system.role, system.state, system.tier, ...(system.stack || [])],
+      summary: system.description + ' Runtime: ' + JSON.stringify(system.runtime) + '. Open gates: ' + ((system.open_gates || []).join('; ') || 'none recorded') + '.',
+      status: system.state,
+      url: 'https://xpex-systems-ai.vercel.app/#system/' + system.id
+    }));
+}
+
 function retrieveEvidence(query) {
   const ranked = GX_EVIDENCE
     .map(item => ({...item, score:scoreEvidence(query,item)}))
     .sort((a,b) => b.score - a.score);
 
-  const selected = ranked.filter(x => x.score > 0).slice(0,5);
-  if (selected.length) return selected;
+  const selected = ranked.filter(x => x.score > 0).slice(0,4);
+  const neural = neuralEvidence(query);
+  if (selected.length || neural.length) return [...neural, ...selected].slice(0,6);
   return GX_EVIDENCE.filter(x => ['company','founder','portfolio','trust'].includes(x.id));
 }
 
@@ -154,7 +182,9 @@ export default async function handler(req,res) {
       scope:'public-evidence-only',
       aiEnabled:process.env.GX_AI_ENABLED === 'true' && Boolean(process.env.AI_GATEWAY_API_KEY || process.env.VERCEL_OIDC_TOKEN),
       model:(process.env.GX_AI_ENABLED === 'true' && (process.env.AI_GATEWAY_API_KEY || process.env.VERCEL_OIDC_TOKEN)) ? MODEL : null,
-      evidenceItems:GX_EVIDENCE.length
+      evidenceItems:GX_EVIDENCE.length,
+      neuralSystems:neuralCatalog.systems.length,
+      knowledgeLayer:'neural-system-catalog-v2'
     });
   }
 
