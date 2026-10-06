@@ -195,7 +195,7 @@
       "name": "XPeX Academy",
       "role": "AI learning and applied-project platform",
       "tier": "FLAGSHIP_CANDIDATE",
-      "public_demo_status": "RUNTIME_CORRELATION_REQUIRED",
+      "public_demo_status": "RECOVERY_REQUIRED",
       "source": "xpex-systems-ai/XPEX-ACADEMY",
       "source_visibility": "PUBLIC",
       "runtime": {
@@ -216,7 +216,7 @@
         "Canonical Firebase/Railway runtime is not visible through the currently connected provider inventory.",
         "Public demo URL and current production health still require provider-backed corroboration."
       ],
-      "next_action": "Connect and verify the canonical Firebase/Railway runtime and run a student/Polo smoke test; do not revive quarantined Vercel copies unless architecture changes."
+      "next_action": "Recover provider-backed runtime verification for the canonical Firebase/Railway stack and run a student/Polo smoke test; do not revive quarantined Vercel copies unless architecture changes."
     }
   ],
   "portfolio_systems": [
