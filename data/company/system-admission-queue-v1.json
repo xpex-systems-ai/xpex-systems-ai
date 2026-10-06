@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-06T04:08:00-03:00",
+  "generated_at": "2026-10-06T04:16:00-03:00",
   "rule": "Candidates are discovery targets only. PENDING_DISCOVERY does not imply ownership, deployment, production health or commercial readiness.",
   "candidates": [
     {
@@ -22,8 +22,13 @@
       "blockers": [
         "Canonical identity not yet confirmed.",
         "Relevant Supabase project not visible in current connector session.",
-        "Source hardening PR #1 pending checks/review."
-      ]
+        "Dependency/SBOM assurance remains pending."
+      ],
+      "source_hardening": {
+        "status": "MERGED_AND_VERIFIED",
+        "repository": "xpex-systems-ai/remix-of-remix-of-remix-of-remix-of-xpex-api-hub-87",
+        "merge_commit": "eb76188996c00604cd2d50aa89e7fd7bf9417f3c"
+      }
     },
     {
       "candidate_id": "CAND-XPEX-PLUGIN-FACTORY-001",
