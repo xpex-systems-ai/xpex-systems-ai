@@ -1,47 +1,51 @@
-# Agent Kill Switch & Containment Standard
+# GXEON Kill-Switch Standard
 
-Every production-capable GXEON agent must have a tested containment path.
+## Objective
 
-## Minimum kill-switch actions
+Every privileged persistent agent must have a practical containment mechanism before production activation.
 
-A production kill switch should be able to perform, as applicable:
+## Required containment actions
 
-1. disable the agent identity;
-2. revoke tool access;
-3. revoke/rotate scoped credentials;
-4. freeze write-capable actions;
-5. stop schedules and autonomous loops;
-6. quarantine memory/state if compromise is suspected;
-7. preserve logs and evidence.
+The default GXEON containment design includes:
+- `DISABLE_AGENT`
+- `REVOKE_TOOLS`
+- `FREEZE_WRITES`
+- `STOP_SCHEDULES`
+- `PRESERVE_LOGS`
 
-## Activation
-
-Kill-switch activation authority must be explicit.
-
-High-risk agents should support more than one containment path so a single failed provider does not prevent shutdown.
+Additional actions may include:
+- revoke provider token;
+- rotate credentials;
+- quarantine memory;
+- disable outbound network access;
+- freeze financial capability;
+- rollback deployment.
 
 ## States
 
-- `DESIGN` — containment behavior documented.
-- `READY` — implementation exists.
-- `TESTED` — implementation has been exercised with evidence.
-- `RETIRED` — agent no longer active.
+- `DESIGN` — containment is documented but not runtime-tested.
+- `READY` — technical mechanism exists.
+- `TESTED` — mechanism has passed a controlled test.
+- `RETIRED` — agent/runtime is retired.
 
-An agent cannot be promoted to a persistent production runtime if its kill switch remains only `DESIGN`.
+Current GXEON persistent-agent roles remain in `DESIGN` until runtime infrastructure exists.
+
+## Authority
+
+Kill-switch activation is controlled by authorized XPeX human operators.
+
+An agent cannot silently remove or weaken its own containment path.
 
 ## Evidence
 
-A kill-switch test should record:
-- agent ID;
-- trigger;
-- activation identity;
-- time to containment;
-- tools/tokens revoked;
-- write paths blocked;
-- scheduled work stopped;
-- log/evidence preservation;
-- restoration/recovery steps.
+A production activation gate should require:
+- kill-switch ID;
+- mechanism;
+- activation authority;
+- last tested time;
+- test evidence;
+- recovery procedure.
 
 ## Rule
 
-Containment is a first-class capability, not an emergency document.
+No R2+ persistent autonomous agent reaches production without a tested containment path.
