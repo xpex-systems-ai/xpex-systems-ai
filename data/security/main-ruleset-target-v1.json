@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "target_branch": "main",
+  "status": "TARGET_CONFIGURATION_NOT_YET_ENFORCED",
+  "protections": {
+    "require_pull_request": true,
+    "minimum_approvals": 1,
+    "dismiss_stale_approvals": true,
+    "require_conversation_resolution": true,
+    "block_force_push": true,
+    "restrict_deletion": true,
+    "require_status_checks": true,
+    "required_checks": [
+      "Validate XAGF structure",
+      "Validate public company claims",
+      "Validate system registry",
+      "Validate Trust Passports and AI-BOMs",
+      "Validate governed agent permissions",
+      "Scan tracked files for secret material",
+      "Test evidence and governance invariants",
+      "Validate immutable GitHub Action pins",
+      "CodeQL / Python"
+    ],
+    "future_checks": [
+      "Dependency vulnerability review"
+    ]
+  },
+  "note": "Dependency Review should become required only after GitHub Dependency Graph is enabled and the workflow passes. This file documents the intended policy and is not proof of GitHub-side enforcement."
+}
