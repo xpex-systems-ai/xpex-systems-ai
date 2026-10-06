@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xpex.systems/schemas/permission-policy.schema.json",
+  "title": "XPeX Agent Permission Policy",
+  "type": "object",
+  "required": [
+    "policy_id",
+    "subject_id",
+    "allow",
+    "deny",
+    "approval_required",
+    "default_effect"
+  ],
+  "properties": {
+    "policy_id": {
+      "type": "string"
+    },
+    "subject_id": {
+      "type": "string"
+    },
+    "allow": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "deny": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "approval_required": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "default_effect": {
+      "enum": [
+        "DENY",
+        "ALLOW"
+      ]
+    },
+    "environments": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "data_classes": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "D0",
+          "D1",
+          "D2",
+          "D3",
+          "D4"
+        ]
+      }
+    },
+    "status": {
+      "enum": [
+        "DRAFT",
+        "ACTIVE",
+        "PAUSED",
+        "RETIRED"
+      ]
+    }
+  },
+  "additionalProperties": true
+}
