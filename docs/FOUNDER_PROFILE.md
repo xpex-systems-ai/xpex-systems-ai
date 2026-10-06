@@ -56,3 +56,13 @@ Best-fit role families include:
 - Technical AI Product Engineering.
 
 This profile does not replace role-specific requirements such as programming depth, English proficiency, on-site expectations, years of experience or interview performance.
+
+
+## Canonical discovery
+
+- LinkedIn: https://www.linkedin.com/in/ceojuniorsena
+- Corporate site: https://xpex-systems-ai.vercel.app
+- Corporate GitHub: https://github.com/xpex-systems-ai/xpex-systems-ai
+- Flagship review pack: https://github.com/xpex-systems-ai/xpex-systems-ai/blob/main/docs/FLAGSHIP_CASES.md
+
+The LinkedIn surface is the discovery layer. The corporate site and GitHub remain the verification layers.
