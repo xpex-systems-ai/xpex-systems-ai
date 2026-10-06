@@ -1,72 +1,16 @@
 import './styles.css';
 import './gx.css';
 import { initGX } from './gx.js';
+import { SYSTEM_INTELLIGENCE } from './data/system-intelligence.js';
 
-const systems = [
-  {
-    name: 'XPeX Systems Command',
-    role: 'Company Intelligence & Evidence OS',
-    status: 'STAGING VERIFIED',
-    tone: 'amber',
-    copy: 'Maps systems, providers, runtime evidence and provenance into one operational control plane.',
-    proof: 'Railway · PostgreSQL · Evidence registry',
-    href: 'https://github.com/xpex-systems-ai/xpex-systems-command'
-  },
-  {
-    name: 'GXEON Audit OS',
-    role: 'Evidence-led systems audit',
-    status: 'DEMO READY',
-    tone: 'green',
-    copy: 'Turns infrastructure discovery into findings, evidence and reviewable technical decisions.',
-    proof: 'Vercel READY · Runtime error query clean',
-    href: 'https://gxeon-audit-os.vercel.app'
-  },
-  {
-    name: 'XPeX Plugin Factory',
-    role: 'MCP · Plugin · Skill compiler',
-    status: 'DEMO READY',
-    tone: 'green',
-    copy: 'Compiles strict blueprints into deterministic agent packages with policy and security gates.',
-    proof: 'Railway SUCCESS · MCP live',
-    href: 'https://xpex-plugin-factory-production.up.railway.app'
-  },
-  {
-    name: 'XPeX Studio AI',
-    role: 'AI creation control plane',
-    status: 'DEMO READY',
-    tone: 'green',
-    copy: 'A production frontend foundation for Genesis, Agent Core and Memory Core workflows.',
-    proof: 'Vercel READY · Next.js',
-    href: 'https://xpex-studio-ai.vercel.app'
-  },
-  {
-    name: 'GXEON Wallet Command Center',
-    role: 'Agent marketplace · Web3 truth layer',
-    status: 'HARDENING',
-    tone: 'amber',
-    copy: 'Separates watch-only state, agent demand, payment evidence and settled money with explicit truth boundaries.',
-    proof: 'Vercel READY · MCP discovery',
-    href: 'https://gxeon-wallet-command-center.vercel.app'
-  },
-  {
-    name: 'XPeX API Fabric',
-    role: 'API & machine-service distribution',
-    status: 'ADMISSION',
-    tone: 'amber',
-    copy: 'Production API lineage under enterprise admission, with source assurance and provider evidence.',
-    proof: 'Vercel READY · CodeQL',
-    href: 'https://github.com/xpex-systems-ai/remix-of-remix-of-remix-of-remix-of-xpex-api-hub-87'
-  },
-  {
-    name: 'XPeX Academy',
-    role: 'AI learning & applied projects',
-    status: 'RUNTIME CORRELATION',
-    tone: 'amber',
-    copy: 'Learning, Polo and student operations designed to move from education into applied AI production.',
-    proof: 'GitHub + Firebase + Railway lineage',
-    href: 'https://github.com/xpex-systems-ai/XPEX-ACADEMY'
-  }
-];
+const systems = SYSTEM_INTELLIGENCE.systems.map((s) => ({
+  ...s,
+  role: s.subtitle,
+  tone: ['DEMO READY'].includes(s.status) ? 'green' : 'amber',
+  copy: s.summary,
+  proofLine: s.proof[0],
+  href: s.links.live || s.links.source || '#'
+}));
 
 const checks = [
   'Governance Validation',
@@ -92,6 +36,7 @@ app.innerHTML = `
     </a>
     <nav>
       <a href="#systems">Systems</a>
+      <a href="#intelligence">Intelligence</a>
       <a href="#trust">Trust</a>
       <a href="#gx">GX</a>
       <a href="#founder">Founder</a>
@@ -150,10 +95,56 @@ app.innerHTML = `
             <h3>${s.name}</h3>
             <p class="role">${s.role}</p>
             <p class="desc">${s.copy}</p>
-            <div class="proof"><span></span>${s.proof}</div>
-            <div class="open">View evidence ↗</div>
+            <div class="proof"><span></span>${s.proofLine}</div>
+            <div class="open">Open system ↗</div>
           </a>
         `).join('')}
+      </div>
+    </section>
+
+    <section id="intelligence" class="shell section system-intelligence">
+      <div class="section-head">
+        <div>
+          <p class="kicker">GX SYSTEM INTELLIGENCE</p>
+          <h2>Every system gets a dossier.</h2>
+        </div>
+        <p>A Netflix-style catalog for the company brain: identity, runtime, provider, proof, source, assets and evidence state — one canonical record per system.</p>
+      </div>
+      <div class="dossier-grid">
+        ${systems.map((s,i)=>`
+          <article class="dossier-card" style="--i:${i}">
+            <div class="dossier-cover">
+              <span class="dossier-number">GX / 0${i+1}</span>
+              <span class="status ${s.tone}">${s.status}</span>
+              <div class="dossier-glyph">${s.name.split(' ').map(x=>x[0]).slice(0,3).join('')}</div>
+              <div>
+                <small>${s.provider} · ${s.environment}</small>
+                <h3>${s.name}</h3>
+                <p>${s.role}</p>
+              </div>
+            </div>
+            <div class="dossier-body">
+              <p>${s.copy}</p>
+              <div class="dossier-proof">
+                <b>Evidence stack</b>
+                <ul>${s.proof.map(p=>`<li>${p}</li>`).join('')}</ul>
+              </div>
+              <div class="dossier-meta">
+                <span>Stage <b>${s.stage}</b></span>
+                <span>Assets <b>${s.media.length}</b></span>
+                <span>Media <b>${s.media_class || 'PENDING'}</b></span>
+              </div>
+              <div class="dossier-actions">
+                <a class="button primary" href="${s.href}" target="_blank" rel="noreferrer">Open evidence ↗</a>
+                <button class="button dossier-ask" type="button" data-system-ask="${s.id}">Ask GX</button>
+              </div>
+            </div>
+          </article>
+        `).join('')}
+      </div>
+      <div class="brain-contract">
+        <span>GX KNOWLEDGE CONTRACT</span>
+        <p>GX can reason over canonical system records, but it cannot silently promote staging to production, concept art to evidence, watched money to settled money, or internal data to public truth.</p>
       </div>
     </section>
 
@@ -296,3 +287,14 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.system-card, .manifesto, .section-head, .trust-layout, .founder, .gx-intro').forEach(el => observer.observe(el));
 
 initGX();
+
+document.querySelectorAll('[data-system-ask]').forEach(button => {
+  button.addEventListener('click', () => {
+    const system = SYSTEM_INTELLIGENCE.systems.find(x => x.id === button.dataset.systemAsk);
+    const input = document.querySelector('[data-gx-input]');
+    if (!system || !input) return;
+    input.value = `Me dê o dossiê completo de ${system.name}: função, estado, provider, runtime, evidências, assets e o que ainda não está provado.`;
+    document.querySelector('#gx')?.scrollIntoView({behavior:'smooth'});
+    setTimeout(() => input.focus(), 500);
+  });
+});
