@@ -13,8 +13,8 @@ Move from a large internal project inventory to a small, recruiter/investor/cust
 - [x] Enterprise Control Plane documented
 - [x] Trust/assurance truth boundary documented
 - [ ] Corporate public domain selected
-- [ ] Corporate Vercel target account/team selected
-- [ ] Public company site deployed
+- [x] Corporate Vercel target account/team selected — `xpex-neural`
+- [x] Public company site deployed — `xpex-systems-ai.vercel.app`
 
 ## Gate B — Portfolio consolidation
 
@@ -80,10 +80,9 @@ WHO WE ARE
 
 ## Immediate next execution
 
-1. Merge Portfolio Consolidation V1 after all CI gates pass.
-2. Select the corporate Vercel account/team for the public XPeX site.
-3. Build the public site directly from the evidence-backed registry.
-4. Fix/close demo blockers in Wallet, API Fabric and Academy.
-5. Produce screenshots/video proof for the three green systems.
-6. Standardize LinkedIn and résumé against the exact same system names and claims.
-7. Begin curated applications and partner/investor outreach.
+1. Keep the corporate site synchronized with the evidence-backed registry.
+2. Fix/close demo blockers in Wallet, API Fabric and Academy.
+3. Produce screenshots/video proof for the three green systems.
+4. Attach a custom corporate domain when the domain decision is finalized.
+5. Standardize LinkedIn and résumé against the exact same system names and claims.
+6. Begin curated applications and partner/investor outreach.
