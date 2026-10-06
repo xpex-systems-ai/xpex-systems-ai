@@ -83,7 +83,7 @@ A passing badge means the corresponding workflow executed successfully. It is no
 - **XPeX Studio AI:** Vercel production READY; no runtime error group observed in the latest 7-day query.
 - **XPeX Plugin Factory / GXEON Agent Gateway:** Railway deployment SUCCESS; public Railway domains present.
 - **GXEON Wallet Command Center:** Vercel production READY; one repeated Node `url.parse()` deprecation warning remains a demo hardening item.
-- **XPeX Academy:** strategic flagship candidate, but latest observed relevant Vercel deployments are CANCELED; canonical production recovery is required.
+- **XPeX Academy:** legacy Vercel deployments are intentionally CANCELED after decommissioning that path; canonical Firebase/Railway runtime still requires provider-backed correlation.
 
 ## Agent truth
 
@@ -133,7 +133,7 @@ BUILD → CONNECT → OPERATE → PROVE → IMPROVE
 1. Enable/verify GitHub admin security controls and required main-branch enforcement.
 2. Consolidate 103 observed Vercel projects into 20 material lineages, 10 portfolio systems and 5–7 flagships.
 3. Remove the Wallet Command Center runtime deprecation warning and run a clean external-demo smoke pass.
-4. Resolve XPeX API/Marketplace canonical identity + Supabase lineage and recover one canonical XPeX Academy production deployment.
+4. Resolve XPeX API/Marketplace canonical identity + Supabase lineage and connect/verify the canonical XPeX Academy Firebase/Railway runtime.
 5. Build public case pages for the flagship set and the founder engineering profile.
 6. Convert verified System Packs and Trust Passports into the public XPeX Systems Command / Trust Center dashboard.
 7. Run release provenance attestation on the first versioned enterprise-assurance release.
