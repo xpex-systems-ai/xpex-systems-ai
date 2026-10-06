@@ -62,6 +62,14 @@ for item in index.get("systems", []):
             errors.append(f"{sid}: index slug/card product_id mismatch")
 
         runtime_status = card.get("runtime_status")
+        if runtime_status in {"VERIFIED_LIVE", "VERIFIED_STAGING"}:
+            trust_ref = card.get("trust_passport")
+            aibom_ref = card.get("ai_bom")
+            if not trust_ref or not (ROOT / trust_ref).exists():
+                errors.append(f"{sid}: verified runtime missing Trust Passport")
+            if not aibom_ref or not (ROOT / aibom_ref).exists():
+                errors.append(f"{sid}: verified runtime missing AI-BOM")
+
         if runtime_status == "VERIFIED_LIVE":
             source = card.get("source") or {}
             runtime = card.get("runtime") or {}
