@@ -29,6 +29,12 @@
     "Watched value is not settled money",
     "Concept art is not runtime evidence"
   ],
-  "public_evidence_count": 12,
-  "privacy_boundary": "The public GX instance is deliberately separated from the founder's private ChatGPT workspace and connected accounts."
+  "public_evidence_count": 19,
+  "privacy_boundary": "The public GX instance is deliberately separated from the founder's private ChatGPT workspace and connected accounts.",
+  "knowledge_plane": {
+    "system_intelligence_pages": 7,
+    "material_lineages": 20,
+    "graph": "data/company/gx-knowledge-graph-v1.json",
+    "machine_registry": "site/public/data/system-intelligence-v1.json"
+  }
 }

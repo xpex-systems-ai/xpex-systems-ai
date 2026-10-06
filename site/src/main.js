@@ -1,9 +1,12 @@
 import './styles.css';
 import './gx.css';
 import { initGX } from './gx.js';
+import './system-page.css';
+import { maybeRenderSystemPage, rewriteSystemLinks } from './system-page.js';
 
 const systems = [
   {
+    slug: 'systems-command',
     name: 'XPeX Systems Command',
     role: 'Company Intelligence & Evidence OS',
     status: 'STAGING VERIFIED',
@@ -13,6 +16,7 @@ const systems = [
     href: 'https://github.com/xpex-systems-ai/xpex-systems-command'
   },
   {
+    slug: 'audit-os',
     name: 'GXEON Audit OS',
     role: 'Evidence-led systems audit',
     status: 'DEMO READY',
@@ -22,6 +26,7 @@ const systems = [
     href: 'https://gxeon-audit-os.vercel.app'
   },
   {
+    slug: 'plugin-factory',
     name: 'XPeX Plugin Factory',
     role: 'MCP · Plugin · Skill compiler',
     status: 'DEMO READY',
@@ -31,6 +36,7 @@ const systems = [
     href: 'https://xpex-plugin-factory-production.up.railway.app'
   },
   {
+    slug: 'studio-ai',
     name: 'XPeX Studio AI',
     role: 'AI creation control plane',
     status: 'DEMO READY',
@@ -40,6 +46,7 @@ const systems = [
     href: 'https://xpex-studio-ai.vercel.app'
   },
   {
+    slug: 'wallet-command',
     name: 'GXEON Wallet Command Center',
     role: 'Agent marketplace · Web3 truth layer',
     status: 'HARDENING',
@@ -49,6 +56,7 @@ const systems = [
     href: 'https://gxeon-wallet-command-center.vercel.app'
   },
   {
+    slug: 'api-fabric',
     name: 'XPeX API Fabric',
     role: 'API & machine-service distribution',
     status: 'ADMISSION',
@@ -58,6 +66,7 @@ const systems = [
     href: 'https://github.com/xpex-systems-ai/remix-of-remix-of-remix-of-remix-of-xpex-api-hub-87'
   },
   {
+    slug: 'academy',
     name: 'XPeX Academy',
     role: 'AI learning & applied projects',
     status: 'RUNTIME CORRELATION',
@@ -142,7 +151,7 @@ app.innerHTML = `
       </div>
       <div class="systems-grid">
         ${systems.map((s, i) => `
-          <a class="system-card" href="${s.href}" target="_blank" rel="noreferrer" style="--i:${i}">
+          <a class="system-card" href="${s.href}" data-system-slug="${s.slug}" style="--i:${i}">
             <div class="system-top">
               <span class="index">0${i + 1}</span>
               <span class="status ${s.tone}">${s.status}</span>
@@ -293,6 +302,10 @@ const observer = new IntersectionObserver((entries) => {
   }
 }, { threshold: 0.12 });
 
-document.querySelectorAll('.system-card, .manifesto, .section-head, .trust-layout, .founder, .gx-intro').forEach(el => observer.observe(el));
+const systemPageActive = maybeRenderSystemPage(app);
 
-initGX();
+if (!systemPageActive) {
+  rewriteSystemLinks();
+  document.querySelectorAll('.system-card, .manifesto, .section-head, .trust-layout, .founder, .gx-intro').forEach(el => observer.observe(el));
+  initGX();
+}

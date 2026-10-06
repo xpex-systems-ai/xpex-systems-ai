@@ -22,6 +22,8 @@ This page summarizes only status supported by current repository, workflow and d
 | Provider relationship registry | Established |
 | Public website | **LIVE / Vercel production READY** |
 | GX Public Evidence Concierge | **IMPLEMENTED / evidence-only default** |
+| GX Knowledge Plane V1 | **7 detailed systems / 20 material lineages** |
+| System Intelligence Pages | **7 evidence-backed detail surfaces** |
 | Media Evidence Governance | **V1 established / seed triage complete** |
 | Enterprise Control Plane V2 | **Established / validated on main** |
 | System admission gates | **G0→G7 established** |
@@ -154,6 +156,6 @@ BUILD → CONNECT → OPERATE → PROVE → IMPROVE
 2. Consolidate 103 observed Vercel projects into 20 material lineages, 10 portfolio systems and 5–7 flagships.
 3. Remove the Wallet Command Center runtime deprecation warning and run a clean external-demo smoke pass.
 4. Resolve XPeX API/Marketplace canonical identity + Supabase lineage and connect/verify the canonical XPeX Academy Firebase/Railway runtime.
-5. Build public case pages for the flagship set and the founder engineering profile.
+5. Continue enriching the 7 System Intelligence pages with approved screenshots, redacted media and provider-backed runtime evidence.
 6. Convert verified System Packs and Trust Passports into the public XPeX Systems Command / Trust Center dashboard.
 7. Run release provenance attestation on the first versioned enterprise-assurance release.

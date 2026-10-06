@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-10-06T19:32:00-03:00",
+  "title": "XPeX System Intelligence Registry",
+  "policy": "Evidence First",
+  "detail_pages": 7,
+  "material_lineages": 20,
+  "note": "Detailed public pages exist only for evidence-backed flagship surfaces. Material lineages are discovery/portfolio nodes, not all independent products.",
+  "systems": [
+  {
+    "slug": "systems-command",
+    "id": "XPEX-SYSTEMS-COMMAND",
+    "name": "XPeX Systems Command",
+    "status": "STAGING VERIFIED",
+    "runtime": "Railway / staging / SUCCESS"
+  },
+  {
+    "slug": "wallet-command",
+    "id": "GXEON-WALLET-COMMAND",
+    "name": "GXEON Wallet Command Center",
+    "status": "HARDENING",
+    "runtime": "Vercel / production / READY"
+  },
+  {
+    "slug": "audit-os",
+    "id": "GXEON-AUDIT-OS",
+    "name": "GXEON Audit OS",
+    "status": "DEMO READY",
+    "runtime": "Vercel / production / READY"
+  },
+  {
+    "slug": "plugin-factory",
+    "id": "XPEX-PLUGIN-FACTORY",
+    "name": "XPeX Plugin Factory",
+    "status": "DEMO READY",
+    "runtime": "Railway / production / SUCCESS"
+  },
+  {
+    "slug": "studio-ai",
+    "id": "XPEX-STUDIO-AI",
+    "name": "XPeX Studio AI",
+    "status": "DEMO READY",
+    "runtime": "Vercel / production / READY"
+  },
+  {
+    "slug": "api-fabric",
+    "id": "XPEX-API-FABRIC",
+    "name": "XPeX API Fabric / Agent Marketplace",
+    "status": "ADMISSION",
+    "runtime": "Vercel / production / READY"
+  },
+  {
+    "slug": "academy",
+    "id": "XPEX-ACADEMY",
+    "name": "XPeX Academy",
+    "status": "RUNTIME CORRELATION",
+    "runtime": "Firebase + Railway declared / current provider correlation pending"
+  }
+]
+}
