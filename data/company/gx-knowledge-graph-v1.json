@@ -1,0 +1,290 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-10-06T19:32:00-03:00",
+  "name": "GX Ecosystem Knowledge Graph",
+  "purpose": "Transfer audited XPeX system knowledge into a governed machine-readable graph used by GX and public system intelligence pages.",
+  "policy": "Evidence First",
+  "public_scope": "Only evidence-backed public/company-safe information is represented here.",
+  "counts": {
+    "material_lineages": 20,
+    "detail_systems": 7
+  },
+  "nodes": [
+    {
+      "id": "company",
+      "type": "company",
+      "name": "XPeX Systems AI",
+      "status": "PUBLIC"
+    },
+    {
+      "id": "founder",
+      "type": "person",
+      "name": "Junior Sena",
+      "status": "PUBLIC"
+    },
+    {
+      "id": "systems-command",
+      "type": "system",
+      "name": "XPeX Systems Command",
+      "status": "STAGING VERIFIED"
+    },
+    {
+      "id": "wallet-command",
+      "type": "system",
+      "name": "GXEON Wallet Command Center",
+      "status": "HARDENING"
+    },
+    {
+      "id": "audit-os",
+      "type": "system",
+      "name": "GXEON Audit OS",
+      "status": "DEMO READY"
+    },
+    {
+      "id": "plugin-factory",
+      "type": "system",
+      "name": "XPeX Plugin Factory",
+      "status": "DEMO READY"
+    },
+    {
+      "id": "studio-ai",
+      "type": "system",
+      "name": "XPeX Studio AI",
+      "status": "DEMO READY"
+    },
+    {
+      "id": "api-fabric",
+      "type": "system",
+      "name": "XPeX API Fabric / Agent Marketplace",
+      "status": "ADMISSION"
+    },
+    {
+      "id": "academy",
+      "type": "system",
+      "name": "XPeX Academy",
+      "status": "RUNTIME CORRELATION"
+    },
+    {
+      "id": "agent-gateway",
+      "type": "lineage",
+      "name": "GXEON Agent Gateway",
+      "status": "MATERIAL_LINEAGE"
+    },
+    {
+      "id": "gxeon-ai-core",
+      "type": "lineage",
+      "name": "GXEON AI core/API",
+      "status": "MATERIAL_LINEAGE"
+    },
+    {
+      "id": "app-forge",
+      "type": "lineage",
+      "name": "GXEON App Forge",
+      "status": "MATERIAL_LINEAGE"
+    },
+    {
+      "id": "media-center",
+      "type": "lineage",
+      "name": "GXEON Media Center",
+      "status": "MATERIAL_LINEAGE"
+    },
+    {
+      "id": "cenara",
+      "type": "lineage",
+      "name": "Cenara",
+      "status": "MATERIAL_LINEAGE"
+    },
+    {
+      "id": "synapse-revenue",
+      "type": "lineage",
+      "name": "Synapse Revenue Hub",
+      "status": "MATERIAL_LINEAGE"
+    },
+    {
+      "id": "product-forge",
+      "type": "lineage",
+      "name": "Product Forge AI",
+      "status": "MATERIAL_LINEAGE"
+    },
+    {
+      "id": "automai",
+      "type": "lineage",
+      "name": "AutomAI XPeX Systems",
+      "status": "MATERIAL_LINEAGE"
+    },
+    {
+      "id": "commander",
+      "type": "lineage",
+      "name": "XPeX Commander",
+      "status": "MATERIAL_LINEAGE"
+    },
+    {
+      "id": "monetary-dashboard",
+      "type": "lineage",
+      "name": "XPeX Monetary Dashboard",
+      "status": "MATERIAL_LINEAGE"
+    },
+    {
+      "id": "creator-commerce",
+      "type": "lineage",
+      "name": "XPeX Creator Commerce OS",
+      "status": "MATERIAL_LINEAGE"
+    },
+    {
+      "id": "xpex-os",
+      "type": "lineage",
+      "name": "XPeX OS",
+      "status": "MATERIAL_LINEAGE"
+    },
+    {
+      "id": "lead-flow",
+      "type": "lineage",
+      "name": "XPeX Lead Flow",
+      "status": "MATERIAL_LINEAGE"
+    }
+  ],
+  "edges": [
+    {
+      "from": "founder",
+      "to": "company",
+      "relation": "FOUNDED"
+    },
+    {
+      "from": "company",
+      "to": "systems-command",
+      "relation": "OPERATES"
+    },
+    {
+      "from": "company",
+      "to": "wallet-command",
+      "relation": "OPERATES"
+    },
+    {
+      "from": "company",
+      "to": "audit-os",
+      "relation": "OPERATES"
+    },
+    {
+      "from": "company",
+      "to": "plugin-factory",
+      "relation": "OPERATES"
+    },
+    {
+      "from": "company",
+      "to": "studio-ai",
+      "relation": "OPERATES"
+    },
+    {
+      "from": "company",
+      "to": "api-fabric",
+      "relation": "OPERATES"
+    },
+    {
+      "from": "company",
+      "to": "academy",
+      "relation": "OPERATES"
+    },
+    {
+      "from": "systems-command",
+      "to": "audit-os",
+      "relation": "EVIDENCE_CONTROL_PLANE_FOR"
+    },
+    {
+      "from": "systems-command",
+      "to": "api-fabric",
+      "relation": "ADMISSION_CONTROL_PLANE_FOR"
+    },
+    {
+      "from": "systems-command",
+      "to": "plugin-factory",
+      "relation": "CATALOGS_CAPABILITIES_FROM"
+    },
+    {
+      "from": "wallet-command",
+      "to": "api-fabric",
+      "relation": "DISTRIBUTION_AND_MONEY_TRUTH_ADJACENCY"
+    },
+    {
+      "from": "wallet-command",
+      "to": "plugin-factory",
+      "relation": "AGENT_MARKETPLACE_ADJACENCY"
+    },
+    {
+      "from": "studio-ai",
+      "to": "academy",
+      "relation": "AI_CREATION_AND_LEARNING_ADJACENCY"
+    },
+    {
+      "from": "audit-os",
+      "to": "gxeon-ai-core",
+      "relation": "SOURCE_LINEAGE"
+    },
+    {
+      "from": "plugin-factory",
+      "to": "agent-gateway",
+      "relation": "PACKAGES_AND_EXPOSES"
+    },
+    {
+      "from": "company",
+      "to": "cenara",
+      "relation": "MATERIAL_LINEAGE"
+    },
+    {
+      "from": "company",
+      "to": "app-forge",
+      "relation": "MATERIAL_LINEAGE"
+    },
+    {
+      "from": "company",
+      "to": "media-center",
+      "relation": "MATERIAL_LINEAGE"
+    },
+    {
+      "from": "company",
+      "to": "synapse-revenue",
+      "relation": "MATERIAL_LINEAGE"
+    },
+    {
+      "from": "company",
+      "to": "product-forge",
+      "relation": "MATERIAL_LINEAGE"
+    },
+    {
+      "from": "company",
+      "to": "automai",
+      "relation": "MATERIAL_LINEAGE"
+    },
+    {
+      "from": "company",
+      "to": "commander",
+      "relation": "MATERIAL_LINEAGE"
+    },
+    {
+      "from": "company",
+      "to": "monetary-dashboard",
+      "relation": "MATERIAL_LINEAGE"
+    },
+    {
+      "from": "company",
+      "to": "creator-commerce",
+      "relation": "MATERIAL_LINEAGE"
+    },
+    {
+      "from": "company",
+      "to": "xpex-os",
+      "relation": "MATERIAL_LINEAGE"
+    },
+    {
+      "from": "company",
+      "to": "lead-flow",
+      "relation": "MATERIAL_LINEAGE"
+    }
+  ],
+  "governance": {
+    "public_detail_rule": "Only systems with enough identity/runtime/source evidence receive public intelligence pages.",
+    "no_private_memory_transfer": true,
+    "no_credentials": true,
+    "no_unverified_claims": true,
+    "concept_art_is_not_runtime_evidence": true
+  }
+}
