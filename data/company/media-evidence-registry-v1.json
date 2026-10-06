@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "state": "SEED_TRIAGE",
+  "purpose": "Govern media before it is used as public technical evidence.",
+  "classes": {
+    "E1": "Public production evidence candidate",
+    "E2": "Public after redaction/review",
+    "E3": "Internal evidence only",
+    "D1": "Design/concept only",
+    "X": "Reject or duplicate"
+  },
+  "seed_assets": [
+    {
+      "name": "screencapture-xpex-systems-command-staging-web-production-up-railway-app-2026-10-02-00_22_32.png",
+      "system": "XPeX Systems Command",
+      "class": "E1",
+      "decision": "KEEP",
+      "notes": "Real staging surface; current screenshot is an empty-state view and does not imply active asset counts."
+    },
+    {
+      "name": "screencapture-gxeon-wallet-command-center-vercel-app-2026-10-02-08_17_44.png",
+      "system": "GXEON Wallet Command Center",
+      "class": "E2",
+      "decision": "REDACT_FIRST",
+      "notes": "Real product surface; includes a wallet address and operational details that should not be published as-is."
+    },
+    {
+      "name": "Sistema XPEX: Inteligência Autônoma Dourada.png",
+      "system": "XPeX Systems AI",
+      "class": "D1",
+      "decision": "CONCEPT_ONLY",
+      "notes": "Generated future-state branding with unsupported numeric metrics; never use as production proof."
+    },
+    {
+      "name": "Central de Comando XPeX Systems.png",
+      "system": "XPeX Systems Command",
+      "class": "D1",
+      "decision": "CONCEPT_ONLY",
+      "notes": "Generated future-state dashboard with synthetic metrics and states."
+    },
+    {
+      "name": "Nexara: Inteligência Artificial do Futuro.png",
+      "system": "Nexara",
+      "class": "D1",
+      "decision": "CONCEPT_ONLY",
+      "notes": "Generated brand/future-state art; not runtime evidence."
+    }
+  ],
+  "publication_gate": [
+    "canonical system mapping",
+    "provenance classification",
+    "sensitive-data review",
+    "redaction if required",
+    "numeric-claim verification",
+    "caption/source context",
+    "public approval"
+  ]
+}
