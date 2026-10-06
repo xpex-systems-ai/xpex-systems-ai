@@ -11,9 +11,12 @@
 [![System Registry](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/system-registry-validation.yml/badge.svg)](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/system-registry-validation.yml)
 [![Trust Passport](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/trust-passport-validation.yml/badge.svg)](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/trust-passport-validation.yml)
 [![Agent Policy](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/agent-policy-validation.yml/badge.svg)](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/agent-policy-validation.yml)
+[![Agent Security](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/agent-security-validation.yml/badge.svg)](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/agent-security-validation.yml)
 [![Secret Hygiene](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/secret-hygiene.yml/badge.svg)](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/secret-hygiene.yml)
+[![Secret Pattern Scan](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/secret-pattern-scan.yml/badge.svg)](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/secret-pattern-scan.yml)
 [![Assurance Tests](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/assurance-tests.yml/badge.svg)](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/assurance-tests.yml)
 [![Action Supply Chain](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/action-supply-chain-validation.yml/badge.svg)](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/action-supply-chain-validation.yml)
+[![Workflow Supply Chain](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/workflow-supply-chain-validation.yml/badge.svg)](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/workflow-supply-chain-validation.yml)
 [![CodeQL](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/codeql.yml/badge.svg)](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/codeql.yml)
 [![OpenSSF Scorecard](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/scorecard.yml/badge.svg)](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/scorecard.yml)
 
@@ -21,7 +24,7 @@
 
 An AI-native systems company building an evidence-aware operating layer for intelligent software, autonomous agents, infrastructure and enterprise operations.
 
-[Showcase](docs/SHOWCASE.md) · [Verified Systems](systems/README.md) · [System Standard](docs/SYSTEM_STANDARD.md) · [Architecture](docs/ARCHITECTURE.md) · [Agents](docs/AGENTS.md) · [Agent Trust](docs/AGENT_TRUST.md) · [Trust](docs/TRUST.md) · [Trust Passport](docs/TRUST_PASSPORT.md) · [Status](STATUS.md) · [Investor Brief](docs/INVESTOR_BRIEF.md) · [Accelerator Profile](docs/ACCELERATOR_PROFILE.md)
+[Showcase](docs/SHOWCASE.md) · [Verified Systems](systems/README.md) · [System Standard](docs/SYSTEM_STANDARD.md) · [Architecture](docs/ARCHITECTURE.md) · [Agents](docs/AGENTS.md) · [Agent Trust](docs/AGENT_TRUST.md) · [Trust](docs/TRUST.md) · [Trust Passport](docs/TRUST_PASSPORT.md) · [Assurance](docs/ASSURANCE.md) · [Status](STATUS.md) · [Investor Brief](docs/INVESTOR_BRIEF.md) · [Accelerator Profile](docs/ACCELERATOR_PROFILE.md)
 
 </div>
 
@@ -137,6 +140,32 @@ We deliberately separate product vision from deployment evidence.
 A deployment is not promoted to public **VERIFIED_LIVE** merely because it builds successfully. XPeX requires source, runtime and security evidence.
 
 See [Products](docs/PRODUCTS.md).
+
+---
+
+## Policy → Test → Execution → Result
+
+XPeX treats assurance as an evidence chain:
+
+```text
+POLICY
+  ↓
+CONTROL
+  ↓
+IMPLEMENTATION
+  ↓
+TEST
+  ↓
+EXECUTION
+  ↓
+RESULT
+  ↓
+EVIDENCE
+  ↓
+INDEPENDENT VERIFICATION
+```
+
+[Explore the assurance chain →](docs/POLICY_TEST_EXECUTION_RESULT.md)
 
 ---
 
