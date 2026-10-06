@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xpex.systems/schemas/system-trust-passport.schema.json",
+  "title": "XPeX System Trust Passport",
+  "type": "object",
+  "required": [
+    "passport_version",
+    "passport_id",
+    "subject_type",
+    "system_id",
+    "name",
+    "overall_trust_state",
+    "dimensions",
+    "evidence_refs",
+    "issued_at"
+  ],
+  "properties": {
+    "passport_version": {
+      "type": "string"
+    },
+    "passport_id": {
+      "type": "string"
+    },
+    "subject_type": {
+      "const": "SYSTEM"
+    },
+    "system_id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "overall_trust_state": {
+      "enum": [
+        "TP0_UNASSESSED",
+        "TP1_DOCUMENTED",
+        "TP2_CONTROLLED",
+        "TP3_VERIFIED",
+        "TP4_CONTINUOUSLY_ASSURED"
+      ]
+    },
+    "dimensions": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "status"
+        ],
+        "properties": {
+          "status": {
+            "enum": [
+              "VERIFIED",
+              "IMPLEMENTED",
+              "POLICY_DEFINED",
+              "CONDITIONAL",
+              "NOT_VERIFIED",
+              "NOT_APPLICABLE"
+            ]
+          },
+          "summary": {
+            "type": "string"
+          },
+          "evidence_refs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "blockers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "issued_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "last_verified_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    }
+  },
+  "additionalProperties": true
+}
