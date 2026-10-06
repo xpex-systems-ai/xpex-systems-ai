@@ -4,11 +4,14 @@
 
 ### AI Systems · Agents · Company Intelligence
 
+[![Governance Validation](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/governance-validation.yml/badge.svg)](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/governance-validation.yml)
+[![Public Truth Validation](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/public-truth-validation.yml/badge.svg)](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/workflows/public-truth-validation.yml)
+
 **Build. Connect. Operate. Prove.**
 
 An AI-native systems company building an evidence-aware operating layer for intelligent software, autonomous agents, infrastructure and enterprise operations.
 
-[Architecture](docs/ARCHITECTURE.md) · [Products](docs/PRODUCTS.md) · [Agents](docs/AGENTS.md) · [Trust & Governance](docs/TRUST.md) · [Roadmap](docs/company/roadmap.md)
+[Architecture](docs/ARCHITECTURE.md) · [Products](docs/PRODUCTS.md) · [Agents](docs/AGENTS.md) · [Trust & Governance](docs/TRUST.md) · [Status](STATUS.md) · [Investor Brief](docs/INVESTOR_BRIEF.md) · [Roadmap](docs/company/roadmap.md)
 
 </div>
 
@@ -293,7 +296,7 @@ Core principles:
 
 We prefer measurable controls, evidence and independent verification over claims of “total security”.
 
-[Security Policy](SECURITY.md) · [Security Baseline](docs/governance/security-baseline.md)
+[Security Policy](SECURITY.md) · [Security Baseline](docs/governance/security-baseline.md) · [Public Status](STATUS.md)
 
 ---
 
