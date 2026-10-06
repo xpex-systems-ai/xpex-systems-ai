@@ -78,7 +78,7 @@ Examples:
 - System Registry Validation;
 - Secret Hygiene;
 - CodeQL;
-- Dependency Review;
+- Dependency Review readiness (currently manual via `workflow_dispatch`);
 - Supply-chain pinning validation.
 
 ## 5. Execution
