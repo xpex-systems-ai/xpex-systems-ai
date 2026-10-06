@@ -1,19 +1,38 @@
 name: Trust Passport Validation
+
 on:
   pull_request:
-    paths: ["data/trust/**","systems/**/ai-bom.json","schemas/*trust-passport*.json","schemas/ai-bom.schema.json","scripts/validate-trust-passports.py","docs/TRUST_PASSPORT.md"]
+    paths:
+      - "data/trust/**"
+      - "systems/**/ai-bom.json"
+      - "schemas/*trust-passport*.json"
+      - "schemas/ai-bom.schema.json"
+      - "scripts/validate-trust-passports.py"
+      - "docs/TRUST_PASSPORT.md"
   push:
     branches: [main]
-    paths: ["data/trust/**","systems/**/ai-bom.json","schemas/*trust-passport*.json","schemas/ai-bom.schema.json","scripts/validate-trust-passports.py","docs/TRUST_PASSPORT.md"]
+    paths:
+      - "data/trust/**"
+      - "systems/**/ai-bom.json"
+      - "schemas/*trust-passport*.json"
+      - "schemas/ai-bom.schema.json"
+      - "scripts/validate-trust-passports.py"
+      - "docs/TRUST_PASSPORT.md"
+
 permissions:
   contents: read
+
 jobs:
   validate:
     name: Validate Trust Passports and AI-BOMs
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with: {python-version: "3.12"}
-      - run: python scripts/validate-trust-passports.py
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+      - name: Validate
+        run: python scripts/validate-trust-passports.py

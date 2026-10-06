@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0",
+  "snapshot_at": "2026-10-06T01:40:00-03:00",
+  "repository": "xpex-systems-ai/xpex-systems-ai",
+  "visibility": "PUBLIC",
+  "assurance_statement": "This snapshot records observed/configured controls and explicitly avoids claiming unverified repository-admin settings.",
+  "controls": [
+    {
+      "control": "GOVERNANCE_VALIDATION",
+      "status": "IMPLEMENTED",
+      "evidence": ".github/workflows/governance-validation.yml"
+    },
+    {
+      "control": "PUBLIC_TRUTH_VALIDATION",
+      "status": "IMPLEMENTED",
+      "evidence": ".github/workflows/public-truth-validation.yml"
+    },
+    {
+      "control": "SYSTEM_REGISTRY_VALIDATION",
+      "status": "IMPLEMENTED",
+      "evidence": ".github/workflows/system-registry-validation.yml"
+    },
+    {
+      "control": "TRUST_PASSPORT_VALIDATION",
+      "status": "IMPLEMENTED",
+      "evidence": ".github/workflows/trust-passport-validation.yml"
+    },
+    {
+      "control": "AGENT_POLICY_VALIDATION",
+      "status": "IMPLEMENTED",
+      "evidence": ".github/workflows/agent-policy-validation.yml"
+    },
+    {
+      "control": "SECRET_HYGIENE_VALIDATION",
+      "status": "IMPLEMENTED",
+      "evidence": ".github/workflows/secret-hygiene.yml"
+    },
+    {
+      "control": "ASSURANCE_INVARIANT_TESTS",
+      "status": "IMPLEMENTED",
+      "evidence": ".github/workflows/assurance-tests.yml"
+    },
+    {
+      "control": "CODEQL",
+      "status": "CONFIGURED_PENDING_EXECUTION",
+      "evidence": ".github/workflows/codeql.yml"
+    },
+    {
+      "control": "DEPENDENCY_REVIEW",
+      "status": "CONFIGURED_PENDING_EXECUTION",
+      "evidence": ".github/workflows/dependency-review.yml"
+    },
+    {
+      "control": "OPENSSF_SCORECARD",
+      "status": "CONFIGURED_PENDING_EXECUTION",
+      "evidence": ".github/workflows/scorecard.yml"
+    },
+    {
+      "control": "RELEASE_ATTESTATION",
+      "status": "CONFIGURED_ON_TAG_OR_MANUAL",
+      "evidence": ".github/workflows/release-attestation.yml"
+    },
+    {
+      "control": "DEPENDABOT_GITHUB_ACTIONS",
+      "status": "CONFIGURED",
+      "evidence": ".github/dependabot.yml"
+    },
+    {
+      "control": "REPOSITORY_RULESETS",
+      "status": "NOT_ENFORCED_AT_SNAPSHOT",
+      "observation": "GitHub rulesets API returned an empty collection."
+    },
+    {
+      "control": "BRANCH_PROTECTION",
+      "status": "NOT_VERIFIED",
+      "observation": "Connected GitHub integration lacks administration access required to read or mutate branch-protection settings."
+    },
+    {
+      "control": "GITHUB_SECRET_SCANNING",
+      "status": "NOT_VERIFIED",
+      "observation": "Repository setting is not exposed through the connected integration."
+    },
+    {
+      "control": "GITHUB_PUSH_PROTECTION",
+      "status": "NOT_VERIFIED",
+      "observation": "Repository setting is not exposed through the connected integration."
+    },
+    {
+      "control": "PRIVATE_VULNERABILITY_REPORTING",
+      "status": "NOT_VERIFIED",
+      "observation": "Repository setting is not exposed through the connected integration."
+    }
+  ],
+  "external_certifications_claimed": []
+}

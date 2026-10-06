@@ -4,19 +4,13 @@ on:
   pull_request:
     paths:
       - "README.md"
-      - "docs/ARCHITECTURE.md"
-      - "docs/PRODUCTS.md"
-      - "docs/AGENTS.md"
-      - "docs/TRUST.md"
-      - "docs/PARTNERS.md"
-      - "docs/INVESTOR_BRIEF.md"
+      - "docs/**"
       - "data/products/**"
       - "data/agents/**"
       - "data/providers/**"
       - "scripts/validate-public-company.py"
   push:
-    branches:
-      - main
+    branches: [main]
     paths:
       - "README.md"
       - "docs/**"
@@ -35,10 +29,10 @@ jobs:
     timeout-minutes: 5
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with:
           python-version: "3.12"
-      - name: Validate public registries and claims
+      - name: Validate
         run: python scripts/validate-public-company.py
