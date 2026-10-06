@@ -1,4 +1,5 @@
 import { GX_EVIDENCE, GX_PUBLIC_RULES } from '../src/data/gx-evidence.js';
+import { SYSTEM_INTELLIGENCE, MATERIAL_LINEAGES } from '../src/data/system-intelligence.js';
 
 const buckets = globalThis.__gxRateBuckets || new Map();
 globalThis.__gxRateBuckets = buckets;
@@ -7,6 +8,34 @@ const WINDOW_MS = 5 * 60 * 1000;
 const MAX_REQUESTS = 15;
 const MAX_MESSAGE_LENGTH = 900;
 const MODEL = 'openai/gpt-5.6-sol';
+
+const SYSTEM_EVIDENCE = SYSTEM_INTELLIGENCE.map(system => ({
+  id: `system-intelligence:${system.slug}`,
+  title: system.name,
+  kind: 'system-intelligence',
+  keywords: [
+    system.slug,
+    system.name,
+    system.role,
+    ...(system.tech || []),
+    ...(system.architecture || []),
+    ...(system.related || [])
+  ],
+  summary: [
+    system.summary,
+    'Problem: ' + system.problem,
+    'What XPeX built: ' + system.built,
+    'Architecture: ' + (system.architecture || []).join(' -> '),
+    'Security: ' + (system.security || []).join(' | '),
+    'Open gates: ' + (system.limits || []).join(' | '),
+    'Runtime: ' + JSON.stringify(system.runtime),
+    'Source: ' + JSON.stringify(system.source)
+  ].join('\n'),
+  status: system.status,
+  url: `https://xpex-systems-ai.vercel.app/?system=${encodeURIComponent(system.slug)}`
+}));
+
+const ALL_PUBLIC_EVIDENCE = [...GX_EVIDENCE, ...SYSTEM_EVIDENCE];
 
 function normalize(value='') {
   return value
@@ -37,13 +66,13 @@ function scoreEvidence(query, item) {
 }
 
 function retrieveEvidence(query) {
-  const ranked = GX_EVIDENCE
+  const ranked = ALL_PUBLIC_EVIDENCE
     .map(item => ({...item, score:scoreEvidence(query,item)}))
     .sort((a,b) => b.score - a.score);
 
   const selected = ranked.filter(x => x.score > 0).slice(0,5);
   if (selected.length) return selected;
-  return GX_EVIDENCE.filter(x => ['company','founder','portfolio','trust'].includes(x.id));
+  return ALL_PUBLIC_EVIDENCE.filter(x => ['company','founder','portfolio','trust'].includes(x.id));
 }
 
 function rateLimit(req) {
@@ -154,7 +183,9 @@ export default async function handler(req,res) {
       scope:'public-evidence-only',
       aiEnabled:process.env.GX_AI_ENABLED === 'true' && Boolean(process.env.AI_GATEWAY_API_KEY || process.env.VERCEL_OIDC_TOKEN),
       model:(process.env.GX_AI_ENABLED === 'true' && (process.env.AI_GATEWAY_API_KEY || process.env.VERCEL_OIDC_TOKEN)) ? MODEL : null,
-      evidenceItems:GX_EVIDENCE.length
+      evidenceItems:ALL_PUBLIC_EVIDENCE.length,
+      knowledgeSystems:SYSTEM_INTELLIGENCE.length,
+      materialLineages:MATERIAL_LINEAGES.length
     });
   }
 
