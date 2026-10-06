@@ -1,0 +1,35 @@
+{
+  "framework": "XAGF",
+  "version": "1.0",
+  "snapshot_status": "FOUNDATION_POLICY_LAYER_ESTABLISHED",
+  "statement": "This file intentionally distinguishes written policy from implemented and independently verified controls.",
+  "status_legend": {
+    "NOT_ASSESSED": "No implementation assessment yet.",
+    "POLICY_DEFINED": "Policy/control has been documented.",
+    "IMPLEMENTED": "Technical or procedural implementation exists but has not been independently verified.",
+    "VERIFIED": "Independent evidence confirms the control.",
+    "PARTIAL": "Some required components exist.",
+    "BLOCKED": "Known blocker prevents control satisfaction."
+  },
+  "default_control_status": "POLICY_DEFINED",
+  "verified_controls": [],
+  "implementation_notes": [
+    {
+      "area": "Governance repository",
+      "status": "IMPLEMENTED",
+      "note": "Company governance artifacts, schemas, review templates and CI structural validation are being established in the official corporate repository."
+    },
+    {
+      "area": "Evidence-first deployment verification",
+      "status": "PARTIAL",
+      "note": "Cross-platform evidence practices exist in XPeX Systems Command, but XAGF-wide continuous assurance is not yet implemented for every system."
+    },
+    {
+      "area": "Production secret hardening",
+      "status": "BLOCKED",
+      "note": "Some previously audited Vercel portfolio candidates have unresolved readable-secret findings and remain blocked from public VERIFIED_LIVE promotion until remediated."
+    }
+  ],
+  "overall_assurance_level": "AL1",
+  "next_target": "AL2"
+}
