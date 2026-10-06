@@ -1,20 +1,29 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-06T03:40:00-03:00",
+  "generated_at": "2026-10-06T04:08:00-03:00",
   "rule": "Candidates are discovery targets only. PENDING_DISCOVERY does not imply ownership, deployment, production health or commercial readiness.",
   "candidates": [
     {
       "candidate_id": "CAND-GXEON-MARKETPLACE-001",
       "proposed_name": "GXEON Agent Marketplace",
       "priority": "P0",
-      "discovery_status": "PENDING_DISCOVERY",
+      "discovery_status": "CORROBORATING",
       "intended_sources": [
         "VERCEL",
         "GITHUB",
         "DATABASE"
       ],
       "target_outcome": "Build a verified System Pack and determine canonical source, runtime, data and commercial status.",
-      "evidence_refs": []
+      "evidence_refs": [
+        "data/company/admission-evidence/gxeon-agent-marketplace-discovery-v1.json"
+      ],
+      "correlated_system_id": "XPEX-API-FABRIC-001",
+      "identity_status": "HYPOTHESIS_NOT_CANONICAL",
+      "blockers": [
+        "Canonical identity not yet confirmed.",
+        "Relevant Supabase project not visible in current connector session.",
+        "Source hardening PR #1 pending checks/review."
+      ]
     },
     {
       "candidate_id": "CAND-XPEX-PLUGIN-FACTORY-001",
