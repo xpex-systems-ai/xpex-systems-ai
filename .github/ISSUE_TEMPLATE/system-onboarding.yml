@@ -1,0 +1,43 @@
+name: XPeX System Onboarding
+description: Register a newly discovered system or product family
+title: "[SYSTEM] "
+labels: ["system-registry"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Observed name
+    validations:
+      required: true
+  - type: dropdown
+    id: source
+    attributes:
+      label: Discovery source
+      options: ["GitHub","Vercel","Railway","Lovable","Replit","Supabase","Other"]
+    validations:
+      required: true
+  - type: input
+    id: provider_id
+    attributes:
+      label: Provider object / project ID
+  - type: textarea
+    id: lineage
+    attributes:
+      label: Source / lineage evidence
+  - type: textarea
+    id: runtime
+    attributes:
+      label: Runtime / deployment evidence
+  - type: textarea
+    id: ownership
+    attributes:
+      label: Ownership / license evidence
+  - type: dropdown
+    id: canonical
+    attributes:
+      label: Proposed canonical state
+      options: ["DISCOVERED","CLASSIFIED","CORROBORATED","CANONICAL_CANDIDATE"]
+  - type: textarea
+    id: blockers
+    attributes:
+      label: Security / governance / brand blockers

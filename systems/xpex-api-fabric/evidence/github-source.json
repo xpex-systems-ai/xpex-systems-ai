@@ -1,0 +1,12 @@
+{
+  "evidence_id": "EVD-XPEX-API-FABRIC-GITHUB-001",
+  "system_id": "XPEX-API-FABRIC-001",
+  "claim": "The verified production deployment is linked to source under the official xpex-systems-ai GitHub organization.",
+  "source_type": "SOURCE_CODE",
+  "organization": "xpex-systems-ai",
+  "repository": "remix-of-remix-of-remix-of-remix-of-xpex-api-hub-87",
+  "commit": "5ba2e886a997c97c410e4bbabada659187912538",
+  "commit_message": "docs: add RustChain ecosystem badge",
+  "verification_status": "VERIFIED",
+  "public_safe": true
+}

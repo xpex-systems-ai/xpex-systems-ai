@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "system_id": "XPEX-SYS-COMMAND-001",
+  "product_id": "xpex-systems-command",
+  "name": "XPeX Systems Command",
+  "role": "Company Intelligence & Evidence OS",
+  "owner": "XPeX Systems AI",
+  "canonical_status": "CANONICAL",
+  "runtime_status": "VERIFIED_STAGING",
+  "assurance_level": "AL1",
+  "source": {
+    "organization": "xpex-systems-ai",
+    "repository": "xpex-systems-command",
+    "verification_status": "VERIFIED"
+  },
+  "runtime": {
+    "provider": "Railway",
+    "environment": "staging",
+    "deployment_id": "13013067-a3e1-45b5-8bab-c747e87c3c35",
+    "state_at_verification": "SUCCESS"
+  },
+  "public_flagship_candidate": true,
+  "commercial_status": "NOT_ASSERTED",
+  "governance_framework": "XAGF",
+  "evidence": [
+    "evidence/railway-deployment.json"
+  ],
+  "updated_at": "2026-10-05T23:35:00-03:00"
+}

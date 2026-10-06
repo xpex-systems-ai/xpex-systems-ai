@@ -1,0 +1,41 @@
+name: System Registry Validation
+
+on:
+  pull_request:
+    paths:
+      - "systems/**"
+      - "data/company/system-index-v1.json"
+      - "data/company/company-graph-v1.json"
+      - "schemas/system-registry-entry.schema.json"
+      - "templates/system-onboarding/**"
+      - "docs/SYSTEM_ONBOARDING.md"
+      - "scripts/validate-system-registry.py"
+  push:
+    branches:
+      - main
+    paths:
+      - "systems/**"
+      - "data/company/system-index-v1.json"
+      - "data/company/company-graph-v1.json"
+      - "schemas/system-registry-entry.schema.json"
+      - "templates/system-onboarding/**"
+      - "docs/SYSTEM_ONBOARDING.md"
+      - "scripts/validate-system-registry.py"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate system registry
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate registry
+        run: python scripts/validate-system-registry.py

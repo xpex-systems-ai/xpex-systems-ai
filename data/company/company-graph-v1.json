@@ -1,0 +1,139 @@
+{
+  "schema_version": "1.0",
+  "company": "XPeX Systems AI",
+  "generated_at": "2026-10-05T23:35:00-03:00",
+  "nodes": [
+    {
+      "id": "company:xpex",
+      "type": "COMPANY",
+      "label": "XPeX Systems AI",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "system:command",
+      "type": "SYSTEM",
+      "label": "XPeX Systems Command",
+      "status": "VERIFIED_STAGING"
+    },
+    {
+      "id": "system:gxeon",
+      "type": "SYSTEM_FAMILY",
+      "label": "GXEON",
+      "status": "CONSOLIDATION"
+    },
+    {
+      "id": "system:nexara",
+      "type": "DESIGN_TARGET",
+      "label": "NEXARA Intelligence Fabric",
+      "status": "DESIGN_TARGET"
+    },
+    {
+      "id": "system:api-fabric",
+      "type": "SYSTEM",
+      "label": "XPeX API Fabric",
+      "status": "VERIFIED_LIVE"
+    },
+    {
+      "id": "vertical:academy",
+      "type": "VERTICAL",
+      "label": "XPeX Academy",
+      "status": "EXISTING_PRODUCT_FAMILY"
+    },
+    {
+      "id": "vertical:revenue",
+      "type": "VERTICAL",
+      "label": "XPeX Revenue",
+      "status": "CONSOLIDATION_TARGET"
+    },
+    {
+      "id": "vertical:web3",
+      "type": "VERTICAL",
+      "label": "XPeX Web3",
+      "status": "SECURITY_HARDENING"
+    },
+    {
+      "id": "vertical:media",
+      "type": "VERTICAL",
+      "label": "XPeX Media / Creator",
+      "status": "CONSOLIDATION_TARGET"
+    },
+    {
+      "id": "framework:xagf",
+      "type": "GOVERNANCE",
+      "label": "XAGF",
+      "status": "ESTABLISHED"
+    }
+  ],
+  "edges": [
+    {
+      "from": "company:xpex",
+      "to": "system:command",
+      "relation": "GOVERNS"
+    },
+    {
+      "from": "company:xpex",
+      "to": "system:gxeon",
+      "relation": "OPERATES"
+    },
+    {
+      "from": "company:xpex",
+      "to": "system:nexara",
+      "relation": "DESIGNS"
+    },
+    {
+      "from": "company:xpex",
+      "to": "system:api-fabric",
+      "relation": "OWNS_OR_OPERATES"
+    },
+    {
+      "from": "company:xpex",
+      "to": "vertical:academy",
+      "relation": "PRODUCT_VERTICAL"
+    },
+    {
+      "from": "company:xpex",
+      "to": "vertical:revenue",
+      "relation": "PRODUCT_VERTICAL"
+    },
+    {
+      "from": "company:xpex",
+      "to": "vertical:web3",
+      "relation": "PRODUCT_VERTICAL"
+    },
+    {
+      "from": "company:xpex",
+      "to": "vertical:media",
+      "relation": "PRODUCT_VERTICAL"
+    },
+    {
+      "from": "framework:xagf",
+      "to": "system:command",
+      "relation": "GOVERNS"
+    },
+    {
+      "from": "framework:xagf",
+      "to": "system:gxeon",
+      "relation": "GOVERNS"
+    },
+    {
+      "from": "framework:xagf",
+      "to": "system:nexara",
+      "relation": "GOVERNS"
+    },
+    {
+      "from": "framework:xagf",
+      "to": "system:api-fabric",
+      "relation": "GOVERNS"
+    },
+    {
+      "from": "system:command",
+      "to": "system:api-fabric",
+      "relation": "REGISTERS_EVIDENCE_FOR"
+    },
+    {
+      "from": "system:gxeon",
+      "to": "system:nexara",
+      "relation": "TARGETS_INTELLIGENCE_ROUTING_THROUGH"
+    }
+  ]
+}

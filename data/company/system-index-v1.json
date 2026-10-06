@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "updated_at": "2026-10-05T23:35:00-03:00",
+  "company": "XPeX Systems AI",
+  "systems": [
+    {
+      "system_id": "XPEX-SYS-COMMAND-001",
+      "slug": "xpex-systems-command",
+      "name": "XPeX Systems Command",
+      "role": "Company Intelligence & Evidence OS",
+      "canonical_status": "CANONICAL",
+      "runtime_status": "VERIFIED_STAGING",
+      "system_pack": "systems/xpex-systems-command/"
+    },
+    {
+      "system_id": "XPEX-API-FABRIC-001",
+      "slug": "xpex-api-fabric",
+      "name": "XPeX API Fabric",
+      "role": "API & AI infrastructure / agent marketplace lineage",
+      "canonical_status": "CANONICAL_CANDIDATE",
+      "runtime_status": "VERIFIED_LIVE",
+      "brand_ready": false,
+      "system_pack": "systems/xpex-api-fabric/"
+    },
+    {
+      "system_id": "GXEON-FAMILY-001",
+      "slug": "gxeon",
+      "name": "GXEON",
+      "role": "Agent execution & automation",
+      "canonical_status": "CANONICAL_CANDIDATE",
+      "runtime_status": "UNKNOWN",
+      "registry": "data/agents/agent-registry-v1.json"
+    },
+    {
+      "system_id": "NEXARA-TARGET-001",
+      "slug": "nexara",
+      "name": "NEXARA Intelligence Fabric",
+      "role": "Model/provider orchestration",
+      "canonical_status": "CLASSIFIED",
+      "runtime_status": "NOT_DEPLOYED",
+      "design_target": true
+    }
+  ],
+  "truth": {
+    "total_entries": 4,
+    "verified_live": 1,
+    "verified_staging": 1,
+    "canonical": 1,
+    "canonical_candidates": 2,
+    "design_targets": 1
+  }
+}

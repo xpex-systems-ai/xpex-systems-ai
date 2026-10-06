@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "system_id": "XPEX-API-FABRIC-001",
+  "product_id": "xpex-api-fabric",
+  "name": "XPeX API Fabric",
+  "name_status": "CANONICAL_CANDIDATE",
+  "legacy_names": [
+    "XPeX Neural",
+    "XPeX API Hub",
+    "XPEX Neural - API Marketplace Premium"
+  ],
+  "role": "API & AI infrastructure / agent marketplace lineage",
+  "owner": "XPeX Systems AI",
+  "canonical_status": "CANONICAL_CANDIDATE",
+  "runtime_status": "VERIFIED_LIVE",
+  "assurance_level": "AL1",
+  "source": {
+    "organization": "xpex-systems-ai",
+    "repository": "remix-of-remix-of-remix-of-remix-of-xpex-api-hub-87",
+    "commit": "5ba2e886a997c97c410e4bbabada659187912538",
+    "verification_status": "VERIFIED"
+  },
+  "runtime": {
+    "provider": "Vercel",
+    "environment": "production",
+    "project_id": "prj_3gcH2XkcpFatpPEAZZF56IBCqvsZ",
+    "deployment_id": "dpl_2Shq2ceHdj12tZzJ6HPv8RdPYPJb",
+    "state_at_verification": "READY",
+    "http_status_at_verification": 200,
+    "public_alias": "https://remix-of-remix-of-remix-of-remix-of-xpex-api-hub-87-xpex-neural.vercel.app"
+  },
+  "public_flagship_candidate": true,
+  "brand_ready": false,
+  "commercial_status": "NOT_ASSERTED",
+  "blockers": [
+    "Founder approval of canonical public product name.",
+    "Legacy runtime metadata still exposes XPEX Neural branding.",
+    "Clean branded public domain not yet assigned."
+  ],
+  "governance_framework": "XAGF",
+  "evidence": [
+    "evidence/github-source.json",
+    "evidence/vercel-deployment.json",
+    "evidence/http-verification.json"
+  ],
+  "updated_at": "2026-10-05T23:35:00-03:00"
+}

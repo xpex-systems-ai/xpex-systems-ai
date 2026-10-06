@@ -1,0 +1,146 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xpex.systems/schemas/system-registry-entry.schema.json",
+  "title": "XPeX System Registry Entry",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "system_id",
+    "product_id",
+    "name",
+    "owner",
+    "canonical_status",
+    "runtime_status",
+    "source",
+    "governance_framework"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "system_id": {
+      "type": "string",
+      "minLength": 4
+    },
+    "product_id": {
+      "type": "string",
+      "minLength": 3
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "name_status": {
+      "type": "string"
+    },
+    "legacy_names": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "role": {
+      "type": "string"
+    },
+    "owner": {
+      "type": "string"
+    },
+    "canonical_status": {
+      "enum": [
+        "DISCOVERED",
+        "CLASSIFIED",
+        "CORROBORATED",
+        "CANONICAL_CANDIDATE",
+        "CANONICAL",
+        "LEGACY",
+        "ARCHIVED"
+      ]
+    },
+    "runtime_status": {
+      "enum": [
+        "NOT_DEPLOYED",
+        "DEPLOYED",
+        "VERIFIED_STAGING",
+        "VERIFIED_LIVE",
+        "RUNTIME_CORROBORATION_IN_PROGRESS",
+        "UNKNOWN"
+      ]
+    },
+    "assurance_level": {
+      "enum": [
+        "AL0",
+        "AL1",
+        "AL2",
+        "AL3",
+        "AL4"
+      ]
+    },
+    "source": {
+      "type": "object",
+      "required": [
+        "verification_status"
+      ],
+      "properties": {
+        "organization": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "repository": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "commit": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "verification_status": {
+          "enum": [
+            "UNKNOWN",
+            "OBSERVED",
+            "CORROBORATED",
+            "VERIFIED",
+            "VERIFIED_REPOSITORY"
+          ]
+        }
+      }
+    },
+    "runtime": {
+      "type": "object"
+    },
+    "public_flagship_candidate": {
+      "type": "boolean"
+    },
+    "brand_ready": {
+      "type": "boolean"
+    },
+    "commercial_status": {
+      "type": "string"
+    },
+    "blockers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "governance_framework": {
+      "type": "string"
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "additionalProperties": true
+}
