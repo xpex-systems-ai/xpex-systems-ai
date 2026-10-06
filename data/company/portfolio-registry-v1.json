@@ -216,7 +216,7 @@
         "Canonical Firebase/Railway runtime is not visible through the currently connected provider inventory.",
         "Public demo URL and current production health still require provider-backed corroboration."
       ],
-      "next_action": "Connect/verify the canonical Firebase/Railway runtime and run a student/Polo smoke test; do not revive quarantined Vercel copies unless architecture changes."
+      "next_action": "Connect and verify the canonical Firebase/Railway runtime and run a student/Polo smoke test; do not revive quarantined Vercel copies unless architecture changes."
     }
   ],
   "portfolio_systems": [
