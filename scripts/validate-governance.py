@@ -43,7 +43,7 @@ FORBIDDEN_BASENAMES = {
     "service-account.json",
 }
 
-CONTROL_ID = re.compile(r"^XAGF-[A-Z]{3}-\d{3}$")
+CONTROL_ID = re.compile(r"^XAGF-[A-Z]{2,3}-\d{3}$")
 
 errors: list[str] = []
 
