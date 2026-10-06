@@ -12,7 +12,10 @@
     "canonical_status",
     "runtime_status",
     "source",
-    "governance_framework"
+    "governance_framework",
+    "trust_passport_ref",
+    "ai_bom_ref",
+    "assurance_model"
   ],
   "properties": {
     "schema_version": {
@@ -140,6 +143,18 @@
     "updated_at": {
       "type": "string",
       "format": "date-time"
+    },
+    "trust_passport_ref": {
+      "type": "string",
+      "minLength": 3
+    },
+    "ai_bom_ref": {
+      "type": "string",
+      "minLength": 3
+    },
+    "assurance_model": {
+      "type": "string",
+      "minLength": 3
     }
   },
   "additionalProperties": true
