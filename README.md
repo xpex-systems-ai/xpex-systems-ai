@@ -11,7 +11,7 @@
 
 An AI-native systems company building an evidence-aware operating layer for intelligent software, autonomous agents, infrastructure and enterprise operations.
 
-[Architecture](docs/ARCHITECTURE.md) · [Products](docs/PRODUCTS.md) · [Agents](docs/AGENTS.md) · [Trust & Governance](docs/TRUST.md) · [Status](STATUS.md) · [Investor Brief](docs/INVESTOR_BRIEF.md) · [Roadmap](docs/company/roadmap.md)
+[Architecture](docs/ARCHITECTURE.md) · [Verified Systems](systems/README.md) · [Products](docs/PRODUCTS.md) · [Agents](docs/AGENTS.md) · [Trust & Governance](docs/TRUST.md) · [Status](STATUS.md) · [Investor Brief](docs/INVESTOR_BRIEF.md) · [Roadmap](docs/company/roadmap.md)
 
 </div>
 
