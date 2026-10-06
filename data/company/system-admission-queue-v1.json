@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-10-06T03:40:00-03:00",
+  "rule": "Candidates are discovery targets only. PENDING_DISCOVERY does not imply ownership, deployment, production health or commercial readiness.",
+  "candidates": [
+    {
+      "candidate_id": "CAND-GXEON-MARKETPLACE-001",
+      "proposed_name": "GXEON Agent Marketplace",
+      "priority": "P0",
+      "discovery_status": "PENDING_DISCOVERY",
+      "intended_sources": [
+        "VERCEL",
+        "GITHUB",
+        "DATABASE"
+      ],
+      "target_outcome": "Build a verified System Pack and determine canonical source, runtime, data and commercial status.",
+      "evidence_refs": []
+    },
+    {
+      "candidate_id": "CAND-XPEX-PLUGIN-FACTORY-001",
+      "proposed_name": "XPeX Plugin Factory",
+      "priority": "P1",
+      "discovery_status": "PENDING_DISCOVERY",
+      "intended_sources": [
+        "VERCEL",
+        "RAILWAY",
+        "GITHUB",
+        "DATABASE"
+      ],
+      "target_outcome": "Correlate source, active runtime, integrations and marketplace role.",
+      "evidence_refs": []
+    },
+    {
+      "candidate_id": "CAND-XPEX-ACADEMY-001",
+      "proposed_name": "XPeX Academy",
+      "priority": "P1",
+      "discovery_status": "PENDING_DISCOVERY",
+      "intended_sources": [
+        "VERCEL",
+        "RAILWAY",
+        "GITHUB",
+        "DATABASE"
+      ],
+      "target_outcome": "Correlate learning platform source, runtime, data stores and production state.",
+      "evidence_refs": []
+    },
+    {
+      "candidate_id": "CAND-WALLET-COMMAND-001",
+      "proposed_name": "Wallet Command Center",
+      "priority": "P2",
+      "discovery_status": "PENDING_DISCOVERY",
+      "intended_sources": [
+        "VERCEL",
+        "GITHUB",
+        "DATABASE"
+      ],
+      "target_outcome": "Determine canonical identity, runtime, wallet-data boundary and security posture.",
+      "evidence_refs": []
+    }
+  ]
+}
