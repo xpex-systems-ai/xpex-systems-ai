@@ -26,11 +26,18 @@
       ]
     },
     {
-      "product_id": "xpex-api-infrastructure",
-      "name": "XPeX API Infrastructure / Marketplace Lineage",
+      "product_id": "xpex-api-fabric",
+      "name": "XPeX API Fabric",
+      "name_status": "CANONICAL_CANDIDATE",
+      "legacy_names": [
+        "XPeX Neural",
+        "XPeX API Hub"
+      ],
       "category": "AI_INFRASTRUCTURE",
-      "role": "API & AI infrastructure",
+      "role": "API & AI infrastructure / agent marketplace lineage",
       "status": "VERIFIED_LIVE",
+      "canonical_status": "CANONICAL_CANDIDATE",
+      "system_pack": "systems/xpex-api-fabric/",
       "source": {
         "organization": "xpex-systems-ai",
         "repository": "remix-of-remix-of-remix-of-remix-of-xpex-api-hub-87",
@@ -42,11 +49,15 @@
         "deployment_id": "dpl_2Shq2ceHdj12tZzJ6HPv8RdPYPJb",
         "state": "READY",
         "target": "production",
-        "public_alias": "https://remix-of-remix-of-remix-of-remix-of-xpex-api-hub-87-xpex-neural.vercel.app"
+        "public_alias": "https://remix-of-remix-of-remix-of-remix-of-xpex-api-hub-87-xpex-neural.vercel.app",
+        "http_status_at_verification": 200
       },
+      "brand_ready": false,
       "public_flagship_candidate": true,
       "blockers": [
-        "Canonical public product name/domain still needs consolidation."
+        "Founder approval of canonical public product name.",
+        "Legacy runtime metadata still exposes XPEX Neural branding.",
+        "Clean branded public domain not yet assigned."
       ]
     },
     {
