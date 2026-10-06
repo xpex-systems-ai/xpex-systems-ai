@@ -5,26 +5,24 @@ on:
     paths:
       - "data/trust/**"
       - "systems/**/ai-bom.json"
-      - "schemas/*trust-passport*.json"
+      - "schemas/*trust-passport.schema.json"
       - "schemas/ai-bom.schema.json"
       - "scripts/validate-trust-passports.py"
-      - "docs/TRUST_PASSPORT.md"
   push:
     branches: [main]
     paths:
       - "data/trust/**"
       - "systems/**/ai-bom.json"
-      - "schemas/*trust-passport*.json"
+      - "schemas/*trust-passport.schema.json"
       - "schemas/ai-bom.schema.json"
       - "scripts/validate-trust-passports.py"
-      - "docs/TRUST_PASSPORT.md"
 
 permissions:
   contents: read
 
 jobs:
   validate:
-    name: Validate Trust Passports and AI-BOMs
+    name: Validate Trust Passports
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -34,5 +32,5 @@ jobs:
         uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with:
           python-version: "3.12"
-      - name: Validate
+      - name: Validate passports and AI-BOMs
         run: python scripts/validate-trust-passports.py
