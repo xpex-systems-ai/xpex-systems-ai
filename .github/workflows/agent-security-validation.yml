@@ -1,0 +1,35 @@
+name: Agent Security Validation
+
+on:
+  pull_request:
+    paths:
+      - "data/agents/**"
+      - "data/trust/agent-passports/**"
+      - "docs/governance/agent-governance.md"
+      - "docs/governance/autonomy-levels.md"
+      - "docs/governance/financial-agent-controls.md"
+      - "scripts/validate-agent-security.py"
+  push:
+    branches: [main]
+    paths:
+      - "data/agents/**"
+      - "data/trust/agent-passports/**"
+      - "scripts/validate-agent-security.py"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate GXEON agent security boundaries
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+      - name: Validate agent registry and high-risk gates
+        run: python scripts/validate-agent-security.py
