@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "observed_at": "2026-10-06T04:08:00-03:00",
+  "observed_at": "2026-10-06T04:16:00-03:00",
   "candidate_id": "CAND-GXEON-MARKETPLACE-001",
   "admission_stage": "G0_DISCOVERY_G1_CORROBORATION",
   "identity_hypothesis": {
@@ -46,9 +46,23 @@
     ],
     "hardening_pr": {
       "number": 1,
-      "state": "OPEN",
-      "head_sha": "3d4233d42c2ac33c660600c3f209a65aa35f7781",
-      "purpose": "Remove committed runtime env file from current tree, add source assurance, CodeQL, secret scan and evidence-accurate security claims."
+      "state": "MERGED",
+      "merge_commit_sha": "eb76188996c00604cd2d50aa89e7fd7bf9417f3c",
+      "outcome": "Current source tree no longer commits .env; safe env template, Evidence First security policy, deterministic Source Assurance, secret-pattern scanning and CodeQL are present.",
+      "pre_merge_checks": {
+        "source_assurance": "SUCCESS",
+        "codeql": "SUCCESS"
+      },
+      "post_merge_checks": {
+        "source_assurance": {
+          "status": "SUCCESS",
+          "workflow_run_id": 37428328044
+        },
+        "codeql": {
+          "status": "SUCCESS",
+          "workflow_run_id": 37428327926
+        }
+      }
     }
   },
   "supabase": {
@@ -70,7 +84,7 @@
     "G0": "PASS",
     "G1": "BLOCKED",
     "G2": "BLOCKED",
-    "G3": "IN_PROGRESS",
+    "G3": "PARTIAL",
     "G4": "PARTIAL",
     "G5": "NOT_EVALUATED",
     "G6": "NOT_EVALUATED",
@@ -80,8 +94,8 @@
     "Canonical identity between GXEON Agent Marketplace and XPeX API Fabric lineage is not yet approved/evidenced.",
     "Relevant Supabase runtime project is not visible in the currently connected Supabase account.",
     "Two distinct Supabase project references exist in source/docs and require lineage reconciliation.",
-    "Source hardening PR #1 must pass checks and review before merge.",
-    "Clean branded domain and public product naming remain unresolved."
+    "Clean branded domain and public product naming remain unresolved.",
+    "Dependency/SBOM assurance for the application lineage is still pending."
   ],
-  "truth_boundary": "Discovery/correlation evidence only. This record does not promote the candidate to CANONICAL, VERIFIED_LIVE or PUBLIC_FLAGSHIP."
+  "truth_boundary": "Discovery/correlation evidence only. Source hardening is merged and verified, but this record does not promote the candidate to CANONICAL, VERIFIED_LIVE as GXEON Agent Marketplace, or PUBLIC_FLAGSHIP."
 }
