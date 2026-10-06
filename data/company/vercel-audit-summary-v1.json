@@ -5,7 +5,6 @@
   "accounts": [
     {
       "label": "xpexoss / xpex-neural",
-      "connected_identity": "xpexoss@outlook.com",
       "team": "xpex-neural",
       "projects_observed": 61,
       "notable_lineages": [
@@ -21,7 +20,6 @@
     },
     {
       "label": "xpexcentral",
-      "connected_identity": "xpexcentral@gmail.com",
       "projects_observed": 26,
       "notable_lineages": [
         "GXEON-AI family",
@@ -33,7 +31,6 @@
     },
     {
       "label": "GXEON",
-      "connected_identity": "gxeon.ai@gmail.com",
       "team": "GXEON",
       "projects_observed": 16,
       "notable_lineages": [
@@ -86,5 +83,6 @@
       "runtime_note": "Repeated Node url.parse deprecation warning observed on production API routes."
     }
   ],
-  "rule": "Provider inventory is discovery evidence. It does not by itself prove canonical identity, ownership, commercial readiness or external certification."
+  "rule": "Provider inventory is discovery evidence. It does not by itself prove canonical identity, ownership, commercial readiness or external certification.",
+  "privacy_note": "Connected account identities are intentionally omitted from the public audit summary; only portfolio-relevant scope labels and counts are published."
 }
