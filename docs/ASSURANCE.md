@@ -14,7 +14,7 @@ XPeX separates **policy**, **implementation**, **verification** and **external c
 | Secret Pattern Scan | Detects high-confidence secret patterns in the public repository |
 | Workflow Supply Chain Validation | Requires immutable SHA pins for third-party GitHub Actions |
 | CodeQL Security Analysis | Static security analysis for repository Python code |
-| Dependency Review Readiness | Manual `workflow_dispatch` check; not a PR gate until Dependency Graph enforcement is enabled |
+| Dependency Review Readiness | Manual `workflow_dispatch` comparison with explicit base/head refs; not a PR gate until Dependency Graph enforcement is enabled |
 
 ## GitHub-native vs XPeX-native
 
