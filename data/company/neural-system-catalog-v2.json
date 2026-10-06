@@ -1,0 +1,350 @@
+{
+  "schema_version": "2.0",
+  "title": "XPeX Neural System Catalog",
+  "policy": "Evidence First",
+  "knowledge_contract": {
+    "canonical_source": "This registry is the public machine-readable knowledge layer for GX.",
+    "ingestion": "Only audited/admitted evidence is promoted.",
+    "privacy": "No secrets, private memory, customer data, credentials or private wallet material.",
+    "truth": "Runtime, source, security and commercial claims remain separate."
+  },
+  "systems": [
+    {
+      "id": "systems-command",
+      "name": "XPeX Systems Command",
+      "role": "Company Intelligence & Evidence OS",
+      "state": "STAGING VERIFIED",
+      "tier": "FLAGSHIP",
+      "description": "Maps systems, providers, runtime evidence and provenance into one operational control plane.",
+      "stack": [
+        "Next.js",
+        "TypeScript",
+        "Prisma",
+        "PostgreSQL",
+        "Railway"
+      ],
+      "runtime": {
+        "provider": "Railway",
+        "environment": "staging",
+        "state": "SUCCESS",
+        "deployment_id": "13013067-a3e1-45b5-8bab-c747e87c3c35"
+      },
+      "evidence": [
+        {
+          "type": "source",
+          "label": "Canonical repository",
+          "url": "https://github.com/xpex-systems-ai/xpex-systems-command"
+        },
+        {
+          "type": "case",
+          "label": "Flagship case",
+          "url": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/main/docs/FLAGSHIP_CASES.md#1-xpex-systems-command"
+        }
+      ],
+      "assets": [
+        {
+          "type": "screenshot",
+          "name": "Systems Command staging capture",
+          "classification": "E1",
+          "state": "APPROVED_CANDIDATE"
+        }
+      ],
+      "open_gates": [
+        "Stronger identity/RBAC/token-vault controls",
+        "Independent production approval"
+      ]
+    },
+    {
+      "id": "audit-os",
+      "name": "GXEON Audit OS",
+      "role": "Evidence-led systems audit",
+      "state": "DEMO READY",
+      "tier": "FLAGSHIP",
+      "description": "Turns infrastructure discovery into findings, evidence and reviewable technical decisions.",
+      "stack": [
+        "Vercel",
+        "Agentic audit workflow"
+      ],
+      "runtime": {
+        "provider": "Vercel",
+        "environment": "production",
+        "state": "READY",
+        "url": "https://gxeon-audit-os.vercel.app"
+      },
+      "evidence": [
+        {
+          "type": "runtime",
+          "label": "Live surface",
+          "url": "https://gxeon-audit-os.vercel.app"
+        },
+        {
+          "type": "case",
+          "label": "Flagship case",
+          "url": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/main/docs/FLAGSHIP_CASES.md#3-gxeon-audit-os"
+        }
+      ],
+      "assets": [],
+      "open_gates": []
+    },
+    {
+      "id": "plugin-factory",
+      "name": "XPeX Plugin Factory",
+      "role": "MCP · Plugin · Skill compiler",
+      "state": "DEMO READY",
+      "tier": "FLAGSHIP",
+      "description": "Compiles strict blueprints into deterministic agent packages with policy and security gates.",
+      "stack": [
+        "TypeScript",
+        "Zod",
+        "MCP",
+        "Railway"
+      ],
+      "runtime": {
+        "provider": "Railway",
+        "environment": "production",
+        "state": "SUCCESS",
+        "url": "https://xpex-plugin-factory-production.up.railway.app"
+      },
+      "evidence": [
+        {
+          "type": "runtime",
+          "label": "Live surface",
+          "url": "https://xpex-plugin-factory-production.up.railway.app"
+        },
+        {
+          "type": "case",
+          "label": "Flagship case",
+          "url": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/main/docs/FLAGSHIP_CASES.md#4-xpex-plugin-factory"
+        }
+      ],
+      "assets": [],
+      "open_gates": []
+    },
+    {
+      "id": "studio-ai",
+      "name": "XPeX Studio AI",
+      "role": "AI creation control plane",
+      "state": "DEMO READY",
+      "tier": "FLAGSHIP",
+      "description": "Control-plane frontend foundation for Genesis, Agent Core and Memory Core workflows.",
+      "stack": [
+        "Next.js",
+        "Supabase-ready",
+        "Vercel"
+      ],
+      "runtime": {
+        "provider": "Vercel",
+        "environment": "production",
+        "state": "READY",
+        "url": "https://xpex-studio-ai.vercel.app"
+      },
+      "evidence": [
+        {
+          "type": "runtime",
+          "label": "Live surface",
+          "url": "https://xpex-studio-ai.vercel.app"
+        },
+        {
+          "type": "case",
+          "label": "Flagship case",
+          "url": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/main/docs/FLAGSHIP_CASES.md#5-xpex-studio-ai"
+        }
+      ],
+      "assets": [],
+      "open_gates": [
+        "Provider-backed auth/data evidence before stronger production claims"
+      ]
+    },
+    {
+      "id": "wallet",
+      "name": "GXEON Wallet Command Center",
+      "role": "Agent marketplace · Web3 truth layer",
+      "state": "HARDENING",
+      "tier": "FLAGSHIP",
+      "description": "Separates watch-only state, agent demand, payment evidence and settled money with explicit truth boundaries.",
+      "stack": [
+        "React",
+        "Vite",
+        "TypeScript",
+        "Vercel Functions",
+        "Firebase/Firestore paths",
+        "Stripe",
+        "viem",
+        "MCP"
+      ],
+      "runtime": {
+        "provider": "Vercel",
+        "environment": "production",
+        "state": "READY",
+        "url": "https://gxeon-wallet-command-center.vercel.app"
+      },
+      "evidence": [
+        {
+          "type": "runtime",
+          "label": "Live surface",
+          "url": "https://gxeon-wallet-command-center.vercel.app"
+        },
+        {
+          "type": "case",
+          "label": "Flagship case",
+          "url": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/main/docs/FLAGSHIP_CASES.md#2-gxeon-wallet-command-center"
+        }
+      ],
+      "assets": [
+        {
+          "type": "screenshot",
+          "name": "Wallet Command Center capture",
+          "classification": "E2",
+          "state": "REDACT_FIRST"
+        }
+      ],
+      "open_gates": [
+        "Remove repeated Node url.parse() deprecation warning"
+      ]
+    },
+    {
+      "id": "api-fabric",
+      "name": "XPeX API Fabric",
+      "role": "API & machine-service distribution",
+      "state": "ADMISSION",
+      "tier": "FLAGSHIP",
+      "description": "Production API lineage under enterprise admission with source assurance and provider evidence.",
+      "stack": [
+        "React",
+        "Supabase",
+        "Stripe",
+        "Vercel"
+      ],
+      "runtime": {
+        "provider": "Vercel",
+        "environment": "production",
+        "state": "READY",
+        "deployment_id": "dpl_F3m3QDdobj76KgM7iBNYi4udEwyZ"
+      },
+      "evidence": [
+        {
+          "type": "source",
+          "label": "Verified source lineage",
+          "url": "https://github.com/xpex-systems-ai/remix-of-remix-of-remix-of-remix-of-xpex-api-hub-87"
+        },
+        {
+          "type": "case",
+          "label": "Flagship case",
+          "url": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/main/docs/FLAGSHIP_CASES.md#6-xpex-api-fabric--marketplace-lineage"
+        }
+      ],
+      "assets": [],
+      "open_gates": [
+        "Canonical product naming",
+        "Supabase ownership/runtime correlation"
+      ]
+    },
+    {
+      "id": "academy",
+      "name": "XPeX Academy",
+      "role": "AI learning & applied projects",
+      "state": "RUNTIME CORRELATION",
+      "tier": "FLAGSHIP",
+      "description": "Learning, Polo and student operations designed to move from education into applied AI production.",
+      "stack": [
+        "GitHub",
+        "Firebase lineage",
+        "Railway lineage"
+      ],
+      "runtime": {
+        "provider": "Firebase/Railway",
+        "environment": "canonical target",
+        "state": "REQUIRES_CORRELATION"
+      },
+      "evidence": [
+        {
+          "type": "source",
+          "label": "Canonical repository",
+          "url": "https://github.com/xpex-systems-ai/XPEX-ACADEMY"
+        },
+        {
+          "type": "case",
+          "label": "Flagship case",
+          "url": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/main/docs/FLAGSHIP_CASES.md#7-xpex-academy"
+        }
+      ],
+      "assets": [],
+      "open_gates": [
+        "Provider-backed canonical runtime correlation",
+        "Smoke testing before external live-demo promotion"
+      ]
+    },
+    {
+      "id": "app-forge",
+      "name": "GXEON App Forge",
+      "role": "Portfolio system",
+      "state": "EVIDENCE LIMITED",
+      "tier": "PORTFOLIO",
+      "description": "Portfolio-listed system; current public evidence does not support flagship-level runtime claims.",
+      "stack": [],
+      "runtime": {
+        "state": "NOT PUBLICLY CORRELATED"
+      },
+      "evidence": [
+        {
+          "type": "portfolio",
+          "label": "Portfolio registry",
+          "url": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/main/docs/PORTFOLIO.md"
+        }
+      ],
+      "assets": [],
+      "open_gates": [
+        "Source/runtime correlation",
+        "Flagship admission"
+      ]
+    },
+    {
+      "id": "synapse-revenue-hub",
+      "name": "Synapse Revenue Hub",
+      "role": "Portfolio system",
+      "state": "EVIDENCE LIMITED",
+      "tier": "PORTFOLIO",
+      "description": "Portfolio-listed system; current public evidence does not support flagship-level runtime claims.",
+      "stack": [],
+      "runtime": {
+        "state": "NOT PUBLICLY CORRELATED"
+      },
+      "evidence": [
+        {
+          "type": "portfolio",
+          "label": "Portfolio registry",
+          "url": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/main/docs/PORTFOLIO.md"
+        }
+      ],
+      "assets": [],
+      "open_gates": [
+        "Source/runtime correlation",
+        "Flagship admission"
+      ]
+    },
+    {
+      "id": "product-forge-ai",
+      "name": "Product Forge AI",
+      "role": "Portfolio system",
+      "state": "EVIDENCE LIMITED",
+      "tier": "PORTFOLIO",
+      "description": "Portfolio-listed system; current public evidence does not support flagship-level runtime claims.",
+      "stack": [],
+      "runtime": {
+        "state": "NOT PUBLICLY CORRELATED"
+      },
+      "evidence": [
+        {
+          "type": "portfolio",
+          "label": "Portfolio registry",
+          "url": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/main/docs/PORTFOLIO.md"
+        }
+      ],
+      "assets": [],
+      "open_gates": [
+        "Source/runtime correlation",
+        "Flagship admission"
+      ]
+    }
+  ]
+}
