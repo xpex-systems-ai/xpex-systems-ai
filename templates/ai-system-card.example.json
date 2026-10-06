@@ -1,0 +1,35 @@
+{
+  "system_id": "XPEX-EXAMPLE-001",
+  "name": "Example AI System",
+  "owner": "XPeX Systems AI",
+  "purpose": "Demonstrate an XAGF system card.",
+  "risk_tier": "R1",
+  "status": "CLASSIFIED",
+  "data_classes": [
+    "D0",
+    "D1"
+  ],
+  "models": [
+    "provider/model-version"
+  ],
+  "agents": [
+    "GXEON-EXAMPLE-001"
+  ],
+  "tools": [
+    "registry.read"
+  ],
+  "deployment": {
+    "environment": "staging",
+    "provider": null,
+    "source_commit": null,
+    "deployment_id": null
+  },
+  "controls": [
+    "XAGF-GOV-001",
+    "XAGF-GOV-002",
+    "XAGF-AGT-001"
+  ],
+  "open_findings": [],
+  "assurance_level": "AL1",
+  "last_reviewed_at": null
+}

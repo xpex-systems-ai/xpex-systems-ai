@@ -1,0 +1,124 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-10-05T23:35:00-03:00",
+  "note": "This is a governed target registry. REGISTERED does not mean continuously autonomous runtime is deployed.",
+  "agents": [
+    {
+      "agent_id": "GXEON-AUDITOR-001",
+      "name": "GXEON Auditor",
+      "purpose": "Inventory, correlate and verify company systems, source, deployments and evidence.",
+      "governance_status": "REGISTERED",
+      "runtime_status": "NOT_DEPLOYED_AS_PERSISTENT_AUTONOMOUS_SERVICE",
+      "risk_tier": "R1",
+      "autonomy_level": "L1_TO_L2_TARGET",
+      "allowed": [
+        "source.read",
+        "deployment.read",
+        "evidence.write_draft",
+        "audit.report"
+      ],
+      "approval_required": [
+        "destructive.action",
+        "credential.change",
+        "production.write"
+      ]
+    },
+    {
+      "agent_id": "GXEON-ENGINEER-001",
+      "name": "GXEON Engineer",
+      "purpose": "Implement bounded engineering changes in approved repositories and environments.",
+      "governance_status": "REGISTERED",
+      "runtime_status": "NOT_DEPLOYED_AS_PERSISTENT_AUTONOMOUS_SERVICE",
+      "risk_tier": "R2",
+      "autonomy_level": "L2_TO_L3_TARGET",
+      "allowed": [
+        "code.change_scoped",
+        "test.run",
+        "branch.create",
+        "pull_request.create"
+      ],
+      "approval_required": [
+        "production.promote",
+        "critical.merge",
+        "secret.change",
+        "destructive.action"
+      ]
+    },
+    {
+      "agent_id": "GXEON-SECURITY-001",
+      "name": "GXEON Security",
+      "purpose": "Run governance/security checks, evidence collection and remediation workflows.",
+      "governance_status": "REGISTERED",
+      "runtime_status": "NOT_DEPLOYED_AS_PERSISTENT_AUTONOMOUS_SERVICE",
+      "risk_tier": "R2",
+      "autonomy_level": "L2_TARGET",
+      "allowed": [
+        "security.read",
+        "scan.run",
+        "finding.create",
+        "remediation.draft"
+      ],
+      "approval_required": [
+        "credential.rotate",
+        "production.block",
+        "destructive.action"
+      ]
+    },
+    {
+      "agent_id": "GXEON-RESEARCH-001",
+      "name": "GXEON Research",
+      "purpose": "Perform structured research and evidence-backed synthesis.",
+      "governance_status": "REGISTERED",
+      "runtime_status": "NOT_DEPLOYED_AS_PERSISTENT_AUTONOMOUS_SERVICE",
+      "risk_tier": "R1",
+      "autonomy_level": "L1_TO_L2_TARGET",
+      "allowed": [
+        "public.research",
+        "source.read",
+        "evidence.summarize"
+      ],
+      "approval_required": [
+        "external.publish"
+      ]
+    },
+    {
+      "agent_id": "GXEON-REVENUE-001",
+      "name": "GXEON Revenue",
+      "purpose": "Support approved commercial operations and revenue workflows.",
+      "governance_status": "REGISTERED",
+      "runtime_status": "NOT_DEPLOYED_AS_PERSISTENT_AUTONOMOUS_SERVICE",
+      "risk_tier": "R2",
+      "autonomy_level": "L2_TARGET",
+      "allowed": [
+        "pipeline.read",
+        "proposal.draft",
+        "pricing.read"
+      ],
+      "approval_required": [
+        "contract.commit",
+        "payment.execute",
+        "external.send"
+      ]
+    },
+    {
+      "agent_id": "GXEON-OPERATIONS-001",
+      "name": "GXEON Operations",
+      "purpose": "Monitor infrastructure, runtime and operational state.",
+      "governance_status": "REGISTERED",
+      "runtime_status": "NOT_DEPLOYED_AS_PERSISTENT_AUTONOMOUS_SERVICE",
+      "risk_tier": "R2",
+      "autonomy_level": "L1_TO_L2_TARGET",
+      "allowed": [
+        "runtime.read",
+        "logs.read",
+        "health.check",
+        "incident.draft"
+      ],
+      "approval_required": [
+        "production.change",
+        "resource.delete",
+        "credential.change"
+      ]
+    }
+  ]
+}
