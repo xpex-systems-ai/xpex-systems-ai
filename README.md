@@ -26,7 +26,7 @@
 
 An AI-native systems company building an evidence-driven control plane for intelligent software, autonomous agents, infrastructure and enterprise operations.
 
-[Portfolio](docs/PORTFOLIO.md) · [Demo Readiness](docs/DEMO_READINESS.md) · [Founder Profile](docs/FOUNDER_PROFILE.md) · [Showcase](docs/SHOWCASE.md) · [Verified Systems](systems/README.md) · [Enterprise Control Plane](docs/ENTERPRISE_CONTROL_PLANE.md) · [Admission Gates](docs/SYSTEM_ADMISSION_GATES.md) · [Trust Center](docs/TRUST_CENTER.md) · [Architecture](docs/ARCHITECTURE.md) · [Agents](docs/AGENTS.md) · [Assurance](docs/ASSURANCE.md) · [Status](STATUS.md)
+[Portfolio](docs/PORTFOLIO.md) · [Flagship Cases](docs/FLAGSHIP_CASES.md) · [Demo Readiness](docs/DEMO_READINESS.md) · [Founder Profile](docs/FOUNDER_PROFILE.md) · [Showcase](docs/SHOWCASE.md) · [Verified Systems](systems/README.md) · [Enterprise Control Plane](docs/ENTERPRISE_CONTROL_PLANE.md) · [Admission Gates](docs/SYSTEM_ADMISSION_GATES.md) · [Trust Center](docs/TRUST_CENTER.md) · [Architecture](docs/ARCHITECTURE.md) · [Agents](docs/AGENTS.md) · [Assurance](docs/ASSURANCE.md) · [Status](STATUS.md)
 
 </div>
 
