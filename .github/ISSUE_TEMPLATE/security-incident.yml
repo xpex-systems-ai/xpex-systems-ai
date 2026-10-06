@@ -1,0 +1,44 @@
+name: Security / AI Incident
+description: Record an AI, agent or platform security incident
+title: "[INCIDENT] "
+labels: ["security", "incident"]
+body:
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options: ["SEV-0 Critical", "SEV-1 High", "SEV-2 Moderate", "SEV-3 Low", "SEV-4 Observation"]
+    validations:
+      required: true
+  - type: input
+    id: system
+    attributes:
+      label: Affected system / agent
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: Incident summary
+      description: Do not include secrets or exploitable credentials.
+    validations:
+      required: true
+  - type: textarea
+    id: containment
+    attributes:
+      label: Containment actions
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence references
+      description: Link safe internal references; do not paste secrets.
+  - type: textarea
+    id: impact
+    attributes:
+      label: Known / potential impact
+  - type: textarea
+    id: next
+    attributes:
+      label: Required next actions
