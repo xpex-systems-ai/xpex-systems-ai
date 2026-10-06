@@ -1,0 +1,109 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-10-06T02:15:00-03:00",
+  "policy": "XAGF",
+  "kill_switches": [
+    {
+      "kill_switch_id": "KS-GXEON-AUDITOR-001",
+      "agent_id": "GXEON-AUDITOR-001",
+      "owner": "XPeX Systems AI",
+      "actions": [
+        "DISABLE_AGENT",
+        "REVOKE_TOOLS",
+        "FREEZE_WRITES",
+        "STOP_SCHEDULES",
+        "PRESERVE_LOGS"
+      ],
+      "activation_authority": [
+        "XPeX Founder/Authorized Operator"
+      ],
+      "status": "DESIGN",
+      "last_tested_at": null
+    },
+    {
+      "kill_switch_id": "KS-GXEON-ENGINEER-001",
+      "agent_id": "GXEON-ENGINEER-001",
+      "owner": "XPeX Systems AI",
+      "actions": [
+        "DISABLE_AGENT",
+        "REVOKE_TOOLS",
+        "FREEZE_WRITES",
+        "STOP_SCHEDULES",
+        "PRESERVE_LOGS"
+      ],
+      "activation_authority": [
+        "XPeX Founder/Authorized Operator"
+      ],
+      "status": "DESIGN",
+      "last_tested_at": null
+    },
+    {
+      "kill_switch_id": "KS-GXEON-SECURITY-001",
+      "agent_id": "GXEON-SECURITY-001",
+      "owner": "XPeX Systems AI",
+      "actions": [
+        "DISABLE_AGENT",
+        "REVOKE_TOOLS",
+        "FREEZE_WRITES",
+        "STOP_SCHEDULES",
+        "PRESERVE_LOGS"
+      ],
+      "activation_authority": [
+        "XPeX Founder/Authorized Operator"
+      ],
+      "status": "DESIGN",
+      "last_tested_at": null
+    },
+    {
+      "kill_switch_id": "KS-GXEON-RESEARCH-001",
+      "agent_id": "GXEON-RESEARCH-001",
+      "owner": "XPeX Systems AI",
+      "actions": [
+        "DISABLE_AGENT",
+        "REVOKE_TOOLS",
+        "FREEZE_WRITES",
+        "STOP_SCHEDULES",
+        "PRESERVE_LOGS"
+      ],
+      "activation_authority": [
+        "XPeX Founder/Authorized Operator"
+      ],
+      "status": "DESIGN",
+      "last_tested_at": null
+    },
+    {
+      "kill_switch_id": "KS-GXEON-REVENUE-001",
+      "agent_id": "GXEON-REVENUE-001",
+      "owner": "XPeX Systems AI",
+      "actions": [
+        "DISABLE_AGENT",
+        "REVOKE_TOOLS",
+        "FREEZE_WRITES",
+        "STOP_SCHEDULES",
+        "PRESERVE_LOGS"
+      ],
+      "activation_authority": [
+        "XPeX Founder/Authorized Operator"
+      ],
+      "status": "DESIGN",
+      "last_tested_at": null
+    },
+    {
+      "kill_switch_id": "KS-GXEON-OPERATIONS-001",
+      "agent_id": "GXEON-OPERATIONS-001",
+      "owner": "XPeX Systems AI",
+      "actions": [
+        "DISABLE_AGENT",
+        "REVOKE_TOOLS",
+        "FREEZE_WRITES",
+        "STOP_SCHEDULES",
+        "PRESERVE_LOGS"
+      ],
+      "activation_authority": [
+        "XPeX Founder/Authorized Operator"
+      ],
+      "status": "DESIGN",
+      "last_tested_at": null
+    }
+  ]
+}
