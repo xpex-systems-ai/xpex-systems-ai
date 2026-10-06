@@ -14,3 +14,12 @@ Do not:
 - hide fork/upstream lineage;
 - put credentials in evidence;
 - present a draft name as final without marking its status.
+
+
+For any verified runtime, also create:
+- `ai-bom.json`;
+- a matching Trust Passport under `data/trust/system-passports/`;
+- evidence references that are public-safe;
+- explicit unknowns/blockers.
+
+Use `docs/SYSTEM_STANDARD.md` as the authoritative mold.
