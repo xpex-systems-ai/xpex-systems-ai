@@ -1,0 +1,150 @@
+{
+  "schema_version": "2.0",
+  "generated_from": "Evidence First corporate registry + verified runtime snapshot",
+  "knowledge_contract": "GX may reason over these records but must preserve evidence status and never upgrade a claim without new proof.",
+  "systems": [
+    {
+      "id": "systems-command",
+      "name": "XPeX Systems Command",
+      "subtitle": "Company Intelligence & Evidence OS",
+      "status": "STAGING VERIFIED",
+      "stage": "CANONICAL",
+      "provider": "Railway",
+      "environment": "staging",
+      "summary": "Maps systems, providers, runtime evidence and provenance into one operational control plane.",
+      "proof": [
+        "Railway deployment 13013067-a3e1-45b5-8bab-c747e87c3c35 verified SUCCESS",
+        "PostgreSQL lineage recorded",
+        "Trust Passport TP1_DOCUMENTED",
+        "AI-BOM present"
+      ],
+      "links": {
+        "source": "https://github.com/xpex-systems-ai/xpex-systems-command"
+      },
+      "media": [
+        "screencapture-xpex-systems-command-staging-web-production-up-railway-app-2026-10-02-00_22_32.png"
+      ],
+      "media_class": "E1"
+    },
+    {
+      "id": "audit-os",
+      "name": "GXEON Audit OS",
+      "subtitle": "Evidence-led systems audit",
+      "status": "DEMO READY",
+      "stage": "FLAGSHIP",
+      "provider": "Vercel",
+      "environment": "production",
+      "summary": "Turns infrastructure discovery into findings, evidence and reviewable technical decisions.",
+      "proof": [
+        "Vercel production observed READY",
+        "No runtime error group observed in latest recorded 7-day query"
+      ],
+      "links": {
+        "live": "https://gxeon-audit-os.vercel.app"
+      },
+      "media": [],
+      "media_class": null
+    },
+    {
+      "id": "plugin-factory",
+      "name": "XPeX Plugin Factory",
+      "subtitle": "MCP · Plugin · Skill compiler",
+      "status": "DEMO READY",
+      "stage": "FLAGSHIP",
+      "provider": "Railway",
+      "environment": "production",
+      "summary": "Compiles strict blueprints into deterministic agent packages with policy and security gates.",
+      "proof": [
+        "Railway deployment evidence SUCCESS",
+        "Public Railway domain present"
+      ],
+      "links": {
+        "live": "https://xpex-plugin-factory-production.up.railway.app"
+      },
+      "media": [],
+      "media_class": null
+    },
+    {
+      "id": "studio-ai",
+      "name": "XPeX Studio AI",
+      "subtitle": "AI creation control plane",
+      "status": "DEMO READY",
+      "stage": "FLAGSHIP",
+      "provider": "Vercel",
+      "environment": "production",
+      "summary": "AI creation/control-plane frontend foundation for Genesis, Agent Core and Memory Core workflows.",
+      "proof": [
+        "Vercel production observed READY",
+        "No runtime error group observed in latest recorded 7-day query"
+      ],
+      "links": {
+        "live": "https://xpex-studio-ai.vercel.app"
+      },
+      "media": [],
+      "media_class": null
+    },
+    {
+      "id": "wallet",
+      "name": "GXEON Wallet Command Center",
+      "subtitle": "Agent marketplace · Web3 truth layer",
+      "status": "HARDENING",
+      "stage": "FLAGSHIP",
+      "provider": "Vercel",
+      "environment": "production",
+      "summary": "Separates watched state, agent demand, payment evidence and settled money with explicit truth boundaries.",
+      "proof": [
+        "Vercel production observed READY",
+        "MCP discovery surface recorded",
+        "Node url.parse deprecation warning remains a hardening item"
+      ],
+      "links": {
+        "live": "https://gxeon-wallet-command-center.vercel.app"
+      },
+      "media": [
+        "screencapture-gxeon-wallet-command-center-vercel-app-2026-10-02-08_17_44.png"
+      ],
+      "media_class": "E2"
+    },
+    {
+      "id": "api-fabric",
+      "name": "XPeX API Fabric",
+      "subtitle": "API & machine-service distribution",
+      "status": "ADMISSION",
+      "stage": "CANONICAL_CANDIDATE",
+      "provider": "Vercel",
+      "environment": "production",
+      "summary": "Production API lineage under enterprise admission, with source assurance and provider evidence.",
+      "proof": [
+        "Production deployment dpl_F3m3QDdobj76KgM7iBNYi4udEwyZ observed READY",
+        "Source commit eb76188996c00604cd2d50aa89e7fd7bf9417f3c",
+        "Trust Passport TP1_DOCUMENTED",
+        "AI-BOM present",
+        "Legacy branding/domain cleanup remains"
+      ],
+      "links": {
+        "source": "https://github.com/xpex-systems-ai/remix-of-remix-of-remix-of-remix-of-xpex-api-hub-87"
+      },
+      "media": [],
+      "media_class": null
+    },
+    {
+      "id": "academy",
+      "name": "XPeX Academy",
+      "subtitle": "AI learning & applied projects",
+      "status": "RUNTIME CORRELATION",
+      "stage": "PORTFOLIO",
+      "provider": "Firebase + Railway",
+      "environment": "canonical runtime pending correlation",
+      "summary": "Learning, Polo and student operations designed to move from education into applied AI production.",
+      "proof": [
+        "Legacy Vercel path intentionally decommissioned",
+        "Canonical Firebase/Railway runtime still requires provider-backed correlation"
+      ],
+      "links": {
+        "source": "https://github.com/xpex-systems-ai/XPEX-ACADEMY"
+      },
+      "media": [],
+      "media_class": null
+    }
+  ]
+}
