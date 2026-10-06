@@ -131,7 +131,7 @@
       ],
       "default_effect": "DENY",
       "environments": [
-        "staging"
+        "research"
       ],
       "data_classes": [
         "D0",
@@ -164,7 +164,7 @@
       ],
       "default_effect": "DENY",
       "environments": [
-        "staging"
+        "commercial-sandbox"
       ],
       "data_classes": [
         "D0",
