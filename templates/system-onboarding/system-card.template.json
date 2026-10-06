@@ -23,5 +23,8 @@
   "blockers": [],
   "governance_framework": "XAGF",
   "evidence": [],
-  "updated_at": null
+  "updated_at": null,
+  "trust_passport_ref": "data/trust/system-passports/replace-me.json",
+  "ai_bom_ref": "systems/replace-me/ai-bom.json",
+  "assurance_model": "XPeX Trust Passport v1"
 }
