@@ -102,4 +102,10 @@ export function initGX() {
   quicks.forEach(button=>{
     button.addEventListener('click',()=>ask(button.dataset.gxQuick));
   });
+
+  const initialAsk=new URLSearchParams(location.search).get('ask');
+  if (initialAsk) {
+    input.value=initialAsk;
+    setTimeout(()=>ask(initialAsk),120);
+  }
 }
