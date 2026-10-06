@@ -26,7 +26,7 @@
 
 An AI-native systems company building an evidence-driven control plane for intelligent software, autonomous agents, infrastructure and enterprise operations.
 
-[Portfolio](docs/PORTFOLIO.md) · [Flagship Cases](docs/FLAGSHIP_CASES.md) · [GX Evidence Concierge](docs/GX_PUBLIC_AGENT.md) · [Media Evidence](docs/MEDIA_EVIDENCE_TRIAGE.md) · [Demo Readiness](docs/DEMO_READINESS.md) · [Public Launch](docs/PUBLIC_LAUNCH_CHECKLIST.md) · [Founder Profile](docs/FOUNDER_PROFILE.md) · [Showcase](docs/SHOWCASE.md) · [Verified Systems](systems/README.md) · [Enterprise Control Plane](docs/ENTERPRISE_CONTROL_PLANE.md) · [Admission Gates](docs/SYSTEM_ADMISSION_GATES.md) · [Trust Center](docs/TRUST_CENTER.md) · [Architecture](docs/ARCHITECTURE.md) · [Agents](docs/AGENTS.md) · [Assurance](docs/ASSURANCE.md) · [Status](STATUS.md)
+[Portfolio](docs/PORTFOLIO.md) · [Flagship Cases](docs/FLAGSHIP_CASES.md) · [GX Evidence Concierge](docs/GX_PUBLIC_AGENT.md) · [GX Knowledge Plane](docs/GX_KNOWLEDGE_PLANE.md) · [System Intelligence](site/public/data/system-intelligence-v1.json) · [Media Evidence](docs/MEDIA_EVIDENCE_TRIAGE.md) · [Demo Readiness](docs/DEMO_READINESS.md) · [Public Launch](docs/PUBLIC_LAUNCH_CHECKLIST.md) · [Founder Profile](docs/FOUNDER_PROFILE.md) · [Showcase](docs/SHOWCASE.md) · [Verified Systems](systems/README.md) · [Enterprise Control Plane](docs/ENTERPRISE_CONTROL_PLANE.md) · [Admission Gates](docs/SYSTEM_ADMISSION_GATES.md) · [Trust Center](docs/TRUST_CENTER.md) · [Architecture](docs/ARCHITECTURE.md) · [Agents](docs/AGENTS.md) · [Assurance](docs/ASSURANCE.md) · [Status](STATUS.md)
 
 </div>
 
