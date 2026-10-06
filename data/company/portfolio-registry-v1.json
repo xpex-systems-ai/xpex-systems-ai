@@ -316,10 +316,16 @@
     "project_id": "prj_9TzNOpz6Uzz34uHfLrlYAXzXcfgw",
     "project_name": "xpex-systems-ai",
     "canonical_alias": "https://xpex-systems-ai.vercel.app",
-    "deployment_id": "dpl_3NTiihVHeQPbP4Kx9SYK5fKw7UpD",
+    "deployment_id": "dpl_mbgL6LUF2wSgcWRBxtDqxabvQoq3",
     "deployment_state": "READY",
-    "source_commit": "4cb02888ba2f8a3ded135166cbebe376f61555bb",
+    "source_commit": "1eca8a368830ae8a2d9a2ee0c8fad49b205abe54",
     "framework": "vite",
-    "public_access": "VERCEL_SSO_DISABLED"
+    "public_access": "VERCEL_SSO_DISABLED",
+    "capabilities": {
+      "gx_public_evidence_nodes": 19,
+      "gx_knowledge_systems": 7,
+      "material_lineages": 20,
+      "system_intelligence_registry": "https://xpex-systems-ai.vercel.app/data/system-intelligence-v1.json"
+    }
   }
 }
