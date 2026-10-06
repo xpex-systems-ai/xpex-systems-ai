@@ -93,6 +93,7 @@ function sourceView(evidence) {
 }
 
 async function answerWithGateway(message, evidence) {
+  if (process.env.GX_AI_ENABLED !== 'true') return null;
   const authToken = process.env.AI_GATEWAY_API_KEY || process.env.VERCEL_OIDC_TOKEN;
   if (!authToken) return null;
 
@@ -151,8 +152,8 @@ export default async function handler(req,res) {
       name:'GX Evidence Concierge',
       status:'ready',
       scope:'public-evidence-only',
-      aiEnabled:Boolean(process.env.AI_GATEWAY_API_KEY || process.env.VERCEL_OIDC_TOKEN),
-      model:(process.env.AI_GATEWAY_API_KEY || process.env.VERCEL_OIDC_TOKEN) ? MODEL : null,
+      aiEnabled:process.env.GX_AI_ENABLED === 'true' && Boolean(process.env.AI_GATEWAY_API_KEY || process.env.VERCEL_OIDC_TOKEN),
+      model:(process.env.GX_AI_ENABLED === 'true' && (process.env.AI_GATEWAY_API_KEY || process.env.VERCEL_OIDC_TOKEN)) ? MODEL : null,
       evidenceItems:GX_EVIDENCE.length
     });
   }
