@@ -68,16 +68,23 @@ A passing badge means the corresponding workflow executed successfully. It is no
 - Team: `xpex-neural`
 - Project: `xpex-systems-ai`
 - Project ID: `prj_9TzNOpz6Uzz34uHfLrlYAXzXcfgw`
-- Production deployment: `dpl_3NTiihVHeQPbP4Kx9SYK5fKw7UpD`
+- Production deployment: `dpl_mbgL6LUF2wSgcWRBxtDqxabvQoq3`
 - State: `READY`
 - Canonical Vercel alias: `https://xpex-systems-ai.vercel.app`
-- Source commit: `4cb02888ba2f8a3ded135166cbebe376f61555bb`
+- Source commit: `1eca8a368830ae8a2d9a2ee0c8fad49b205abe54`
 - Framework: Vite
 - Node build baseline: 22.x
 - Vercel SSO protection: disabled for the public corporate surface
 - Git fork protection: enabled
 
-The corporate site exposes portfolio, Trust Layer, founder profile and external-review paths. Public claims remain bounded by the corporate evidence registry.
+The corporate site exposes portfolio, Trust Layer, founder profile, System Intelligence pages and external-review paths. Public claims remain bounded by the corporate evidence registry.
+
+GX production verification:
+- `/api/gx`: `200 OK`
+- Public evidence/context nodes: **19**
+- Detailed knowledge systems: **7**
+- Material asset lineages in the knowledge graph: **20**
+- `/data/system-intelligence-v1.json`: `200 OK`
 
 
 ### XPeX Systems Command
