@@ -1,15 +1,14 @@
-name: Dependency Review
+name: Dependency Review Readiness
 
 on:
-  pull_request:
-    branches: [main]
+  workflow_dispatch:
 
 permissions:
   contents: read
 
 jobs:
   review:
-    name: Dependency vulnerability review
+    name: Dependency review (requires GitHub Dependency Graph)
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
