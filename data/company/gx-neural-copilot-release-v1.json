@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "snapshot": "2026-10-06",
+  "component": "XPeX GX Neural Copilot",
+  "policy": "Evidence First",
+  "source": {
+    "repository": "xpex-systems-ai/xpex-systems-ai",
+    "commit": "f5ffafd43517f5363d2034a959ffe7a63abf528f",
+    "merged_pr": 29
+  },
+  "runtime": {
+    "provider": "Vercel",
+    "project": "xpex-systems-ai",
+    "production_deployment": "dpl_GEkcSKyKJaPVKkUNxPejoiLozQEi",
+    "state": "READY",
+    "canonical_endpoint": "https://xpex-systems-ai.vercel.app/api/mcp/gx",
+    "health_http_status": 200,
+    "transport": "streamable-http-json",
+    "protocol_version": "2025-03-26"
+  },
+  "knowledge_plane": {
+    "mcp_tools": 11,
+    "detailed_systems": 7,
+    "material_lineages": 20,
+    "evidence_nodes": 19
+  },
+  "plugin_release": {
+    "name": "xpex-gx-neural-copilot",
+    "version": "1.0.0",
+    "scope": "USER",
+    "discoverability": "PRIVATE",
+    "creation_status": "created",
+    "manifest_verified": true,
+    "mcp_binding_verified": "https://xpex-systems-ai.vercel.app/api/mcp/gx",
+    "private_identifier_omitted_from_public_evidence": true
+  },
+  "assurance": {
+    "pr_checks": "9/9 applicable workflows passed before merge",
+    "preview_deployment": "READY",
+    "preview_mcp_health": "200 OK",
+    "production_deployment": "READY",
+    "production_mcp_health": "200 OK"
+  },
+  "boundaries": [
+    "Read-only public evidence and Company Intelligence in V1",
+    "No private ChatGPT memory transfer",
+    "No credential access",
+    "No infrastructure mutation",
+    "No financial action",
+    "No self-approval"
+  ]
+}
