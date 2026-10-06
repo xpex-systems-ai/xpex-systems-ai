@@ -1,0 +1,212 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-10-06T02:15:00-03:00",
+  "default_effect": "DENY",
+  "policies": [
+    {
+      "policy_id": "PP-GXEON-AUDITOR-001",
+      "subject_id": "GXEON-AUDITOR-001",
+      "allow": [
+        "source.read",
+        "deployment.read",
+        "evidence.write_draft",
+        "audit.report"
+      ],
+      "deny": [
+        "payment.execute",
+        "wallet.transfer",
+        "trade.execute",
+        "credential.rotate",
+        "repository.delete",
+        "database.delete",
+        "production.delete",
+        "account.owner.change"
+      ],
+      "approval_required": [
+        "destructive.action",
+        "credential.change",
+        "production.write"
+      ],
+      "default_effect": "DENY",
+      "environments": [
+        "staging"
+      ],
+      "data_classes": [
+        "D0",
+        "D1"
+      ],
+      "status": "DRAFT"
+    },
+    {
+      "policy_id": "PP-GXEON-ENGINEER-001",
+      "subject_id": "GXEON-ENGINEER-001",
+      "allow": [
+        "code.change_scoped",
+        "test.run",
+        "branch.create",
+        "pull_request.create"
+      ],
+      "deny": [
+        "payment.execute",
+        "wallet.transfer",
+        "trade.execute",
+        "credential.rotate",
+        "repository.delete",
+        "database.delete",
+        "production.delete",
+        "account.owner.change"
+      ],
+      "approval_required": [
+        "production.promote",
+        "critical.merge",
+        "secret.change",
+        "destructive.action"
+      ],
+      "default_effect": "DENY",
+      "environments": [
+        "staging"
+      ],
+      "data_classes": [
+        "D0",
+        "D1",
+        "D2"
+      ],
+      "status": "DRAFT"
+    },
+    {
+      "policy_id": "PP-GXEON-SECURITY-001",
+      "subject_id": "GXEON-SECURITY-001",
+      "allow": [
+        "security.read",
+        "scan.run",
+        "finding.create",
+        "remediation.draft"
+      ],
+      "deny": [
+        "payment.execute",
+        "wallet.transfer",
+        "trade.execute",
+        "credential.rotate",
+        "repository.delete",
+        "database.delete",
+        "production.delete",
+        "account.owner.change"
+      ],
+      "approval_required": [
+        "credential.rotate",
+        "production.block",
+        "destructive.action"
+      ],
+      "default_effect": "DENY",
+      "environments": [
+        "staging"
+      ],
+      "data_classes": [
+        "D0",
+        "D1",
+        "D2"
+      ],
+      "status": "DRAFT"
+    },
+    {
+      "policy_id": "PP-GXEON-RESEARCH-001",
+      "subject_id": "GXEON-RESEARCH-001",
+      "allow": [
+        "public.research",
+        "source.read",
+        "evidence.summarize"
+      ],
+      "deny": [
+        "payment.execute",
+        "wallet.transfer",
+        "trade.execute",
+        "credential.rotate",
+        "repository.delete",
+        "database.delete",
+        "production.delete",
+        "account.owner.change"
+      ],
+      "approval_required": [
+        "external.publish"
+      ],
+      "default_effect": "DENY",
+      "environments": [
+        "research"
+      ],
+      "data_classes": [
+        "D0",
+        "D1"
+      ],
+      "status": "DRAFT"
+    },
+    {
+      "policy_id": "PP-GXEON-REVENUE-001",
+      "subject_id": "GXEON-REVENUE-001",
+      "allow": [
+        "pipeline.read",
+        "proposal.draft",
+        "pricing.read"
+      ],
+      "deny": [
+        "payment.execute",
+        "wallet.transfer",
+        "trade.execute",
+        "credential.rotate",
+        "repository.delete",
+        "database.delete",
+        "production.delete",
+        "account.owner.change"
+      ],
+      "approval_required": [
+        "contract.commit",
+        "payment.execute",
+        "external.send"
+      ],
+      "default_effect": "DENY",
+      "environments": [
+        "commercial-sandbox"
+      ],
+      "data_classes": [
+        "D0",
+        "D1",
+        "D2"
+      ],
+      "status": "DRAFT"
+    },
+    {
+      "policy_id": "PP-GXEON-OPERATIONS-001",
+      "subject_id": "GXEON-OPERATIONS-001",
+      "allow": [
+        "runtime.read",
+        "logs.read",
+        "health.check",
+        "incident.draft"
+      ],
+      "deny": [
+        "payment.execute",
+        "wallet.transfer",
+        "trade.execute",
+        "credential.rotate",
+        "repository.delete",
+        "database.delete",
+        "production.delete",
+        "account.owner.change"
+      ],
+      "approval_required": [
+        "production.change",
+        "resource.delete",
+        "credential.change"
+      ],
+      "default_effect": "DENY",
+      "environments": [
+        "staging"
+      ],
+      "data_classes": [
+        "D0",
+        "D1",
+        "D2"
+      ],
+      "status": "DRAFT"
+    }
+  ]
+}
