@@ -81,3 +81,17 @@ Knowledge permission and action permission remain separate.
 ## Governance invariant
 
 > THE EXECUTOR DOES NOT APPROVE ITS OWN DELIVERY.
+
+
+## Verified V1 release
+
+The V1 integration completed the GXO release flow:
+
+- PR #29 merged after all 9 applicable CI/security/governance workflows passed.
+- Vercel production deployment `dpl_GEkcSKyKJaPVKkUNxPejoiLozQEi` reached `READY`.
+- The canonical MCP endpoint returned `200 OK`.
+- The endpoint reports 11 MCP tools, 7 detailed systems, 20 material lineages and 19 evidence/context nodes.
+- The private OpenAI/Codex plugin package `xpex-gx-neural-copilot` version `1.0.0` was created and its manifest/MCP/skill files were re-read successfully.
+- The plugin's private backend identifier is intentionally omitted from public repository evidence.
+
+Release evidence: `data/company/gx-neural-copilot-release-v1.json`.
