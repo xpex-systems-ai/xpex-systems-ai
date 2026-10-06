@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "snapshot_at": "2026-10-06T02:15:00-03:00",
+  "company": "XPeX Systems AI",
+  "internal_framework": "XAGF",
+  "overall_internal_assurance": "AL1",
+  "trust_passport_model": "1.0",
+  "system_passports": 2,
+  "agent_passports": 6,
+  "agent_manifests": 6,
+  "automated_gates": [
+    "Governance Validation",
+    "Public Truth Validation",
+    "System Registry Validation",
+    "Trust Passport Validation",
+    "Agent Security Validation",
+    "Secret Pattern Scan",
+    "Workflow Supply Chain Validation",
+    "CodeQL Security Analysis",
+    "Dependency Review"
+  ],
+  "external_certifications": [],
+  "statement": "Automated validation does not constitute external certification.",
+  "admin_controls_pending_verification": [
+    "GitHub ruleset / branch protection enforcement",
+    "GitHub Secret Scanning configuration",
+    "GitHub Push Protection configuration"
+  ]
+}
