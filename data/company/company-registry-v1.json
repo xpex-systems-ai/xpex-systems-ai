@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0",
+  "company": {
+    "name": "XPeX Systems AI",
+    "category": "AI-Native Systems Company",
+    "positioning": "AI Systems, Agents & Company Intelligence",
+    "tagline": "Build. Connect. Operate. Prove.",
+    "operating_principle": "EVIDENCE_FIRST",
+    "governance_rule": "THE EXECUTOR DOES NOT APPROVE ITS OWN DELIVERY."
+  },
+  "layers": [
+    {
+      "id": "xpex-systems-command",
+      "name": "XPeX Systems Command",
+      "type": "CONTROL_PLANE",
+      "status": "EXISTING_FOUNDATION"
+    },
+    {
+      "id": "gxeon",
+      "name": "GXEON",
+      "type": "AGENT_EXECUTION_LAYER",
+      "status": "EXISTING_FAMILY_CONSOLIDATION_REQUIRED"
+    },
+    {
+      "id": "nexara",
+      "name": "NEXARA Intelligence Fabric",
+      "type": "MODEL_ROUTING_LAYER",
+      "status": "DESIGN_TARGET"
+    }
+  ],
+  "verticals": [
+    {
+      "id": "academy",
+      "name": "XPeX Academy",
+      "status": "EXISTING_PRODUCT_FAMILY"
+    },
+    {
+      "id": "revenue",
+      "name": "XPeX Revenue",
+      "status": "CONSOLIDATION_TARGET"
+    },
+    {
+      "id": "web3",
+      "name": "XPeX Web3",
+      "status": "CONSOLIDATION_TARGET"
+    },
+    {
+      "id": "media",
+      "name": "XPeX Media / Creator",
+      "status": "CONSOLIDATION_TARGET"
+    }
+  ],
+  "public_portfolio_policy": {
+    "target_flagships_min": 4,
+    "target_flagships_max": 7,
+    "required_gates": [
+      "CANONICAL_IDENTITY",
+      "SOURCE_POSITION_KNOWN",
+      "RUNTIME_VERIFIED",
+      "SECURITY_REVIEW",
+      "PUBLIC_DESCRIPTION_APPROVED",
+      "PUBLIC_EVIDENCE_CREATED"
+    ]
+  },
+  "business_model_sequence": [
+    "SERVICE",
+    "SOFTWARE",
+    "PLATFORM",
+    "NETWORK"
+  ],
+  "roadmap_current_phase": "COMPANY_FOUNDATION_V1",
+  "updated_at": "2026-10-05T22:19:00-03:00"
+}
