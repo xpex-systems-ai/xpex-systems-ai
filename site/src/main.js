@@ -1,4 +1,6 @@
 import './styles.css';
+import './gx.css';
+import { initGX } from './gx.js';
 
 const systems = [
   {
@@ -91,6 +93,7 @@ app.innerHTML = `
     <nav>
       <a href="#systems">Systems</a>
       <a href="#trust">Trust</a>
+      <a href="#gx">GX</a>
       <a href="#founder">Founder</a>
       <a href="#contact">Review</a>
     </nav>
@@ -201,6 +204,44 @@ app.innerHTML = `
       </div>
     </section>
 
+    <section id="gx" class="gx-section">
+      <div class="shell gx-shell">
+        <div class="gx-intro">
+          <div>
+            <p class="kicker">GX PUBLIC EVIDENCE CONCIERGE</p>
+            <h2>Ask the system.<br/>See the evidence.</h2>
+          </div>
+          <p><strong>GX</strong> is the public evidence interface for XPeX Systems AI. It answers from an approved public registry, exposes the strongest supporting links and refuses to turn unproven claims into facts.</p>
+        </div>
+
+        <div class="gx-console" data-gx-console>
+          <aside class="gx-rail">
+            <div class="gx-identity">
+              <div class="gx-core">GX</div>
+              <div><b>Evidence Concierge</b><small>Public · Read only · Evidence gated</small></div>
+            </div>
+            <div class="gx-state"><span>Response mode</span><span data-gx-mode>READY</span></div>
+            <h3>Try a question</h3>
+            <div class="gx-quick-list">
+              <button class="gx-quick" type="button" data-gx-quick="Quem é Junior Sena e o que ele construiu?">Who built XPeX?</button>
+              <button class="gx-quick" type="button" data-gx-quick="Quais sistemas da XPeX estão prontos para demonstração?">Demo-ready systems</button>
+              <button class="gx-quick" type="button" data-gx-quick="Que segurança e governança a XPeX consegue provar publicamente?">Security & governance</button>
+              <button class="gx-quick" type="button" data-gx-quick="Explique o XPeX Systems Command e mostre a evidência pública.">Systems Command</button>
+            </div>
+            <p class="gx-boundary">GX não expõe segredos, dados privados, contratos, carteiras ou memórias internas. Também não executa ações a partir desta interface pública.</p>
+          </aside>
+
+          <div class="gx-chat">
+            <div class="gx-log" data-gx-log aria-live="polite"></div>
+            <form class="gx-form" data-gx-form>
+              <input data-gx-input maxlength="900" autocomplete="off" placeholder="Ask about XPeX, systems, architecture, trust…" aria-label="Ask GX"/>
+              <button class="button primary" type="submit" data-gx-send>Ask GX →</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="founder" class="founder-wrap">
       <div class="shell founder">
         <div class="founder-id">
@@ -234,6 +275,8 @@ app.innerHTML = `
     </section>
   </main>
 
+  <a class="gx-float" href="#gx" aria-label="Open GX Evidence Concierge">GX</a>
+
   <footer class="shell footer">
     <div class="brand">
       <span class="brand-mark">X</span>
@@ -250,4 +293,6 @@ const observer = new IntersectionObserver((entries) => {
   }
 }, { threshold: 0.12 });
 
-document.querySelectorAll('.system-card, .manifesto, .section-head, .trust-layout, .founder').forEach(el => observer.observe(el));
+document.querySelectorAll('.system-card, .manifesto, .section-head, .trust-layout, .founder, .gx-intro').forEach(el => observer.observe(el));
+
+initGX();
