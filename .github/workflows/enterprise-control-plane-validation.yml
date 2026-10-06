@@ -1,0 +1,44 @@
+name: Enterprise Control Plane Validation
+
+on:
+  pull_request:
+    paths:
+      - "docs/ENTERPRISE_CONTROL_PLANE.md"
+      - "docs/SYSTEM_ADMISSION_GATES.md"
+      - "docs/TRUST_CENTER.md"
+      - "data/company/enterprise-control-plane-v1.json"
+      - "data/company/system-admission-queue-v1.json"
+      - "schemas/system-admission-record.schema.json"
+      - "scripts/validate-enterprise-control-plane.py"
+      - ".github/CODEOWNERS"
+      - ".github/pull_request_template.md"
+  push:
+    branches: [main]
+    paths:
+      - "docs/ENTERPRISE_CONTROL_PLANE.md"
+      - "docs/SYSTEM_ADMISSION_GATES.md"
+      - "docs/TRUST_CENTER.md"
+      - "data/company/enterprise-control-plane-v1.json"
+      - "data/company/system-admission-queue-v1.json"
+      - "schemas/system-admission-record.schema.json"
+      - "scripts/validate-enterprise-control-plane.py"
+      - ".github/CODEOWNERS"
+      - ".github/pull_request_template.md"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate enterprise control-plane invariants
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+      - name: Validate enterprise control plane
+        run: python scripts/validate-enterprise-control-plane.py
