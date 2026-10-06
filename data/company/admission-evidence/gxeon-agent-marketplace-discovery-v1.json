@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0",
+  "observed_at": "2026-10-06T04:08:00-03:00",
+  "candidate_id": "CAND-GXEON-MARKETPLACE-001",
+  "admission_stage": "G0_DISCOVERY_G1_CORROBORATION",
+  "identity_hypothesis": {
+    "candidate_name": "GXEON Agent Marketplace",
+    "correlated_existing_system_id": "XPEX-API-FABRIC-001",
+    "status": "NOT_YET_CANONICAL",
+    "rationale": "The verified XPeX API Fabric lineage contains marketplace, agent/API, Stripe and Supabase functionality, but the public/canonical identity GXEON Agent Marketplace has not yet been independently established."
+  },
+  "vercel": {
+    "connected_team": {
+      "id": "team_rvTe2wbTmDcXGPMIMXC8mgRX",
+      "slug": "xpex-neural",
+      "visible_team_count": 1
+    },
+    "project": {
+      "id": "prj_3gcH2XkcpFatpPEAZZF56IBCqvsZ",
+      "name": "remix-of-remix-of-remix-of-remix-of-xpex-api-hub-87",
+      "linked_github_repo": "xpex-systems-ai/remix-of-remix-of-remix-of-remix-of-xpex-api-hub-87"
+    },
+    "production_deployment": {
+      "id": "dpl_2Shq2ceHdj12tZzJ6HPv8RdPYPJb",
+      "state": "READY",
+      "target": "production",
+      "framework": "vite",
+      "source_commit": "5ba2e886a997c97c410e4bbabada659187912538"
+    },
+    "production_domain_observed": "remix-of-remix-of-remix-of-remix-of-delta-five.vercel.app",
+    "project_environment_variables": {
+      "visible_count": 0,
+      "hidden_production_env_count": 0
+    }
+  },
+  "github": {
+    "source_repository": "xpex-systems-ai/remix-of-remix-of-remix-of-remix-of-xpex-api-hub-87",
+    "source_repository_verified": true,
+    "observed_capabilities": [
+      "API marketplace page",
+      "agent-facing API documentation",
+      "MCP-related product/documentation references",
+      "Supabase Edge Functions",
+      "Stripe checkout/webhook/billing implementation",
+      "agent registry/orchestration related source"
+    ],
+    "hardening_pr": {
+      "number": 1,
+      "state": "OPEN",
+      "head_sha": "3d4233d42c2ac33c660600c3f209a65aa35f7781",
+      "purpose": "Remove committed runtime env file from current tree, add source assurance, CodeQL, secret scan and evidence-accurate security claims."
+    }
+  },
+  "supabase": {
+    "source_references_observed": [
+      "btfrmkiuoymjqqdxlzeg",
+      "ykunuwzqlwrskosyyrzm"
+    ],
+    "currently_connected_account_projects": [
+      {
+        "project_ref": "trdblfqkczyieirdefyt",
+        "organization": "xpexsystemsai",
+        "status": "INACTIVE"
+      }
+    ],
+    "correlation_status": "BLOCKED",
+    "blocker": "The Supabase project references used by this source are not visible through the currently connected Supabase account. Additional authorized Supabase account connection or ownership evidence is required before G2/G4 can pass."
+  },
+  "gates": {
+    "G0": "PASS",
+    "G1": "BLOCKED",
+    "G2": "BLOCKED",
+    "G3": "IN_PROGRESS",
+    "G4": "PARTIAL",
+    "G5": "NOT_EVALUATED",
+    "G6": "NOT_EVALUATED",
+    "G7": "NOT_EVALUATED"
+  },
+  "blockers": [
+    "Canonical identity between GXEON Agent Marketplace and XPeX API Fabric lineage is not yet approved/evidenced.",
+    "Relevant Supabase runtime project is not visible in the currently connected Supabase account.",
+    "Two distinct Supabase project references exist in source/docs and require lineage reconciliation.",
+    "Source hardening PR #1 must pass checks and review before merge.",
+    "Clean branded domain and public product naming remain unresolved."
+  ],
+  "truth_boundary": "Discovery/correlation evidence only. This record does not promote the candidate to CANONICAL, VERIFIED_LIVE or PUBLIC_FLAGSHIP."
+}
