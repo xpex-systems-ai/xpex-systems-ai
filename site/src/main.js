@@ -1,6 +1,8 @@
 import './styles.css';
 import './gx.css';
+import './system-pages.css';
 import { initGX } from './gx.js';
+import { initNeuralCatalog } from './system-pages.js';
 
 const systems = [
   {
@@ -92,6 +94,7 @@ app.innerHTML = `
     </a>
     <nav>
       <a href="#systems">Systems</a>
+      <a href="#catalog">Catalog</a>
       <a href="#trust">Trust</a>
       <a href="#gx">GX</a>
       <a href="#founder">Founder</a>
@@ -156,6 +159,16 @@ app.innerHTML = `
         `).join('')}
       </div>
     </section>
+
+    <section id="catalog" class="neural-catalog">
+      <div class="shell neural-head">
+        <p class="kicker">XPEX NEURAL SYSTEM CATALOG</p>
+        <h2>Every system.<br/>Its own evidence page.</h2>
+        <p>A governed, machine-readable catalog of the XPeX ecosystem. Open a system to inspect its purpose, stack, runtime truth, evidence graph, visual-asset state, open gates and raw JSON record.</p>
+      </div>
+      <div class="shell neural-rail" data-neural-grid></div>
+    </section>
+    <aside class="neural-detail" data-neural-detail hidden aria-live="polite"></aside>
 
     <section class="dark-band">
       <div class="shell intelligence">
@@ -296,3 +309,4 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.system-card, .manifesto, .section-head, .trust-layout, .founder, .gx-intro').forEach(el => observer.observe(el));
 
 initGX();
+initNeuralCatalog();
