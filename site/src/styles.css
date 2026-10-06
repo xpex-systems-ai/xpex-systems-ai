@@ -240,3 +240,6 @@ blockquote { margin:28px 0 12px; padding-left:20px; border-left:1px solid var(--
   .monogram { width:90px; }
   .founder h2 { font-size:43px; }
 }
+
+.founder-links { display:flex; gap:20px; flex-wrap:wrap; align-items:center; margin-top:8px; }
+.founder-links .text-link { margin-top:0; }

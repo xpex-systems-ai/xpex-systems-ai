@@ -45,10 +45,10 @@ Move from a large internal project inventory to a small, recruiter/investor/cust
 - [x] Flagship case pack
 - [x] Demo-readiness matrix
 - [ ] One-page résumé aligned to flagship evidence
-- [ ] LinkedIn headline/about/featured section aligned to the same evidence
+- [x] LinkedIn headline/about/featured master copy prepared and evidence-aligned
 - [ ] 3–5 flagship screenshots or short clips
 - [ ] Public case-study URLs
-- [ ] English version of the company/founder pitch
+- [x] English-first company/founder discovery pitch prepared
 
 ## Gate E — Investor package
 
@@ -86,3 +86,9 @@ WHO WE ARE
 4. Attach a custom corporate domain when the domain decision is finalized.
 5. Standardize LinkedIn and résumé against the exact same system names and claims.
 6. Begin curated applications and partner/investor outreach.
+
+
+## LinkedIn connector limitation
+
+The connected LinkedIn capability currently supports profile discovery/lookup, not profile editing.  
+Master copy is prepared in `docs/LINKEDIN_MASTER_PROFILE.md`, but headline/About/Experience/Featured changes must still be applied in LinkedIn itself.

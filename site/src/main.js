@@ -214,7 +214,10 @@ app.innerHTML = `
         <div class="founder-story">
           <p>The portfolio is the proof: agentic applications, MCP surfaces, deployment infrastructure, provider integrations, evidence architecture, security gates and multiple product systems.</p>
           <blockquote>“I built an AI systems infrastructure with real deployments, agent/tool boundaries, provider integrations, evidence, security gates and multiple product surfaces.”</blockquote>
-          <a class="text-link" target="_blank" rel="noreferrer" href="https://github.com/xpex-systems-ai/xpex-systems-ai/blob/main/docs/FOUNDER_PROFILE.md">Open engineering profile →</a>
+          <div class="founder-links">
+            <a class="text-link" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/ceojuniorsena">LinkedIn →</a>
+            <a class="text-link" target="_blank" rel="noreferrer" href="https://github.com/xpex-systems-ai/xpex-systems-ai/blob/main/docs/FOUNDER_PROFILE.md">Engineering profile →</a>
+          </div>
         </div>
       </div>
     </section>
@@ -226,6 +229,7 @@ app.innerHTML = `
       <div class="hero-actions">
         <a class="button primary" target="_blank" rel="noreferrer" href="https://github.com/xpex-systems-ai/xpex-systems-ai">Corporate repository ↗</a>
         <a class="button" target="_blank" rel="noreferrer" href="https://github.com/xpex-systems-ai/xpex-systems-ai/blob/main/docs/FLAGSHIP_CASES.md">15-minute review pack ↗</a>
+        <a class="button" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/ceojuniorsena">LinkedIn ↗</a>
       </div>
     </section>
   </main>
