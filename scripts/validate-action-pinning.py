@@ -20,7 +20,7 @@ for p in WF.glob("*.yml"):
         action,version=ref.rsplit("@",1)
         if not re.fullmatch(r"[0-9a-f]{40}",version):
             errors.append(f"{p.name}: action not pinned to immutable 40-char SHA: {ref}")
-        if not (action.startswith("actions/") or action=="github/codeql-action" or action=="ossf/scorecard-action"):
+        if not (action.startswith("actions/") or action.startswith("github/codeql-action/") or action=="ossf/scorecard-action"):
             errors.append(f"{p.name}: action publisher not in current corporate allowlist: {action}")
 
 if errors:
