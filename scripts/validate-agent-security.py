@@ -39,6 +39,7 @@ MANDATORY_KILL_SWITCH_ACTIONS = {
 }
 PRODUCTION_TRUST_STATES = {"TP3_VERIFIED", "TP4_CONTINUOUSLY_ASSURED"}
 VERIFIED_DIMENSION_STATUS = "VERIFIED"
+VALID_GOVERNANCE_STATUSES = {"REGISTERED", "ACTIVE", "PAUSED", "RETIRED"}
 
 
 def safe_repo_path(rel: str) -> pathlib.Path | None:
@@ -157,7 +158,7 @@ for agent in agents:
         errors.append(f"{aid}: permission_default must be DENY")
 
     governance_status = agent.get("governance_status")
-    if governance_status not in {"REGISTERED", "PAUSED", "RETIRED"}:
+    if governance_status not in VALID_GOVERNANCE_STATUSES:
         errors.append(f"{aid}: invalid governance_status {governance_status!r}")
 
     manifest_ref = agent.get("manifest_ref")
@@ -209,6 +210,9 @@ for agent in agents:
         errors.append(f"{aid}: manifest has no denied capabilities")
     if not registry_allow:
         errors.append(f"{aid}: registry has no allowed capabilities")
+    registry_high_impact = high_impact & registry_allow
+    if registry_high_impact:
+        errors.append(f"{aid}: registry directly allows high-impact actions: {sorted(registry_high_impact)}")
     if not registry_allow.issubset(capabilities):
         errors.append(
             f"{aid}: registry allows actions outside manifest capabilities: "
@@ -219,6 +223,9 @@ for agent in agents:
             f"{aid}: registry approval boundary exceeds/contradicts manifest: "
             f"{sorted(registry_approvals - manifest_approvals)}"
         )
+    capability_deny_overlap = capabilities & denied
+    if capability_deny_overlap:
+        errors.append(f"{aid}: manifest both allows and denies actions: {sorted(capability_deny_overlap)}")
     direct_high_impact = high_impact & capabilities
     if direct_high_impact:
         errors.append(f"{aid}: high-impact actions directly allowed in manifest: {sorted(direct_high_impact)}")
@@ -244,7 +251,11 @@ for agent in agents:
         if policy.get("status") not in {"DRAFT", "ACTIVE", "PAUSED", "RETIRED"}:
             errors.append(f"{aid}: invalid permission policy status")
         policy_allow = set(policy.get("allow") or [])
+        policy_deny = set(policy.get("deny") or [])
         policy_approvals = set(policy.get("approval_required") or [])
+        policy_effect_overlap = policy_allow & policy_deny
+        if policy_effect_overlap:
+            errors.append(f"{aid}: permission policy both allows and denies actions: {sorted(policy_effect_overlap)}")
         if high_impact & policy_allow:
             errors.append(f"{aid}: permission policy allows high-impact action directly")
         if policy_allow != registry_allow:
@@ -295,7 +306,14 @@ for agent in agents:
         if matrix.get("risk_tier") != risk:
             errors.append(f"{aid}: registry/permission-matrix risk mismatch")
         matrix_allow = set(matrix.get("allow") or [])
+        matrix_deny = set(matrix.get("deny") or [])
         matrix_approvals = set(matrix.get("human_approval_required") or [])
+        matrix_effect_overlap = matrix_allow & matrix_deny
+        if matrix_effect_overlap:
+            errors.append(f"{aid}: permission matrix both allows and denies actions: {sorted(matrix_effect_overlap)}")
+        matrix_high_impact = high_impact & matrix_allow
+        if matrix_high_impact:
+            errors.append(f"{aid}: permission matrix directly allows high-impact actions: {sorted(matrix_high_impact)}")
         if not registry_allow.issubset(matrix_allow):
             errors.append(
                 f"{aid}: registry allows actions outside canonical permission matrix: "
@@ -327,7 +345,12 @@ for agent in agents:
     runtime = agent.get("runtime_status")
     if runtime not in VALID_RUNTIME_STATUSES:
         errors.append(f"{aid}: unknown runtime_status {runtime!r}; fail-closed")
+    elif runtime in NON_PRODUCTION_RUNTIME_STATUSES:
+        if governance_status == "ACTIVE":
+            errors.append(f"{aid}: ACTIVE governance status is incompatible with non-production runtime {runtime!r}")
     elif runtime in STAGING_RUNTIME_STATUSES:
+        if governance_status not in {"REGISTERED", "ACTIVE"}:
+            errors.append(f"{aid}: staging runtime requires REGISTERED or ACTIVE governance status")
         if manifest.get("status") != "ACTIVE":
             errors.append(f"{aid}: staging runtime requires ACTIVE manifest")
         if not ks or ks.get("status") not in {"READY", "TESTED"}:
@@ -338,6 +361,8 @@ for agent in agents:
         if not runtime_dim.get("evidence_refs"):
             errors.append(f"{aid}: staging runtime requires runtime evidence")
     elif runtime in PRODUCTION_RUNTIME_STATUSES:
+        if governance_status != "ACTIVE":
+            errors.append(f"{aid}: production runtime requires ACTIVE governance status")
         if manifest.get("status") != "ACTIVE":
             errors.append(f"{aid}: production runtime requires ACTIVE manifest")
         if not ks or ks.get("status") != "TESTED":
