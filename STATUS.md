@@ -21,7 +21,9 @@ This page summarizes only status supported by current repository, workflow and d
 | Public product registry | Established |
 | Provider relationship registry | Established |
 | Public website | Not yet launched |
-| Public Trust Center | Specification complete; implementation pending |
+| Enterprise Control Plane V2 | **Established / validated on main** |
+| System admission gates | **G0→G7 established** |
+| Public Trust Center | Engineering view established; product implementation pending |
 
 ## Automated assurance
 
@@ -32,9 +34,13 @@ Main-branch verification has passed these core checks on the current trust/secur
 - **System Registry Validation — PASS**
 - **Trust Passport Validation — PASS**
 - **Agent Policy Validation — PASS**
+- **Agent Security Validation — PASS**
+- **Enterprise Control Plane Validation — PASS**
 - **Secret Hygiene Validation — PASS**
+- **Secret Pattern Scan — PASS**
 - **Assurance Tests — PASS**
 - **Action Supply-chain Validation — PASS**
+- **Workflow Supply Chain Validation — PASS**
 - **CodeQL / Python — PASS**
 
 Additional controls:
@@ -114,8 +120,9 @@ BUILD → CONNECT → OPERATE → PROVE → IMPROVE
 
 ## Next gates
 
-1. Enable/verify GitHub admin security controls.
-2. Run release provenance attestation on the first versioned assurance release.
-3. Harden the public flagship runtime/brand.
-4. Launch the public XPeX platform + Trust Center.
-5. Apply the Verified System Standard to every new Vercel/Replit/Railway/Supabase system.
+1. Enable/verify GitHub admin security controls and required main-branch enforcement.
+2. Start provider-backed system admission from Vercel/GitHub/Railway/database inventory.
+3. Admit **GXEON Agent Marketplace** first through G0→G7 with source, runtime, data and security evidence.
+4. Continue with XPeX Plugin Factory, XPeX Academy and Wallet Command Center according to the admission queue.
+5. Convert verified System Packs and Trust Passports into the public XPeX Systems Command / Trust Center dashboard.
+6. Run release provenance attestation on the first versioned enterprise-assurance release.
