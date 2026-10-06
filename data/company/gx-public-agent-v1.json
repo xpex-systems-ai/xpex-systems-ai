@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0",
+  "id": "GX-PUBLIC-EVIDENCE-CONCIERGE",
+  "name": "GX Evidence Concierge",
+  "surface": "https://xpex-systems-ai.vercel.app/#gx",
+  "mode_default": "EVIDENCE_ONLY",
+  "ai_mode": {
+    "supported": true,
+    "enabled": false,
+    "activation_env": "GX_AI_ENABLED",
+    "provider": "Vercel AI Gateway",
+    "auth_preference": "VERCEL_OIDC_TOKEN",
+    "model": "openai/gpt-5.6-sol",
+    "cost_gate": "REQUIRES_EXPLICIT_ACTIVATION_AFTER_BUDGET_APPROVAL"
+  },
+  "permissions": {
+    "read_public_evidence": true,
+    "cite_public_sources": true,
+    "execute_actions": false,
+    "access_private_memory": false,
+    "access_credentials": false,
+    "financial_actions": false,
+    "infrastructure_writes": false
+  },
+  "truth_rules": [
+    "Public evidence only",
+    "Unknown is not proven",
+    "READY is not external certification",
+    "Watched value is not settled money",
+    "Concept art is not runtime evidence"
+  ],
+  "public_evidence_count": 12,
+  "privacy_boundary": "The public GX instance is deliberately separated from the founder's private ChatGPT workspace and connected accounts."
+}
