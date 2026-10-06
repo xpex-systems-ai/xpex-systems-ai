@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-05T23:35:00-03:00",
+  "generated_at": "2026-10-06T02:15:00-03:00",
   "note": "This is a governed target registry. REGISTERED does not mean continuously autonomous runtime is deployed.",
   "agents": [
     {
@@ -21,7 +21,12 @@
         "destructive.action",
         "credential.change",
         "production.write"
-      ]
+      ],
+      "manifest_ref": "data/agents/manifests/gxeon-auditor-001.json",
+      "trust_passport_ref": "data/trust/agent-passports/gxeon-auditor-001.json",
+      "kill_switch_id": "KS-GXEON-AUDITOR-001",
+      "permission_policy_id": "PP-GXEON-AUDITOR-001",
+      "permission_default": "DENY"
     },
     {
       "agent_id": "GXEON-ENGINEER-001",
@@ -42,7 +47,12 @@
         "critical.merge",
         "secret.change",
         "destructive.action"
-      ]
+      ],
+      "manifest_ref": "data/agents/manifests/gxeon-engineer-001.json",
+      "trust_passport_ref": "data/trust/agent-passports/gxeon-engineer-001.json",
+      "kill_switch_id": "KS-GXEON-ENGINEER-001",
+      "permission_policy_id": "PP-GXEON-ENGINEER-001",
+      "permission_default": "DENY"
     },
     {
       "agent_id": "GXEON-SECURITY-001",
@@ -62,7 +72,12 @@
         "credential.rotate",
         "production.block",
         "destructive.action"
-      ]
+      ],
+      "manifest_ref": "data/agents/manifests/gxeon-security-001.json",
+      "trust_passport_ref": "data/trust/agent-passports/gxeon-security-001.json",
+      "kill_switch_id": "KS-GXEON-SECURITY-001",
+      "permission_policy_id": "PP-GXEON-SECURITY-001",
+      "permission_default": "DENY"
     },
     {
       "agent_id": "GXEON-RESEARCH-001",
@@ -79,7 +94,12 @@
       ],
       "approval_required": [
         "external.publish"
-      ]
+      ],
+      "manifest_ref": "data/agents/manifests/gxeon-research-001.json",
+      "trust_passport_ref": "data/trust/agent-passports/gxeon-research-001.json",
+      "kill_switch_id": "KS-GXEON-RESEARCH-001",
+      "permission_policy_id": "PP-GXEON-RESEARCH-001",
+      "permission_default": "DENY"
     },
     {
       "agent_id": "GXEON-REVENUE-001",
@@ -98,7 +118,12 @@
         "contract.commit",
         "payment.execute",
         "external.send"
-      ]
+      ],
+      "manifest_ref": "data/agents/manifests/gxeon-revenue-001.json",
+      "trust_passport_ref": "data/trust/agent-passports/gxeon-revenue-001.json",
+      "kill_switch_id": "KS-GXEON-REVENUE-001",
+      "permission_policy_id": "PP-GXEON-REVENUE-001",
+      "permission_default": "DENY"
     },
     {
       "agent_id": "GXEON-OPERATIONS-001",
@@ -118,7 +143,12 @@
         "production.change",
         "resource.delete",
         "credential.change"
-      ]
+      ],
+      "manifest_ref": "data/agents/manifests/gxeon-operations-001.json",
+      "trust_passport_ref": "data/trust/agent-passports/gxeon-operations-001.json",
+      "kill_switch_id": "KS-GXEON-OPERATIONS-001",
+      "permission_policy_id": "PP-GXEON-OPERATIONS-001",
+      "permission_default": "DENY"
     }
   ]
 }
