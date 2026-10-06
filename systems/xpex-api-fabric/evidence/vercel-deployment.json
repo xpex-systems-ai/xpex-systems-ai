@@ -1,0 +1,16 @@
+{
+  "evidence_id": "EVD-XPEX-API-FABRIC-VERCEL-001",
+  "system_id": "XPEX-API-FABRIC-001",
+  "claim": "A production Vercel deployment linked to official XPeX source was observed in READY state.",
+  "source_type": "PROVIDER_API",
+  "provider": "Vercel",
+  "project_id": "prj_3gcH2XkcpFatpPEAZZF56IBCqvsZ",
+  "deployment_id": "dpl_2Shq2ceHdj12tZzJ6HPv8RdPYPJb",
+  "target": "production",
+  "state": "READY",
+  "source_repository": "xpex-systems-ai/remix-of-remix-of-remix-of-remix-of-xpex-api-hub-87",
+  "source_commit": "5ba2e886a997c97c410e4bbabada659187912538",
+  "alias": "https://remix-of-remix-of-remix-of-remix-of-xpex-api-hub-87-xpex-neural.vercel.app",
+  "verification_status": "VERIFIED",
+  "public_safe": true
+}
