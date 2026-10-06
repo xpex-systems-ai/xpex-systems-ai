@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "system_id": "REPLACE-ME",
+  "product_id": "replace-me",
+  "name": "Replace Me",
+  "name_status": "CANONICAL_CANDIDATE",
+  "legacy_names": [],
+  "role": "Describe role",
+  "owner": "XPeX Systems AI",
+  "canonical_status": "CANONICAL_CANDIDATE",
+  "runtime_status": "UNKNOWN",
+  "assurance_level": "AL0",
+  "source": {
+    "organization": null,
+    "repository": null,
+    "commit": null,
+    "verification_status": "UNKNOWN"
+  },
+  "runtime": {},
+  "public_flagship_candidate": false,
+  "brand_ready": false,
+  "commercial_status": "NOT_ASSERTED",
+  "blockers": [],
+  "governance_framework": "XAGF",
+  "evidence": [],
+  "updated_at": null
+}
