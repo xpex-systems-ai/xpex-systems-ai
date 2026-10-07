@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0",
+  "name": "XPeX Enterprise Agent API",
+  "company": "XPeX Systems AI",
+  "description": "Machine-readable discovery, solution matching and enterprise handoff for XPeX systems, platforms, agents, plugins and MCP capabilities.",
+  "policy": "Evidence First",
+  "endpoints": {
+    "rest": "https://xpex-systems-ai.vercel.app/api/agent-api",
+    "mcp": "https://xpex-systems-ai.vercel.app/api/mcp/enterprise",
+    "gx_mcp": "https://xpex-systems-ai.vercel.app/api/mcp/gx",
+    "system_intelligence": "https://xpex-systems-ai.vercel.app/data/system-intelligence-v1.json",
+    "launch_radar": "https://xpex-systems-ai.vercel.app/data/global-launch-radar-v1.json"
+  },
+  "discovery_intents": [
+    "enterprise AI systems",
+    "AI agents",
+    "MCP integration",
+    "plugin integration",
+    "digital workers",
+    "company intelligence",
+    "evidence audit",
+    "agent marketplace",
+    "AI workforce",
+    "applied AI learning",
+    "AI creation workflows"
+  ],
+  "contact": {
+    "website": "https://xpex-systems-ai.vercel.app",
+    "linkedin": "https://www.linkedin.com/in/ceojuniorsena",
+    "github": "https://github.com/xpex-systems-ai/xpex-systems-ai"
+  },
+  "privacy": "Public, stateless, read-only discovery. Never send credentials, secrets, private customer data or regulated data.",
+  "truth_boundary": "Discovery or fit output does not imply a customer, partner, investor, procurement, pilot or commercial relationship."
+}

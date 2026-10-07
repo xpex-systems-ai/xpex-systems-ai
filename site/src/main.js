@@ -3,8 +3,10 @@ import './gx.css';
 import { initGX } from './gx.js';
 import './system-page.css';
 import './global-launch.css';
+import './enterprise-agent-api.css';
 import { maybeRenderSystemPage, rewriteSystemLinks } from './system-page.js';
 import { initGlobalLaunchRadar } from './global-launch.js';
+import { initEnterpriseAgentAPI } from './enterprise-agent-api.js';
 
 const systems = [
   {
@@ -106,6 +108,7 @@ app.innerHTML = `
       <a href="#trust">Trust</a>
       <a href="#gx">GX</a>
       <a href="#founder">Founder</a>
+      <a href="#agent-api">Agent API</a>
       <a href="#launch">Global Launch</a>
       <a href="#contact">Review</a>
     </nav>
@@ -275,6 +278,42 @@ app.innerHTML = `
       </div>
     </section>
 
+    <section id="agent-api" class="agent-api-section">
+      <div class="shell agent-api-shell" data-agent-api>
+        <div class="agent-api-head">
+          <div>
+            <p class="kicker">XPEX ENTERPRISE AGENT API</p>
+            <h2>Tell us the need.<br/>The system finds the right XPeX capability.</h2>
+          </div>
+          <p>A machine-readable discovery layer for companies, accelerators and agent platforms evaluating XPeX systems, agents, MCP integrations and digital-worker capabilities. It matches a real need to evidence-backed assets — without pretending a match is already a customer relationship.</p>
+        </div>
+        <div class="agent-api-layout">
+          <div class="agent-api-panel">
+            <h3>Enterprise need matcher</h3>
+            <p>Describe the problem. The Agent API maps it to XPeX systems, proof and a bounded pilot path.</p>
+            <form class="agent-api-form" data-agent-api-form>
+              <input data-agent-api-company maxlength="300" placeholder="Company / team type — e.g. enterprise AI, agent platform"/>
+              <textarea data-agent-api-need maxlength="1200" placeholder="What do you need? Example: We need to integrate AI agents with GitHub, cloud deployments and human approval."></textarea>
+              <button class="button primary" type="submit" data-agent-api-submit>Match our need →</button>
+            </form>
+            <p class="agent-api-note">Stateless public discovery. Do not submit secrets, credentials, private customer data or regulated data.</p>
+          </div>
+          <div class="agent-api-panel">
+            <div class="agent-api-result" data-agent-api-result>
+              <p class="agent-api-muted">Describe a company need to receive the best evidence-backed XPeX solution pack.</p>
+            </div>
+            <div class="agent-api-machine">
+              <a href="/api/agent-api" target="_blank" rel="noreferrer">REST discovery ↗</a>
+              <a href="/api/mcp/enterprise" target="_blank" rel="noreferrer">Enterprise MCP ↗</a>
+              <a href="/.well-known/xpex-agent-api.json" target="_blank" rel="noreferrer">Well-known manifest ↗</a>
+              <a href="/data/enterprise-agent-catalog-v1.json" target="_blank" rel="noreferrer">Agent catalog ↗</a>
+              <a href="/llms.txt" target="_blank" rel="noreferrer">llms.txt ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="launch" class="launch-section">
       <div class="shell launch-shell">
         <div class="launch-head">
@@ -339,4 +378,5 @@ if (!systemPageActive) {
   document.querySelectorAll('.system-card, .manifesto, .section-head, .trust-layout, .founder, .gx-intro, .launch-head').forEach(el => observer.observe(el));
   initGX();
   initGlobalLaunchRadar();
+  initEnterpriseAgentAPI();
 }

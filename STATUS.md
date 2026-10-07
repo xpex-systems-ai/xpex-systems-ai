@@ -26,6 +26,7 @@ This page summarizes only status supported by current repository, workflow and d
 | Public website | **LIVE / Vercel production READY** |
 | GX Public Evidence Concierge | **IMPLEMENTED / evidence-only default** |
 | GX Neural Copilot Plugin | **V1 CREATED / PRIVATE / MCP production READY** |
+| Enterprise Agent API | **V1 implemented / REST + MCP + machine-readable discovery** |
 | GX Knowledge Plane V1 | **7 detailed systems / 20 material lineages** |
 | System Intelligence Pages | **7 evidence-backed detail surfaces** |
 | Media Evidence Governance | **V1 established / seed triage complete** |
@@ -176,6 +177,21 @@ No external certification is currently claimed.
 ```text
 BUILD → CONNECT → OPERATE → PROVE → IMPROVE
 ```
+
+## Enterprise Agent API
+
+The Enterprise Agent API is the outward-facing discovery/distribution layer for companies, accelerators, agent platforms and enterprise AI teams.
+
+Implemented surfaces:
+- REST discovery: `/api/agent-api`
+- Enterprise MCP: `/api/mcp/enterprise`
+- Well-known discovery manifest: `/.well-known/xpex-agent-api.json`
+- Machine-readable asset catalog: `/data/enterprise-agent-catalog-v1.json`
+- AI discovery index: `/llms.txt`
+- Public website need matcher: `#agent-api`
+- Plugin source package: `plugins/xpex-enterprise-agent-api/`
+
+V1 is stateless and read-only. It does not persist visitor prompts, execute outreach, mutate customer systems or fabricate commercial relationships.
 
 ## Global launch
 
