@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-10-07",
+  "title": "XPeX Enterprise Agent Distribution Catalog",
+  "company": "XPeX Systems AI",
+  "assets": [
+    {
+      "id": "gx-neural-copilot",
+      "name": "GX Neural Copilot",
+      "type": [
+        "plugin",
+        "mcp",
+        "company-intelligence"
+      ],
+      "audience": [
+        "ChatGPT/Codex operators",
+        "enterprise AI teams",
+        "technical evaluators"
+      ],
+      "endpoint": "https://xpex-systems-ai.vercel.app/api/mcp/gx",
+      "status": "PRODUCTION READY / READ ONLY",
+      "description": "Evidence-backed interface to the XPeX Company Intelligence layer."
+    },
+    {
+      "id": "enterprise-agent-api",
+      "name": "XPeX Enterprise Agent API",
+      "type": [
+        "rest",
+        "mcp",
+        "enterprise-discovery"
+      ],
+      "audience": [
+        "companies",
+        "accelerators",
+        "agent platforms",
+        "enterprise innovation teams"
+      ],
+      "rest": "https://xpex-systems-ai.vercel.app/api/agent-api",
+      "mcp": "https://xpex-systems-ai.vercel.app/api/mcp/enterprise",
+      "status": "PUBLIC DISCOVERY",
+      "description": "Matches real company needs to evidence-backed XPeX systems, agent capabilities and pilot blueprints."
+    },
+    {
+      "id": "plugin-factory",
+      "name": "XPeX Plugin Factory",
+      "type": [
+        "compiler",
+        "mcp",
+        "plugin",
+        "skill"
+      ],
+      "audience": [
+        "agent developers",
+        "AI platform teams",
+        "integration teams"
+      ],
+      "endpoint": "https://xpex-plugin-factory-production.up.railway.app",
+      "status": "DEMO READY",
+      "description": "Compiles strict blueprints into deterministic plugin, MCP and skill packages with policy gates."
+    },
+    {
+      "id": "systems-command",
+      "name": "XPeX Systems Command",
+      "type": [
+        "company-intelligence",
+        "evidence-os",
+        "control-plane"
+      ],
+      "audience": [
+        "CTO",
+        "CIO",
+        "Head of AI",
+        "technical due diligence"
+      ],
+      "page": "https://xpex-systems-ai.vercel.app/?system=systems-command",
+      "status": "STAGING VERIFIED",
+      "description": "Provenance-first control plane for systems, runtime and evidence."
+    },
+    {
+      "id": "audit-os",
+      "name": "GXEON Audit OS",
+      "type": [
+        "audit",
+        "evidence",
+        "due-diligence"
+      ],
+      "audience": [
+        "founders",
+        "investors",
+        "accelerators",
+        "security and technical teams"
+      ],
+      "page": "https://gxeon-audit-os.vercel.app",
+      "status": "DEMO READY",
+      "description": "Evidence-led digital systems audit."
+    }
+  ],
+  "discovery": "https://xpex-systems-ai.vercel.app/.well-known/xpex-agent-api.json",
+  "contact": "https://www.linkedin.com/in/ceojuniorsena"
+}
