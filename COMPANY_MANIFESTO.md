@@ -112,3 +112,12 @@ A XPeX Systems AI deve ser reconhecida não por dizer que usa inteligência arti
 Essa é a fundação.
 
 Tudo que vier depois deverá ser construído em cima dela.
+
+
+## Neural Workforce
+
+A próxima camada estratégica da XPeX é a **Neural Workforce**: agentes, skills e plugins compostos para ampliar a capacidade humana de trabalho.
+
+A XPeX não precisa reconstruir cada aplicativo existente. Ela pretende se tornar a camada inteligente que conecta aplicações, capacidades e procedimentos em trabalhadores digitais especializados, com identidade, limites de permissão, evidência e supervisão humana.
+
+A direção completa está definida no [XPeX Neural Workforce Manifesto](NEURAL_WORKFORCE_MANIFESTO.md).
