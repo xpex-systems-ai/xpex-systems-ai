@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "test:gx": "node tests/gx-evidence.test.mjs && node tests/system-intelligence.test.mjs && node --check api/gx.js && node --check src/system-page.js",
     "test:gx-mcp": "node tests/gx-mcp.test.mjs && node --check api/mcp/gx.js",
-    "test:launch": "node tests/global-launch.test.mjs && node --check src/global-launch.js"
+    "test:launch": "node tests/global-launch.test.mjs && node --check src/global-launch.js",
+    "test:enterprise-agent-api": "node tests/enterprise-agent-api.test.mjs && node --check api/agent-api.js && node --check api/mcp/enterprise.js && node --check src/enterprise-agent-api.js"
   },
   "devDependencies": {
     "vite": "^7.1.12"
