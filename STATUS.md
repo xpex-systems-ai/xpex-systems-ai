@@ -12,6 +12,8 @@ This page summarizes only status supported by current repository, workflow and d
 | Official corporate repository | **PUBLIC / Established** |
 | Corporate manifesto | Established |
 | Neural Workforce manifesto | **V1 established / human-capability expansion doctrine** |
+| Global Launch Radar | **V1 established / 12 programs + 8 investor targets** |
+| Accelerator Application Pack | **V1 prepared / founder facts gate before submission** |
 | Product architecture | Established |
 | XAGF governance framework | **59 controls / 11 domains** |
 | Verified System Standard | Established |
@@ -174,6 +176,23 @@ No external certification is currently claimed.
 ```text
 BUILD → CONNECT → OPERATE → PROVE → IMPROVE
 ```
+
+## Global launch
+
+Current launch radar snapshot: **2026-10-07**.
+
+Highest-priority public opportunities currently tracked:
+- Y Combinator Winter 2027 — application window observed open; official on-time deadline Nov 2, 2026 at 8pm PT.
+- Alchemist Accelerator — rolling enterprise/B2B applications.
+- Techstars New York City / Boston — Spring 2027 applications observed open; final deadline Nov 18, 2026.
+- NVIDIA Inception / Microsoft for Startups — ecosystem applications tracked subject to company eligibility.
+
+The radar does **not** represent any target as a partner, investor, accelerator acceptance or endorsement.
+
+See:
+- `docs/GLOBAL_LAUNCH_PLAYBOOK.md`
+- `docs/ACCELERATOR_APPLICATION_PACK.md`
+- `data/company/global-launch-radar-v1.json`
 
 ## Neural Workforce operationalization
 
