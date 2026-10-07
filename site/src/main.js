@@ -2,7 +2,9 @@ import './styles.css';
 import './gx.css';
 import { initGX } from './gx.js';
 import './system-page.css';
+import './global-launch.css';
 import { maybeRenderSystemPage, rewriteSystemLinks } from './system-page.js';
+import { initGlobalLaunchRadar } from './global-launch.js';
 
 const systems = [
   {
@@ -104,6 +106,7 @@ app.innerHTML = `
       <a href="#trust">Trust</a>
       <a href="#gx">GX</a>
       <a href="#founder">Founder</a>
+      <a href="#launch">Global Launch</a>
       <a href="#contact">Review</a>
     </nav>
     <a class="button ghost" href="https://github.com/xpex-systems-ai" target="_blank" rel="noreferrer">GitHub ↗</a>
@@ -272,6 +275,33 @@ app.innerHTML = `
       </div>
     </section>
 
+    <section id="launch" class="launch-section">
+      <div class="shell launch-shell">
+        <div class="launch-head">
+          <div>
+            <p class="kicker">GLOBAL LAUNCH · ENTERPRISE INNOVATION</p>
+            <h2>XPeX is entering the global founder ecosystem.</h2>
+          </div>
+          <div>
+            <p>We are targeting accelerator, enterprise-innovation and investor programs where XPeX can be evaluated on technical evidence — not hype. A target is not a partnership or acceptance.</p>
+            <div class="launch-kpis">
+              <span><b data-launch-count>—</b> tracked programs</span>
+              <span data-launch-snapshot>Opportunity snapshot</span>
+              <span>Evidence First</span>
+            </div>
+          </div>
+        </div>
+        <div class="launch-grid" data-launch-radar></div>
+        <div class="launch-cta">
+          <p><strong>For accelerators, VCs and enterprise partners:</strong> start with the 60-second thesis, then inspect the systems, MCP surface and evidence.</p>
+          <div class="hero-actions">
+            <a class="button primary" target="_blank" rel="noreferrer" href="https://github.com/xpex-systems-ai/xpex-systems-ai/blob/main/docs/ACCELERATOR_APPLICATION_PACK.md">Application pack ↗</a>
+            <a class="button" target="_blank" rel="noreferrer" href="https://github.com/xpex-systems-ai/xpex-systems-ai/blob/main/NEURAL_WORKFORCE_MANIFESTO.md">Neural Workforce ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="contact" class="shell section review">
       <p class="kicker">EXTERNAL REVIEW</p>
       <h2>Start with the evidence.<br/>Then inspect the systems.</h2>
@@ -306,6 +336,7 @@ const systemPageActive = maybeRenderSystemPage(app);
 
 if (!systemPageActive) {
   rewriteSystemLinks();
-  document.querySelectorAll('.system-card, .manifesto, .section-head, .trust-layout, .founder, .gx-intro').forEach(el => observer.observe(el));
+  document.querySelectorAll('.system-card, .manifesto, .section-head, .trust-layout, .founder, .gx-intro, .launch-head').forEach(el => observer.observe(el));
   initGX();
+  initGlobalLaunchRadar();
 }
