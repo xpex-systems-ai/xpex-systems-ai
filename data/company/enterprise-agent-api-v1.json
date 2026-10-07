@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "snapshot_date": "2026-10-07",
+  "component": "XPeX Enterprise Agent API",
+  "policy": "Evidence First",
+  "purpose": "Machine-readable enterprise discovery, need matching and agent/system distribution.",
+  "public_endpoints": {
+    "rest": "https://xpex-systems-ai.vercel.app/api/agent-api",
+    "mcp": "https://xpex-systems-ai.vercel.app/api/mcp/enterprise",
+    "discovery": "https://xpex-systems-ai.vercel.app/.well-known/xpex-agent-api.json",
+    "catalog": "https://xpex-systems-ai.vercel.app/data/enterprise-agent-catalog-v1.json",
+    "llms": "https://xpex-systems-ai.vercel.app/llms.txt"
+  },
+  "capabilities": {
+    "mcp_tools": 8,
+    "enterprise_offerings": 7,
+    "public_system_intelligence_pages": 7,
+    "matching": "stateless keyword/intent routing with evidence-backed solution packs"
+  },
+  "boundaries": [
+    "No secret or credential access",
+    "No private customer data",
+    "No unsolicited outreach automation in V1",
+    "No production mutation",
+    "No financial action",
+    "No claim that a match is a customer, partnership or contract",
+    "No guaranteed outcome"
+  ]
+}
