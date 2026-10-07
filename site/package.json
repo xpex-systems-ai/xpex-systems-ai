@@ -8,7 +8,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "test:gx": "node tests/gx-evidence.test.mjs && node tests/system-intelligence.test.mjs && node --check api/gx.js && node --check src/system-page.js",
-    "test:gx-mcp": "node tests/gx-mcp.test.mjs && node --check api/mcp/gx.js"
+    "test:gx-mcp": "node tests/gx-mcp.test.mjs && node --check api/mcp/gx.js",
+    "test:launch": "node tests/global-launch.test.mjs && node --check src/global-launch.js"
   },
   "devDependencies": {
     "vite": "^7.1.12"

@@ -1,0 +1,246 @@
+{
+  "schema_version": "1.0",
+  "snapshot_date": "2026-10-07",
+  "title": "XPeX Global Launch Radar",
+  "company": "XPeX Systems AI",
+  "positioning": "AI Systems · Agents · Company Intelligence · Neural Workforce",
+  "launch_thesis": "XPeX composes existing software, MCP tools, plugins, skills and governed agents into evidence-backed digital workers that expand human capability.",
+  "truth_boundary": "This radar tracks public opportunity windows and XPeX readiness. A target is not a partnership, acceptance, investment or endorsement.",
+  "priority_targets": [
+    {
+      "id": "yc-w27",
+      "type": "accelerator",
+      "name": "Y Combinator",
+      "program": "Winter 2027",
+      "priority": "P0",
+      "fit": "VERY_HIGH",
+      "status": "OPEN",
+      "deadline": "2026-11-02T20:00:00-08:00",
+      "location": "San Francisco, USA",
+      "action": "APPLY",
+      "rationale": "Global top-tier accelerator; strong fit for AI infrastructure, agents and a technical founder with a working product portfolio.",
+      "source": "https://www.ycombinator.com/apply"
+    },
+    {
+      "id": "techstars-nyc-s27",
+      "type": "accelerator",
+      "name": "Techstars",
+      "program": "New York City Accelerator — Spring 2027",
+      "priority": "P0",
+      "fit": "VERY_HIGH",
+      "status": "OPEN",
+      "deadline": "2026-11-18",
+      "location": "New York, USA / hybrid",
+      "action": "APPLY",
+      "rationale": "Explicit focus on AI/ML, enterprise SaaS and large markets; strong fit for enterprise agentic infrastructure.",
+      "source": "https://www.techstars.com/accelerators/nyc"
+    },
+    {
+      "id": "techstars-boston-s27",
+      "type": "accelerator",
+      "name": "Techstars",
+      "program": "Boston Accelerator — Spring 2027",
+      "priority": "P0",
+      "fit": "HIGH",
+      "status": "OPEN",
+      "deadline": "2026-11-18",
+      "location": "Boston, USA",
+      "action": "APPLY",
+      "rationale": "AI/ML and transformative technology focus with strong enterprise and technical network.",
+      "source": "https://www.techstars.com/accelerators/boston"
+    },
+    {
+      "id": "techstars-anywhere-s27",
+      "type": "accelerator",
+      "name": "Techstars",
+      "program": "Anywhere Accelerator — Spring 2027",
+      "priority": "P1",
+      "fit": "HIGH",
+      "status": "OPEN",
+      "deadline": "2026-11-18",
+      "location": "Remote-first / American time zones",
+      "action": "APPLY",
+      "rationale": "Remote-first format lowers relocation friction while retaining Techstars investor and mentor network.",
+      "source": "https://www.techstars.com/accelerators/anywhere"
+    },
+    {
+      "id": "techstars-london-s27",
+      "type": "accelerator",
+      "name": "Techstars",
+      "program": "London Accelerator — Spring 2027",
+      "priority": "P1",
+      "fit": "HIGH",
+      "status": "OPEN",
+      "deadline": "2026-11-18",
+      "location": "London, UK",
+      "action": "APPLY",
+      "rationale": "Global founder intake across verticals and access to a major capital and enterprise ecosystem.",
+      "source": "https://www.techstars.com/accelerators/london"
+    },
+    {
+      "id": "antler-us",
+      "type": "accelerator",
+      "name": "Antler",
+      "program": "US Residency",
+      "priority": "P1",
+      "fit": "HIGH",
+      "status": "ROLLING",
+      "deadline": null,
+      "location": "San Francisco / Austin / New York",
+      "action": "APPLY",
+      "rationale": "Rolling intake in the US and strong early-stage founder network.",
+      "source": "https://www.antler.co/cohort-start-dates"
+    },
+    {
+      "id": "alchemist",
+      "type": "accelerator",
+      "name": "Alchemist Accelerator",
+      "program": "Enterprise / B2B Accelerator",
+      "priority": "P0",
+      "fit": "VERY_HIGH",
+      "status": "ROLLING",
+      "deadline": null,
+      "location": "Silicon Valley / global",
+      "action": "APPLY",
+      "rationale": "Enterprise and B2B focus maps directly to XPeX Company Intelligence, agentic systems and governed digital workers.",
+      "source": "https://www.alchemistaccelerator.com/programs"
+    },
+    {
+      "id": "nvidia-inception",
+      "type": "ecosystem",
+      "name": "NVIDIA",
+      "program": "Inception",
+      "priority": "P1",
+      "fit": "HIGH",
+      "status": "ROLLING",
+      "deadline": null,
+      "location": "Global",
+      "action": "APPLY_IF_ELIGIBLE",
+      "rationale": "Free AI startup program with technical resources, market visibility and investor-network exposure. Eligibility requires an incorporated company, working website and at least one developer.",
+      "source": "https://www.nvidia.com/en-us/startups/"
+    },
+    {
+      "id": "microsoft-startups",
+      "type": "ecosystem",
+      "name": "Microsoft",
+      "program": "Microsoft for Startups",
+      "priority": "P1",
+      "fit": "HIGH",
+      "status": "OPEN",
+      "deadline": null,
+      "location": "Global",
+      "action": "APPLY_IF_ELIGIBLE",
+      "rationale": "Early-stage B2B software/AI program designed to help startups reach enterprise readiness and go to market.",
+      "source": "https://learn.microsoft.com/en-us/startups/"
+    },
+    {
+      "id": "aws-activate",
+      "type": "ecosystem",
+      "name": "AWS",
+      "program": "AWS Activate",
+      "priority": "P2",
+      "fit": "MEDIUM",
+      "status": "OPEN",
+      "deadline": null,
+      "location": "Global",
+      "action": "APPLY_IF_ELIGIBLE",
+      "rationale": "Cloud credits, technical support and startup resources can reduce infrastructure cost and extend runway.",
+      "source": "https://aws.amazon.com/aws-startups/learn/applying-for-aws-activate-credits-a-step-by-step-guide/"
+    },
+    {
+      "id": "google-startups",
+      "type": "ecosystem",
+      "name": "Google for Startups",
+      "program": "Accelerator network",
+      "priority": "P2",
+      "fit": "HIGH",
+      "status": "PROGRAM_FINDER",
+      "deadline": null,
+      "location": "Global",
+      "action": "WATCH_AND_APPLY",
+      "rationale": "Technical, product and leadership support for growth-stage startups; program windows vary by accelerator.",
+      "source": "https://startup.google.com/intl/en/programs/accelerator/"
+    },
+    {
+      "id": "500-global-flagship",
+      "type": "accelerator",
+      "name": "500 Global",
+      "program": "Flagship / 500 Fellowship",
+      "priority": "P2",
+      "fit": "HIGH",
+      "status": "VERIFY_WINDOW",
+      "deadline": null,
+      "location": "San Francisco, USA",
+      "action": "VERIFY_BEFORE_SUBMIT",
+      "rationale": "Strong global early-stage investor network, but the current official page presents inconsistent batch/deadline text; do not claim an open on-time window until reverified.",
+      "source": "https://500.co/founders/flagship"
+    }
+  ],
+  "investor_watch": [
+    {
+      "name": "Andreessen Horowitz (a16z)",
+      "focus": "AI / enterprise / infrastructure",
+      "action": "RESEARCH_WARM_PATH"
+    },
+    {
+      "name": "Sequoia Capital",
+      "focus": "AI / software / category-defining companies",
+      "action": "RESEARCH_WARM_PATH"
+    },
+    {
+      "name": "Accel",
+      "focus": "enterprise software / developer infrastructure / AI",
+      "action": "RESEARCH_WARM_PATH"
+    },
+    {
+      "name": "Bessemer Venture Partners",
+      "focus": "cloud / enterprise / AI",
+      "action": "RESEARCH_WARM_PATH"
+    },
+    {
+      "name": "Lightspeed Venture Partners",
+      "focus": "enterprise / AI / infrastructure",
+      "action": "RESEARCH_WARM_PATH"
+    },
+    {
+      "name": "General Catalyst",
+      "focus": "AI / enterprise / transformation",
+      "action": "RESEARCH_WARM_PATH"
+    },
+    {
+      "name": "Khosla Ventures",
+      "focus": "frontier technology / AI",
+      "action": "RESEARCH_WARM_PATH"
+    },
+    {
+      "name": "Gradient Ventures",
+      "focus": "AI-first startups",
+      "action": "RESEARCH_WARM_PATH"
+    }
+  ],
+  "application_readiness": {
+    "public_site": "https://xpex-systems-ai.vercel.app",
+    "founder_linkedin": "https://www.linkedin.com/in/ceojuniorsena",
+    "corporate_github": "https://github.com/xpex-systems-ai/xpex-systems-ai",
+    "flagship_case_pack": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/main/docs/FLAGSHIP_CASES.md",
+    "neural_workforce_manifesto": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/main/NEURAL_WORKFORCE_MANIFESTO.md",
+    "gx_neural_copilot_mcp": "https://xpex-systems-ai.vercel.app/api/mcp/gx",
+    "verified_signals": {
+      "gx_mcp_tools": 11,
+      "detailed_systems": 7,
+      "material_lineages": 20,
+      "evidence_nodes": 19
+    },
+    "missing_or_must_confirm_before_submission": [
+      "Legal incorporated company name and registration jurisdiction",
+      "Incorporation date",
+      "Founder ownership / cap table",
+      "Current revenue and funding — only if provider/document verified",
+      "Customer count and references — only if verified",
+      "Founder full-time commitment answer",
+      "Co-founder/team structure",
+      "Current fundraising target and use of funds",
+      "Application-specific demo video and founder video"
+    ]
+  }
+}
