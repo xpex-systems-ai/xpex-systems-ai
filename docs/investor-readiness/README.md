@@ -30,3 +30,6 @@ Prepare XPeX for professional product demos, commercial validation, investor due
 
 ## Gate rules
 PASS requires linked, dated evidence and reviewer. NOT_EVALUATED is never PASS. An executor cannot approve their own delivery. No investor-verified status without independent due diligence.
+
+## Runtime evidence update — 2026-10-10
+- [Provider Runtime Reconciliation](PROVIDER_RUNTIME_RECONCILIATION_20261010.md): Railway health-access log evidence, deployment/source correlation, Vercel source/production mapping, known security and integration blockers. HTTP public probes inconclusive; no G0–G7 gates promoted.
