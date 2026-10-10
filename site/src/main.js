@@ -7,6 +7,8 @@ import './enterprise-agent-api.css';
 import { maybeRenderSystemPage, rewriteSystemLinks } from './system-page.js';
 import { initGlobalLaunchRadar } from './global-launch.js';
 import { initEnterpriseAgentAPI } from './enterprise-agent-api.js';
+import './ecosystem.css';
+import { ecosystemEntry, maybeRenderEcosystem } from './ecosystem.js';
 
 const systems = [
   {
@@ -104,6 +106,7 @@ app.innerHTML = `
       <span><b>XPeX</b><small>SYSTEMS AI</small></span>
     </a>
     <nav>
+      <a href="/?view=ecosystem">GXEON</a>
       <a href="#systems">Systems</a>
       <a href="#trust">Trust</a>
       <a href="#gx">GX</a>
@@ -121,7 +124,8 @@ app.innerHTML = `
       <h1>Intelligence that can<br/><em>operate — and prove it.</em></h1>
       <p class="hero-copy">XPeX Systems AI builds evidence-aware infrastructure for intelligent software, autonomous agents and enterprise operations.</p>
       <div class="hero-actions">
-        <a class="button primary" href="#systems">Explore systems</a>
+        <a class="button primary" href="/?view=ecosystem">Explore the ecosystem</a>
+        <a class="button" href="#systems">Explore systems</a>
         <a class="button" href="#trust">Open Trust Layer</a>
       </div>
       <div class="hero-proof">
@@ -146,6 +150,8 @@ app.innerHTML = `
       </div>
       <p>We do not promote a system because it looks complete. XPeX separates discovery, identity, runtime, security and commercial truth — then requires evidence before promotion.</p>
     </section>
+
+    ${ecosystemEntry()}
 
     <section id="systems" class="shell section">
       <div class="section-head">
@@ -371,7 +377,7 @@ const observer = new IntersectionObserver((entries) => {
   }
 }, { threshold: 0.12 });
 
-const systemPageActive = maybeRenderSystemPage(app);
+const systemPageActive = maybeRenderEcosystem(app) || maybeRenderSystemPage(app);
 
 if (!systemPageActive) {
   rewriteSystemLinks();

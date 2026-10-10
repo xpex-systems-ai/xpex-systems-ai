@@ -29,6 +29,14 @@ https://xpex-systems-ai.vercel.app/data/global-launch-radar-v1.json
 
 ## Core capabilities
 
+Corporate GXEON public demonstration:
+https://xpex-systems-ai.vercel.app/?view=ecosystem
+
+Public read-only ecosystem projection (timestamped configuration, radar counts, declared catalog):
+https://xpex-systems-ai.vercel.app/api/ecosystem
+
+Private accounts, balances, ledger records and signing are excluded. Stale/unavailable sources and unknown financials remain explicit. Catalog presence is not execution or revenue.
+
 - Company Intelligence and system provenance
 - AI agent and MCP integration
 - Plugin and skill packaging

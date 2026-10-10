@@ -102,6 +102,9 @@ function extractText(payload) {
 
 function fallbackAnswer(message, evidence) {
   const q = normalize(message);
+  if (/coinbase|revenue operations|integrac|monetiz|ecossistema gxeon|gxeon enterprise/.test(q)) {
+    return 'O GXEON tem uma demonstração pública dentro do site oficial da XPeX: /?view=ecosystem. Ela consulta estados das integrações, fontes do radar e o catálogo existente em modo somente leitura. Coinbase exige configuração e autenticação para consultar saldo e histórico. Fontes atrasadas são identificadas; saldo e receita sem conciliação ficam NÃO VERIFICADOS. Os caminhos comerciais são diagnóstico, piloto de agentes/integrações e distribuição de serviços, com proposta e contrato revisados por humanos.';
+  }
   if (/segur|trust|govern|codeql|secret|supply/.test(q)) {
     return 'A XPeX publica uma camada de confiança baseada em validações automáticas, como governança, Public Truth, secret hygiene, supply-chain, Assurance Tests e CodeQL. Esses sinais provam que os controles executaram com sucesso — não são uma certificação externa.';
   }

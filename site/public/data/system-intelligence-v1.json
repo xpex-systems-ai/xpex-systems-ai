@@ -16,6 +16,9 @@
   },
   {
     "slug": "wallet-command",
+    "corporate_demo": "https://xpex-systems-ai.vercel.app/?view=ecosystem",
+    "public_metadata": "https://xpex-systems-ai.vercel.app/api/ecosystem",
+    "financial_boundary": "Authenticated balance/history and reconciliation required; public financials are NOT VERIFIED.",
     "id": "GXEON-WALLET-COMMAND",
     "name": "GXEON Wallet Command Center",
     "status": "HARDENING",
