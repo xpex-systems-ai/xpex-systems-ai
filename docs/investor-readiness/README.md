@@ -48,3 +48,6 @@ PASS requires linked, dated evidence and reviewer. NOT_EVALUATED is never PASS. 
 
 ## Mission 10 — Sensitive R100 contracts
 - [R100 Sensitive Contract Recovery](R100_SENSITIVE_CONTRACT_RECOVERY_20261010.md): backend TS errors 19→0, safety checks 8/8 pass, frontend release still blocked by 10 dashboard errors.
+
+## Mission 11 — Frontend release recovery
+- [Frontend Release Recovery](FRONTEND_RELEASE_RECOVERY_20261010.md): draft PR #442, 10 frontend TS diagnostics recovered, 5 safety tests and a controlled integration-smoke plan; human review and live validation still pending.
