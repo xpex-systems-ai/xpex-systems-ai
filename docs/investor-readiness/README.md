@@ -42,3 +42,6 @@ PASS requires linked, dated evidence and reviewer. NOT_EVALUATED is never PASS. 
 
 ## Mission 08 — Operator preview route typing
 - [Operator Route Type Recovery](OPERATOR_ROUTE_TYPE_RECOVERY_20261010.md): stacked PR #438, 9 resolved TS7030 errors, 36 remaining global errors; full release still blocked.
+
+## Mission 09 — Operator Handoff & Client Offer
+- [Operator Handoff Safety Recovery](OPERATOR_HANDOFF_SAFETY_RECOVERY_20261010.md): draft PR #439; contract tests pass 4/4; 36 → 19 TypeScript diagnostics; overall CI still blocked.
