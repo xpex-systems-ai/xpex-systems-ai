@@ -39,3 +39,6 @@ PASS requires linked, dated evidence and reviewer. NOT_EVALUATED is never PASS. 
 
 ## Mission 07 — Backend TypeScript recovery
 - [Audit OS Backend TypeScript Recovery](AUDIT_OS_BACKEND_TYPE_RECOVERY_20261010.md): scoped draft PR, dedicated test suite, measured 68 → 45 diagnostics and remaining global CI blockers.
+
+## Mission 08 — Operator preview route typing
+- [Operator Route Type Recovery](OPERATOR_ROUTE_TYPE_RECOVERY_20261010.md): stacked PR #438, 9 resolved TS7030 errors, 36 remaining global errors; full release still blocked.
