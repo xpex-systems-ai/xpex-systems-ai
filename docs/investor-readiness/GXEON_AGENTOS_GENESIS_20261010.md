@@ -41,7 +41,7 @@ Rejected and cancelled states also exist; human approval or external execution a
 
 GitHub Actions [AgentOS Genesis Safety #38070509974](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38070509974): **SUCCESS, 14/14 tests**; synthetic demo emitted `AWAITING_HUMAN_APPROVAL`, `verifiedChain: true`, `actualExternalAgentActions: 0`, `reportedRevenueBrl: 0`. GitHub Actions [Monorepo Health #38070509963](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38070509963): **SUCCESS**.
 
-[Typecheck #38070509948](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38070509948): **SUCCESS on exact head SHA**. [Build #38070509946](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38070509946): **PENDING at report update**, check before declaring exact-head CI fully green.
+[Typecheck #38070509948](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38070509948): **SUCCESS on exact head SHA**. [Build #38070509946](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38070509946): **SUCCESS on exact head SHA**.
 
 ## Next gates before actual tool-calling agents
 
