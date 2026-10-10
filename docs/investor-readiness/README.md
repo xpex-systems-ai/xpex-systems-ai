@@ -33,3 +33,6 @@ PASS requires linked, dated evidence and reviewer. NOT_EVALUATED is never PASS. 
 
 ## Runtime evidence update — 2026-10-10
 - [Provider Runtime Reconciliation](PROVIDER_RUNTIME_RECONCILIATION_20261010.md): Railway health-access log evidence, deployment/source correlation, Vercel source/production mapping, known security and integration blockers. HTTP public probes inconclusive; no G0–G7 gates promoted.
+
+## Frontend / API integration review
+- [Audit OS frontend ↔ backend review](AUDIT_OS_FRONTEND_BACKEND_REVIEW_20261010.md) documents current Vercel environment metadata, source route alignment, open security gates and the unmerged draft code patch in GXEON-AI#434.
