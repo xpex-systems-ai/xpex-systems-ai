@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "2.0",
+  "observedAt": "2026-10-10T02:40:45Z",
+  "scope": "Timestamped public demo reachability and health observations; not exhaustive workflow verification.",
+  "publicDemos": [
+    {"id":"audit-os","url":"https://gxeon-audit-os.vercel.app","httpStatus":200,"title":"GXEON Dashboard"},
+    {"id":"studio-ai","url":"https://xpex-studio-ai.vercel.app","httpStatus":200,"title":"XpeX Studio AI | Frontend Online"},
+    {"id":"plugin-factory","url":"https://xpex-plugin-factory-production.up.railway.app","httpStatus":200,"health":{"url":"https://xpex-plugin-factory-production.up.railway.app/health","httpStatus":200,"environment":"production","version":"0.4.0"}},
+    {"id":"wallet-command","url":"https://gxeon-wallet-command-center.vercel.app","provider":"Vercel","deployment":"dpl_7qX3NtTm9H56NMEadjSRerA6pN34","state":"READY","sourceSha":"e797d96c787308d3c96afa39ea395732a1f20d05","publicMetadata":"https://xpex-systems-ai.vercel.app/api/ecosystem","metadataHttpStatus":200}
+  ],
+  "staging": {"id":"systems-command","url":"https://xpex-systems-command-staging-web-production.up.railway.app","healthUrl":"https://xpex-systems-command-staging-web-production.up.railway.app/api/health","healthHttpStatus":200,"environment":"staging","operatorAccess":"AUTHENTICATED_SESSION_REQUIRED"},
+  "openGates": ["API Fabric canonical admission","Academy runtime correlation","Coinbase backend/operator configuration","Authenticated settlement reconciliation"]
+}
