@@ -23,3 +23,9 @@ Do not presume that creator-owned accounts, third-party APIs, open source depend
 
 ## Commercial proof
 Separate demo, authorized pilot, contractual customer, recognized revenue and cleared receipts. No invented customers or prices.
+
+## 2026-10-10 provider evidence supplement
+See [Provider Runtime Reconciliation](PROVIDER_RUNTIME_RECONCILIATION_20261010.md).
+- Systems Command: Railway service currently online (1/1 replica); source commit `def62b7c6ff64722697d62219f2fd214bce41eca` correlated to current deployment; Railway GET `/api/health` HTTP 200 in provider logs. Gmail inventory read failures present; staging + security release blockers still apply.
+- Audit OS: Vercel production deploy `READY` at source commit `dbc29fff9a2c55487f85a83db597f41c493af7a8`; SSO protection indicated; separate API origin configuration and direct GET functionality unverified. 7d grouped runtime errors returned none; not proof of E2E health.
+- **All G0–G7 statuses remain NOT_EVALUATED pending gate-specific evidence and independent reviewer.**
