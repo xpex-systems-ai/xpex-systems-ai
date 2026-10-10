@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0",
+  "system_id": "XPEX-STUDIO-AI",
+  "display_slug": "studio-ai",
+  "preparation_status": "DOCUMENTED",
+  "prepared_at": "2026-10-10T04:10:49.399Z",
+  "source_observation": {
+    "repository": "xpex-systems-ai/xpex-studio-ai",
+    "private": true,
+    "default_branch": "main",
+    "license": null,
+    "archived": false,
+    "observed_at": "2026-10-10T04:10:49.399Z",
+    "commit": "88f7ea3bb5c4e501105d0e37b5ade9a9557e73e5",
+    "tree": "57d57b9852c2dca0b0c4ade039be75a08f0b961e"
+  },
+  "source_legal_title": "NOT_VERIFIED",
+  "buyer_hypothesis": "Equipes de criação e operações de IA",
+  "expected_result": "Organização de criação, agentes e memória",
+  "published_stage": "DEMO READY",
+  "operating_cost": null,
+  "operating_cost_status": "NOT_VERIFIED",
+  "settled_revenue": null,
+  "revenue_status": "NOT_VERIFIED",
+  "transfer_readiness": "REVIEW_AND_REHEARSAL_REQUIRED",
+  "next_actions": [
+    "Correlacionar Supabase Auth e ownership da base.",
+    "Testar isolamento de dados e sessão com contas de teste.",
+    "Documentar um fluxo de criação reproduzível e seus custos."
+  ],
+  "standards": [
+    {
+      "id": "identity",
+      "name": "Identidade",
+      "requirement": "Nome, logo, função, estágio e fonte canônica.",
+      "status": "DOCUMENTED_REQUIREMENT",
+      "implementation_verification": "PENDING"
+    },
+    {
+      "id": "utility",
+      "name": "Utilidade",
+      "requirement": "Comprador, problema, resultado e condição de aceite.",
+      "status": "DOCUMENTED_REQUIREMENT",
+      "implementation_verification": "PENDING"
+    },
+    {
+      "id": "demo",
+      "name": "Demonstração",
+      "requirement": "Entradas, roteiro, saídas, evidências e limitações.",
+      "status": "DOCUMENTED_REQUIREMENT",
+      "implementation_verification": "PENDING"
+    },
+    {
+      "id": "security",
+      "name": "Segurança",
+      "requirement": "Permissões, dados, achados, testes e revisão independente.",
+      "status": "DOCUMENTED_REQUIREMENT",
+      "implementation_verification": "PENDING"
+    },
+    {
+      "id": "operation",
+      "name": "Operação",
+      "requirement": "Instalação, atualização, monitoramento e recuperação.",
+      "status": "DOCUMENTED_REQUIREMENT",
+      "implementation_verification": "PENDING"
+    },
+    {
+      "id": "economics",
+      "name": "Economia",
+      "requirement": "Custos, preço, margem e fonte dos valores.",
+      "status": "DOCUMENTED_REQUIREMENT",
+      "implementation_verification": "PENDING"
+    },
+    {
+      "id": "transfer",
+      "name": "Transferência",
+      "requirement": "Titularidade, licenças, dependências e troca de operador.",
+      "status": "DOCUMENTED_REQUIREMENT",
+      "implementation_verification": "PENDING"
+    }
+  ],
+  "open_gates": [
+    "Source is private.",
+    "Auth/data runtime needs stronger provider-backed correlation before production-level claims."
+  ],
+  "independent_acceptance": "PENDING"
+}

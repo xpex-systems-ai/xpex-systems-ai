@@ -135,7 +135,7 @@ Lead with:
 Strongest targets:
 - New York City;
 - Boston;
-- Anywhere;
+- Anywhere — reassess current physical-AI emphasis and three in-person offsites;
 - London.
 
 ### Alchemist
@@ -148,7 +148,7 @@ Alchemist is one of the highest-fit targets because the product is fundamentally
 
 ### NVIDIA Inception
 
-Apply only if legal-company eligibility is confirmed.
+Review eligibility before applying. The official Inception page excludes companies associated with cryptocurrency and consulting/outsourced development firms. GXEON Web3 activity and the actual XPeX business model must be disclosed accurately and assessed alongside incorporation, developer and website criteria. Eligibility is not established in this package. Source checked 10 October 2026: https://www.nvidia.com/en-us/startups/
 
 Emphasize:
 - agentic AI;

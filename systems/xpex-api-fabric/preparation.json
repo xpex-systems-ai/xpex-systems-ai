@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0",
+  "system_id": "XPEX-API-FABRIC-001",
+  "display_slug": "api-fabric",
+  "preparation_status": "DOCUMENTED",
+  "prepared_at": "2026-10-10T04:10:49.399Z",
+  "source_observation": {
+    "repository": "xpex-systems-ai/remix-of-remix-of-remix-of-remix-of-xpex-api-hub-87",
+    "private": false,
+    "default_branch": "main",
+    "license": null,
+    "archived": false,
+    "observed_at": "2026-10-10T04:10:49.399Z",
+    "commit": "eb76188996c00604cd2d50aa89e7fd7bf9417f3c",
+    "tree": "ec88e5d2b67ff8539d966661e23ad9a890a622bf"
+  },
+  "source_legal_title": "NOT_VERIFIED",
+  "buyer_hypothesis": "Equipes que distribuem serviços para agentes",
+  "expected_result": "Descoberta e distribuição de capacidades por API",
+  "published_stage": "ADMISSION",
+  "operating_cost": null,
+  "operating_cost_status": "NOT_VERIFIED",
+  "settled_revenue": null,
+  "revenue_status": "NOT_VERIFIED",
+  "transfer_readiness": "REVIEW_AND_REHEARSAL_REQUIRED",
+  "next_actions": [
+    "Correlacionar identidade pública, projeto e base Supabase.",
+    "Confirmar endpoint canônico e contrato de serviço.",
+    "Testar entrega e cobrança separadamente antes de qualquer alegação comercial."
+  ],
+  "standards": [
+    {
+      "id": "identity",
+      "name": "Identidade",
+      "requirement": "Nome, logo, função, estágio e fonte canônica.",
+      "status": "DOCUMENTED_REQUIREMENT",
+      "implementation_verification": "PENDING"
+    },
+    {
+      "id": "utility",
+      "name": "Utilidade",
+      "requirement": "Comprador, problema, resultado e condição de aceite.",
+      "status": "DOCUMENTED_REQUIREMENT",
+      "implementation_verification": "PENDING"
+    },
+    {
+      "id": "demo",
+      "name": "Demonstração",
+      "requirement": "Entradas, roteiro, saídas, evidências e limitações.",
+      "status": "DOCUMENTED_REQUIREMENT",
+      "implementation_verification": "PENDING"
+    },
+    {
+      "id": "security",
+      "name": "Segurança",
+      "requirement": "Permissões, dados, achados, testes e revisão independente.",
+      "status": "DOCUMENTED_REQUIREMENT",
+      "implementation_verification": "PENDING"
+    },
+    {
+      "id": "operation",
+      "name": "Operação",
+      "requirement": "Instalação, atualização, monitoramento e recuperação.",
+      "status": "DOCUMENTED_REQUIREMENT",
+      "implementation_verification": "PENDING"
+    },
+    {
+      "id": "economics",
+      "name": "Economia",
+      "requirement": "Custos, preço, margem e fonte dos valores.",
+      "status": "DOCUMENTED_REQUIREMENT",
+      "implementation_verification": "PENDING"
+    },
+    {
+      "id": "transfer",
+      "name": "Transferência",
+      "requirement": "Titularidade, licenças, dependências e troca de operador.",
+      "status": "DOCUMENTED_REQUIREMENT",
+      "implementation_verification": "PENDING"
+    }
+  ],
+  "open_gates": [
+    "Legacy repository/project naming remains.",
+    "Canonical GXEON Agent Marketplace identity is not yet proven.",
+    "Supabase runtime ownership correlation is incomplete."
+  ],
+  "independent_acceptance": "PENDING"
+}

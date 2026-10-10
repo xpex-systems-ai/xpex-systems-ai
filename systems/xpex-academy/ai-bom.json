@@ -1,0 +1,23 @@
+{
+  "aibom_id": "AIBOM-XPEX-ACADEMY",
+  "system_id": "XPEX-ACADEMY",
+  "version": "1.0",
+  "source_commit": "7bb8e1de29997beba1cbaccf809a4978d698435c",
+  "deployment_id": null,
+  "models": [],
+  "agents": [],
+  "tools": [],
+  "providers": [
+    "GitHub",
+    "Firebase + Railway declared in source"
+  ],
+  "data_sources": [],
+  "policies": [
+    "XAGF",
+    "Evidence First"
+  ],
+  "unknowns": [
+    "Models, running agents, exact tools, data classes and credential scopes require application-level inventory. Empty lists represent unverified inventory, not a claim that these dependencies do not exist."
+  ],
+  "generated_at": "2026-10-10T04:10:49.399Z"
+}

@@ -31,7 +31,7 @@ jobs:
         run: npm ci --no-audit --no-fund
       - name: Validate GX evidence boundary
         working-directory: site
-        run: npm run test:gx && npm run test:gx-mcp && npm run test:launch && npm run test:enterprise-agent-api && npm run test:ecosystem
+        run: npm run test:gx && npm run test:gx-mcp && npm run test:launch && npm run test:enterprise-agent-api && npm run test:ecosystem && npm run test:company
       - name: Build
         working-directory: site
         run: npm run build

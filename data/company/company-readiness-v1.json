@@ -1,0 +1,386 @@
+{
+  "schema_version": "1.0",
+  "company": "XPeX Systems AI",
+  "status": "PREPARATION_ACTIVE",
+  "prepared_at": "2026-10-10",
+  "source_review": {
+    "repository": "xpex-systems-ai/xpex-systems-ai",
+    "commit": "e1d5476ca5089c00d0add14bb0e784054bd7c557",
+    "reviewed_at": "2026-10-10",
+    "basis": "Current public System Intelligence records and corporate source. Runtime and workflow observations retain their own timestamps."
+  },
+  "assurance": {
+    "level": "AL1",
+    "meaning": "Documented governance foundation",
+    "independent_certification": "NOT_ASSERTED",
+    "control_evidence": "data/governance/control-status-v1.json"
+  },
+  "commercial": {
+    "status": "PILOT_VALIDATION_REQUIRED",
+    "customers": null,
+    "customers_status": "NOT_VERIFIED",
+    "settled_revenue": null,
+    "revenue_status": "NOT_VERIFIED",
+    "currency": "BRL",
+    "valuation": null,
+    "valuation_status": "NOT_ASSESSED",
+    "costs": null,
+    "costs_status": "NOT_VERIFIED",
+    "buyer_hypothesis": "Fundador ou gestor técnico de uma empresa de software com aplicações, integrações e agentes distribuídos.",
+    "value_proposition": "Organizar sistemas e integrações com origem, permissões, estado e evidências, para apoiar decisões e entregas técnicas.",
+    "initial_offer": "Diagnóstico XPeX de Sistemas e Integrações",
+    "offer_status": "PROPOSED",
+    "acceptance": "Mapa de escopo, evidências, achados priorizados e plano de correção revisados com o cliente.",
+    "pricing": "SCOPED_PROPOSAL_REQUIRED"
+  },
+  "transaction_paths": [
+    {
+      "id": "investment",
+      "label": "Investimento",
+      "status": "MATERIALS_PREPARED_REVIEW_REQUIRED",
+      "purpose": "Capital em troca de participação; operação continua sob os termos negociados."
+    },
+    {
+      "id": "acquisition",
+      "label": "Aquisição integral",
+      "status": "DUE_DILIGENCE_REQUIRED",
+      "purpose": "Transferência de controle com escopo, obrigações e transição definidos."
+    },
+    {
+      "id": "assets",
+      "label": "Aquisição de ativos",
+      "status": "SCOPE_AND_TITLE_REVIEW_REQUIRED",
+      "purpose": "Transferência de ativos específicos e direitos comprovados, conforme contrato."
+    }
+  ],
+  "standards": [
+    {
+      "id": "identity",
+      "name": "Identidade",
+      "requirement": "Nome, logo, função, estágio e fonte canônica."
+    },
+    {
+      "id": "utility",
+      "name": "Utilidade",
+      "requirement": "Comprador, problema, resultado e condição de aceite."
+    },
+    {
+      "id": "demo",
+      "name": "Demonstração",
+      "requirement": "Entradas, roteiro, saídas, evidências e limitações."
+    },
+    {
+      "id": "security",
+      "name": "Segurança",
+      "requirement": "Permissões, dados, achados, testes e revisão independente."
+    },
+    {
+      "id": "operation",
+      "name": "Operação",
+      "requirement": "Instalação, atualização, monitoramento e recuperação."
+    },
+    {
+      "id": "economics",
+      "name": "Economia",
+      "requirement": "Custos, preço, margem e fonte dos valores."
+    },
+    {
+      "id": "transfer",
+      "name": "Transferência",
+      "requirement": "Titularidade, licenças, dependências e troca de operador."
+    }
+  ],
+  "systems": [
+    {
+      "slug": "systems-command",
+      "pack": "systems/xpex-systems-command",
+      "priority": "P0",
+      "preparation_status": "DOCUMENTED",
+      "buyer_hypothesis": "Fundadores e gestores técnicos",
+      "expected_result": "Inventário de sistemas, origem, runtime e evidências",
+      "next_milestone": "Confirmar a operação autenticada e documentar uma instalação recuperável",
+      "next_actions": [
+        "Verificar IAM/RBAC e admissão dos conectores antes de produção.",
+        "Registrar restauração e troca de operador em staging.",
+        "Demonstrar um inventário autorizado com evidências revisadas."
+      ]
+    },
+    {
+      "slug": "audit-os",
+      "pack": "systems/gxeon-audit-os",
+      "priority": "P0",
+      "preparation_status": "DOCUMENTED",
+      "buyer_hypothesis": "Equipes responsáveis por aplicações e integrações",
+      "expected_result": "Diagnóstico com achados e evidências rastreáveis",
+      "next_milestone": "Consolidar a identidade da aplicação e repetir um diagnóstico completo",
+      "next_actions": [
+        "Resolver a linhagem compartilhada GXEON-AI.",
+        "Testar uma auditoria com entrada autorizada e relatório revisado.",
+        "Medir tempo e custo do diagnóstico."
+      ]
+    },
+    {
+      "slug": "plugin-factory",
+      "pack": "systems/xpex-plugin-factory",
+      "priority": "P0",
+      "preparation_status": "DOCUMENTED",
+      "buyer_hypothesis": "Equipes que constroem agentes, MCP e plugins",
+      "expected_result": "Pacote de integração compilado para revisão",
+      "next_milestone": "Repetir validação, preview e compilação determinística",
+      "next_actions": [
+        "Registrar blueprint, relatório, arquivos e hash do pacote.",
+        "Demonstrar bloqueio de um blueprint inseguro sem credenciais reais.",
+        "Documentar instalação e suporte do artefato gerado."
+      ]
+    },
+    {
+      "slug": "wallet-command",
+      "pack": "systems/gxeon-wallet-command",
+      "priority": "P1",
+      "preparation_status": "DOCUMENTED",
+      "buyer_hypothesis": "Operadores de serviços e tarefas de agentes",
+      "expected_result": "Monitoramento financeiro com origens e liquidação separadas",
+      "next_milestone": "Validar consultas autorizadas e reconciliação antes de alegar recebimentos",
+      "next_actions": [
+        "Reavaliar o aviso url.parse documentado.",
+        "Configurar e verificar autenticação e backend Coinbase com credenciais administradas pelo titular.",
+        "Testar deduplicação e reconciliação com transações comprovadas, sem movimentar fundos."
+      ]
+    },
+    {
+      "slug": "studio-ai",
+      "pack": "systems/xpex-studio-ai",
+      "priority": "P1",
+      "preparation_status": "DOCUMENTED",
+      "buyer_hypothesis": "Equipes de criação e operações de IA",
+      "expected_result": "Organização de criação, agentes e memória",
+      "next_milestone": "Verificar autenticação e contratos de dados além da interface",
+      "next_actions": [
+        "Correlacionar Supabase Auth e ownership da base.",
+        "Testar isolamento de dados e sessão com contas de teste.",
+        "Documentar um fluxo de criação reproduzível e seus custos."
+      ]
+    },
+    {
+      "slug": "api-fabric",
+      "pack": "systems/xpex-api-fabric",
+      "priority": "P2",
+      "preparation_status": "DOCUMENTED",
+      "buyer_hypothesis": "Equipes que distribuem serviços para agentes",
+      "expected_result": "Descoberta e distribuição de capacidades por API",
+      "next_milestone": "Concluir admissão de identidade e dados",
+      "next_actions": [
+        "Correlacionar identidade pública, projeto e base Supabase.",
+        "Confirmar endpoint canônico e contrato de serviço.",
+        "Testar entrega e cobrança separadamente antes de qualquer alegação comercial."
+      ]
+    },
+    {
+      "slug": "academy",
+      "pack": "systems/xpex-academy",
+      "priority": "P2",
+      "preparation_status": "DOCUMENTED",
+      "buyer_hypothesis": "Alunos e gestores de ensino de IA aplicada",
+      "expected_result": "Percurso de aprendizado com atividades e revisão",
+      "next_milestone": "Corroborar o runtime canônico e repetir a jornada do aluno",
+      "next_actions": [
+        "Identificar o ambiente Firebase/Railway canônico com evidência do provedor.",
+        "Testar convite, matrícula, aula, avaliação e certificado em ambiente autorizado.",
+        "Preservar as cópias Vercel desativadas e documentar a transição."
+      ]
+    }
+  ],
+  "gates": [
+    {
+      "id": "entity",
+      "priority": "P0",
+      "status": "DOCUMENT_REQUIRED",
+      "title": "Estrutura societária",
+      "description": "Identidade jurídica, jurisdição, data de constituição e poderes de representação.",
+      "owner_role": "Junior Sena + assessoria jurídica",
+      "acceptance": "Documento oficial atualizado, revisado em ambiente privado."
+    },
+    {
+      "id": "ownership",
+      "priority": "P0",
+      "status": "DOCUMENT_REQUIRED",
+      "title": "Propriedade dos ativos",
+      "description": "Titularidade de código, marcas, contribuições, contratos e licenças de terceiros.",
+      "owner_role": "Junior Sena + assessoria jurídica",
+      "acceptance": "Cadeia de titularidade e permissões de transferência revisadas."
+    },
+    {
+      "id": "security",
+      "priority": "P0",
+      "status": "REVIEW_REQUIRED",
+      "title": "Controles e achados de segurança",
+      "description": "Confirmar fechamento dos achados históricos do portfólio; AL1 documenta a fundação.",
+      "owner_role": "Engenharia + revisor independente",
+      "acceptance": "Revisão atual por sistema, escopo e evidências de remediação."
+    },
+    {
+      "id": "recovery",
+      "priority": "P0",
+      "status": "TEST_REQUIRED",
+      "title": "Continuidade e transferência",
+      "description": "Instalação, recuperação, substituição de operador e dependências de contas.",
+      "owner_role": "Engenharia + segundo operador",
+      "acceptance": "Execução registrada por operador distinto, sem compartilhamento de credenciais."
+    },
+    {
+      "id": "customer",
+      "priority": "P0",
+      "status": "VALIDATION_REQUIRED",
+      "title": "Validação comercial",
+      "description": "Comprador real, problema definido, entrega aceita e benefício medido.",
+      "owner_role": "Junior Sena + cliente autorizado",
+      "acceptance": "Piloto revisado; autorização para uso público do caso."
+    },
+    {
+      "id": "financial",
+      "priority": "P0",
+      "status": "DOCUMENT_REQUIRED",
+      "title": "Custos e resultados financeiros",
+      "description": "Custos dos provedores, receitas comprovadas, obrigações e orçamento.",
+      "owner_role": "Junior Sena + contabilidade",
+      "acceptance": "Reconciliação de documentos de origem; valores desconhecidos permanecem nulos."
+    },
+    {
+      "id": "workflow",
+      "priority": "P1",
+      "status": "TEST_REQUIRED",
+      "title": "Demonstração completa",
+      "description": "Repetir os fluxos escolhidos e separar links disponíveis de execução validada.",
+      "owner_role": "Engenharia + revisor",
+      "acceptance": "Roteiro, entradas, saídas, limitações e resultados por execução."
+    },
+    {
+      "id": "terms",
+      "priority": "P1",
+      "status": "REVIEW_REQUIRED",
+      "title": "Termos da operação",
+      "description": "Definir investimento, aquisição ou ativos; escopo e transição.",
+      "owner_role": "Junior Sena + assessoria jurídica/contábil",
+      "acceptance": "Documentos e condições aprovados pelo titular; nenhuma assinatura automática."
+    },
+    {
+      "id": "valuation",
+      "priority": "P1",
+      "status": "EVIDENCE_REQUIRED",
+      "title": "Avaliação de preço",
+      "description": "Avaliar ativos, custos, riscos, obrigações e resultados comprovados.",
+      "owner_role": "Junior Sena + avaliador",
+      "acceptance": "Metodologia e premissas revisadas; nenhuma avaliação numérica declarada nesta preparação."
+    }
+  ],
+  "public_materials": [
+    {
+      "title": "Apresentação da empresa",
+      "path": "docs/company/preparation/COMPANY_OVERVIEW.md"
+    },
+    {
+      "title": "Oferta e piloto comercial",
+      "path": "docs/company/preparation/COMMERCIAL_PILOT.md"
+    },
+    {
+      "title": "Roteiro da demonstração",
+      "path": "docs/company/preparation/DEMO_RUNBOOK.md"
+    },
+    {
+      "title": "Índice de revisão e transferência",
+      "path": "docs/company/preparation/TRANSFER_READINESS.md"
+    },
+    {
+      "title": "Plano de execução e critérios",
+      "path": "docs/company/preparation/MISSION_PLAN.md"
+    },
+    {
+      "title": "Índice da documentação privada",
+      "path": "docs/company/preparation/PRIVATE_DOCUMENT_CHECKLIST.md"
+    }
+  ],
+  "data_room": {
+    "status": "INDEX_PREPARED_PRIVATE_ROOM_NOT_PROVISIONED",
+    "visibility": "PUBLIC_INDEX_ONLY",
+    "private_documents_uploaded": false,
+    "sections": [
+      {
+        "id": "company",
+        "title": "Societário e administração",
+        "status": "DOCUMENT_REQUIRED",
+        "requested": "Registro, quadro societário, poderes e obrigações."
+      },
+      {
+        "id": "product",
+        "title": "Produtos e tecnologia",
+        "status": "PUBLIC_PACK_PREPARED",
+        "requested": "Sete dossiês, arquitetura, fontes e evidências."
+      },
+      {
+        "id": "ip",
+        "title": "Propriedade e licenças",
+        "status": "REVIEW_REQUIRED",
+        "requested": "Cessões, licenças, marcas e titularidade."
+      },
+      {
+        "id": "commercial",
+        "title": "Clientes e contratos",
+        "status": "VALIDATION_REQUIRED",
+        "requested": "Pilotos, aceites e contratos autorizados."
+      },
+      {
+        "id": "financial",
+        "title": "Financeiro e obrigações",
+        "status": "DOCUMENT_REQUIRED",
+        "requested": "Receitas conciliadas, despesas, passivos e orçamento."
+      },
+      {
+        "id": "security",
+        "title": "Segurança e operação",
+        "status": "REVIEW_REQUIRED",
+        "requested": "Permissões, achados, restauração e revisão independente."
+      }
+    ]
+  },
+  "demo": {
+    "status": "GUIDED_REVIEW",
+    "scope": "Navegação pública, inspeção de evidências e compilação sem publicação. Não representa integração automática entre produtos.",
+    "steps": [
+      {
+        "id": "company",
+        "title": "Entender a empresa",
+        "description": "Abrir o resumo, o problema do comprador e a oferta proposta.",
+        "href": "/?view=company#commercial",
+        "boundary": "Hipótese comercial; clientes e receitas não verificados."
+      },
+      {
+        "id": "command",
+        "title": "Inspecionar o Command",
+        "description": "Revisar arquitetura e evidências. O ambiente staging exige acesso de operador.",
+        "href": "/?system=systems-command",
+        "boundary": "Staging autenticado; a demonstração pública usa metadados aprovados."
+      },
+      {
+        "id": "audit",
+        "title": "Revisar o Audit OS",
+        "description": "Abrir a aplicação e explicar descoberta, achados e revisão de evidências.",
+        "href": "https://gxeon-audit-os.vercel.app",
+        "boundary": "Disponibilidade da interface não comprova todo o fluxo."
+      },
+      {
+        "id": "factory",
+        "title": "Validar e compilar um blueprint",
+        "description": "Usar a amostra pública e comparar o relatório com o pacote gerado.",
+        "href": "https://xpex-plugin-factory-production.up.railway.app",
+        "boundary": "Compilação sem publicação, instalação, cobrança ou aprovação externa."
+      },
+      {
+        "id": "wallet",
+        "title": "Verificar a camada financeira",
+        "description": "Consultar a projeção pública de integrações, catálogo e fronteiras financeiras.",
+        "href": "/?view=ecosystem",
+        "boundary": "Conexão, saldo e receita são estados distintos; nenhuma movimentação."
+      }
+    ]
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "schema_version": "1.0",
+  "observed_at": "2026-10-10T04:24:33.275966+00:00",
+  "public_safe": true,
+  "scope": "Public HTTP reachability and stateless Factory validation/preview/package; no external publishing or financial operation.",
+  "observations": [
+    {
+      "slug": "corporate",
+      "url": "https://xpex-systems-ai.vercel.app/",
+      "observed_at": "2026-10-10T04:24:05.755979+00:00",
+      "method": "GET",
+      "scope": "HTTP_REACHABILITY_ONLY",
+      "http_status": 200,
+      "final_url": "https://xpex-systems-ai.vercel.app/",
+      "response_sha256": "e7f4bbae285669674d2e3a7fc3062eb9b89c9aa443606a7778b41079dd5f3ee1",
+      "status": "HTTP_RESPONSE_OBSERVED",
+      "duration_ms": 4321
+    },
+    {
+      "slug": "systems-command",
+      "url": "https://xpex-systems-command-staging-web-production.up.railway.app/api/health",
+      "observed_at": "2026-10-10T04:24:05.756854+00:00",
+      "method": "GET",
+      "scope": "HTTP_REACHABILITY_ONLY",
+      "http_status": 200,
+      "final_url": "https://xpex-systems-command-staging-web-production.up.railway.app/api/health",
+      "response_sha256": "e6c4972b47e781427c699c059bc8249d6989976c49ec0af12ad4f23e88534411",
+      "status": "HTTP_RESPONSE_OBSERVED",
+      "duration_ms": 4651
+    },
+    {
+      "slug": "audit-os",
+      "url": "https://gxeon-audit-os.vercel.app/",
+      "observed_at": "2026-10-10T04:24:05.757611+00:00",
+      "method": "GET",
+      "scope": "HTTP_REACHABILITY_ONLY",
+      "http_status": 200,
+      "final_url": "https://gxeon-audit-os.vercel.app/",
+      "response_sha256": "14abaa54cdde817716cb08a9b754c80b7982ec5b87e8e074c06739b2dce7de89",
+      "status": "HTTP_RESPONSE_OBSERVED",
+      "duration_ms": 4241
+    },
+    {
+      "slug": "plugin-factory",
+      "url": "https://xpex-plugin-factory-production.up.railway.app/health",
+      "observed_at": "2026-10-10T04:24:05.758190+00:00",
+      "method": "GET",
+      "scope": "HTTP_REACHABILITY_ONLY",
+      "http_status": 200,
+      "final_url": "https://xpex-plugin-factory-production.up.railway.app/health",
+      "response_sha256": "0ab330349772885999804de7e22366afdab06323069ec25013c748b0514370ac",
+      "status": "HTTP_RESPONSE_OBSERVED",
+      "duration_ms": 3790
+    },
+    {
+      "slug": "wallet-command",
+      "url": "https://gxeon-wallet-command-center.vercel.app/",
+      "observed_at": "2026-10-10T04:24:05.759526+00:00",
+      "method": "GET",
+      "scope": "HTTP_REACHABILITY_ONLY",
+      "http_status": 200,
+      "final_url": "https://gxeon-wallet-command-center.vercel.app/",
+      "response_sha256": "e1fd2662f6dd1e90efd9961264ba043f00b745af657193bb9930ca9ccfda8fb9",
+      "status": "HTTP_RESPONSE_OBSERVED",
+      "duration_ms": 4918
+    },
+    {
+      "slug": "studio-ai",
+      "url": "https://xpex-studio-ai.vercel.app/",
+      "observed_at": "2026-10-10T04:24:05.762750+00:00",
+      "method": "GET",
+      "scope": "HTTP_REACHABILITY_ONLY",
+      "http_status": 200,
+      "final_url": "https://xpex-studio-ai.vercel.app/",
+      "response_sha256": "0f0895299ad1f9e3854a3fbb35526e2b28f1d68d469a6ccad98498d3b40d0c23",
+      "status": "HTTP_RESPONSE_OBSERVED",
+      "duration_ms": 4130
+    }
+  ],
+  "unobserved_canonical_runtimes": [
+    "api-fabric",
+    "academy"
+  ],
+  "factory_workflow": {
+    "tested_at": "2026-10-10T04:24:10.677462+00:00",
+    "corrective_source_commit": "30d31b4d5ce5b31eebf43c0b5a07d360d239f367",
+    "source_runtime_commit_correlation": "NOT_VERIFIED",
+    "corrective_pr": "https://github.com/xpex-systems-ai/XPeX-Plugin-Factory-/pull/23",
+    "production_correction_status": "CORRECTION_NOT_OBSERVED",
+    "production_access_limit": "The connected Railway account does not expose the Factory project. No unrelated service was redeployed.",
+    "validate_http": 200,
+    "preview_http": 200,
+    "package_http": 200,
+    "validation_report": {
+      "valid": true,
+      "findings": [],
+      "generatedFiles": [
+        ".codex-plugin/plugin.json",
+        ".mcp.json",
+        "README.md",
+        "assets/icon.svg",
+        "mcp.json",
+        "plugin.json",
+        "skills/plugin-factory/SKILL.md"
+      ]
+    },
+    "preview_paths": [
+      ".codex-plugin/plugin.json",
+      ".mcp.json",
+      "README.md",
+      "mcp.json",
+      "plugin.json"
+    ],
+    "zip_paths": [
+      ".codex-plugin/",
+      ".codex-plugin/plugin.json",
+      ".mcp.json",
+      "assets/",
+      "assets/icon.svg",
+      "mcp.json",
+      "plugin.json",
+      "README.md",
+      "skills/",
+      "skills/plugin-factory/",
+      "skills/plugin-factory/SKILL.md",
+      "FACTORY-REPORT.json"
+    ],
+    "zip_bytes": 6637,
+    "zip_sha256": "b25e59218b1151facd5c9169bb4a040b6f891a8f7df19414c6b424fa7663822e",
+    "repeat_identical": false,
+    "unsafe_endpoint_rejected": true,
+    "unsafe_endpoint_http": 400,
+    "unsafe_endpoint_response": {
+      "error": "INVALID_BLUEPRINT",
+      "issues": [
+        {
+          "code": "custom",
+          "path": [
+            "mcpServers",
+            0,
+            "url"
+          ],
+          "message": "URL must use HTTPS"
+        }
+      ]
+    },
+    "installed": false,
+    "published": false,
+    "payment_executed": false
+  },
+  "end_to_end_cross_product_workflow": "NOT_TESTED",
+  "independent_acceptance": "PENDING"
+}

@@ -1,0 +1,88 @@
+{
+  "passport_version": "1.0",
+  "passport_id": "TP-GXEON-WALLET-COMMAND",
+  "subject_type": "SYSTEM",
+  "system_id": "GXEON-WALLET-COMMAND",
+  "name": "GXEON Wallet Command Center",
+  "overall_trust_state": "TP1_DOCUMENTED",
+  "dimensions": {
+    "IDENTITY": {
+      "status": "POLICY_DEFINED",
+      "summary": "Preparation requirements documented; independent verification remains pending.",
+      "evidence_refs": [
+        "systems/gxeon-wallet-command/preparation.json"
+      ]
+    },
+    "SOURCE_OWNERSHIP": {
+      "status": "NOT_VERIFIED",
+      "summary": "Source location observed; legal title and upstream/dependency obligations require review.",
+      "evidence_refs": []
+    },
+    "PERMISSIONS": {
+      "status": "NOT_VERIFIED",
+      "summary": "Preparation requirements documented; independent verification remains pending.",
+      "evidence_refs": []
+    },
+    "POLICY": {
+      "status": "POLICY_DEFINED",
+      "summary": "Preparation requirements documented; independent verification remains pending.",
+      "evidence_refs": [
+        "systems/gxeon-wallet-command/preparation.json"
+      ]
+    },
+    "SECRETS": {
+      "status": "NOT_VERIFIED",
+      "summary": "Preparation requirements documented; independent verification remains pending.",
+      "evidence_refs": []
+    },
+    "EVALUATION": {
+      "status": "NOT_VERIFIED",
+      "summary": "Preparation requirements documented; independent verification remains pending.",
+      "evidence_refs": []
+    },
+    "CONTAINMENT": {
+      "status": "NOT_VERIFIED",
+      "summary": "Preparation requirements documented; independent verification remains pending.",
+      "evidence_refs": []
+    },
+    "RUNTIME": {
+      "status": "NOT_VERIFIED",
+      "summary": "Published runtime metadata and reachability are distinct from independent workflow verification.",
+      "evidence_refs": []
+    },
+    "EVIDENCE": {
+      "status": "POLICY_DEFINED",
+      "summary": "Preparation requirements documented; independent verification remains pending.",
+      "evidence_refs": [
+        "systems/gxeon-wallet-command/preparation.json"
+      ]
+    },
+    "SUPPLY_CHAIN": {
+      "status": "NOT_VERIFIED",
+      "summary": "Preparation requirements documented; independent verification remains pending.",
+      "evidence_refs": []
+    },
+    "HUMAN_OVERSIGHT": {
+      "status": "POLICY_DEFINED",
+      "summary": "Preparation requirements documented; independent verification remains pending.",
+      "evidence_refs": [
+        "systems/gxeon-wallet-command/preparation.json"
+      ]
+    }
+  },
+  "blockers": [
+    "A Node url.parse deprecation warning remains a documented hardening item.",
+    "Public wallet monitoring is not proof of ownership.",
+    "Checkout or submission is not revenue.",
+    "Coinbase balance/history require configured operator authentication and authorized backend credentials.",
+    "AgenticTrade publication and payment execution are not verified by the public demo."
+  ],
+  "legal_ownership_status": "NOT_VERIFIED",
+  "transfer_readiness": "NOT_VERIFIED",
+  "issued_at": "2026-10-10T04:10:49.399Z",
+  "last_verified_at": null,
+  "evidence_refs": [
+    "systems/gxeon-wallet-command/preparation.json"
+  ],
+  "ownership_scope": "Existing SOURCE_OWNERSHIP evidence establishes repository/source correlation, not complete legal title or transaction rights."
+}

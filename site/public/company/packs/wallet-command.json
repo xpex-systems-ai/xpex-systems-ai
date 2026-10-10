@@ -1,0 +1,183 @@
+{
+  "slug": "wallet-command",
+  "name": "GXEON Wallet Command Center",
+  "status": "HARDENING",
+  "source": {
+    "repo": "xpex-systems-ai/GXEON-Wallet-Command-Center",
+    "visibility": "PUBLIC",
+    "url": "https://github.com/xpex-systems-ai/GXEON-Wallet-Command-Center"
+  },
+  "runtime": {
+    "provider": "Vercel",
+    "environment": "production",
+    "state": "READY",
+    "project": "prj_GRGA7dhQ0lLnyWN7ixIJ8MGlPrhe",
+    "url": "https://gxeon-wallet-command-center.vercel.app"
+  },
+  "priority": "P1",
+  "preparation_status": "DOCUMENTED",
+  "dossier": "https://xpex-systems-ai.vercel.app/?view=company&system=wallet-command",
+  "pack": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/main/systems/gxeon-wallet-command/README.md",
+  "next_actions": [
+    "Reavaliar o aviso url.parse documentado.",
+    "Configurar e verificar autenticação e backend Coinbase com credenciais administradas pelo titular.",
+    "Testar deduplicação e reconciliação com transações comprovadas, sem movimentar fundos."
+  ],
+  "verified_transfer": false,
+  "operating_cost": null,
+  "operating_cost_status": "NOT_VERIFIED",
+  "limits": [
+    "A Node url.parse deprecation warning remains a documented hardening item.",
+    "Public wallet monitoring is not proof of ownership.",
+    "Checkout or submission is not revenue.",
+    "Coinbase balance/history require configured operator authentication and authorized backend credentials.",
+    "AgenticTrade publication and payment execution are not verified by the public demo."
+  ],
+  "preparation": {
+    "schema_version": "1.0",
+    "system_id": "GXEON-WALLET-COMMAND",
+    "display_slug": "wallet-command",
+    "preparation_status": "DOCUMENTED",
+    "prepared_at": "2026-10-10T04:10:49.399Z",
+    "source_observation": {
+      "repository": "xpex-systems-ai/GXEON-Wallet-Command-Center",
+      "private": false,
+      "default_branch": "main",
+      "license": null,
+      "archived": false,
+      "observed_at": "2026-10-10T04:10:49.399Z",
+      "commit": "e797d96c787308d3c96afa39ea395732a1f20d05",
+      "tree": "0d3e4b6b395c1bf6e78a02db50d254db00877a58"
+    },
+    "source_legal_title": "NOT_VERIFIED",
+    "buyer_hypothesis": "Operadores de serviços e tarefas de agentes",
+    "expected_result": "Monitoramento financeiro com origens e liquidação separadas",
+    "published_stage": "HARDENING",
+    "operating_cost": null,
+    "operating_cost_status": "NOT_VERIFIED",
+    "settled_revenue": null,
+    "revenue_status": "NOT_VERIFIED",
+    "transfer_readiness": "REVIEW_AND_REHEARSAL_REQUIRED",
+    "next_actions": [
+      "Reavaliar o aviso url.parse documentado.",
+      "Configurar e verificar autenticação e backend Coinbase com credenciais administradas pelo titular.",
+      "Testar deduplicação e reconciliação com transações comprovadas, sem movimentar fundos."
+    ],
+    "standards": [
+      {
+        "id": "identity",
+        "name": "Identidade",
+        "requirement": "Nome, logo, função, estágio e fonte canônica.",
+        "status": "DOCUMENTED_REQUIREMENT",
+        "implementation_verification": "PENDING"
+      },
+      {
+        "id": "utility",
+        "name": "Utilidade",
+        "requirement": "Comprador, problema, resultado e condição de aceite.",
+        "status": "DOCUMENTED_REQUIREMENT",
+        "implementation_verification": "PENDING"
+      },
+      {
+        "id": "demo",
+        "name": "Demonstração",
+        "requirement": "Entradas, roteiro, saídas, evidências e limitações.",
+        "status": "DOCUMENTED_REQUIREMENT",
+        "implementation_verification": "PENDING"
+      },
+      {
+        "id": "security",
+        "name": "Segurança",
+        "requirement": "Permissões, dados, achados, testes e revisão independente.",
+        "status": "DOCUMENTED_REQUIREMENT",
+        "implementation_verification": "PENDING"
+      },
+      {
+        "id": "operation",
+        "name": "Operação",
+        "requirement": "Instalação, atualização, monitoramento e recuperação.",
+        "status": "DOCUMENTED_REQUIREMENT",
+        "implementation_verification": "PENDING"
+      },
+      {
+        "id": "economics",
+        "name": "Economia",
+        "requirement": "Custos, preço, margem e fonte dos valores.",
+        "status": "DOCUMENTED_REQUIREMENT",
+        "implementation_verification": "PENDING"
+      },
+      {
+        "id": "transfer",
+        "name": "Transferência",
+        "requirement": "Titularidade, licenças, dependências e troca de operador.",
+        "status": "DOCUMENTED_REQUIREMENT",
+        "implementation_verification": "PENDING"
+      }
+    ],
+    "open_gates": [
+      "A Node url.parse deprecation warning remains a documented hardening item.",
+      "Public wallet monitoring is not proof of ownership.",
+      "Checkout or submission is not revenue.",
+      "Coinbase balance/history require configured operator authentication and authorized backend credentials.",
+      "AgenticTrade publication and payment execution are not verified by the public demo."
+    ],
+    "independent_acceptance": "PENDING"
+  },
+  "architecture": [
+    "Web control plane",
+    "Read/monitor plane",
+    "Agent marketplace discovery",
+    "Payment verification",
+    "Local signing boundary",
+    "Blockchain adapters"
+  ],
+  "security": [
+    "No private keys/seeds in GitHub, Firebase or browser storage.",
+    "Control Plane != Signing Plane.",
+    "Watch-only by default.",
+    "SUBMITTED != PAID.",
+    "Human-verified signing remains local."
+  ],
+  "evidence": [
+    {
+      "label": "Corporate GXEON Demonstration",
+      "url": "https://xpex-systems-ai.vercel.app/?view=ecosystem",
+      "kind": "LIVE"
+    },
+    {
+      "label": "Corporate Public Projection API",
+      "url": "https://xpex-systems-ai.vercel.app/api/ecosystem",
+      "kind": "TRUTH"
+    },
+    {
+      "label": "Integrations",
+      "url": "https://gxeon-wallet-command-center.vercel.app/?tab=integrations",
+      "kind": "LIVE"
+    },
+    {
+      "label": "Revenue Operations",
+      "url": "https://gxeon-wallet-command-center.vercel.app/?tab=revenue-operations",
+      "kind": "LIVE"
+    },
+    {
+      "label": "Security Model",
+      "url": "https://github.com/xpex-systems-ai/GXEON-Wallet-Command-Center/blob/main/docs/SECURITY_MODEL.md",
+      "kind": "SECURITY"
+    },
+    {
+      "label": "Agent Marketplace",
+      "url": "https://github.com/xpex-systems-ai/GXEON-Wallet-Command-Center/blob/main/docs/AGENT_MARKETPLACE.md",
+      "kind": "PRODUCT"
+    },
+    {
+      "label": "Financial State Machine",
+      "url": "https://github.com/xpex-systems-ai/GXEON-Wallet-Command-Center/blob/main/docs/FINANCIAL_STATE_MACHINE.md",
+      "kind": "TRUTH"
+    },
+    {
+      "label": "Public Marketplace",
+      "url": "https://gxeon-wallet-command-center.vercel.app/market",
+      "kind": "LIVE"
+    }
+  ]
+}

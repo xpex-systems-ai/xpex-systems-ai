@@ -1,0 +1,85 @@
+{
+  "passport_version": "1.0",
+  "passport_id": "TP-XPEX-STUDIO-AI",
+  "subject_type": "SYSTEM",
+  "system_id": "XPEX-STUDIO-AI",
+  "name": "XPeX Studio AI",
+  "overall_trust_state": "TP1_DOCUMENTED",
+  "dimensions": {
+    "IDENTITY": {
+      "status": "POLICY_DEFINED",
+      "summary": "Preparation requirements documented; independent verification remains pending.",
+      "evidence_refs": [
+        "systems/xpex-studio-ai/preparation.json"
+      ]
+    },
+    "SOURCE_OWNERSHIP": {
+      "status": "NOT_VERIFIED",
+      "summary": "Source location observed; legal title and upstream/dependency obligations require review.",
+      "evidence_refs": []
+    },
+    "PERMISSIONS": {
+      "status": "NOT_VERIFIED",
+      "summary": "Preparation requirements documented; independent verification remains pending.",
+      "evidence_refs": []
+    },
+    "POLICY": {
+      "status": "POLICY_DEFINED",
+      "summary": "Preparation requirements documented; independent verification remains pending.",
+      "evidence_refs": [
+        "systems/xpex-studio-ai/preparation.json"
+      ]
+    },
+    "SECRETS": {
+      "status": "NOT_VERIFIED",
+      "summary": "Preparation requirements documented; independent verification remains pending.",
+      "evidence_refs": []
+    },
+    "EVALUATION": {
+      "status": "NOT_VERIFIED",
+      "summary": "Preparation requirements documented; independent verification remains pending.",
+      "evidence_refs": []
+    },
+    "CONTAINMENT": {
+      "status": "NOT_VERIFIED",
+      "summary": "Preparation requirements documented; independent verification remains pending.",
+      "evidence_refs": []
+    },
+    "RUNTIME": {
+      "status": "NOT_VERIFIED",
+      "summary": "Published runtime metadata and reachability are distinct from independent workflow verification.",
+      "evidence_refs": []
+    },
+    "EVIDENCE": {
+      "status": "POLICY_DEFINED",
+      "summary": "Preparation requirements documented; independent verification remains pending.",
+      "evidence_refs": [
+        "systems/xpex-studio-ai/preparation.json"
+      ]
+    },
+    "SUPPLY_CHAIN": {
+      "status": "NOT_VERIFIED",
+      "summary": "Preparation requirements documented; independent verification remains pending.",
+      "evidence_refs": []
+    },
+    "HUMAN_OVERSIGHT": {
+      "status": "POLICY_DEFINED",
+      "summary": "Preparation requirements documented; independent verification remains pending.",
+      "evidence_refs": [
+        "systems/xpex-studio-ai/preparation.json"
+      ]
+    }
+  },
+  "blockers": [
+    "Source is private.",
+    "Auth/data runtime needs stronger provider-backed correlation before production-level claims."
+  ],
+  "legal_ownership_status": "NOT_VERIFIED",
+  "transfer_readiness": "NOT_VERIFIED",
+  "issued_at": "2026-10-10T04:10:49.399Z",
+  "last_verified_at": null,
+  "evidence_refs": [
+    "systems/xpex-studio-ai/preparation.json"
+  ],
+  "ownership_scope": "Existing SOURCE_OWNERSHIP evidence establishes repository/source correlation, not complete legal title or transaction rights."
+}

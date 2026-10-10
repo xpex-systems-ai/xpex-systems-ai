@@ -13,6 +13,8 @@ import './brand.css';
 import { brandMark, brandLockup, maybeRenderBrandPage } from './brand.js';
 import { SYSTEM_INTELLIGENCE } from './data/system-intelligence.js';
 import { investorBrief, brandEntry } from './investor-brief.js';
+import './company.css';
+import { companyEntry, maybeRenderCompanyPage } from './company.js';
 
 const systems = [...SYSTEM_INTELLIGENCE].sort((a,b) => Number(Boolean(b.runtime.url && b.runtime.environment==='production')) - Number(Boolean(a.runtime.url && a.runtime.environment==='production'))).map(s => ({
   ...s,
@@ -48,6 +50,7 @@ app.innerHTML = `
       <a href="#trust">Trust</a>
       <a href="#gx">GX</a>
       <a href="#investors">Investors</a>
+      <a href="/?view=company">Company pack</a>
       <a href="/?view=brand">Brand</a>
       <a href="#agent-api">Agent API</a>
       <a href="#contact">Review</a>
@@ -92,6 +95,7 @@ app.innerHTML = `
     ${investorBrief()}
     ${ecosystemEntry()}
     ${brandEntry()}
+    ${companyEntry()}
 
     <section id="systems" class="shell section">
       <div class="section-head">
@@ -154,7 +158,7 @@ app.innerHTML = `
 
       <div class="trust-layout">
         <div class="checks">
-          ${checks.map(c => `<div class="check"><span>✓</span><b>${c}</b><small>passing</small></div>`).join('')}
+          ${checks.map(c => `<div class="check"><span>◦</span><b>${c}</b><small>CI workflow</small></div>`).join('')}
         </div>
         <aside class="trust-panel">
           <p class="kicker">CURRENT BASELINE</p>
@@ -319,7 +323,7 @@ const observer = new IntersectionObserver((entries) => {
   }
 }, { threshold: 0.12 });
 
-const systemPageActive = maybeRenderBrandPage(app) || maybeRenderEcosystem(app) || maybeRenderSystemPage(app);
+const systemPageActive = maybeRenderCompanyPage(app) || maybeRenderBrandPage(app) || maybeRenderEcosystem(app) || maybeRenderSystemPage(app);
 
 if (!systemPageActive) {
   rewriteSystemLinks();

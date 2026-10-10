@@ -1,0 +1,31 @@
+{
+  "system_id": "XPEX-PLUGIN-FACTORY",
+  "public_safe": true,
+  "observed_at": "2026-10-10T04:23:20.557350+00:00",
+  "evidence_type": "SOURCE_METADATA_AND_PUBLISHED_INTELLIGENCE",
+  "scope": "Source default-branch observation and existing public System Intelligence. Not legal title or a fresh provider/deployed-commit attestation.",
+  "source": {
+    "repository": "xpex-systems-ai/XPeX-Plugin-Factory-",
+    "private": false,
+    "default_branch": "main",
+    "license": "NOASSERTION",
+    "archived": false,
+    "observed_at": "2026-10-10T04:23:20.557350+00:00",
+    "commit": "30d31b4d5ce5b31eebf43c0b5a07d360d239f367",
+    "tree": "72d39a43357b9a2eb2773a24cd8f6a19134c4280"
+  },
+  "published_status": "DEMO READY",
+  "published_runtime": {
+    "provider": "Railway",
+    "environment": "production",
+    "state": "SUCCESS",
+    "deployment": "20b15638-e776-420e-82ef-d9ab5ed80d15",
+    "url": "https://xpex-plugin-factory-production.up.railway.app"
+  },
+  "published_limits": [
+    "Payment surfaces do not prove revenue.",
+    "The public MCP surface does not publish or mutate third-party systems."
+  ],
+  "source_runtime_commit_correlation": "NOT_VERIFIED",
+  "reference": "https://xpex-systems-ai.vercel.app/?system=plugin-factory"
+}

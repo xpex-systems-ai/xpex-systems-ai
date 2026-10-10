@@ -1,0 +1,32 @@
+{
+  "system_id": "XPEX-STUDIO-AI",
+  "public_safe": true,
+  "observed_at": "2026-10-10T04:23:20.557350+00:00",
+  "evidence_type": "SOURCE_METADATA_AND_PUBLISHED_INTELLIGENCE",
+  "scope": "Source default-branch observation and existing public System Intelligence. Not legal title or a fresh provider/deployed-commit attestation.",
+  "source": {
+    "repository": "xpex-systems-ai/xpex-studio-ai",
+    "private": true,
+    "default_branch": "main",
+    "license": null,
+    "archived": false,
+    "observed_at": "2026-10-10T04:10:49.399Z",
+    "commit": "88f7ea3bb5c4e501105d0e37b5ade9a9557e73e5",
+    "tree": "57d57b9852c2dca0b0c4ade039be75a08f0b961e"
+  },
+  "published_status": "DEMO READY",
+  "published_runtime": {
+    "provider": "Vercel",
+    "environment": "production",
+    "state": "READY",
+    "project": "prj_Vz5ENExQovKTZKVqG35Cet9rExUl",
+    "url": "https://xpex-studio-ai.vercel.app",
+    "runtimeErrors7d": "NONE_OBSERVED"
+  },
+  "published_limits": [
+    "Source is private.",
+    "Auth/data runtime needs stronger provider-backed correlation before production-level claims."
+  ],
+  "source_runtime_commit_correlation": "NOT_VERIFIED",
+  "reference": "https://xpex-systems-ai.vercel.app/?system=studio-ai"
+}

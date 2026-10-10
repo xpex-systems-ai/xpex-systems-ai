@@ -55,13 +55,14 @@
       "name": "Techstars",
       "program": "Anywhere Accelerator — Spring 2027",
       "priority": "P1",
-      "fit": "HIGH",
+      "fit": "MEDIUM",
       "status": "OPEN",
       "deadline": "2026-11-18",
       "location": "Remote-first / American time zones",
       "action": "APPLY",
-      "rationale": "Remote-first format lowers relocation friction while retaining Techstars investor and mentor network.",
-      "source": "https://www.techstars.com/accelerators/anywhere"
+      "rationale": "Current emphasis includes robotics, energy and applied physical AI. Remote-first delivery includes three in-person offsites; sector fit and attendance need review alongside the enterprise software thesis.",
+      "source": "https://www.techstars.com/accelerators/anywhere",
+      "last_reviewed_at": "2026-10-10"
     },
     {
       "id": "techstars-london-s27",
@@ -111,13 +112,14 @@
       "name": "NVIDIA",
       "program": "Inception",
       "priority": "P1",
-      "fit": "HIGH",
-      "status": "ROLLING",
+      "fit": "REVIEW_REQUIRED",
+      "status": "ELIGIBILITY_REVIEW_REQUIRED",
       "deadline": null,
       "location": "Global",
-      "action": "APPLY_IF_ELIGIBLE",
-      "rationale": "Free AI startup program with technical resources, market visibility and investor-network exposure. Eligibility requires an incorporated company, working website and at least one developer.",
-      "source": "https://www.nvidia.com/en-us/startups/"
+      "action": "REVIEW_ELIGIBILITY",
+      "rationale": "Eligibility requires incorporation, a working website and a developer. Official exclusions include companies associated with cryptocurrency and consulting/outsourced development firms. GXEON Web3 activity and the actual XPeX business model require review before applying.",
+      "source": "https://www.nvidia.com/en-us/startups/",
+      "last_reviewed_at": "2026-10-10"
     },
     {
       "id": "microsoft-startups",

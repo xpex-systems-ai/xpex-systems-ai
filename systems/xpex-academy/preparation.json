@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0",
+  "system_id": "XPEX-ACADEMY",
+  "display_slug": "academy",
+  "preparation_status": "DOCUMENTED",
+  "prepared_at": "2026-10-10T04:10:49.399Z",
+  "source_observation": {
+    "repository": "xpex-systems-ai/XPEX-ACADEMY",
+    "private": false,
+    "default_branch": "dev",
+    "license": "AGPL-3.0",
+    "archived": false,
+    "observed_at": "2026-10-10T04:10:49.399Z",
+    "commit": "7bb8e1de29997beba1cbaccf809a4978d698435c",
+    "tree": "c22f2dd190d003c2f5b523c145b74c3361621e03"
+  },
+  "source_legal_title": "NOT_VERIFIED",
+  "buyer_hypothesis": "Alunos e gestores de ensino de IA aplicada",
+  "expected_result": "Percurso de aprendizado com atividades e revisão",
+  "published_stage": "RUNTIME CORRELATION",
+  "operating_cost": null,
+  "operating_cost_status": "NOT_VERIFIED",
+  "settled_revenue": null,
+  "revenue_status": "NOT_VERIFIED",
+  "transfer_readiness": "REVIEW_AND_REHEARSAL_REQUIRED",
+  "next_actions": [
+    "Identificar o ambiente Firebase/Railway canônico com evidência do provedor.",
+    "Testar convite, matrícula, aula, avaliação e certificado em ambiente autorizado.",
+    "Preservar as cópias Vercel desativadas e documentar a transição."
+  ],
+  "standards": [
+    {
+      "id": "identity",
+      "name": "Identidade",
+      "requirement": "Nome, logo, função, estágio e fonte canônica.",
+      "status": "DOCUMENTED_REQUIREMENT",
+      "implementation_verification": "PENDING"
+    },
+    {
+      "id": "utility",
+      "name": "Utilidade",
+      "requirement": "Comprador, problema, resultado e condição de aceite.",
+      "status": "DOCUMENTED_REQUIREMENT",
+      "implementation_verification": "PENDING"
+    },
+    {
+      "id": "demo",
+      "name": "Demonstração",
+      "requirement": "Entradas, roteiro, saídas, evidências e limitações.",
+      "status": "DOCUMENTED_REQUIREMENT",
+      "implementation_verification": "PENDING"
+    },
+    {
+      "id": "security",
+      "name": "Segurança",
+      "requirement": "Permissões, dados, achados, testes e revisão independente.",
+      "status": "DOCUMENTED_REQUIREMENT",
+      "implementation_verification": "PENDING"
+    },
+    {
+      "id": "operation",
+      "name": "Operação",
+      "requirement": "Instalação, atualização, monitoramento e recuperação.",
+      "status": "DOCUMENTED_REQUIREMENT",
+      "implementation_verification": "PENDING"
+    },
+    {
+      "id": "economics",
+      "name": "Economia",
+      "requirement": "Custos, preço, margem e fonte dos valores.",
+      "status": "DOCUMENTED_REQUIREMENT",
+      "implementation_verification": "PENDING"
+    },
+    {
+      "id": "transfer",
+      "name": "Transferência",
+      "requirement": "Titularidade, licenças, dependências e troca de operador.",
+      "status": "DOCUMENTED_REQUIREMENT",
+      "implementation_verification": "PENDING"
+    }
+  ],
+  "open_gates": [
+    "Current connected provider inventory does not yet corroborate the canonical Firebase/Railway runtime.",
+    "Public demo URL and current production health remain open evidence gates."
+  ],
+  "independent_acceptance": "PENDING"
+}

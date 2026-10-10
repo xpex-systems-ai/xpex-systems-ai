@@ -87,5 +87,8 @@
     "systems/xpex-systems-command/system-card.json"
   ],
   "issued_at": "2026-10-06T01:20:00-03:00",
-  "last_verified_at": "2026-10-05T23:35:00-03:00"
+  "last_verified_at": "2026-10-05T23:35:00-03:00",
+  "legal_ownership_status": "NOT_VERIFIED",
+  "transfer_readiness": "NOT_VERIFIED",
+  "ownership_scope": "Existing SOURCE_OWNERSHIP evidence establishes repository/source correlation, not complete legal title or transaction rights."
 }

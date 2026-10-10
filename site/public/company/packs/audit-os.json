@@ -1,0 +1,149 @@
+{
+  "slug": "audit-os",
+  "name": "GXEON Audit OS",
+  "status": "DEMO READY",
+  "source": {
+    "repo": "xpex-systems-ai/GXEON-AI",
+    "visibility": "PUBLIC",
+    "url": "https://github.com/xpex-systems-ai/GXEON-AI"
+  },
+  "runtime": {
+    "provider": "Vercel",
+    "environment": "production",
+    "state": "READY",
+    "project": "prj_owdXFSlvK1GBrWVuYCqeHpTlYjP4",
+    "url": "https://gxeon-audit-os.vercel.app",
+    "runtimeErrors7d": "NONE_OBSERVED"
+  },
+  "priority": "P0",
+  "preparation_status": "DOCUMENTED",
+  "dossier": "https://xpex-systems-ai.vercel.app/?view=company&system=audit-os",
+  "pack": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/main/systems/gxeon-audit-os/README.md",
+  "next_actions": [
+    "Resolver a linhagem compartilhada GXEON-AI.",
+    "Testar uma auditoria com entrada autorizada e relatório revisado.",
+    "Medir tempo e custo do diagnóstico."
+  ],
+  "verified_transfer": false,
+  "operating_cost": null,
+  "operating_cost_status": "NOT_VERIFIED",
+  "limits": [
+    "The GXEON-AI source lineage serves multiple surfaces and still requires canonical consolidation."
+  ],
+  "preparation": {
+    "schema_version": "1.0",
+    "system_id": "GXEON-AUDIT-OS",
+    "display_slug": "audit-os",
+    "preparation_status": "DOCUMENTED",
+    "prepared_at": "2026-10-10T04:10:49.399Z",
+    "source_observation": {
+      "repository": "xpex-systems-ai/GXEON-AI",
+      "private": false,
+      "default_branch": "main",
+      "license": null,
+      "archived": false,
+      "observed_at": "2026-10-10T04:10:49.399Z",
+      "commit": "dbc29fff9a2c55487f85a83db597f41c493af7a8",
+      "tree": "cb5c2ee33e9fd126cafc66529b4e068b9a4467bc"
+    },
+    "source_legal_title": "NOT_VERIFIED",
+    "buyer_hypothesis": "Equipes responsáveis por aplicações e integrações",
+    "expected_result": "Diagnóstico com achados e evidências rastreáveis",
+    "published_stage": "DEMO READY",
+    "operating_cost": null,
+    "operating_cost_status": "NOT_VERIFIED",
+    "settled_revenue": null,
+    "revenue_status": "NOT_VERIFIED",
+    "transfer_readiness": "REVIEW_AND_REHEARSAL_REQUIRED",
+    "next_actions": [
+      "Resolver a linhagem compartilhada GXEON-AI.",
+      "Testar uma auditoria com entrada autorizada e relatório revisado.",
+      "Medir tempo e custo do diagnóstico."
+    ],
+    "standards": [
+      {
+        "id": "identity",
+        "name": "Identidade",
+        "requirement": "Nome, logo, função, estágio e fonte canônica.",
+        "status": "DOCUMENTED_REQUIREMENT",
+        "implementation_verification": "PENDING"
+      },
+      {
+        "id": "utility",
+        "name": "Utilidade",
+        "requirement": "Comprador, problema, resultado e condição de aceite.",
+        "status": "DOCUMENTED_REQUIREMENT",
+        "implementation_verification": "PENDING"
+      },
+      {
+        "id": "demo",
+        "name": "Demonstração",
+        "requirement": "Entradas, roteiro, saídas, evidências e limitações.",
+        "status": "DOCUMENTED_REQUIREMENT",
+        "implementation_verification": "PENDING"
+      },
+      {
+        "id": "security",
+        "name": "Segurança",
+        "requirement": "Permissões, dados, achados, testes e revisão independente.",
+        "status": "DOCUMENTED_REQUIREMENT",
+        "implementation_verification": "PENDING"
+      },
+      {
+        "id": "operation",
+        "name": "Operação",
+        "requirement": "Instalação, atualização, monitoramento e recuperação.",
+        "status": "DOCUMENTED_REQUIREMENT",
+        "implementation_verification": "PENDING"
+      },
+      {
+        "id": "economics",
+        "name": "Economia",
+        "requirement": "Custos, preço, margem e fonte dos valores.",
+        "status": "DOCUMENTED_REQUIREMENT",
+        "implementation_verification": "PENDING"
+      },
+      {
+        "id": "transfer",
+        "name": "Transferência",
+        "requirement": "Titularidade, licenças, dependências e troca de operador.",
+        "status": "DOCUMENTED_REQUIREMENT",
+        "implementation_verification": "PENDING"
+      }
+    ],
+    "open_gates": [
+      "The GXEON-AI source lineage serves multiple surfaces and still requires canonical consolidation."
+    ],
+    "independent_acceptance": "PENDING"
+  },
+  "architecture": [
+    "Asset discovery",
+    "Classification",
+    "Evidence capture",
+    "Finding preparation",
+    "Human review",
+    "Public-safe result"
+  ],
+  "security": [
+    "Manual-first / preview-first operating posture.",
+    "Duplicate deployment shells are not promoted as separate products.",
+    "Runtime evidence is kept separate from marketing claims."
+  ],
+  "evidence": [
+    {
+      "label": "Live Audit OS",
+      "url": "https://gxeon-audit-os.vercel.app",
+      "kind": "LIVE"
+    },
+    {
+      "label": "Source lineage",
+      "url": "https://github.com/xpex-systems-ai/GXEON-AI",
+      "kind": "SOURCE"
+    },
+    {
+      "label": "Corporate Case",
+      "url": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/main/docs/FLAGSHIP_CASES.md",
+      "kind": "CASE"
+    }
+  ]
+}

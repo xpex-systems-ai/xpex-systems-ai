@@ -1,0 +1,31 @@
+{
+  "system_id": "XPEX-ACADEMY",
+  "public_safe": true,
+  "observed_at": "2026-10-10T04:23:20.557350+00:00",
+  "evidence_type": "SOURCE_METADATA_AND_PUBLISHED_INTELLIGENCE",
+  "scope": "Source default-branch observation and existing public System Intelligence. Not legal title or a fresh provider/deployed-commit attestation.",
+  "source": {
+    "repository": "xpex-systems-ai/XPEX-ACADEMY",
+    "private": false,
+    "default_branch": "dev",
+    "license": "AGPL-3.0",
+    "archived": false,
+    "observed_at": "2026-10-10T04:10:49.399Z",
+    "commit": "7bb8e1de29997beba1cbaccf809a4978d698435c",
+    "tree": "c22f2dd190d003c2f5b523c145b74c3361621e03"
+  },
+  "published_status": "RUNTIME CORRELATION",
+  "published_runtime": {
+    "provider": "Firebase + Railway declared in source",
+    "environment": "canonical runtime correlation pending",
+    "state": "UNVERIFIED_CURRENT_RUNTIME",
+    "legacyVercelCopies": 6,
+    "legacyVercelState": "CANCELED"
+  },
+  "published_limits": [
+    "Current connected provider inventory does not yet corroborate the canonical Firebase/Railway runtime.",
+    "Public demo URL and current production health remain open evidence gates."
+  ],
+  "source_runtime_commit_correlation": "NOT_VERIFIED",
+  "reference": "https://xpex-systems-ai.vercel.app/?system=academy"
+}
