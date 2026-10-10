@@ -28,10 +28,10 @@ jobs:
           node-version: "22"
       - name: Install
         working-directory: site
-        run: npm install --no-audit --no-fund
+        run: npm ci --no-audit --no-fund
       - name: Validate GX evidence boundary
         working-directory: site
-        run: npm run test:gx && npm run test:gx-mcp && npm run test:launch && npm run test:enterprise-agent-api
+        run: npm run test:gx && npm run test:gx-mcp && npm run test:launch && npm run test:enterprise-agent-api && npm run test:ecosystem
       - name: Build
         working-directory: site
         run: npm run build

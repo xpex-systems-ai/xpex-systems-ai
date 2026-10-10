@@ -13,10 +13,18 @@ Public corporate surface for XPeX Systems AI.
 ## Local development
 
 ```bash
-npm install
+npm ci
 npm run dev
 npm run build
 ```
+
+## Corporate GXEON demonstration
+
+The company homepage links to `/?view=ecosystem`, a first-class public, read-only
+projection of the existing Wallet integrations, demand-source metadata and service
+catalog. `/api/ecosystem` uses fixed public upstream URLs and excludes private
+financial and operator data. Run `npm run test:ecosystem` for the boundary checks.
+See [the demonstration and commercial handoff](../docs/GXEON_ENTERPRISE_DEMO.md).
 
 ## Deployment
 

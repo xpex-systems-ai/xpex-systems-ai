@@ -58,9 +58,18 @@ export const GX_EVIDENCE = [
     title: 'GXEON Wallet Command Center',
     kind: 'system',
     keywords: ['wallet','command center','web3','rtc','usdc','stripe','money truth','marketplace','mcp discovery'],
-    summary: 'GXEON Wallet Command Center separates monitored/watched values, agent demand, payment evidence and settled money. Vercel production is observed READY. A Node url.parse deprecation warning remains a documented hardening item.',
+    summary: 'GXEON Wallet Command Center separates monitored/watched values, agent demand, payment evidence and settled money. Its Integrations and Revenue Operations modules feed the corporate GXEON public read-only demonstration at /?view=ecosystem through /api/ecosystem. Financial balances and receipts require authenticated reconciliation. Coinbase connector verification is not backend synchronization. A Node url.parse deprecation warning remains a documented hardening item.',
     status: 'HARDENING',
     url: 'https://gxeon-wallet-command-center.vercel.app'
+  },
+  {
+    id: 'gxeon-enterprise',
+    title: 'GXEON Enterprise — Corporate Ecosystem Demonstration',
+    kind: 'company',
+    keywords: ['gxeon','enterprise','ecossistema','ecosystem','integrations','integracoes','coinbase','community','comunidades','revenue operations','monetizacao','pilot','piloto'],
+    summary: 'The corporate GXEON demonstration integrates existing Wallet public metadata: integration configuration, timestamped demand-source counts and the declared service catalog. It does not expose accounts, balances, private transactions, signing or operator credentials. Unknown financial values remain NOT VERIFIED; stale sources are identified. Commercial paths are scoped Company Intelligence diagnostics, agent/MCP integration pilots and platform service distribution, subject to human-reviewed scope and contracts. A catalog listing is not a service execution or a confirmed sale. AgenticTrade publication and USDC prices are not verified. Current public status is fetched separately from /api/ecosystem.',
+    status: 'PUBLIC READ-ONLY DEMONSTRATION',
+    url: 'https://xpex-systems-ai.vercel.app/?view=ecosystem'
   },
   {
     id: 'api-fabric',
