@@ -1,0 +1,101 @@
+{
+  "version": "2.0",
+  "company": "XPeX Systems AI",
+  "palette": {
+    "ink": "#07090D",
+    "gold": "#E2B248",
+    "white": "#FFFFFF"
+  },
+  "brands": [
+    {
+      "id": "xpex",
+      "name": "XPeX Systems AI",
+      "short": "XPeX",
+      "descriptor": "Systems AI",
+      "layer": "COMPANY",
+      "meaning": "Four independent paths converge into one operating architecture.",
+      "symbol": "xpex-symbol.svg",
+      "lockup": "xpex-lockup.svg"
+    },
+    {
+      "id": "gxeon",
+      "name": "GXEON",
+      "short": "GXEON",
+      "descriptor": "Agent Economy",
+      "layer": "AGENT LAYER",
+      "meaning": "An open intelligence loop with a visible control and verification point.",
+      "symbol": "gxeon-symbol.svg",
+      "lockup": "gxeon-lockup.svg"
+    },
+    {
+      "id": "systems-command",
+      "name": "XPeX Systems Command",
+      "short": "Systems Command",
+      "descriptor": "Company Intelligence",
+      "layer": "SYSTEM",
+      "meaning": "Source, runtime, data and evidence connected to a central registry.",
+      "symbol": "systems-command-symbol.svg",
+      "lockup": "systems-command-lockup.svg"
+    },
+    {
+      "id": "audit-os",
+      "name": "GXEON Audit OS",
+      "short": "Audit OS",
+      "descriptor": "Evidence & Assurance",
+      "layer": "SYSTEM",
+      "meaning": "A protected evidence record and a bounded verification check.",
+      "symbol": "audit-os-symbol.svg",
+      "lockup": "audit-os-lockup.svg"
+    },
+    {
+      "id": "plugin-factory",
+      "name": "XPeX Plugin Factory",
+      "short": "Plugin Factory",
+      "descriptor": "MCP & Capability Compiler",
+      "layer": "SYSTEM",
+      "meaning": "Separate capabilities assembled into a governed integration.",
+      "symbol": "plugin-factory-symbol.svg",
+      "lockup": "plugin-factory-lockup.svg"
+    },
+    {
+      "id": "studio-ai",
+      "name": "XPeX Studio AI",
+      "short": "Studio AI",
+      "descriptor": "Creation & Agent Workflows",
+      "layer": "SYSTEM",
+      "meaning": "A creative frame with an open, forward-facing execution aperture.",
+      "symbol": "studio-ai-symbol.svg",
+      "lockup": "studio-ai-lockup.svg"
+    },
+    {
+      "id": "wallet-command",
+      "name": "GXEON Wallet Command Center",
+      "short": "Wallet Command",
+      "descriptor": "Payments & Financial Evidence",
+      "layer": "SYSTEM",
+      "meaning": "A financial observation boundary with an explicit settlement checkpoint.",
+      "symbol": "wallet-command-symbol.svg",
+      "lockup": "wallet-command-lockup.svg"
+    },
+    {
+      "id": "api-fabric",
+      "name": "XPeX API Fabric",
+      "short": "API Fabric",
+      "descriptor": "Machine-Service Distribution",
+      "layer": "SYSTEM",
+      "meaning": "Interfaces route requests through a shared, inspectable fabric.",
+      "symbol": "api-fabric-symbol.svg",
+      "lockup": "api-fabric-lockup.svg"
+    },
+    {
+      "id": "academy",
+      "name": "XPeX Academy",
+      "short": "Academy",
+      "descriptor": "Applied AI Learning",
+      "layer": "SYSTEM",
+      "meaning": "Two open knowledge paths meet at a shared learning core.",
+      "symbol": "academy-symbol.svg",
+      "lockup": "academy-lockup.svg"
+    }
+  ]
+}

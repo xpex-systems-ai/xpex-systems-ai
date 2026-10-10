@@ -9,79 +9,17 @@ import { initGlobalLaunchRadar } from './global-launch.js';
 import { initEnterpriseAgentAPI } from './enterprise-agent-api.js';
 import './ecosystem.css';
 import { ecosystemEntry, maybeRenderEcosystem } from './ecosystem.js';
+import './brand.css';
+import { brandMark, brandLockup, maybeRenderBrandPage } from './brand.js';
+import { SYSTEM_INTELLIGENCE } from './data/system-intelligence.js';
+import { investorBrief, brandEntry } from './investor-brief.js';
 
-const systems = [
-  {
-    slug: 'systems-command',
-    name: 'XPeX Systems Command',
-    role: 'Company Intelligence & Evidence OS',
-    status: 'STAGING VERIFIED',
-    tone: 'amber',
-    copy: 'Maps systems, providers, runtime evidence and provenance into one operational control plane.',
-    proof: 'Railway · PostgreSQL · Evidence registry',
-    href: 'https://github.com/xpex-systems-ai/xpex-systems-command'
-  },
-  {
-    slug: 'audit-os',
-    name: 'GXEON Audit OS',
-    role: 'Evidence-led systems audit',
-    status: 'DEMO READY',
-    tone: 'green',
-    copy: 'Turns infrastructure discovery into findings, evidence and reviewable technical decisions.',
-    proof: 'Vercel READY · Runtime error query clean',
-    href: 'https://gxeon-audit-os.vercel.app'
-  },
-  {
-    slug: 'plugin-factory',
-    name: 'XPeX Plugin Factory',
-    role: 'MCP · Plugin · Skill compiler',
-    status: 'DEMO READY',
-    tone: 'green',
-    copy: 'Compiles strict blueprints into deterministic agent packages with policy and security gates.',
-    proof: 'Railway SUCCESS · MCP live',
-    href: 'https://xpex-plugin-factory-production.up.railway.app'
-  },
-  {
-    slug: 'studio-ai',
-    name: 'XPeX Studio AI',
-    role: 'AI creation control plane',
-    status: 'DEMO READY',
-    tone: 'green',
-    copy: 'A production frontend foundation for Genesis, Agent Core and Memory Core workflows.',
-    proof: 'Vercel READY · Next.js',
-    href: 'https://xpex-studio-ai.vercel.app'
-  },
-  {
-    slug: 'wallet-command',
-    name: 'GXEON Wallet Command Center',
-    role: 'Agent marketplace · Web3 truth layer',
-    status: 'HARDENING',
-    tone: 'amber',
-    copy: 'Separates watch-only state, agent demand, payment evidence and settled money with explicit truth boundaries.',
-    proof: 'Vercel READY · MCP discovery',
-    href: 'https://gxeon-wallet-command-center.vercel.app'
-  },
-  {
-    slug: 'api-fabric',
-    name: 'XPeX API Fabric',
-    role: 'API & machine-service distribution',
-    status: 'ADMISSION',
-    tone: 'amber',
-    copy: 'Production API lineage under enterprise admission, with source assurance and provider evidence.',
-    proof: 'Vercel READY · CodeQL',
-    href: 'https://github.com/xpex-systems-ai/remix-of-remix-of-remix-of-remix-of-xpex-api-hub-87'
-  },
-  {
-    slug: 'academy',
-    name: 'XPeX Academy',
-    role: 'AI learning & applied projects',
-    status: 'RUNTIME CORRELATION',
-    tone: 'amber',
-    copy: 'Learning, Polo and student operations designed to move from education into applied AI production.',
-    proof: 'GitHub + Firebase + Railway lineage',
-    href: 'https://github.com/xpex-systems-ai/XPEX-ACADEMY'
-  }
-];
+const systems = [...SYSTEM_INTELLIGENCE].sort((a,b) => Number(Boolean(b.runtime.url && b.runtime.environment==='production')) - Number(Boolean(a.runtime.url && a.runtime.environment==='production'))).map(s => ({
+  ...s,
+  copy: s.summary,
+  href: s.source.url,
+  proof: `${s.runtime.provider} · ${s.runtime.environment} · ${s.status}`
+}));
 
 const checks = [
   'Governance Validation',
@@ -102,17 +40,16 @@ app.innerHTML = `
   <div class="noise"></div>
   <header class="nav shell">
     <a class="brand" href="#top" aria-label="XPeX Systems AI home">
-      <span class="brand-mark">X</span>
-      <span><b>XPeX</b><small>SYSTEMS AI</small></span>
+      ${brandLockup()}
     </a>
     <nav>
       <a href="/?view=ecosystem">GXEON</a>
       <a href="#systems">Systems</a>
       <a href="#trust">Trust</a>
       <a href="#gx">GX</a>
-      <a href="#founder">Founder</a>
+      <a href="#investors">Investors</a>
+      <a href="/?view=brand">Brand</a>
       <a href="#agent-api">Agent API</a>
-      <a href="#launch">Global Launch</a>
       <a href="#contact">Review</a>
     </nav>
     <a class="button ghost" href="https://github.com/xpex-systems-ai" target="_blank" rel="noreferrer">GitHub ↗</a>
@@ -121,19 +58,20 @@ app.innerHTML = `
   <main id="top">
     <section class="hero shell">
       <div class="eyebrow"><span></span> AI SYSTEMS · AGENTS · COMPANY INTELLIGENCE</div>
-      <h1>Intelligence that can<br/><em>operate — and prove it.</em></h1>
-      <p class="hero-copy">XPeX Systems AI builds evidence-aware infrastructure for intelligent software, autonomous agents and enterprise operations.</p>
+      <h1>Applied AI.<br/><em>One connected ecosystem.</em></h1>
+      <p class="hero-copy">XPeX Systems AI connects Company Intelligence, governed agents and enterprise workflows through systems you can inspect, demonstrate and verify.</p>
       <div class="hero-actions">
         <a class="button primary" href="/?view=ecosystem">Explore the ecosystem</a>
-        <a class="button" href="#systems">Explore systems</a>
-        <a class="button" href="#trust">Open Trust Layer</a>
+        <a class="button" href="#investors">Company & investment thesis</a>
+        <a class="text-link" href="#systems">Inspect the systems →</a>
       </div>
       <div class="hero-proof">
-        <div><strong>103</strong><span>provider projects observed</span></div>
-        <div><strong>20</strong><span>material asset lineages</span></div>
-        <div><strong>10</strong><span>portfolio systems</span></div>
-        <div><strong>7</strong><span>flagship surfaces</span></div>
+        <div><strong>${systems.length}</strong><span>canonical system profiles</span></div>
+        <div><strong>4</strong><span>public demo surfaces observed</span></div>
+        <div><strong>1</strong><span>verified staging control plane</span></div>
+        <div><strong>AL1</strong><span>engineering assurance foundation</span></div>
       </div>
+      <p class="hero-snapshot">Runtime observations: 10 Oct 2026 (UTC) · <a href="/data/portfolio-observations-v2.json" target="_blank" rel="noreferrer">Inspect the snapshot ↗</a></p>
       <div class="orbital" aria-hidden="true">
         <i></i><i></i><i></i><b></b>
       </div>
@@ -151,7 +89,9 @@ app.innerHTML = `
       <p>We do not promote a system because it looks complete. XPeX separates discovery, identity, runtime, security and commercial truth — then requires evidence before promotion.</p>
     </section>
 
+    ${investorBrief()}
     ${ecosystemEntry()}
+    ${brandEntry()}
 
     <section id="systems" class="shell section">
       <div class="section-head">
@@ -159,21 +99,24 @@ app.innerHTML = `
           <p class="kicker">FLAGSHIP PORTFOLIO</p>
           <h2>Seven systems.<br/>One operating architecture.</h2>
         </div>
-        <p>External reviewers see a small canonical set — not a graveyard of experiments and duplicate deployments.</p>
+        <p>Four public demo surfaces, one authenticated staging control plane and two systems with open admission or runtime gates. Each profile links to its architecture and evidence.</p>
       </div>
       <div class="systems-grid">
         ${systems.map((s, i) => `
-          <a class="system-card" href="${s.href}" data-system-slug="${s.slug}" style="--i:${i}">
+          <article class="system-card" style="--i:${i}">
             <div class="system-top">
-              <span class="index">0${i + 1}</span>
+              ${brandMark(s.slug)}
               <span class="status ${s.tone}">${s.status}</span>
             </div>
             <h3>${s.name}</h3>
             <p class="role">${s.role}</p>
             <p class="desc">${s.copy}</p>
-            <div class="proof"><span></span>${s.proof}</div>
-            <div class="open">View evidence ↗</div>
-          </a>
+            <div class="proof">${s.proof}</div>
+            <div class="system-actions">
+              ${s.runtime.url ? `<a class="button" href="${s.runtime.url}" target="_blank" rel="noreferrer">${s.runtime.environment==='staging' ? 'Operator access ↗' : 'Open public demo ↗'}</a>` : ''}
+              <a class="text-link" data-system-slug="${s.slug}" href="${s.href}">Inspect evidence →</a>
+            </div>
+          </article>
         `).join('')}
       </div>
     </section>
@@ -238,7 +181,7 @@ app.innerHTML = `
         <div class="gx-console" data-gx-console>
           <aside class="gx-rail">
             <div class="gx-identity">
-              <div class="gx-core">GX</div>
+              <div class="gx-core">${brandMark('gxeon')}</div>
               <div><b>Evidence Concierge</b><small>Public · Read only · Evidence gated</small></div>
             </div>
             <div class="gx-state"><span>Response mode</span><span data-gx-mode>READY</span></div>
@@ -359,12 +302,11 @@ app.innerHTML = `
     </section>
   </main>
 
-  <a class="gx-float" href="#gx" aria-label="Open GX Evidence Concierge">GX</a>
+  <a class="gx-float" href="#gx" aria-label="Open GX Evidence Concierge">${brandMark('gxeon')}</a>
 
   <footer class="shell footer">
     <div class="brand">
-      <span class="brand-mark">X</span>
-      <span><b>XPeX</b><small>SYSTEMS AI</small></span>
+      ${brandLockup()}
     </div>
     <p>Build. Connect. Operate. Prove.</p>
     <p>© 2026 XPeX Systems AI</p>
@@ -377,7 +319,7 @@ const observer = new IntersectionObserver((entries) => {
   }
 }, { threshold: 0.12 });
 
-const systemPageActive = maybeRenderEcosystem(app) || maybeRenderSystemPage(app);
+const systemPageActive = maybeRenderBrandPage(app) || maybeRenderEcosystem(app) || maybeRenderSystemPage(app);
 
 if (!systemPageActive) {
   rewriteSystemLinks();
