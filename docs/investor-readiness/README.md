@@ -36,3 +36,6 @@ PASS requires linked, dated evidence and reviewer. NOT_EVALUATED is never PASS. 
 
 ## Frontend / API integration review
 - [Audit OS frontend ↔ backend review](AUDIT_OS_FRONTEND_BACKEND_REVIEW_20261010.md) documents current Vercel environment metadata, source route alignment, open security gates and the unmerged draft code patch in GXEON-AI#434.
+
+## Mission 07 — Backend TypeScript recovery
+- [Audit OS Backend TypeScript Recovery](AUDIT_OS_BACKEND_TYPE_RECOVERY_20261010.md): scoped draft PR, dedicated test suite, measured 68 → 45 diagnostics and remaining global CI blockers.
