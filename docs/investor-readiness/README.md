@@ -51,3 +51,6 @@ PASS requires linked, dated evidence and reviewer. NOT_EVALUATED is never PASS. 
 
 ## Mission 11 — Frontend release recovery
 - [Frontend Release Recovery](FRONTEND_RELEASE_RECOVERY_20261010.md): draft PR #442, 10 frontend TS diagnostics recovered, 5 safety tests and a controlled integration-smoke plan; human review and live validation still pending.
+
+## Mission 12 — AgentOS Genesis P0
+- [AgentOS Genesis Evidence](GXEON_AGENTOS_GENESIS_20261010.md): source-only synthetic mission journal with role separation, digest-chain validation and 13 safety tests; genuine autonomous runtime, authenticated agents and enterprise admission remain blocked.
