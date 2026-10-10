@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-05T23:35:00-03:00",
+  "updated_at": "2026-10-10T04:10:49.399Z",
   "company": "XPeX Systems AI",
   "systems": [
     {
@@ -39,14 +39,64 @@
       "canonical_status": "CLASSIFIED",
       "runtime_status": "NOT_DEPLOYED",
       "design_target": true
+    },
+    {
+      "system_id": "GXEON-AUDIT-OS",
+      "slug": "gxeon-audit-os",
+      "intelligence_slug": "audit-os",
+      "name": "GXEON Audit OS",
+      "role": "Evidence-led Digital Systems Audit",
+      "canonical_status": "CANONICAL_CANDIDATE",
+      "runtime_status": "DEPLOYED",
+      "system_pack": "systems/gxeon-audit-os/"
+    },
+    {
+      "system_id": "XPEX-PLUGIN-FACTORY",
+      "slug": "xpex-plugin-factory",
+      "intelligence_slug": "plugin-factory",
+      "name": "XPeX Plugin Factory",
+      "role": "MCP · Plugin · Skill Compiler",
+      "canonical_status": "CANONICAL_CANDIDATE",
+      "runtime_status": "DEPLOYED",
+      "system_pack": "systems/xpex-plugin-factory/"
+    },
+    {
+      "system_id": "GXEON-WALLET-COMMAND",
+      "slug": "gxeon-wallet-command",
+      "intelligence_slug": "wallet-command",
+      "name": "GXEON Wallet Command Center",
+      "role": "Agent Marketplace · Wallet Intelligence · Web3 Truth Layer",
+      "canonical_status": "CANONICAL_CANDIDATE",
+      "runtime_status": "DEPLOYED",
+      "system_pack": "systems/gxeon-wallet-command/"
+    },
+    {
+      "system_id": "XPEX-STUDIO-AI",
+      "slug": "xpex-studio-ai",
+      "intelligence_slug": "studio-ai",
+      "name": "XPeX Studio AI",
+      "role": "AI Creation Control Plane",
+      "canonical_status": "CANONICAL_CANDIDATE",
+      "runtime_status": "DEPLOYED",
+      "system_pack": "systems/xpex-studio-ai/"
+    },
+    {
+      "system_id": "XPEX-ACADEMY",
+      "slug": "xpex-academy",
+      "intelligence_slug": "academy",
+      "name": "XPeX Academy",
+      "role": "AI Learning & Applied Projects",
+      "canonical_status": "CANONICAL_CANDIDATE",
+      "runtime_status": "UNKNOWN",
+      "system_pack": "systems/xpex-academy/"
     }
   ],
   "truth": {
-    "total_entries": 4,
+    "total_entries": 9,
     "verified_live": 1,
     "verified_staging": 1,
     "canonical": 1,
-    "canonical_candidates": 2,
+    "canonical_candidates": 7,
     "design_targets": 1
   }
 }

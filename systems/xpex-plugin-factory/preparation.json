@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0",
+  "system_id": "XPEX-PLUGIN-FACTORY",
+  "display_slug": "plugin-factory",
+  "preparation_status": "DOCUMENTED",
+  "prepared_at": "2026-10-10T04:10:49.399Z",
+  "source_observation": {
+    "repository": "xpex-systems-ai/XPeX-Plugin-Factory-",
+    "private": false,
+    "default_branch": "main",
+    "license": "NOASSERTION",
+    "archived": false,
+    "observed_at": "2026-10-10T04:23:20.557350+00:00",
+    "commit": "30d31b4d5ce5b31eebf43c0b5a07d360d239f367",
+    "tree": "72d39a43357b9a2eb2773a24cd8f6a19134c4280"
+  },
+  "source_legal_title": "NOT_VERIFIED",
+  "buyer_hypothesis": "Equipes que constroem agentes, MCP e plugins",
+  "expected_result": "Pacote de integração compilado para revisão",
+  "published_stage": "DEMO READY",
+  "operating_cost": null,
+  "operating_cost_status": "NOT_VERIFIED",
+  "settled_revenue": null,
+  "revenue_status": "NOT_VERIFIED",
+  "transfer_readiness": "REVIEW_AND_REHEARSAL_REQUIRED",
+  "next_actions": [
+    "Registrar blueprint, relatório, arquivos e hash do pacote.",
+    "Demonstrar bloqueio de um blueprint inseguro sem credenciais reais.",
+    "Documentar instalação e suporte do artefato gerado."
+  ],
+  "standards": [
+    {
+      "id": "identity",
+      "name": "Identidade",
+      "requirement": "Nome, logo, função, estágio e fonte canônica.",
+      "status": "DOCUMENTED_REQUIREMENT",
+      "implementation_verification": "PENDING"
+    },
+    {
+      "id": "utility",
+      "name": "Utilidade",
+      "requirement": "Comprador, problema, resultado e condição de aceite.",
+      "status": "DOCUMENTED_REQUIREMENT",
+      "implementation_verification": "PENDING"
+    },
+    {
+      "id": "demo",
+      "name": "Demonstração",
+      "requirement": "Entradas, roteiro, saídas, evidências e limitações.",
+      "status": "DOCUMENTED_REQUIREMENT",
+      "implementation_verification": "PENDING"
+    },
+    {
+      "id": "security",
+      "name": "Segurança",
+      "requirement": "Permissões, dados, achados, testes e revisão independente.",
+      "status": "DOCUMENTED_REQUIREMENT",
+      "implementation_verification": "PENDING"
+    },
+    {
+      "id": "operation",
+      "name": "Operação",
+      "requirement": "Instalação, atualização, monitoramento e recuperação.",
+      "status": "DOCUMENTED_REQUIREMENT",
+      "implementation_verification": "PENDING"
+    },
+    {
+      "id": "economics",
+      "name": "Economia",
+      "requirement": "Custos, preço, margem e fonte dos valores.",
+      "status": "DOCUMENTED_REQUIREMENT",
+      "implementation_verification": "PENDING"
+    },
+    {
+      "id": "transfer",
+      "name": "Transferência",
+      "requirement": "Titularidade, licenças, dependências e troca de operador.",
+      "status": "DOCUMENTED_REQUIREMENT",
+      "implementation_verification": "PENDING"
+    }
+  ],
+  "open_gates": [
+    "Payment surfaces do not prove revenue.",
+    "The public MCP surface does not publish or mutate third-party systems."
+  ],
+  "independent_acceptance": "PENDING"
+}

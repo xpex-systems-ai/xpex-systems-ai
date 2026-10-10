@@ -1,0 +1,31 @@
+{
+  "system_id": "GXEON-AUDIT-OS",
+  "public_safe": true,
+  "observed_at": "2026-10-10T04:23:20.557350+00:00",
+  "evidence_type": "SOURCE_METADATA_AND_PUBLISHED_INTELLIGENCE",
+  "scope": "Source default-branch observation and existing public System Intelligence. Not legal title or a fresh provider/deployed-commit attestation.",
+  "source": {
+    "repository": "xpex-systems-ai/GXEON-AI",
+    "private": false,
+    "default_branch": "main",
+    "license": null,
+    "archived": false,
+    "observed_at": "2026-10-10T04:10:49.399Z",
+    "commit": "dbc29fff9a2c55487f85a83db597f41c493af7a8",
+    "tree": "cb5c2ee33e9fd126cafc66529b4e068b9a4467bc"
+  },
+  "published_status": "DEMO READY",
+  "published_runtime": {
+    "provider": "Vercel",
+    "environment": "production",
+    "state": "READY",
+    "project": "prj_owdXFSlvK1GBrWVuYCqeHpTlYjP4",
+    "url": "https://gxeon-audit-os.vercel.app",
+    "runtimeErrors7d": "NONE_OBSERVED"
+  },
+  "published_limits": [
+    "The GXEON-AI source lineage serves multiple surfaces and still requires canonical consolidation."
+  ],
+  "source_runtime_commit_correlation": "NOT_VERIFIED",
+  "reference": "https://xpex-systems-ai.vercel.app/?system=audit-os"
+}

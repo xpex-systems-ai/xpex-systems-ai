@@ -63,6 +63,11 @@ Current limitations include:
 - governed GXEON roles are not all persistent autonomous production services;
 - NEXARA is an architecture target;
 - some audited legacy systems require secret/configuration hardening;
-- the public web platform and Trust Center are not yet deployed.
+- the corporate public platform is deployed; the Trust Center presents documented/engineering evidence, not independent certification;
+- company preparation, legal title, financial actuals and operational transfer require separate review.
+
+## 10. Current company preparation
+
+See `docs/company/preparation/MISSION_PLAN.md`, `data/company/company-readiness-v1.json`, the seven System Packs and https://xpex-systems-ai.vercel.app/?view=company. Public source-head observations are not deployed-commit or legal-ownership proof.
 
 These limitations are explicit because due diligence is strongest when current maturity is clear.

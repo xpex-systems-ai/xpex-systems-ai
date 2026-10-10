@@ -1,51 +1,82 @@
-# XPeX Systems Command
+# XPeX Systems Command — Company Preparation Pack
 
-**Company Intelligence & Evidence OS**
+Prepared 10 October 2026. Public stage: **STAGING VERIFIED**. Preparation: **DOCUMENTED**. Independent acceptance: **PENDING**.
 
-## Role
+## Function and proposed buyer
 
-XPeX Systems Command is the company control plane.
+A provenance-first control plane for discovering company accounts, systems, assets and evidence without silently rewriting the source systems.
 
-It is designed to normalize and relate systems, assets, repositories, deployments, databases, accounts, sources, evidence and audit runs.
+- Buyer hypothesis: Fundadores e gestores técnicos.
+- Expected result: Inventário de sistemas, origem, runtime e evidências.
+- Next milestone: Confirmar a operação autenticada e documentar uma instalação recuperável.
 
-## Status
+These commercial statements are hypotheses, not verified customer outcomes.
 
-| Dimension | State |
-| --- | --- |
-| Canonical identity | **CANONICAL** |
-| Official source | **VERIFIED** |
-| Runtime | **VERIFIED STAGING** |
-| Public flagship | Candidate |
-| Commercial status | Not asserted here |
+## Identity, source and runtime
 
-## Source
+- Source: https://github.com/xpex-systems-ai/xpex-systems-command (PRIVATE).
+- Observed default branch: main.
+- Source head: 0034d87e03705552b5bcae115ec6c301df8e8672; observed 2026-10-10T04:10:49.399Z.
+- Provider/environment: Railway / staging.
+- Published provider state: SUCCESS.
+- Public endpoint: https://xpex-systems-command-staging-web-production.up.railway.app.
+- Deployed-commit correlation: NOT_VERIFIED in this preparation observation.
 
-Official repository:
+Existing runtime evidence retains its original scope and dates. Source metadata does not establish legal ownership.
 
-`xpex-systems-ai/xpex-systems-command`
+## Architecture and AI dependencies
 
-## Runtime evidence
+- Provider discovery
+- Native identity + provenance
+- Canonical system registry
+- Evidence ingestion
+- Audit lifecycle
+- Company Intelligence queries
 
-Provider: Railway  
-Verified deployment: `13013067-a3e1-45b5-8bab-c747e87c3c35`  
-State at verification: `SUCCESS`
+Declared stack: Next.js 15, React 19, TypeScript, Prisma, PostgreSQL, Zod, Vitest, Railway. The AI-BOM distinguishes verified inventory from unknown dependencies.
 
-## What it proves
+## Demonstration
 
-Systems Command is not presented as a conceptual mockup.
+Use the [company runbook](../../docs/company/preparation/DEMO_RUNBOOK.md). Open the system evidence page at https://xpex-systems-ai.vercel.app/?system=systems-command. Public availability and workflow acceptance remain separate.
 
-A running staging foundation exists and has been used as the evidence registry for real cross-platform audits.
+## Security boundaries
 
-## Governance
+- Internal registry APIs fail closed without server-side authentication.
+- Provider writes remain disabled in the foundation path.
+- Production promotion is explicitly gated pending stronger identity/RBAC/token-vault controls and independent approval.
 
-Governed by XAGF.
+Open gates:
 
-Production/public promotion remains separate from staging verification.
+- Current environment is staging.
+- Public production assurance is not claimed.
+- Real provider connectivity remains bounded by admission/security gates.
 
-## Next gates
+## Operations and economics
 
-- dedicated public product surface;
-- current production architecture review;
-- public Trust Center projection;
-- enterprise tenancy and access-control hardening;
-- portfolio/API boundary stabilization.
+Install/build/start/rollback/restore procedures require application-specific verification. A second authorized operator must rehearse the handover with their own access.
+
+- Operating cost: **NOT_VERIFIED**.
+- Customer/revenue attribution: **NOT_VERIFIED**.
+- Pricing: scoped proposal and acceptance required.
+
+## Transfer review
+
+GitHub license metadata: **NOT_IDENTIFIED_IN_METADATA**. Inspect license text, upstream/fork lineage, dependencies, contributors and provider terms; this metadata is not a completed license audit.
+
+Legal title, rights to transfer, contract assignments, data permissions and obligations are **NOT_VERIFIED**. Credentials and personal sessions are excluded from the public package. See [transfer criteria](../../docs/company/preparation/TRANSFER_READINESS.md).
+
+## Next actions
+
+1. Verificar IAM/RBAC e admissão dos conectores antes de produção.
+2. Registrar restauração e troca de operador em staging.
+3. Demonstrar um inventário autorizado com evidências revisadas.
+
+## Evidence files
+
+- [System card](system-card.json)
+- [Preparation matrix](preparation.json)
+- [AI-BOM](ai-bom.json)
+- [Source/published-state observation](evidence/preparation-observation.json)
+- Trust Passport: data/trust/system-passports/xpex-systems-command.json
+
+Written preparation does not promote a runtime or approve its own delivery.

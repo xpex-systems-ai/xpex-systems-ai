@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "system_id": "XPEX-STUDIO-AI",
+  "product_id": "xpex-studio-ai",
+  "name": "XPeX Studio AI",
+  "role": "AI Creation Control Plane",
+  "owner": "XPeX Systems AI",
+  "owner_basis": "Published corporate operational identity; legal title not verified.",
+  "canonical_status": "CANONICAL_CANDIDATE",
+  "runtime_status": "DEPLOYED",
+  "assurance_level": "AL1",
+  "source": {
+    "organization": "xpex-systems-ai",
+    "repository": "xpex-studio-ai",
+    "commit": "88f7ea3bb5c4e501105d0e37b5ade9a9557e73e5",
+    "verification_status": "OBSERVED_REPOSITORY_METADATA"
+  },
+  "runtime": {
+    "provider": "Vercel",
+    "environment": "production",
+    "state_at_verification": "READY",
+    "deployment_id": null,
+    "public_alias": "https://xpex-studio-ai.vercel.app"
+  },
+  "commercial_status": "NOT_ASSERTED",
+  "governance_framework": "XAGF",
+  "evidence": [
+    "evidence/preparation-observation.json"
+  ],
+  "updated_at": "2026-10-10T04:10:49.399Z",
+  "trust_passport": "data/trust/system-passports/xpex-studio-ai.json",
+  "ai_bom": "systems/xpex-studio-ai/ai-bom.json",
+  "standard": "XPEX_VERIFIED_SYSTEM_STANDARD_V1",
+  "preparation_standard": "XPEX_COMPANY_PREPARATION_V1"
+}

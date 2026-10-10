@@ -1,77 +1,82 @@
-# XPeX API Fabric
+# XPeX API Fabric / Agent Marketplace — Company Preparation Pack
 
-**Canonical public-name candidate for the first verified live API / agent marketplace lineage.**
+Prepared 10 October 2026. Public stage: **ADMISSION**. Preparation: **DOCUMENTED**. Independent acceptance: **PENDING**.
 
-## Why this pack exists
+## Function and proposed buyer
 
-The underlying product lineage has appeared historically under names such as XPeX Neural and XPeX API Hub.
+A production-deployed API/product lineage with Supabase, Stripe and source hardening under enterprise admission.
 
-Those names are preserved as provenance, not as the new corporate identity.
+- Buyer hypothesis: Equipes que distribuem serviços para agentes.
+- Expected result: Descoberta e distribuição de capacidades por API.
+- Next milestone: Concluir admissão de identidade e dados.
 
-The professional public-name candidate is:
+These commercial statements are hypotheses, not verified customer outcomes.
 
-> **XPeX API Fabric**
+## Identity, source and runtime
 
-This name remains subject to founder approval before final brand promotion.
+- Source: https://github.com/xpex-systems-ai/remix-of-remix-of-remix-of-remix-of-xpex-api-hub-87 (PUBLIC).
+- Observed default branch: main.
+- Source head: eb76188996c00604cd2d50aa89e7fd7bf9417f3c; observed 2026-10-10T04:10:49.399Z.
+- Provider/environment: Vercel / production.
+- Published provider state: READY.
+- Public endpoint: NOT_VERIFIED_CANONICAL_ENDPOINT.
+- Deployed-commit correlation: NOT_VERIFIED in this preparation observation.
 
-## Evidence status
+Existing runtime evidence retains its original scope and dates. Source metadata does not establish legal ownership.
 
-| Dimension | State |
-| --- | --- |
-| Canonical product name | **CANONICAL_CANDIDATE** |
-| Official GitHub source | **VERIFIED** |
-| Production deployment | **VERIFIED_LIVE** |
-| HTTP availability | **200 OK** |
-| Deployment provider | Vercel |
-| Public flagship | **Candidate** |
-| Security blocker observed in prior Vercel audit | None reported for this project |
+## Architecture and AI dependencies
 
-## Official source
+- Service catalog
+- API surface
+- Data layer
+- Commercial boundary
+- Runtime deployment
+- Admission evidence
 
-Repository lineage:
+Declared stack: React, Supabase, Stripe, API infrastructure, Vercel, CodeQL. The AI-BOM distinguishes verified inventory from unknown dependencies.
 
-`xpex-systems-ai/remix-of-remix-of-remix-of-remix-of-xpex-api-hub-87`
+## Demonstration
 
-Verified source commit:
+Use the [company runbook](../../docs/company/preparation/DEMO_RUNBOOK.md). Open the system evidence page at https://xpex-systems-ai.vercel.app/?system=api-fabric. Public availability and workflow acceptance remain separate.
 
-`5ba2e886a997c97c410e4bbabada659187912538`
+## Security boundaries
 
-The legacy repository name is evidence of lineage. It is not the desired public product name.
+- Source hardening is merged.
+- CodeQL/source assurance is part of admission.
+- Canonical database ownership must be correlated before stronger claims.
 
-## Runtime
+Open gates:
 
-Deployment:
+- Legacy repository/project naming remains.
+- Canonical GXEON Agent Marketplace identity is not yet proven.
+- Supabase runtime ownership correlation is incomplete.
 
-`dpl_2Shq2ceHdj12tZzJ6HPv8RdPYPJb`
+## Operations and economics
 
-Provider state:
+Install/build/start/rollback/restore procedures require application-specific verification. A second authorized operator must rehearse the handover with their own access.
 
-`READY`
+- Operating cost: **NOT_VERIFIED**.
+- Customer/revenue attribution: **NOT_VERIFIED**.
+- Pricing: scoped proposal and acceptance required.
 
-Verified public alias:
+## Transfer review
 
-https://remix-of-remix-of-remix-of-remix-of-xpex-api-hub-87-xpex-neural.vercel.app
+GitHub license metadata: **NOT_IDENTIFIED_IN_METADATA**. Inspect license text, upstream/fork lineage, dependencies, contributors and provider terms; this metadata is not a completed license audit.
 
-Latest HTTP verification returned **200 OK**.
+Legal title, rights to transfer, contract assignments, data permissions and obligations are **NOT_VERIFIED**. Credentials and personal sessions are excluded from the public package. See [transfer criteria](../../docs/company/preparation/TRANSFER_READINESS.md).
 
-## Current launch blocker
+## Next actions
 
-The runtime is live, but the current HTML metadata still exposes the old title:
+1. Correlacionar identidade pública, projeto e base Supabase.
+2. Confirmar endpoint canônico e contrato de serviço.
+3. Testar entrega e cobrança separadamente antes de qualquer alegação comercial.
 
-`XPEX Neural - API Marketplace Premium`
+## Evidence files
 
-Therefore the system is technically VERIFIED_LIVE but not yet brand-ready for broad corporate promotion.
+- [System card](system-card.json)
+- [Preparation matrix](preparation.json)
+- [AI-BOM](ai-bom.json)
+- [Source/published-state observation](evidence/preparation-observation.json)
+- Trust Passport: data/trust/system-passports/xpex-api-fabric.json
 
-Before public flagship launch:
-1. approve canonical product name;
-2. update repository/app metadata;
-3. assign clean branded domain;
-4. redeploy;
-5. independently verify title/domain/runtime;
-6. generate final public evidence card.
-
-## Governance
-
-The system is governed by XAGF.
-
-A legacy technical name is not silently rewritten in evidence; provenance remains immutable while the public canonical identity evolves.
+Written preparation does not promote a runtime or approve its own delivery.

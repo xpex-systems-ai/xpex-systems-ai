@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0",
+  "system_id": "GXEON-WALLET-COMMAND",
+  "display_slug": "wallet-command",
+  "preparation_status": "DOCUMENTED",
+  "prepared_at": "2026-10-10T04:10:49.399Z",
+  "source_observation": {
+    "repository": "xpex-systems-ai/GXEON-Wallet-Command-Center",
+    "private": false,
+    "default_branch": "main",
+    "license": null,
+    "archived": false,
+    "observed_at": "2026-10-10T04:10:49.399Z",
+    "commit": "e797d96c787308d3c96afa39ea395732a1f20d05",
+    "tree": "0d3e4b6b395c1bf6e78a02db50d254db00877a58"
+  },
+  "source_legal_title": "NOT_VERIFIED",
+  "buyer_hypothesis": "Operadores de serviços e tarefas de agentes",
+  "expected_result": "Monitoramento financeiro com origens e liquidação separadas",
+  "published_stage": "HARDENING",
+  "operating_cost": null,
+  "operating_cost_status": "NOT_VERIFIED",
+  "settled_revenue": null,
+  "revenue_status": "NOT_VERIFIED",
+  "transfer_readiness": "REVIEW_AND_REHEARSAL_REQUIRED",
+  "next_actions": [
+    "Reavaliar o aviso url.parse documentado.",
+    "Configurar e verificar autenticação e backend Coinbase com credenciais administradas pelo titular.",
+    "Testar deduplicação e reconciliação com transações comprovadas, sem movimentar fundos."
+  ],
+  "standards": [
+    {
+      "id": "identity",
+      "name": "Identidade",
+      "requirement": "Nome, logo, função, estágio e fonte canônica.",
+      "status": "DOCUMENTED_REQUIREMENT",
+      "implementation_verification": "PENDING"
+    },
+    {
+      "id": "utility",
+      "name": "Utilidade",
+      "requirement": "Comprador, problema, resultado e condição de aceite.",
+      "status": "DOCUMENTED_REQUIREMENT",
+      "implementation_verification": "PENDING"
+    },
+    {
+      "id": "demo",
+      "name": "Demonstração",
+      "requirement": "Entradas, roteiro, saídas, evidências e limitações.",
+      "status": "DOCUMENTED_REQUIREMENT",
+      "implementation_verification": "PENDING"
+    },
+    {
+      "id": "security",
+      "name": "Segurança",
+      "requirement": "Permissões, dados, achados, testes e revisão independente.",
+      "status": "DOCUMENTED_REQUIREMENT",
+      "implementation_verification": "PENDING"
+    },
+    {
+      "id": "operation",
+      "name": "Operação",
+      "requirement": "Instalação, atualização, monitoramento e recuperação.",
+      "status": "DOCUMENTED_REQUIREMENT",
+      "implementation_verification": "PENDING"
+    },
+    {
+      "id": "economics",
+      "name": "Economia",
+      "requirement": "Custos, preço, margem e fonte dos valores.",
+      "status": "DOCUMENTED_REQUIREMENT",
+      "implementation_verification": "PENDING"
+    },
+    {
+      "id": "transfer",
+      "name": "Transferência",
+      "requirement": "Titularidade, licenças, dependências e troca de operador.",
+      "status": "DOCUMENTED_REQUIREMENT",
+      "implementation_verification": "PENDING"
+    }
+  ],
+  "open_gates": [
+    "A Node url.parse deprecation warning remains a documented hardening item.",
+    "Public wallet monitoring is not proof of ownership.",
+    "Checkout or submission is not revenue.",
+    "Coinbase balance/history require configured operator authentication and authorized backend credentials.",
+    "AgenticTrade publication and payment execution are not verified by the public demo."
+  ],
+  "independent_acceptance": "PENDING"
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "system_id": "XPEX-ACADEMY",
+  "product_id": "xpex-academy",
+  "name": "XPeX Academy",
+  "role": "AI Learning & Applied Projects",
+  "owner": "XPeX Systems AI",
+  "owner_basis": "Published corporate operational identity; legal title not verified.",
+  "canonical_status": "CANONICAL_CANDIDATE",
+  "runtime_status": "UNKNOWN",
+  "assurance_level": "AL1",
+  "source": {
+    "organization": "xpex-systems-ai",
+    "repository": "XPEX-ACADEMY",
+    "commit": "7bb8e1de29997beba1cbaccf809a4978d698435c",
+    "verification_status": "OBSERVED_REPOSITORY_METADATA"
+  },
+  "runtime": {
+    "provider": "Firebase + Railway declared in source",
+    "environment": "canonical runtime correlation pending",
+    "state_at_verification": "UNVERIFIED_CURRENT_RUNTIME",
+    "deployment_id": null,
+    "public_alias": null
+  },
+  "commercial_status": "NOT_ASSERTED",
+  "governance_framework": "XAGF",
+  "evidence": [
+    "evidence/preparation-observation.json"
+  ],
+  "updated_at": "2026-10-10T04:10:49.399Z",
+  "trust_passport": "data/trust/system-passports/xpex-academy.json",
+  "ai_bom": "systems/xpex-academy/ai-bom.json",
+  "standard": "XPEX_VERIFIED_SYSTEM_STANDARD_V1",
+  "preparation_standard": "XPEX_COMPANY_PREPARATION_V1"
+}

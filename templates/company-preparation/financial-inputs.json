@@ -1,0 +1,14 @@
+{
+  "template_version": "1.0",
+  "status": "EMPTY_TEMPLATE_KEEP_COMPLETED_VERSION_PRIVATE",
+  "currency": "BRL",
+  "as_of": null,
+  "entity": { "legal_name": null, "registration_jurisdiction": null, "registration_number": null },
+  "actuals": { "settled_revenue": null, "operating_expenses": null, "cash": null, "debts_and_obligations": null },
+  "monthly_provider_costs": [],
+  "customer_evidence": [],
+  "operating_plan_months": 12,
+  "budget": { "monthly_baseline": null, "planned_pilot_cost": null, "funding_target": null, "use_of_funds": [] },
+  "source_records": [],
+  "rule": "Unknown amounts stay null. Every actual figure requires origin, date, currency and evidence state. Estimates are separate from contracted, invoiced and settled figures."
+}

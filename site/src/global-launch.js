@@ -2,11 +2,15 @@ function esc(v='') {
   return String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
 }
 
-function deadlineLabel(target) {
+export function deadlineLabel(target, { locale='en-US', timeZone } = {}) {
   if (!target.deadline) return target.status === 'ROLLING' ? 'Rolling intake' : target.status.replaceAll('_',' ');
   const d=new Date(target.deadline);
   if (Number.isNaN(d.getTime())) return target.deadline;
-  return new Intl.DateTimeFormat('en-US',{month:'short',day:'numeric',year:'numeric'}).format(d);
+  const calendarDate = /^\d{4}-\d{2}-\d{2}$/.test(target.deadline);
+  if(calendarDate && d.toISOString().slice(0,10)!==target.deadline) return target.deadline;
+  // A calendar deadline has no instant or user timezone. Zoned timestamps do.
+  const zone=calendarDate ? 'UTC' : timeZone;
+  return new Intl.DateTimeFormat(locale,{month:'short',day:'numeric',year:'numeric',...(zone ? {timeZone:zone} : {})}).format(d);
 }
 
 function targetCard(target) {

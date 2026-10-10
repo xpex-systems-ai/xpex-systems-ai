@@ -1,0 +1,23 @@
+{
+  "aibom_id": "AIBOM-XPEX-PLUGIN-FACTORY",
+  "system_id": "XPEX-PLUGIN-FACTORY",
+  "version": "1.0",
+  "source_commit": "66f132a0297db7235410cc11470e1c1330c71b60",
+  "deployment_id": "20b15638-e776-420e-82ef-d9ab5ed80d15",
+  "models": [],
+  "agents": [],
+  "tools": [],
+  "providers": [
+    "GitHub",
+    "Railway"
+  ],
+  "data_sources": [],
+  "policies": [
+    "XAGF",
+    "Evidence First"
+  ],
+  "unknowns": [
+    "Models, running agents, exact tools, data classes and credential scopes require application-level inventory. Empty lists represent unverified inventory, not a claim that these dependencies do not exist."
+  ],
+  "generated_at": "2026-10-10T04:10:49.399Z"
+}
