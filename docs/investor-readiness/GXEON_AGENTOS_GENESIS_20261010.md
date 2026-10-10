@@ -21,6 +21,7 @@ Existing roles are kept:
 [Draft PR #443](https://github.com/xpex-systems-ai/GXEON-AI/pull/443) in GXEON-AI, stacked after [PR #442](https://github.com/xpex-systems-ai/GXEON-AI/pull/442).
 
 Source: `artifacts/api-server/src/agentos/missionKernel.ts`
+Read-only API: `artifacts/api-server/src/routes/agentosGenesis.ts` (mounted by `routes/index.ts`). Only `GET /api/agentos/genesis/status` and `GET /api/agentos/genesis/synthetic-demo`, fixed fixture response, no input or writes.
 Demo: `scripts/agentos-genesis-demo.mjs`
 Tests: `scripts/tests/agentos-genesis-contracts.test.mjs`
 Runbook: `docs/agentos/GENESIS_P0.md`
@@ -38,9 +39,9 @@ Rejected and cancelled states also exist; human approval or external execution a
 
 ## Initial verification
 
-GitHub Actions [AgentOS Genesis Safety #38070275615](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38070275615): **SUCCESS, 13/13 tests**; synthetic demo emitted `AWAITING_HUMAN_APPROVAL`, `verifiedChain: true`, `actualExternalAgentActions: 0`, `reportedRevenueBrl: 0`. GitHub Actions [Monorepo Health #38070275608](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38070275608): **SUCCESS**.
+GitHub Actions [AgentOS Genesis Safety #38070509974](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38070509974): **SUCCESS, 14/14 tests**; synthetic demo emitted `AWAITING_HUMAN_APPROVAL`, `verifiedChain: true`, `actualExternalAgentActions: 0`, `reportedRevenueBrl: 0`. GitHub Actions [Monorepo Health #38070509963](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38070509963): **SUCCESS**.
 
-Full [Typecheck #38070275578](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38070275578) and [Build #38070275548](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38070275548): **verification in progress at initial report**; inspect actual latest conclusions before stating READY.
+[Typecheck #38070509948](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38070509948): **SUCCESS on exact head SHA**. [Build #38070509946](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38070509946): **PENDING at report update**, check before declaring exact-head CI fully green.
 
 ## Next gates before actual tool-calling agents
 
