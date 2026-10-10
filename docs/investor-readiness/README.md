@@ -45,3 +45,6 @@ PASS requires linked, dated evidence and reviewer. NOT_EVALUATED is never PASS. 
 
 ## Mission 09 — Operator Handoff & Client Offer
 - [Operator Handoff Safety Recovery](OPERATOR_HANDOFF_SAFETY_RECOVERY_20261010.md): draft PR #439; contract tests pass 4/4; 36 → 19 TypeScript diagnostics; overall CI still blocked.
+
+## Mission 10 — Sensitive R100 contracts
+- [R100 Sensitive Contract Recovery](R100_SENSITIVE_CONTRACT_RECOVERY_20261010.md): backend TS errors 19→0, safety checks 8/8 pass, frontend release still blocked by 10 dashboard errors.
