@@ -37,3 +37,22 @@ Provider docs:
 - https://developers.openai.com/api/reference/typescript/resources/admin/subresources/organization/subresources/projects
 
 Evidence First — no executor self-approval.
+
+## Expanded release review — explicit final user consent gate
+
+The code review of the official documentation on 2026-10-10 confirmed:
+- GPT-5.6 Luna supports OpenAI Responses API and structured outputs. Standard text rates: US$0.20 / million input tokens, US$0.02 cached input, US$1.20 output.
+- The project spend-limit Admin **GET** endpoint and `project.spend_limit` fields match the official reference. Hard limit enforcement can slightly overshoot.
+- No connected tool in this conversation establishes the **user's actual** OpenAI API project ID, funded billing, hard limit, admin permission, access key or spent balance.
+
+**Additional safety patch:** Source draft PR #448 head `d5bc91119ebf20252d6dad7b4082db32dafce532` adds a *second, explicit* `GXEON15_FINAL_PAID_GO` phrase required by the paid operator CLI, distinct from the prior conditional US$0.01 authorization. The user has **not supplied this final GO**. The extra phrase is a manual operator attestation, not cryptographically signed proof. It must NOT be stored as a permanent production secret.
+
+CI on revised source:
+- [GXEON16 Preflight #38102460362](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38102460362): **13/13 PASS**, including an actual subprocess attempt without final GO, blocked before API transport.
+- [GXEON15 Fake Provider Gate #38102460435](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38102460435): **18/18 PASS**, no real provider calls.
+- [Monorepo Health #38102460312](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38102460312): SUCCESS.
+- [Genesis Safety #38102460302](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38102460302): SUCCESS.
+- [Typecheck #38102460421](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38102460421): check final conclusion on latest SHA.
+- [Build #38102460297](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38102460297): check final conclusion on latest SHA.
+
+**No inference has been made, no spending, no credential use, no code merged or deployed.** Source-only verification does not satisfy independent security review/G0–G7.
