@@ -10,7 +10,7 @@
 - [Typecheck CI #38100294123](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38100294123): SUCCESS (backend and monorepo types).
 - [Genesis Safety CI #38100294159](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38100294159): SUCCESS.
 - [Health CI #38100294162](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38100294162): SUCCESS.
-- [Build CI #38100294170](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38100294170): **IN PROGRESS at initial reporting**; check before stating success on exact head.
+- [Build CI #38100294170](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38100294170): **SUCCESS** on exact tested source head.
 
 ## Actual P1 technical contribution
 - `artifacts/api-server/src/agentos/readOnlyWorker.ts`: deterministic **in-process read-only tool invocation** against three hardcoded synthetic Systems Command-shaped systems. Captures 4 risk flags including UNKNOWN_OWNERSHIP, EVIDENCE_NOT_VERIFIED and PRODUCTION_UNPROVEN. Tool call count = 2.
@@ -29,7 +29,7 @@ The successful demo inspects **3 synthetic systems** and derives **4 findings**.
 - Test fixed grant is not a legitimate credential and cannot authorize future real operations.
 - Typecheck/Build and fixture CI success do not meet enterprise runtime, auth, security or release gates.
 
-## Next release gates
+Follow-up tracker: [GXEON-AI issue #445](https://github.com/xpex-systems-ai/GXEON-AI/issues/445) for authenticated Systems Command access, real model sandbox and independent admission.\n\n## Next release gates
 1. Independent review/merge of stack in correct dependency order.
 2. Authorized integration smoke from GXEON 11 and source ↔ runtime correlation on staging.
 3. Versioned, least-privilege server-to-server Systems Command read API with validated tenant-scoped identity.
