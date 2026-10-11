@@ -22,8 +22,8 @@ Status: **DRAFT SOURCE / GATED REAL RESPONSES TRANSPORT / NO PAID MODEL CALL / N
 - [Provider Safety #38101184856](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38101184856): **SUCCESS; 18/18 tests and operator CLI denial without approval**.
 - [Genesis Safety #38101184868](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38101184868): SUCCESS.
 - [Monorepo Health #38101184881](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38101184881): SUCCESS.
-- [Typecheck #38101184860](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38101184860): in progress at initial report.
-- [Build #38101184852](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38101184852): in progress at initial report.
+- [Typecheck #38101184860](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38101184860): **SUCCESS on corrected head**.
+- [Build #38101184852](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38101184852): **SUCCESS on corrected head**.
 
 ## Admission and safety facts
 - NO paid OpenAI API call, no real model output obtained. Validation used fake transport in GitHub CI only.
