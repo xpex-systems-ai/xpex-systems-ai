@@ -54,3 +54,6 @@ PASS requires linked, dated evidence and reviewer. NOT_EVALUATED is never PASS. 
 
 ## Mission 12 — AgentOS Genesis P0
 - [AgentOS Genesis Evidence](GXEON_AGENTOS_GENESIS_20261010.md): source-only synthetic mission journal with role separation, digest-chain validation and 13 safety tests; genuine autonomous runtime, authenticated agents and enterprise admission remain blocked.
+
+## Mission 13 — Read-only worker bridge
+- [Read-only Worker Evidence](GXEON_AGENTOS_READONLY_WORKER_20261010.md): 12 test-backed synthetic tool invocations, Systems Command-shaped fixture adapter and independent verification; real LLM/runtime, authorization, tenant isolation and deployment remain unapproved.
