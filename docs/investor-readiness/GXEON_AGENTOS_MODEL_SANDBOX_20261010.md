@@ -24,8 +24,8 @@ XPeX Systems AI has implemented its first bounded **model-compatible orchestrati
 - [Genesis Safety #38100707477](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38100707477): SUCCESS.
 - [Read-only Worker #38100707401](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38100707401): SUCCESS.
 - [Health #38100707418](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38100707418): SUCCESS.
-- [Typecheck #38100707471](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38100707471): IN_PROGRESS at initial report.
-- [Build #38100707528](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38100707528): IN_PROGRESS at initial report.
+- [Typecheck #38100707471](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38100707471): **SUCCESS on exact head**.
+- [Build #38100707528](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38100707528): **SUCCESS on exact head**.
 
 ## Safety and financial truth
 
