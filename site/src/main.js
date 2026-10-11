@@ -1,4 +1,6 @@
 import './styles.css';
+import './audit-pilot.css';
+import { maybeRenderAuditPilotPage } from './audit-pilot.js';
 import './gx.css';
 import { initGX } from './gx.js';
 import './system-page.css';
@@ -44,6 +46,7 @@ app.innerHTML = `
     </a>
     <nav>
       <a href="/?view=ecosystem">GXEON</a>
+      <a href="/?view=audit-pilot">Audit Pilot</a>
       <a href="#systems">Systems</a>
       <a href="#trust">Trust</a>
       <a href="#gx">GX</a>
@@ -62,6 +65,7 @@ app.innerHTML = `
       <p class="hero-copy">XPeX Systems AI connects Company Intelligence, governed agents and enterprise workflows through systems you can inspect, demonstrate and verify.</p>
       <div class="hero-actions">
         <a class="button primary" href="/?view=ecosystem">Explore the ecosystem</a>
+        <a class="button" href="/?view=audit-pilot">Request an audit pilot →</a>
         <a class="button" href="#investors">Company & investment thesis</a>
         <a class="text-link" href="#systems">Inspect the systems →</a>
       </div>
@@ -319,7 +323,7 @@ const observer = new IntersectionObserver((entries) => {
   }
 }, { threshold: 0.12 });
 
-const systemPageActive = maybeRenderBrandPage(app) || maybeRenderEcosystem(app) || maybeRenderSystemPage(app);
+const systemPageActive = maybeRenderAuditPilotPage(app, location.search) || maybeRenderBrandPage(app) || maybeRenderEcosystem(app) || maybeRenderSystemPage(app);
 
 if (!systemPageActive) {
   rewriteSystemLinks();
