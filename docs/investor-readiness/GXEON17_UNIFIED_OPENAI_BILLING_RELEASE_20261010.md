@@ -23,8 +23,8 @@ Consolidate the existing GXEON 12–16 mission framework into a *single* model-e
 - [Real Provider Contract #38102829798](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38102829798): SUCCESS, **18/18 tests**.
 - [Genesis Safety #38102829781](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38102829781): SUCCESS.
 - [Health #38102829808](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38102829808): SUCCESS.
-- [Typecheck #38102829800](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38102829800): pending on initial report.
-- [Build #38102829805](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38102829805): pending on initial report.
+- [Typecheck #38102829800](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38102829800): **SUCCESS on source PR head**.
+- [Build #38102829805](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38102829805): **SUCCESS on source PR head**.
 
 ## Unverified / blocked (must not be claimed as completed)
 
@@ -44,3 +44,7 @@ The source is ready for independent review and controlled future pilot setup, **
 - https://developers.openai.com/api/docs/models/gpt-5.6-luna
 
 Evidence First. The executor does not approve its own delivery.
+
+## Separate Stripe revenue-collection audit
+
+The connected Stripe session exposes one **LIVE** account displayed as **Xmente I.A**. Read-only account discovery is not evidence that this merchant legally belongs to XPeX Systems AI or that it is authorized for XPeX client billing. Products, legal entity, price, bank payout destination, tax documents, refund/dispute policy and user-approved Checkout configuration have not been verified. The requested provider-billing preflight should not be conflated with merchant billing or XPeX revenue. **No Stripe products, prices, payment links, invoices or customer charges were created.**
