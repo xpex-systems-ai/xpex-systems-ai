@@ -18,8 +18,8 @@ No final go/no-go was supplied. **No paid API inference, real admin API project 
 - [GXEON16 offline billing preflight #38102142387](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38102142387): **SUCCESS 12/12** fake-provider tests; default-disabled CLI prints no real admin call and zero inference calls.
 - [Genesis #38102142457](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38102142457): SUCCESS.
 - [Monorepo Health #38102142424](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38102142424): SUCCESS.
-- [Typecheck #38102142377](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38102142377): pending at initial documentation.
-- [Build #38102142359](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38102142359): pending at initial documentation.
+- [Typecheck #38102142377](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38102142377): **SUCCESS** on exact head.
+- [Build #38102142359](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38102142359): **SUCCESS** on exact head.
 
 ## Operator-side next verification
 1. Independent review of stacked code PRs (no merge or promotion).
