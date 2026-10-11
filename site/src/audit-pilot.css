@@ -1,0 +1,33 @@
+/* GXEON 19 — private-draft offer page; inherits corporate fonts and buttons. */
+body:has(.ap-main){background:#080d17;color:#f6f7fb}
+.ap-nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:20px;padding-bottom:20px}
+.ap-nav .brand{font-weight:850;letter-spacing:-.05em;font-size:1.35rem;color:#f8fafc}
+.ap-nav .brand span{font-weight:450;color:#a5b4c8}
+.ap-main{overflow:hidden}
+.ap-hero{max-width:1080px;margin:0 auto;padding-top:120px;padding-bottom:108px}
+.ap-hero h1{max-width:940px;margin:20px 0 26px;font-size:clamp(3rem,7.3vw,6.8rem);line-height:1.035;letter-spacing:-.066em}
+.ap-hero h1 em{font-style:normal;color:#f6a64d}
+.ap-lead{max-width:730px;color:#c6d3e3;font-size:clamp(1.15rem,1.6vw,1.35rem);line-height:1.65}
+.ap-state{display:inline-flex;max-width:max-content;margin:22px 0 0;padding:9px 13px;border:1px solid #566274;background:#14202f;border-radius:999px;color:#d7e6f5;font-size:.78rem;letter-spacing:.12em;font-weight:800}
+.ap-actions{display:flex;flex-wrap:wrap;gap:14px;margin:32px 0}
+.ap-disclosure,.ap-small{max-width:850px;font-size:.9rem;line-height:1.7;color:#9fb1c5}
+.ap-disclosure{border-left:3px solid #e5a253;padding-left:16px}
+.ap-block{max-width:1080px;padding-top:100px;padding-bottom:100px}
+.ap-block h2{max-width:770px;margin:8px 0 34px;font-size:clamp(2.1rem,4.5vw,4rem);letter-spacing:-.05em;line-height:1.15}
+.ap-block p{max-width:790px;color:#bdc9d9;line-height:1.7}
+.ap-grid{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.ap-grid li{display:flex;flex-direction:column;gap:12px;min-height:160px;background:#111c2b;border:1px solid #243248;border-radius:18px;padding:28px}
+.ap-grid b{font-size:1.25rem;color:#fff}
+.ap-grid span{font-size:1rem;line-height:1.6;color:#b5c7d8}
+.ap-band{background:linear-gradient(135deg,#111b2b,#131522);border-block:1px solid #26364b}
+.ap-steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:15px;padding:0;list-style:none;counter-reset:steps}
+.ap-steps li{counter-increment:steps;padding:18px;border:1px solid #35465d;background:#182337;border-radius:15px}
+.ap-steps li:before{content:'0' counter(steps);display:block;margin-bottom:24px;color:#f3b16c;font-size:1.15rem;font-weight:800}
+.ap-steps li b{color:#fff}
+.ap-steps li p{color:#b6c8da;font-size:.89rem}
+.ap-exclusions{display:grid;gap:14px;max-width:860px;padding-left:24px;color:#cdd9e8;line-height:1.65}
+.ap-cta{background:linear-gradient(120deg,#141c31,#241b21);border-block:1px solid #35445a}
+.ap-cta h2{max-width:700px}
+.ap-footer{padding-block:36px!important;color:#9babbf;font-size:.85rem}
+@media(max-width:800px){.ap-nav nav{display:none}.ap-hero{padding-top:64px;padding-bottom:72px}.ap-block{padding-top:64px;padding-bottom:64px}.ap-grid{grid-template-columns:1fr}.ap-steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:500px){.ap-steps{grid-template-columns:1fr}.ap-nav .button{font-size:.75rem;padding:10px 12px}}

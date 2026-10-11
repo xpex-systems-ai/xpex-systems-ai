@@ -1,0 +1,40 @@
+name: GXEON19 Audit Pilot Commercial Safety
+on:
+  pull_request:
+    paths:
+      - "site/src/main.js"
+      - "site/src/audit-pilot.js"
+      - "site/src/audit-pilot.css"
+      - "site/tests/gxeon19-audit-pilot.test.mjs"
+      - "site/public/data/gxeon-audit-pilot-v1.json"
+      - "docs/commerce/GXEON19_FIRST_REVENUE_PILOT.md"
+      - ".github/workflows/gxeon19-audit-pilot.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  offer-truth-and-site-build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: site
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v7.0.0
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+      - name: Install locked site dependencies
+        run: npm ci
+      - name: Validate pilot scope and no LIVE checkout
+        run: node --test tests/gxeon19-audit-pilot.test.mjs
+      - name: Validate existing corporate site tests
+        run: |
+          npm run test:ecosystem
+          npm run test:gx
+          npm run test:gx-mcp
+          npm run test:launch
+          npm run test:enterprise-agent-api
+      - name: Compile corporate site
+        run: npm run build
