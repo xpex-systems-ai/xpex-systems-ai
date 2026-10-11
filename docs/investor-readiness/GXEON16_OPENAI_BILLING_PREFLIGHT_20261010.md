@@ -52,7 +52,7 @@ CI on revised source:
 - [GXEON15 Fake Provider Gate #38102460435](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38102460435): **18/18 PASS**, no real provider calls.
 - [Monorepo Health #38102460312](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38102460312): SUCCESS.
 - [Genesis Safety #38102460302](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38102460302): SUCCESS.
-- [Typecheck #38102460421](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38102460421): check final conclusion on latest SHA.
-- [Build #38102460297](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38102460297): check final conclusion on latest SHA.
+- [Typecheck #38102460421](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38102460421): **SUCCESS** on exact latest head.
+- [Build #38102460297](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38102460297): **SUCCESS** on exact latest head.
 
 **No inference has been made, no spending, no credential use, no code merged or deployed.** Source-only verification does not satisfy independent security review/G0–G7.
