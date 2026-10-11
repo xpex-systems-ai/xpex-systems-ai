@@ -6,59 +6,83 @@ import { AUDIT_PILOT, auditPilotMarkup, maybeRenderAuditPilotPage } from '../src
 const offer=JSON.parse(readFileSync(new URL('../public/data/gxeon-audit-pilot-v1.json',import.meta.url),'utf8'));
 const landing=readFileSync(new URL('../src/main.js',import.meta.url),'utf8');
 const page=auditPilotMarkup();
+const stripeUrl='https://buy.stripe.com/aFacN58mf8YXgjj0s91B60g';
 
-test('pilot metadata clearly shows enquiry only and no charge or autonomous agents',()=>{
+test('owner-approved live Stripe product has exact one-time BRL 497 amount',()=>{
   assert.equal(offer.offer_id,AUDIT_PILOT.id);
-  assert.equal(offer.product_status,'PILOT_ENQUIRIES_ONLY');
-  assert.equal(offer.sale_status,'NO_ACTIVE_CHECKOUT');
-  assert.equal(offer.payments_enabled,false);
-  assert.equal(offer.checkout_url,null);
-  assert.equal(offer.published_price_brl,null);
-  assert.equal(offer.verified_revenue_brl,null);
-  assert.equal(AUDIT_PILOT.revenueClaimedBrl,0);
-  assert.equal(AUDIT_PILOT.paidAutonomousAgentsClaimed,false);
+  assert.equal(offer.product_status,'PILOT_LIVE_CHECKOUT_AVAILABLE');
+  assert.equal(offer.payments_enabled,true);
+  assert.equal(offer.sale_status,'LIVE_LINK_ACTIVE_CUSTOMER_PAYMENT_REQUIRED');
+  assert.equal(offer.stripe_livemode,true);
+  assert.equal(offer.published_price_brl,497);
+  assert.equal(offer.stripe_checkout_amount_minor,49700);
+  assert.equal(offer.stripe_checkout_currency,'brl');
+  assert.equal(offer.stripe_product_id,'prod_VQ2NBeH0rvgnrJ');
+  assert.equal(offer.stripe_price_id,'price_1UPCIpHDcsx7lyoomYWYWzQf');
+  assert.equal(offer.stripe_payment_link_id,'plink_1UPCJMHDcsx7lyooR1D1d1kI');
 });
-test('draft pilot price exists only as an internal hypothesis, not a public price',()=>{
-  assert.equal(offer.proposed_pilot_price_brl,497);
-  assert.equal(offer.proposed_pilot_price_status,'INTERNAL_HYPOTHESIS_NOT_APPROVED_OR_PUBLISHED');
-  assert.doesNotMatch(page,/R\$\s*497|US\$|checkout\.stripe\.com/i);
-  assert.match(page,/preço definidos por proposta individual/i);
+test('only the verified Stripe link is displayed, no alternate checkout or higher price',()=>{
+  assert.equal(offer.checkout_url,stripeUrl);
+  assert.equal(AUDIT_PILOT.checkoutUrl,stripeUrl);
+  assert.equal(AUDIT_PILOT.priceBrl,497);
+  assert.match(page,/R\$ 497,00/);
+  assert.match(page,/sem assinatura/);
+  assert.equal((page.match(/https:\/\/buy\.stripe\.com\//g)||[]).length,2);
+  assert.ok(page.includes(stripeUrl));
+  assert.doesNotMatch(page,/R\$\s*1\.497|R\$\s*197/);
 });
-test('site routes pilot view first and exposes legitimate navigation links',()=>{
+test('merchant authorization is user-confirmed, never presented as independent legal certification',()=>{
+  assert.equal(offer.merchant_display_name,'Xmente I.A');
+  assert.equal(offer.merchant_owner_authorization,'CONFIRMED_BY_USER_2026_10_10');
+  assert.equal(offer.live_billing_approval_received,true);
+  assert.equal(offer.requires_verified_merchant_owner,true);
+  assert.doesNotMatch(page,/auditado juridicamente|certificado pela Stripe/i);
+});
+test('site routes audit pilot first and exposes navigation',()=>{
   assert.match(landing,/maybeRenderAuditPilotPage\(app, location\.search\)/);
   assert.match(landing,/href="\/\?view=audit-pilot"/);
   assert.ok(landing.indexOf('maybeRenderAuditPilotPage(app, location.search)') <
     landing.indexOf('maybeRenderBrandPage(app)'));
 });
-test('contact is a verifiable manual inquiry and not a fabricated checkout',()=>{
-  assert.equal(AUDIT_PILOT.publicLeadChannel,offer.customer_intake_channel);
-  assert.match(page,/linkedin\.com\/in\/ceojuniorsena/);
-  assert.match(page,/não realiza pagamento nem contratação automática/i);
-  assert.doesNotMatch(page,/<form|<input|<script|payment_intent|payment_link|stripe\.com/);
+test('checkout requires voluntary customer action with scoped human review',()=>{
+  assert.match(page,/Pagamento real processado pela Stripe/);
+  assert.match(page,/após acordo do escopo, prazo e acesso autorizado/);
+  assert.match(page,/revisão humana/);
+  assert.match(page,/sem realizar alterações de produção/);
+  assert.match(page,/href="https:\/\/buy\.stripe\.com\//);
+  assert.doesNotMatch(page,/<form|<input|<script|payment_intent|api\/checkout/);
 });
-test('service scope is bounded, read-only, consent-first and subject to human review',()=>{
-  assert.equal(offer.requires_written_customer_authorization,true);
-  assert.equal(offer.requires_independent_human_review,true);
-  assert.equal(offer.requires_verified_merchant_owner,true);
-  assert.match(page,/autorização/i);
-  assert.match(page,/revisão humana/i);
-  assert.match(page,/sem realizar alterações de produção/i);
-  assert.match(page,/Não envie tokens, senhas/i);
+test('do not claim Pix or boleto enabled or fabricate recurring billing',()=>{
+  assert.match(page,/Cartão habilitado; Pix e boleto não estavam habilitados/);
+  assert.doesNotMatch(page,/Pix habilitado|Boleto habilitado|assinatura mensal/);
+  assert.match(offer.payment_methods_note,/Pix\/Boleto OFF/);
 });
-test('no false customer, payment, certified security or revenue claims are made',()=>{
+test('public pilot does not claim actual sales, webhook reconciliation or autonomous workers',()=>{
   assert.equal(offer.customer_count_claimed,0);
-  assert.equal(offer.requires_explicit_final_live_billing_approval,true);
+  assert.equal(offer.verified_revenue_brl,null);
+  assert.equal(offer.actual_payment_claimed,false);
+  assert.equal(offer.webhook_verified,false);
+  assert.equal(offer.paid_status_auto_reconciliation_enabled,false);
+  assert.equal(AUDIT_PILOT.revenueClaimedBrl,0);
+  assert.equal(AUDIT_PILOT.paidAutonomousAgentsClaimed,false);
   assert.equal(offer.requires_payment_webhook_and_reconciliation_before_paid_status,true);
   assert.doesNotMatch(page,/clientes pagantes|certificada por|receita comprovada|autonomous worker live/i);
 });
-test('router only activates with the exact requested view',()=>{
+test('service requires explicit project authorization and protects customer secrets',()=>{
+  assert.equal(offer.requires_written_customer_authorization,true);
+  assert.equal(offer.requires_independent_human_review,true);
+  assert.match(page,/autorização/i);
+  assert.match(page,/Não envie tokens, senhas/i);
+});
+test('router only activates on exact view',()=>{
   assert.equal(maybeRenderAuditPilotPage({innerHTML:''},'?view=other'),false);
   assert.equal(maybeRenderAuditPilotPage({innerHTML:''},'?view=audit-pilot-other'),false);
 });
-test('page anchors are accessible and keep no private-data intake fields',()=>{
-  for(const id of ['entrega','metodo','seguranca','conversa']) {
+test('checkout and contact use safe external links and accessible navigation anchors',()=>{
+  for(const id of ['entrega','metodo','seguranca','conversa']){
     assert.match(page,new RegExp('id="'+id+'"'));
   }
   assert.match(page,/lang="pt-BR"/);
   assert.match(page,/rel="noopener noreferrer"/);
+  assert.match(page,/linkedin\.com\/in\/ceojuniorsena/);
 });
