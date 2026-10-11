@@ -1,80 +1,66 @@
-# GXEON 19 — Product Launch & First Revenue
+# GXEON 19 — LIVE Stripe checkout for human-supervised audit pilot
 
-**Status: PILOT OFFER SOURCE IMPLEMENTED / NOT LAUNCHED / NO CUSTOMER CONTRACTED / NO VERIFIED REVENUE**
+**State as of 2026-10-10:** Owner-confirmed LIVE Stripe merchant, product, BRL 497 price and active hosted Payment Link CREATED and read-back VERIFIED. Corporate landing source in draft PR #38, **not yet merged/deployed**. **No customer charge initiated by the assistant and no revenue verified.**
 
-## Product positioning
+## Seller and authorization
 
-**GXEON Audit Engineer**: a narrow technical assessment of **one customer-authorized repository or application**, using read-only inspection with human review, delivered as a written evidence report and remediation priorities.
+- Connected Stripe LIVE account display name: **Xmente I.A** (Brazil, individual business type).
+- The user explicitly confirmed ownership and authorization to sell XPeX Systems AI services through this account, and approved the **R$ 497.00 one-time price**.
+- User authorization confirms permission to use this merchant; **it does not constitute an independent tax/legal certification** of the seller, nor verify a specific bank payout or refund process.
+- Stripe reports `charges_enabled:true`, `payouts_enabled:true`.
+- Payment method configuration read-back: **Card ON**, **Pix OFF**, **boleto OFF**. The account has a boleto capability but the default Checkout configuration does not enable it. Payment methods dynamically depend on customer eligibility and account settings.
 
-The GXEON AgentOS runtime is not yet independently approved as a production-grade autonomous worker. This offer MUST NOT claim autonomous remediation or invasive security certification. Commercial service, if approved, will be a **supervised consulting engagement**.
+## Verified LIVE Stripe objects
 
-## Proposed pilot product (NOT YET PRICE-APPROVED)
+| Object | Value |
+|---|---|
+| Product name | GXEON Audit Engineer — Piloto Supervisionado |
+| Product ID | `prod_VQ2NBeH0rvgnrJ` |
+| Price ID | `price_1UPCIpHDcsx7lyoomYWYWzQf` |
+| Price | BRL 497.00 **(49700 centavos)**, `one_time`, active |
+| Payment Link ID | `plink_1UPCJMHDcsx7lyooR1D1d1kI` |
+| Payment Link | https://buy.stripe.com/aFacN58mf8YXgjj0s91B60g |
+| Link state | `active:true`, `livemode:true`, single quantity |
+| Taxes | Stripe automatic tax `enabled:false`; tax/invoicing duties remain seller responsibilities |
+| Recurring subscription | None |
+| Promotions | Disabled |
+| Provider customer charge | **None initiated by this execution** |
+| Revenue recognized | **Not verified** |
 
-Internal trial pricing hypothesis: **R$497 one time** for an extremely bounded first engagement (one authorized project, standard report, one handoff call). This is a proposed price for unit-economics testing only. Published site must NOT state this price, and Stripe must NOT create a product/price/checkout until the owner explicitly approves scope, price, merchant account and billing terms. Unusual projects and security-sensitive access require separate quoting.
+Stripe accepted the product with default one-time price, and the live Payment Link was created separately. The system then retrieved the price, Payment Link and its line item from the LIVE Stripe account. The hosted checkout will create payment processing only when a **customer opens the link and completes checkout**.
 
-## Sales funnel — four evidence gates
+## Product scope and customer expectations
 
-| Stage | Minimum proof | Rule |
-|---|---|---|
-| LEAD | Message received from real requester, timestamp and intended scope | No identity assumptions, secrets or production access |
-| QUALIFIED | Contact and ownership confirmed, authorized project and acceptance criteria | Treat as opportunity only, no fabricated client |
-| OFFER_APPROVED | Signed or accepted scope, fee/currency, due date, access boundaries, privacy/cancellation policy | No provider tool usage before written authorization |
-| CONTRACTED | Merchant verified, payment method/terms agreed and contract accepted | Never call the deal paid on checkout link or session creation |
-| PAYMENT_CONFIRMED | Stripe verified webhook **plus** read-only Stripe API reconciliation of paid status, matching event, amount and currency | Independent human approves financial status |
-| DELIVERED | Human-reviewed report and signed-off acceptance with reproducible evidence | No executor self-approval |
+GXEON Audit Engineer is a **human-supervised consulting service**, not a production autonomous agent, security certification, penetration test, on-chain product or guarantee of technical outcome.
 
-The public lead channel is an existing public LinkedIn profile. We do not publish a personal email, phone, or pretend an automated CRM exists.
+The advertised offer covers **one authorized project/repository**; high-level architecture and dependency review, risks with reproducible evidence, prioritized remediation advice, human quality review and agreed handoff. No write access, automatic patches/merges, privileged account use or exploitation.
 
-## Deliverable contract
+**Before execution:** Customer and seller must agree in writing on scope, assets, read-only permissions, delivery schedule, privacy/security treatment and cancellation/refund rules. The hosted link already permits voluntary payment, but payment **never** authorizes unscoped access or automatic work. If a customer pays before the scope is accepted, the seller must promptly agree a suitable scope or handle refund/cancellation according to applicable rules. Avoid collecting secrets through LinkedIn or Stripe custom fields.
 
-**In scope:** one authorized system; desktop/read-only assessment of architecture and project metadata; prioritized security/operations findings; citations to files/commits where possible; manual 30-minute handoff/consultation if separately agreed. Record unverified and out-of-scope conditions explicitly.
+## Payment reconciliation and fulfillment safety
 
-**Out of scope:** exploit testing, penetration tests, certification, privileged account access, merging, publishing production changes, access to unrelated tenants, guaranteed ROI or 24/7 monitoring. Any data processing requires a separate DPA/privacy review appropriate to customer situation.
+The link is a **real payment entry point**. It is NOT a reliable signal that anyone has already paid:
+1. The customer voluntarily pays through Stripe hosted Checkout.
+2. Use a secure, independently verified Stripe event and/or read-only Stripe PaymentIntent/Checkout Session reconciliation to confirm successful payment, currency BRL, amount 49700, product/price ID and account identity. For delayed methods, wait until `paid`, not just `checkout.session.completed`.
+3. Attach a receipt reference to an authorized customer order with idempotency; prevent duplicates and cross-customer linking.
+4. Human owner confirms the customer scope, terms and authorized environment before any audit actions.
+5. Independent reviewer validates the technical report and records accepted delivery.
+6. Only then recognize verified payment and fulfillment in commercial records.
 
-**Acceptance:** reviewer different from initial executor verifies evidence sources and scope; customer receives document with inventory, findings, severity rationale, reproducibility, recommended actions and limits; deliverable marked accepted only after client approval.
+**Webhook status:** Not independently verified/deployed for this product; no automatic paid-status propagation claimed. Until a signed webhook is built and validated, rely on secure **manual Stripe dashboard/API reconciliation** and human review before fulfillment. The checkout includes descriptive metadata, but that does not replace event signature verification.
 
-## Customer intake and quote template
+## Corporate integration
 
-```
-GXEON-AUDIT-PILOT (proposta ainda sob avaliação)
-Cliente / responsável: [validar antes de preencher]
-Projeto a auditar: [identificador público ou repositório autorizado; NÃO enviar segredos por mensagem]
-Objetivo: [risco ou entrega priorizada]
-Escopo de leitura autorizado: [arquivos, ambiente e horário]
-Fora do escopo: [deixar explícito]
-Preço e moeda: [aprovação separada]
-Prazo: [acordo separado]
-Privacidade e tratamento de dados: [validar política e consentimentos]
-Revisor humano responsável: [pessoa distinta do executor]
-Aceite e pagamento: [termos escritos + conciliação Stripe após confirmação de merchant]
-```
+- Draft site route: `/?view=audit-pilot` (after independent PR review, merge and deploy).
+- Draft page code: `site/src/audit-pilot.js` — approved price and verified checkout URL.
+- Machine-readable source: `site/public/data/gxeon-audit-pilot-v1.json` — namespaced Stripe product/price/link identifiers, real checkout enabled but `verified_revenue_brl:null` and `webhook_verified:false`.
+- Tests: `site/tests/gxeon19-audit-pilot.test.mjs` + corporate site build and security workflows.
 
-## Accounting / Stripe LIVE gate
+### Pending before company-site launch
 
-A connected LIVE Stripe merchant is **displayed as "Xmente I.A"**; this is NOT evidence that the entity or payout beneficiary is legally XPeX Systems AI. A future checkout must be independently authorized by the merchant owner and should use Stripe Checkout or Payment Links only after approving price and legal sale terms. No test-versus-live mismatch may be silently hidden.
+- Independent review of PR #38, all new CI checks PASS, accessibility/mobile smoke in Vercel preview, and owner approval to merge/deploy.
+- Public privacy notice, service/consumer cancellation rules, legal seller identification and customer support details confirmed as necessary for this service.
+- Stripe webhook reconciliation for scalable auto-processing (not needed to keep a hosted link active, but required before enabling automated fulfillment).
+- First actual customer, invoice/tax document if applicable, accepted scope, human-reviewed report and verified paid receipt.
 
-Before writing to Stripe or making a payment link:
-- [ ] Confirm legal owner, seller entity/registration, bank payout beneficiary and permission for XPeX-branded sale.
-- [ ] Approve precise price, BRL currency, taxes, refund/cancellation rules, delivery schedule and customer service contact.
-- [ ] Record Stripe live merchant/account ID privately and verify bank payouts; do not expose sensitive details to the public website.
-- [ ] Implement/test idempotent Checkout Session or Payment Link creation and webhook verification with a secret from private server-side vault. Reject webhook replay, invalid signature, wrong product ID, currency/amount mismatch and duplicate receipt.
-- [ ] Require Stripe payment reconciled before marking invoice or job PAID; paid Checkout URL does **not** prove money received.
-- [ ] Get human go/no-go for live creation; keep financial actions separate from the existing AgentOS US$0.01 model-inference cost experiment.
-
-No merchant mutation, Stripe product, Checkout Session, payment link, charge, invoice, payout or customer outreach is performed by this PR.
-
-## Launch admission G0–G7 (not approved here)
-
-G0: scope, legal seller identity and privacy. G1: customer authorization and tenancy. G2: model/runtime boundaries and no automatic write. G3: reproducible evidence and human reviewer. G4: controlled finances and processor webhook. G5: complaint/refund/contact policy. G6: integration smoke from staging. G7: founder approval and public-release provenance.
-
-**Pilot launch should remain in draft until these gates are explicitly reviewed.**
-
-## Links
-
-- Draft microsite after approval and deploy: `https://xpex-systems-ai.vercel.app/?view=audit-pilot`.
-- Machine-readable draft offer: `site/public/data/gxeon-audit-pilot-v1.json`.
-- Source runbook and tests: `site/tests/gxeon19-audit-pilot.test.mjs`.
-- Stripe checkout planning guidance: https://docs.stripe.com/payments/checkout and https://docs.stripe.com/payment-links.
-- Independent release blocker: [GXEON-AI Issue #445](https://github.com/xpex-systems-ai/GXEON-AI/issues/445).
-
-Evidence First — the executor does not approve its own delivery.
+**Evidence First — Stripe LIVE link != successful customer payment, and the executor never approves its own delivery.**
