@@ -66,3 +66,6 @@ PASS requires linked, dated evidence and reviewer. NOT_EVALUATED is never PASS. 
 
 ## Mission 16 — OpenAI project spending hard-limit preflight
 - [One-cent Project Preflight Evidence](GXEON16_OPENAI_BILLING_PREFLIGHT_20261010.md): 12 offline tests, read-only administrative check prepared but disabled, operator billing, secrets and final Go unverified.
+
+## Mission 17 — Unified OpenAI provider billing gates
+- [Unified Model Billing Release Evidence](GXEON17_UNIFIED_OPENAI_BILLING_RELEASE_20261010.md): ordered hard-limit and project-cost admin GETs before one synthetic Responses call, source-tested without real credentials or spending; final approval and account evidence remain blocked.
