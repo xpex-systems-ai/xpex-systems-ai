@@ -60,3 +60,6 @@ PASS requires linked, dated evidence and reviewer. NOT_EVALUATED is never PASS. 
 
 ## Mission 14 — Offline Model Sandbox
 - [AgentOS Model Sandbox Evidence](GXEON_AGENTOS_MODEL_SANDBOX_20261010.md): bounded model-compatible P2 mock adapter, independent synthetic verification and 13 negative/positive tests; real provider execution, credentials and G0–G7 remain unapproved.
+
+## Mission 15 — Real Provider Sandbox (disabled by default)
+- [Real Model Sandbox Evidence](GXEON_AGENTOS_REAL_MODEL_SANDBOX_20261010.md): guarded one-shot Responses transport, 18 isolated safety tests, operator approval and cost gates; **no live paid model call authorized or performed**.
