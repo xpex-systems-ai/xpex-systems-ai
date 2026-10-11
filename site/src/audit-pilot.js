@@ -1,15 +1,18 @@
 /**
  * GXEON 19 — standalone pilot-offer microsite in the existing corporate site.
- * Intent: REQUEST ONLY. No payment link, form backend, tracking pixel,
+ * Intent: owner-authorized LIVE Stripe checkout. No form backend, tracking pixel,
  * third-party scripts, autonomous agent claims or unapproved customer access.
  */
 const CONTACT = 'https://www.linkedin.com/in/ceojuniorsena';
 const SYSTEMS = 'https://github.com/xpex-systems-ai/xpex-systems-ai';
+const CHECKOUT = 'https://buy.stripe.com/aFacN58mf8YXgjj0s91B60g';
 export const AUDIT_PILOT = Object.freeze({
   id: 'gxeon-audit-engineer-pilot-v1',
-  status: 'PILOT_ENQUIRIES_ONLY',
-  salesState: 'NO_CHECKOUT_OR_LIVE_CHARGE',
-  priceState: 'CUSTOM_QUOTE_NOT_PUBLISHED',
+  status: 'PILOT_LIVE_CHECKOUT_AVAILABLE',
+  salesState: 'LIVE_LINK_ACTIVE_CUSTOMER_PAYMENT_REQUIRED',
+  priceState: 'OWNER_APPROVED_FIXED_PRICE_BRL_497',
+  priceBrl: 497,
+  checkoutUrl: CHECKOUT,
   currency: 'BRL',
   deliveryMode: 'HUMAN_REVIEWED_WITH_READ_ONLY_TECHNICAL_ASSISTANCE',
   publicLeadChannel: CONTACT,
@@ -48,14 +51,15 @@ export function auditPilotMarkup() {
     <main class="ap-main" lang="pt-BR">
       <section class="shell ap-hero">
         <p class="kicker">XPEX SYSTEMS AI / GXEON AUDIT ENGINEER</p>
-        <p class="ap-state">PILOTO SOB AVALIAÇÃO · ATENDIMENTO HUMANO</p>
+        <p class="ap-state">PILOTO SUPERVISIONADO · PAGAMENTO STRIPE LIVE</p>
         <h1>Entenda o que seu sistema precisa <em>antes de colocar em produção.</em></h1>
         <p class="ap-lead">Auditoria técnica assistida por IA e revisada por profissionais: arquitetura, evidências, riscos e prioridades para a próxima entrega. Uma avaliação com escopo e consentimento definidos.</p>
+        <p class="ap-price">Preço único: <strong>R$ 497,00</strong> · 1 projeto autorizado · sem assinatura</p>
         <div class="ap-actions">
-          <a class="button primary" href="#conversa">Solicitar avaliação do piloto →</a>
-          <a class="button" href="#entrega">Ver entregáveis</a>
+          <a class="button primary" href="${CHECKOUT}" target="_blank" rel="noopener noreferrer">Contratar via Stripe — R$ 497,00 ↗</a>
+          <a class="button" href="#conversa">Conversar antes de pagar</a>
         </div>
-        <p class="ap-disclosure">Não é uma ferramenta autônoma de correção, pentest, certificação ou promessa de resultado financeiro. Contratação e preço dependem de proposta aprovada.</p>
+        <p class="ap-disclosure">Pagamento real processado pela Stripe. Antes de iniciar a análise, confirmamos por escrito o projeto, o prazo, a autorização de leitura e os limites do serviço. Não inclui pentest, certificação, correções automáticas ou promessa de resultado financeiro.</p>
       </section>
 
       <section id="entrega" class="shell ap-block">
@@ -94,9 +98,10 @@ export function auditPilotMarkup() {
         <div class="shell ap-block">
           <p class="kicker">04 / SOLICITE UMA CONVERSA</p>
           <h2>Vamos avaliar se seu projeto se encaixa.</h2>
-          <p>O piloto tem disponibilidade, prazo e preço definidos por proposta individual. O contato abaixo abre um canal humano e <strong>não realiza pagamento nem contratação automática.</strong></p>
+          <p><strong>R$ 497,00 à vista, pagamento único.</strong> O link Stripe permite o pagamento por iniciativa do cliente; a auditoria começa somente após acordo do escopo, prazo e acesso autorizado. Cartão habilitado; Pix e boleto não estavam habilitados no checkout verificado.</p>
           <div class="ap-actions">
-            <a class="button primary" href="${CONTACT}" target="_blank" rel="noopener noreferrer">Conversar sobre o piloto ↗</a>
+            <a class="button primary" href="${CHECKOUT}" target="_blank" rel="noopener noreferrer">Pagar com segurança na Stripe ↗</a>
+            <a class="button" href="${CONTACT}" target="_blank" rel="noopener noreferrer">Conversar sobre o piloto ↗</a>
             <a class="button" href="${SYSTEMS}" target="_blank" rel="noopener noreferrer">Conhecer a XPeX ↗</a>
           </div>
           <p class="ap-small">Na primeira mensagem, informe apenas o tipo de projeto, o objetivo e a forma preferida de contato. Não envie tokens, senhas, dados de clientes ou códigos privados sem um processo autorizado.</p>
