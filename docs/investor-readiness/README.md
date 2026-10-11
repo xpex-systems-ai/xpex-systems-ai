@@ -57,3 +57,6 @@ PASS requires linked, dated evidence and reviewer. NOT_EVALUATED is never PASS. 
 
 ## Mission 13 — Read-only worker bridge
 - [Read-only Worker Evidence](GXEON_AGENTOS_READONLY_WORKER_20261010.md): 12 test-backed synthetic tool invocations, Systems Command-shaped fixture adapter and independent verification; real LLM/runtime, authorization, tenant isolation and deployment remain unapproved.
+
+## Mission 14 — Offline Model Sandbox
+- [AgentOS Model Sandbox Evidence](GXEON_AGENTOS_MODEL_SANDBOX_20261010.md): bounded model-compatible P2 mock adapter, independent synthetic verification and 13 negative/positive tests; real provider execution, credentials and G0–G7 remain unapproved.
