@@ -63,3 +63,6 @@ PASS requires linked, dated evidence and reviewer. NOT_EVALUATED is never PASS. 
 
 ## Mission 15 — Real Provider Sandbox (disabled by default)
 - [Real Model Sandbox Evidence](GXEON_AGENTOS_REAL_MODEL_SANDBOX_20261010.md): guarded one-shot Responses transport, 18 isolated safety tests, operator approval and cost gates; **no live paid model call authorized or performed**.
+
+## Mission 16 — OpenAI project spending hard-limit preflight
+- [One-cent Project Preflight Evidence](GXEON16_OPENAI_BILLING_PREFLIGHT_20261010.md): 12 offline tests, read-only administrative check prepared but disabled, operator billing, secrets and final Go unverified.
