@@ -16,3 +16,6 @@
 .system-actions .button{font-size:11px;padding:10px 14px}
 .brand-entry .button .brand-symbol{width:22px;height:22px;margin-left:12px}
 @media(min-width:801px){.system-card:last-child{grid-column:1/-1}}
+
+/* Approved corporate logo, preserving its original proportions. */
+.brand .brand-official-logo{display:block;width:132px;height:88px;object-fit:contain;flex:none;border-radius:6px}.nav{min-height:104px}.brand-official{padding-bottom:56px;margin-bottom:48px;border-bottom:1px solid var(--line)}.brand-official>img{display:block;width:min(100%,720px);height:auto;border-radius:18px}.brand-official>p:not(.kicker){max-width:680px;color:var(--muted);line-height:1.75}.brand-official .button{margin-top:12px}@media(max-width:700px){.brand .brand-official-logo{width:108px;height:72px}.nav{min-height:88px}}
