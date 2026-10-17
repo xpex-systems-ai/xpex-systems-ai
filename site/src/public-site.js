@@ -14,14 +14,25 @@ const icon = id => `<span class="xp-icon">${brandMark(id)}</span>`;
 
 export function publicHeader() {
   return `<a class="xp-skip" href="#main-content">Ir para o conteúdo</a><header class="xp-header xp-shell">
-    <a class="xp-brand" href="/" aria-label="XPeX Systems AI — início"><svg viewBox="430 80 700 550" aria-hidden="true"><image href="${LOGO}" width="1536" height="1024"/></svg><span><b>XPeX</b> Systems AI</span></a>
+    <a class="xp-brand" href="/" aria-label="XPeX Systems AI — início"><svg viewBox="430 80 700 510" aria-hidden="true"><image href="${LOGO}" width="1536" height="1024"/></svg><span><b>XPeX</b> Systems AI</span></a>
     <button class="xp-menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="xp-navigation">Menu <span aria-hidden="true">☰</span></button>
     <nav id="xp-navigation" aria-label="Navegação principal"><a href="/?view=agents">Agentes</a><a href="/?view=ecosystem">Ecossistema</a><a href="/#systems">Sistemas</a><a href="/?view=plugins">Plugins</a><a href="/?view=developers">Desenvolvedores</a></nav>
     <a class="xp-button xp-gold xp-demo-link" href="/?view=ecosystem">Explorar demo <span aria-hidden="true">→</span></a>
   </header>`;
 }
 export function publicFooter() {
-  return `<footer class="xp-footer xp-shell"><div class="xp-footer-top"><a class="xp-brand" href="/" aria-label="XPeX Systems AI — início"><svg viewBox="430 80 700 550" aria-hidden="true"><image href="${LOGO}" width="1536" height="1024"/></svg><span><b>XPeX</b> Systems AI</span></a><p>Engenharia para a economia de agentes.</p></div><div class="xp-footer-links"><a href="/?view=company">Empresa</a><a href="/?view=radar">Radar de agentes</a><a href="/?view=brand">Identidade visual</a><a href="/?view=developers">Documentação</a>${ext('https://www.linkedin.com/in/ceojuniorsena','LinkedIn')}${ext(REPO,'GitHub')}<a href="/?view=privacy">Privacidade</a><a href="/?view=terms">Termos</a></div><div class="xp-footer-bottom"><span>© ${new Date().getFullYear()} XPeX Systems AI</span><span>Build. Connect. Operate. Prove.</span></div></footer>`;
+  return `<footer class="xp-footer xp-shell"><div class="xp-footer-top"><a class="xp-brand" href="/" aria-label="XPeX Systems AI — início"><svg viewBox="430 80 700 510" aria-hidden="true"><image href="${LOGO}" width="1536" height="1024"/></svg><span><b>XPeX</b> Systems AI</span></a><p>Engenharia para a economia de agentes.</p></div><div class="xp-footer-links"><a href="/?view=company">Empresa</a><a href="/?view=radar">Radar de agentes</a><a href="/?view=brand">Identidade visual</a><a href="/?view=developers">Documentação</a>${ext('https://www.linkedin.com/in/ceojuniorsena','LinkedIn')}${ext(REPO,'GitHub')}<a href="/?view=privacy">Privacidade</a><a href="/?view=terms">Termos</a></div><div class="xp-footer-bottom"><span>© ${new Date().getFullYear()} XPeX Systems AI</span><span>Build. Connect. Operate. Prove.</span></div></footer>`;
+}
+
+export function publicIntegrations() {
+  return `<section class="xp-shell xp-section" id="integration-channels">${sectionHead('INTEGRAÇÕES E CANAIS','Conexões que ampliam o ecossistema.')}<p class="xp-section-intro">Interfaces, distribuição e caminhos de participação. Consulte a fonte de cada canal para conferir sua função e disponibilidade.</p><div class="xp-three">${[
+    ['TensorBlock','Distribuição MCP','A contribuição da XPeX ao catálogo está registrada no GitHub. Catálogo e venda são etapas distintas.','https://github.com/TensorBlock/awesome-mcp-servers/pull/2949','Ver contribuição'],
+    ['Glama','Descoberta de ferramentas','Página pública do GXEON Agent Marketplace, com ferramentas e histórico de inspeções.','https://glama.ai/mcp/connectors/io.github.xpex-systems-ai/gxeon-agent-marketplace','Ver listagem'],
+    ['API empresarial','Interface própria','Descoberta de sistemas, catálogo de capacidades e correspondência de necessidades.','/api/agent-api','Consultar API'],
+    ['MCP empresarial','Interface própria','Ferramentas de descoberta para clientes e runtimes compatíveis com MCP.','/api/mcp/enterprise','Consultar MCP'],
+    ['Speedbot','Fonte externa','Documentação para explorar trabalho, serviços e colaboração entre agentes.','https://speedbot.dev/docs','Abrir documentação'],
+    ['BasedAgents','Fonte externa','Documentação sobre identidade, tarefas e entregas de agentes.','https://basedagents.ai/docs/agents','Abrir documentação']
+  ].map(([name,state,copy,url,label])=>`<article class="xp-card xp-radar-card">${pill(state)}<h3 style="margin-top:24px">${name}</h3><p>${copy}</p>${ext(url,label)}</article>`).join('')}</div><p class="xp-small-note">A presença em um diretório não comprova parceria, contratação ou pagamento.</p></section>`;
 }
 
 const agents = [

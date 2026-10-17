@@ -4,7 +4,7 @@ function esc(v=''){
 
 function resultMarkup(payload){
   const match=payload?.matches?.[0];
-  if(!match) return '<p class="agent-api-muted">No match returned yet.</p>';
+  if(!match) return '<p class="agent-api-muted">Nenhuma correspondência encontrada nesta consulta.</p>';
   const pack=payload.best_match;
   const systems=(pack?.systems||[]).map(s=>`
     <a href="${esc(s.intelligence_page)}" target="_blank" rel="noreferrer">
@@ -14,15 +14,15 @@ function resultMarkup(payload){
 
   return `
     <div class="agent-api-result-head">
-      <span>BEST MATCH</span>
+      <span>CAPACIDADE SUGERIDA</span>
       <b>${esc(match.maturity)}</b>
     </div>
     <h4>${esc(match.name)}</h4>
     <p>${esc(match.promise)}</p>
     <div class="agent-api-systems">${systems}</div>
     <div class="agent-api-result-actions">
-      <a href="${esc(payload.contact?.linkedin||'https://www.linkedin.com/in/ceojuniorsena')}" target="_blank" rel="noreferrer">Discuss integration ↗</a>
-      <a href="https://xpex-systems-ai.vercel.app/api/mcp/enterprise" target="_blank" rel="noreferrer">Enterprise MCP ↗</a>
+      <a href="${esc(payload.contact?.linkedin||'https://www.linkedin.com/in/ceojuniorsena')}" target="_blank" rel="noreferrer">Avaliar integração ↗</a>
+      <a href="https://xpex-systems-ai.vercel.app/api/mcp/enterprise" target="_blank" rel="noreferrer">MCP empresarial ↗</a>
     </div>
   `;
 }
@@ -43,8 +43,8 @@ export function initEnterpriseAgentAPI(){
     if(!need) return;
 
     button.disabled=true;
-    button.textContent='Matching XPeX capabilities…';
-    result.innerHTML='<p class="agent-api-muted">Reading the Enterprise Agent API and evidence graph…</p>';
+    button.textContent='Consultando capacidades…';
+    result.innerHTML='<p class="agent-api-muted">Consultando a API empresarial e as evidências disponíveis…</p>';
 
     try{
       const response=await fetch('/api/agent-api',{
@@ -56,10 +56,10 @@ export function initEnterpriseAgentAPI(){
       if(!response.ok) throw new Error(payload.error||'match failed');
       result.innerHTML=resultMarkup(payload);
     }catch(error){
-      result.innerHTML='<p class="agent-api-muted">The matching endpoint is temporarily unavailable. The MCP and machine-readable catalog remain public.</p>';
+      result.innerHTML='<p class="agent-api-muted">A consulta está temporariamente indisponível. Você pode acessar o MCP e o catálogo público pelos links desta página.</p>';
     }finally{
       button.disabled=false;
-      button.textContent='Match our need →';
+      button.textContent='Encontrar capacidades →';
     }
   });
 }

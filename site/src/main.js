@@ -13,7 +13,7 @@ import './brand.css';
 import { brandMark, brandLockup, maybeRenderBrandPage } from './brand.js';
 import { SYSTEM_INTELLIGENCE } from './data/system-intelligence.js';
 import { investorBrief, brandEntry } from './investor-brief.js';
-import { renderPublicSite, publicHeader, publicFooter, initPublicNavigation } from './public-site.js';
+import { renderPublicSite, publicHeader, publicFooter, publicIntegrations, initPublicNavigation } from './public-site.js';
 
 const systems = [...SYSTEM_INTELLIGENCE].sort((a,b) => Number(Boolean(b.runtime.url && b.runtime.environment==='production')) - Number(Boolean(a.runtime.url && a.runtime.environment==='production'))).map(s => ({
   ...s,
@@ -332,6 +332,7 @@ if (existingPageActive) {
   if (oldFooter) oldFooter.outerHTML = publicFooter();
   const main = app.querySelector('main');
   if (main) main.id = 'main-content';
+  if (main && new URLSearchParams(location.search).get('view') === 'ecosystem') main.insertAdjacentHTML('beforeend', publicIntegrations());
   initPublicNavigation();
 }
 
