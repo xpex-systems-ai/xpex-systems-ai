@@ -13,6 +13,7 @@ import './brand.css';
 import { brandMark, brandLockup, maybeRenderBrandPage } from './brand.js';
 import { SYSTEM_INTELLIGENCE } from './data/system-intelligence.js';
 import { investorBrief, brandEntry } from './investor-brief.js';
+import { renderPublicSite, publicHeader, publicFooter, initPublicNavigation } from './public-site.js';
 
 const systems = [...SYSTEM_INTELLIGENCE].sort((a,b) => Number(Boolean(b.runtime.url && b.runtime.environment==='production')) - Number(Boolean(a.runtime.url && a.runtime.environment==='production'))).map(s => ({
   ...s,
@@ -319,7 +320,20 @@ const observer = new IntersectionObserver((entries) => {
   }
 }, { threshold: 0.12 });
 
-const systemPageActive = maybeRenderBrandPage(app) || maybeRenderEcosystem(app) || maybeRenderSystemPage(app);
+const existingPageActive = maybeRenderBrandPage(app) || maybeRenderEcosystem(app) || maybeRenderSystemPage(app);
+const publicPageActive = !existingPageActive && renderPublicSite(app);
+const systemPageActive = existingPageActive || publicPageActive;
+
+if (existingPageActive) {
+  document.body.classList.add('xpex-public');
+  const oldHeader = app.querySelector('header');
+  const oldFooter = app.querySelector('footer');
+  if (oldHeader) oldHeader.outerHTML = publicHeader();
+  if (oldFooter) oldFooter.outerHTML = publicFooter();
+  const main = app.querySelector('main');
+  if (main) main.id = 'main-content';
+  initPublicNavigation();
+}
 
 if (!systemPageActive) {
   rewriteSystemLinks();
