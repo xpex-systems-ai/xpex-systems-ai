@@ -2,6 +2,8 @@ import { brandMark } from './brand.js';
 import { SYSTEM_INTELLIGENCE } from './data/system-intelligence.js';
 import { initGX } from './gx.js';
 import { initEnterpriseAgentAPI } from './enterprise-agent-api.js';
+import { omnixEntry, omnixPage, initOmnixRequest } from './omnix.js';
+import './omnix.css';
 import './public-site.css';
 
 const REPO = 'https://github.com/xpex-systems-ai/xpex-systems-ai';
@@ -16,7 +18,7 @@ export function publicHeader() {
   return `<a class="xp-skip" href="#main-content">Ir para o conteúdo</a><header class="xp-header xp-shell">
     <a class="xp-brand" href="/" aria-label="XPeX Systems AI — início"><svg viewBox="430 80 700 510" aria-hidden="true"><image href="${LOGO}" width="1536" height="1024"/></svg><span><b>XPeX</b> Systems AI</span></a>
     <button class="xp-menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="xp-navigation">Menu <span aria-hidden="true">☰</span></button>
-    <nav id="xp-navigation" aria-label="Navegação principal"><a href="/?view=agents">Agentes</a><a href="/?view=ecosystem">Ecossistema</a><a href="/#systems">Sistemas</a><a href="/?view=plugins">Plugins</a><a href="/?view=developers">Desenvolvedores</a></nav>
+    <nav id="xp-navigation" aria-label="Navegação principal"><a href="/?view=omnix">OMNIX AI</a><a href="/?view=agents">Agentes</a><a href="/?view=ecosystem">Ecossistema</a><a href="/#systems">Sistemas</a><a href="/?view=plugins">Plugins</a><a href="/?view=developers">Desenvolvedores</a></nav>
     <a class="xp-button xp-gold xp-demo-link" href="/?view=ecosystem">Explorar demo <span aria-hidden="true">→</span></a>
   </header>`;
 }
@@ -82,7 +84,7 @@ function radarCards() { return `<div class="xp-radar-cards">${[
   ['03','RustChain','Contribuições técnicas','Explore bounties e contribuições com recompensas declaradas em RTC.','https://github.com/Scottcjn/Rustchain']
 ].map(([n,name,type,copy,url])=>`<article class="xp-card xp-radar-card"><div class="xp-radar-top"><span>${n}</span>${pill(type)}</div><h3>${name}</h3><p>${copy}</p>${ext(url,'Explorar a fonte')}</article>`).join('')}</div>`; }
 function home() {
-  return `${hero()}${enterprise()}<section id="agents" class="xp-shell xp-section">${sectionHead('FERRAMENTAS PARA TRABALHO REAL','Agentes e capacidades','/?view=agents','Ver todos os agentes')}<div class="xp-three">${agents.slice(0,3).map(agentCard).join('')}</div></section><section id="systems" class="xp-shell xp-section">${sectionHead('UM ECOSSISTEMA. MÚLTIPLAS POSSIBILIDADES.','Nossos sistemas','/?view=systems','Ver todos os sistemas')}<div class="xp-three">${['studio-ai','systems-command','academy'].map(systemCard).join('')}</div></section>
+  return `${hero()}${omnixEntry()}${enterprise()}<section id="agents" class="xp-shell xp-section">${sectionHead('FERRAMENTAS PARA TRABALHO REAL','Agentes e capacidades','/?view=agents','Ver todos os agentes')}<div class="xp-three">${agents.slice(0,3).map(agentCard).join('')}</div></section><section id="systems" class="xp-shell xp-section">${sectionHead('UM ECOSSISTEMA. MÚLTIPLAS POSSIBILIDADES.','Nossos sistemas','/?view=systems','Ver todos os sistemas')}<div class="xp-three">${['studio-ai','systems-command','academy'].map(systemCard).join('')}</div></section>
   <section class="xp-shell xp-section xp-plugins-section"><div><p class="xp-kicker">PLUGINS PARA OPENAI</p><h2>Da capacidade<br/>à ferramenta.</h2><p>Plugins, conectores e MCP para levar a engenharia da XPeX ao seu fluxo de trabalho.</p><a class="xp-link" href="/?view=plugins">Explorar nossos plugins <span aria-hidden="true">→</span></a></div><div class="xp-plugin-preview">${icon('plugin-factory')}<div><span>DESTAQUE / XPeX</span><h3>Plugin Factory</h3><p>Requisitos → Blueprint → Validação → Pacote</p><a class="xp-button" href="/?system=plugin-factory">Conhecer a plataforma →</a></div></div></section>
   <section class="xp-shell xp-section">${sectionHead('DESCUBRA. CONECTE. PARTICIPE.','Radar da economia de agentes','/?view=radar','Explorar o radar')}<p class="xp-section-intro">Um mapa para desenvolvedores descobrirem onde agentes trabalham e disponibilizam capacidades.</p>${radarCards()}<p class="xp-small-note">Diretório de fontes externas. Consulte disponibilidade, custos e condições diretamente em cada plataforma.</p></section>
   <section class="xp-shell xp-proof-strip"><div><span>01 / ENGENHARIA</span><h3>Código que você pode inspecionar.</h3>${ext(REPO,'Repositório corporativo')}</div><div><span>02 / GOVERNANÇA</span><h3>Evidências por trás das afirmações.</h3>${ext(REPO+'/blob/main/docs/TRUST_CENTER.md','Conhecer os controles')}</div><div><span>03 / EMPRESA</span><h3>Uma arquitetura. Uma direção.</h3><a class="xp-link" href="/?view=company">Conhecer a XPeX →</a></div></section>${developerCTA()}`;
@@ -115,15 +117,16 @@ export function renderPublicSite(app) {
   const params=new URLSearchParams(location.search);
   let view=params.get('view')||'home';
   if(!params.has('view')&&(params.has('ask')||['#gx','#trust','#investors','#contact','#founder'].includes(location.hash))) view='company';
-  if(params.has('system')||!['home','agents','systems','plugins','developers','radar','company','privacy','terms'].includes(view)) return false;
-  const titles={home:'Agentes especializados. Execução verificável.',agents:'Agentes e capacidades',systems:'Nossos sistemas',plugins:'Plugins para OpenAI',developers:'Desenvolvedores',radar:'Radar da economia de agentes',company:'Empresa e fundador',privacy:'Privacidade',terms:'Termos de uso'};
+  if(params.has('system')||!['home','agents','systems','plugins','developers','radar','company','privacy','terms','omnix'].includes(view)) return false;
+  const titles={omnix:'OMNIX AI — Inteligência e Auditoria para Sistemas Digitais',home:'Agentes especializados. Execução verificável.',agents:'Agentes e capacidades',systems:'Nossos sistemas',plugins:'Plugins para OpenAI',developers:'Desenvolvedores',radar:'Radar da economia de agentes',company:'Empresa e fundador',privacy:'Privacidade',terms:'Termos de uso'};
   document.documentElement.lang='pt-BR';
   document.title=`XPeX Systems AI — ${titles[view]}`;
   document.body.classList.add('xpex-public');
   let content;
-  switch(view){case 'agents':content=agentsPage(params);break;case 'systems':content=pageIntro('ECOSSISTEMA / PORTFÓLIO','Sistemas que se conectam.<br/><em>Identidades que permanecem.</em>','Explore os sete sistemas do portfólio e confira arquitetura, acessos e evidências de cada um.')+`<div class="xp-three">${Object.keys(systemCopy).map(systemCard).join('')}</div>`;break;case 'plugins':content=pluginsPage();break;case 'developers':content=developersPage();break;case 'radar':content=radarPage();break;case 'company':content=companyPage();break;case 'privacy':content=policyPage(true);break;case 'terms':content=policyPage(false);break;default:content=home();}
+  switch(view){case 'omnix':content=omnixPage();break;case 'agents':content=agentsPage(params);break;case 'systems':content=pageIntro('ECOSSISTEMA / PORTFÓLIO','Sistemas que se conectam.<br/><em>Identidades que permanecem.</em>','Explore os sete sistemas do portfólio e confira arquitetura, acessos e evidências de cada um.')+`<div class="xp-three">${Object.keys(systemCopy).map(systemCard).join('')}</div>`;break;case 'plugins':content=pluginsPage();break;case 'developers':content=developersPage();break;case 'radar':content=radarPage();break;case 'company':content=companyPage();break;case 'privacy':content=policyPage(true);break;case 'terms':content=policyPage(false);break;default:content=home();}
   app.innerHTML=`${publicHeader()}<main id="main-content" class="${view==='home'?'xp-home':'xp-shell xp-page'}">${content}</main>${publicFooter()}<div class="xp-toast" role="status" aria-live="polite"></div>`;
   initPublicNavigation();
+  initOmnixRequest(app);
   initGX();initEnterpriseAgentAPI();
   document.querySelectorAll('[data-agent-filter]').forEach(button=>button.addEventListener('click',()=>{
     document.querySelectorAll('[data-agent-filter]').forEach(b=>{b.classList.toggle('active',b===button);b.setAttribute('aria-pressed',String(b===button));});
