@@ -1,0 +1,265 @@
+{
+  "at": "2026-10-28T14:14:09.458Z",
+  "corporate": {
+    "before": [
+      {
+        "command": "npm ci --no-audit --no-fund",
+        "exit": 0,
+        "ms": 23472,
+        "log": "gx020-evidence\\before-retry\\install.log"
+      },
+      {
+        "command": "npm run test:gx",
+        "exit": 0,
+        "ms": 1952,
+        "log": "gx020-evidence\\before-retry\\test-gx.log"
+      },
+      {
+        "command": "npm run test:gx-mcp",
+        "exit": 0,
+        "ms": 1443,
+        "log": "gx020-evidence\\before-retry\\test-gx-mcp.log"
+      },
+      {
+        "command": "npm run test:launch",
+        "exit": 0,
+        "ms": 2340,
+        "log": "gx020-evidence\\before-retry\\test-launch.log"
+      },
+      {
+        "command": "npm run test:enterprise-agent-api",
+        "exit": 0,
+        "ms": 1610,
+        "log": "gx020-evidence\\before-retry\\test-enterprise-agent-api.log"
+      },
+      {
+        "command": "npm run test:ecosystem",
+        "exit": 0,
+        "ms": 1756,
+        "log": "gx020-evidence\\before-retry\\test-ecosystem.log"
+      },
+      {
+        "command": "npm run build",
+        "exit": 0,
+        "ms": 6022,
+        "log": "gx020-evidence\\before-retry\\build.log"
+      }
+    ],
+    "after": [
+      {
+        "command": "npm ci --no-audit --no-fund",
+        "exit": 0,
+        "ms": 14707,
+        "log": "gx020-evidence\\after\\install.log"
+      },
+      {
+        "command": "npm run test:gx",
+        "exit": 0,
+        "ms": 1454,
+        "log": "gx020-evidence\\after\\test-gx.log"
+      },
+      {
+        "command": "npm run test:gx-mcp",
+        "exit": 0,
+        "ms": 1126,
+        "log": "gx020-evidence\\after\\test-gx-mcp.log"
+      },
+      {
+        "command": "npm run test:launch",
+        "exit": 0,
+        "ms": 1151,
+        "log": "gx020-evidence\\after\\test-launch.log"
+      },
+      {
+        "command": "npm run test:enterprise-agent-api",
+        "exit": 0,
+        "ms": 1405,
+        "log": "gx020-evidence\\after\\test-enterprise-agent-api.log"
+      },
+      {
+        "command": "npm run test:ecosystem",
+        "exit": 0,
+        "ms": 1490,
+        "log": "gx020-evidence\\after\\test-ecosystem.log"
+      },
+      {
+        "command": "npm run build",
+        "exit": 0,
+        "ms": 20489,
+        "log": "gx020-evidence\\after\\build.log"
+      },
+      {
+        "command": "npm run test:preservation",
+        "exit": 0,
+        "ms": 3109,
+        "log": "gx020-evidence\\after\\test-preservation.log"
+      }
+    ],
+    "harnessErrors": [
+      {
+        "phase": "first install",
+        "reason": "Executor incorrectly reused esbuild 0.28.1 override for installed esbuild 0.28.2; corrected and frozen installation passed."
+      },
+      {
+        "phase": "before retry",
+        "reason": "Executor requested future test:preservation before its script existed; existing six commands passed. New script passes in after execution."
+      }
+    ]
+  },
+  "engine": {
+    "node": "v24.19.0",
+    "pnpm": "10.28.1",
+    "source": "761be2762b358eadf9305533d5d2f24c1ebbcc9c",
+    "commands": [
+      {
+        "name": "install",
+        "log": "gx019-independent-evidence/gx020-install.log",
+        "observedTail": [
+          "Scope: all 10 workspace projects",
+          "Lockfile is up to date, resolution step is skipped",
+          "Already up to date",
+          "",
+          ". preinstall$ sh -c 'rm -f package-lock.json yarn.lock; case \"$npm_config_user_agent\" in pnpm/*) ;; *) echo \"Use pnpm instead\" >&2; exit 1 ;; esac'",
+          ". preinstall: Done",
+          "Done in 40.8s using pnpm v10.28.1",
+          ""
+        ]
+      },
+      {
+        "name": "lint",
+        "log": "gx019-independent-evidence/gx020-lint.log",
+        "observedTail": [
+          "",
+          "{\"scope\":\"GX-01 critical code and staging\",\"files\":49,\"errorCount\":0}",
+          ""
+        ]
+      },
+      {
+        "name": "types",
+        "log": "gx019-independent-evidence/gx020-types.log",
+        "observedTail": [
+          "",
+          "> workspace@0.0.0 typecheck C:\\Users\\P-c\\Documents\\Codex\\2026-10-19\\gxeon-handoff-mestre-gx-01-audit\\work\\GXEON-AI-gx019",
+          "> pnpm run typecheck:libs && pnpm -r --workspace-concurrency=1 --filter \"./artifacts/**\" --filter \"./scripts\" --if-present run typecheck",
+          "",
+          "$ tsc --build",
+          "Scope: 5 of 10 workspace projects",
+          "$ tsc -p tsconfig.json --noEmit",
+          "$ tsc -p tsconfig.json --noEmit",
+          "$ tsc -p tsconfig.json --noEmit",
+          "$ tsc -p tsconfig.json --noEmit",
+          "$ tsc -p tsconfig.json --noEmit",
+          ""
+        ]
+      },
+      {
+        "name": "tests",
+        "log": "gx019-independent-evidence/gx020-tests.log",
+        "observedTail": [
+          "  ✔ intake → checks → review → report → closed; repeated runs/finalization do not duplicate (1087.4915ms)",
+          "  ✔ tampered evidence is blocked; failed intake rolls back assets and cases (599.1724ms)",
+          "  ✔ identical operator/reviewer tokens cannot approve; provider failures are redacted (76.5746ms)",
+          "  ✔ changes after review invalidate approval; report tampering blocks export (449.2665ms)",
+          "✔ real SQL persistence and HTTP lifecycle, independent review, rollback and evidence integrity (47573.5339ms)",
+          "ℹ tests 24",
+          "ℹ suites 0",
+          "ℹ pass 24",
+          "ℹ fail 0",
+          "ℹ cancelled 0",
+          "ℹ skipped 0",
+          "ℹ todo 0",
+          "ℹ duration_ms 150749.5591",
+          ""
+        ]
+      },
+      {
+        "name": "apiBuild",
+        "log": "gx019-independent-evidence/gx020-apiBuild.log",
+        "observedTail": [
+          "",
+          "> @workspace/api-server@0.0.0 build C:\\Users\\P-c\\Documents\\Codex\\2026-10-19\\gxeon-handoff-mestre-gx-01-audit\\work\\GXEON-AI-gx019\\artifacts\\api-server",
+          "> node ./build.mjs",
+          "",
+          "",
+          "  dist\\index.mjs          3.8mb",
+          "  dist\\audit-pilot.mjs    2.1mb",
+          "  dist\\pino-worker.mjs  153.5kb",
+          "  dist\\pino-file.mjs    142.2kb",
+          "  dist\\pino-pretty.mjs  115.1kb",
+          "  ...and 7 more output files...",
+          "",
+          "Done in 5708ms",
+          ""
+        ]
+      },
+      {
+        "name": "dashboardBuild",
+        "log": "gx019-independent-evidence/gx020-dashboardBuild.log",
+        "observedTail": [
+          "in \"../../node_modules/.pnpm/zod@4.6.6/node_modules/zod/v4/core/regexes.js\" contains an annotation that Rollup cannot interpret due to the position of the comment. The comment will be removed to avoid issues.",
+          "✓ 2049 modules transformed.",
+          "rendering chunks...",
+          "computing gzip size...",
+          "dist/public/index.html                     1.17 kB │ gzip:   0.48 kB",
+          "dist/public/assets/index-DIkMXPt9.css    190.05 kB │ gzip:  28.23 kB",
+          "dist/public/assets/index-xKLwdR92.js   1,198.64 kB │ gzip: 311.23 kB",
+          "",
+          "(!) Some chunks are larger than 500 kB after minification. Consider:",
+          "- Using dynamic import() to code-split the application",
+          "- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks",
+          "- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.",
+          "✓ built in 1m 57s",
+          ""
+        ]
+      }
+    ],
+    "dependencyAudit": {
+      "exit": 1,
+      "status": "FAIL",
+      "counts": {
+        "info": 0,
+        "low": 1,
+        "moderate": 1,
+        "high": 3,
+        "critical": 0
+      },
+      "advisories": [
+        {
+          "module": "decode-uri-component",
+          "severity": "moderate",
+          "title": "decode-uri-component: Denial of service via exponential decoding of malformed percent-encoded input",
+          "url": "https://github.com/advisories/GHSA-vcc3-ghjq-m6fr",
+          "patched": ">=0.5.0"
+        },
+        {
+          "module": "node-forge",
+          "severity": "high",
+          "title": "node-forge RSA PKCS#1 v1.5 signature verification accepts extra nested DigestAlgorithm elements",
+          "url": "https://github.com/advisories/GHSA-86w9-cpqp-85rv",
+          "patched": "<0.0.0"
+        },
+        {
+          "module": "http-cache-semantics",
+          "severity": "high",
+          "title": "http-cache-semantics max-stale handling can disclose cross-user cached responses",
+          "url": "https://github.com/advisories/GHSA-ch52-4w7c-c8xp",
+          "patched": "<0.0.0"
+        },
+        {
+          "module": "zod",
+          "severity": "high",
+          "title": "Zod can exhaust memory while validating oversized constrained collections",
+          "url": "https://github.com/advisories/GHSA-mrhx-c7xc-m3w5",
+          "patched": ">=4.6.6"
+        },
+        {
+          "module": "deepmerge",
+          "severity": "low",
+          "title": "deepmerge mergeObject() allows prototype poisoning of returned objects",
+          "url": "https://github.com/advisories/GHSA-gcqx-w48m-w2h4",
+          "patched": "<0.0.0"
+        }
+      ]
+    }
+  }
+}

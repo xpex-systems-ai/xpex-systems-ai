@@ -1,5 +1,6 @@
 import { brandMark, brandLockup } from './brand.js';
 import { getSystem, systemHref } from './data/system-intelligence.js';
+import { omnixTechnologyReference } from './omnix.js';
 
 function esc(v=''){
   return String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
@@ -30,6 +31,7 @@ export function maybeRenderSystemPage(app){
     <main class="sip-page">
       <section class="sip-hero"><div class="shell sip-hero-inner"><div class="sip-hero-copy">${brandMark(system.slug)}<div class="sip-meta"><span>${esc(system.tier)}</span><span class="${statusClass(system.tone)}">${esc(system.status)}</span></div><h1>${esc(system.name)}</h1><p class="sip-role">${esc(system.role)}</p><p class="sip-tagline">${esc(system.tagline)}</p><p class="sip-summary">${esc(system.summary)}</p><div class="hero-actions">${system.runtime?.url ? `<a class="button primary" href="${esc(system.runtime.url)}" target="_blank" rel="noreferrer">Open runtime ↗</a>` : ''}<a class="button" href="${esc(system.source.url)}" target="_blank" rel="noreferrer">Source ↗</a><a class="button" href="/?ask=${encodeURIComponent('Explain '+system.name+' and show the strongest public evidence.')}#gx">Ask GX</a></div></div><div class="sip-hero-orbit"><div class="sip-orbit-core">${brandMark(system.slug)}</div><i></i><i></i><i></i></div></div></section>
       <section class="shell sip-proofbar"><div><span>Provider</span><b>${esc(system.runtime.provider)}</b></div><div><span>Environment</span><b>${esc(system.runtime.environment)}</b></div><div><span>Runtime state</span><b>${esc(system.runtime.state)}</b></div><div><span>Source</span><b>${esc(system.source.visibility)}</b></div></section>
+      ${system.slug === 'audit-os' ? `<section class="shell sip-block">${omnixTechnologyReference()}</section>` : ''}
       <section class="shell sip-block sip-overview"><div class="sip-story"><p class="kicker">THE PROBLEM</p><h2>${esc(system.problem)}</h2></div><div class="sip-story"><p class="kicker">WHAT XPEX BUILT</p><p>${esc(system.built)}</p></div></section>
       <section class="shell sip-block"><div class="sip-section-head"><div><p class="kicker">ARCHITECTURE</p><h2>System intelligence, not a screenshot collection.</h2></div><p>GX receives the canonical identity, runtime, source, architecture, security boundaries and evidence links as structured knowledge.</p></div><div class="sip-flow">${system.architecture.map((x,i)=>`<div><span>0${i+1}</span><b>${esc(x)}</b></div>`).join('')}</div><div class="sip-chips">${system.tech.map(x=>`<span>${esc(x)}</span>`).join('')}</div></section>
       ${mediaMarkup(system)}

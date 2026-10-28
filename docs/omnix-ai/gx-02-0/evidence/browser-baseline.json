@@ -1,0 +1,181 @@
+{
+  "capturedAt": "2026-10-28T13:56:25.420Z",
+  "production": {
+    "documentWidth": 375,
+    "images": [
+      {
+        "loaded": true,
+        "src": "/media/gxeon-earth.jpg"
+      }
+    ],
+    "links": [
+      {
+        "href": "#main-content",
+        "text": "Ir para o conteúdo"
+      },
+      {
+        "href": "/",
+        "text": "XPeX Systems AI"
+      },
+      {
+        "href": "/?view=agents",
+        "text": "Agentes"
+      },
+      {
+        "href": "/?view=ecosystem",
+        "text": "Ecossistema"
+      },
+      {
+        "href": "/#systems",
+        "text": "Sistemas"
+      },
+      {
+        "href": "/?view=plugins",
+        "text": "Plugins"
+      },
+      {
+        "href": "/?view=developers",
+        "text": "Desenvolvedores"
+      },
+      {
+        "href": "/?view=ecosystem",
+        "text": "Explorar demo →"
+      },
+      {
+        "href": "/?view=agents",
+        "text": "Conhecer os agentes →"
+      },
+      {
+        "href": "/?view=developers",
+        "text": "Conectar via API"
+      },
+      {
+        "href": "/?view=ecosystem",
+        "text": "Abrir o ecossistema →"
+      },
+      {
+        "href": "/?view=ecosystem",
+        "text": "✦ XPeX EnterpriseEcossistema / Visão geral◈ Visão geral⌘ Sistemas◇ Integrações▤ Evidências↗ OperaçõesIntegraçõesConexões e fontes◦ APIs & MCP◦ Comunidades◦ CatálogosEvidênciasOrigem e rastreabilidade◦ Fonte pública◦ Data da consulta◦ Estado verificadoOperaçõesServiços e capacidades◦ Marketplace◦ Wallet Command◦ Revenue OperationsPrévia ilustrativa · Abra a demonstração para consultar as fontes →"
+      },
+      {
+        "href": "/?view=agents",
+        "text": "Ver todos os agentes →"
+      },
+      {
+        "href": "/?view=agents&agent=audit-engineer",
+        "text": "GXEON Audit EngineerEm validaçãoDiagnóstico de APIs e integrações, com evidências e limites claros.↗"
+      },
+      {
+        "href": "/?view=agents&agent=plugin-factory",
+        "text": "XPeX Plugin FactoryDemonstraçãoFerramentas, plugins e MCP. Do blueprint ao pacote para revisão.↗"
+      },
+      {
+        "href": "/?view=agents&agent=api-mcp",
+        "text": "API & MCPDescoberta públicaInterfaces para outros sistemas descobrirem as capacidades da XPeX.↗"
+      },
+      {
+        "href": "/?view=systems",
+        "text": "Ver todos os sistemas →"
+      },
+      {
+        "href": "/?system=studio-ai",
+        "text": "CriaçãoXPeX Studio AIIdeias em sistemas. Do conceito à operação.Conhecer →DemonstraçãoDEMO READY"
+      },
+      {
+        "href": "/?system=systems-command",
+        "text": "Gestão e governançaComando XPeXOrganize sistemas, fontes e evidências em uma arquitetura.Conhecer →StagingSTAGING VERIFIED"
+      },
+      {
+        "href": "/?system=academy",
+        "text": "EducaçãoXPeX AcademyConhecimento para construir o futuro.Conhecer →Validação de acessoRUNTIME CORRELATION"
+      },
+      {
+        "href": "/?view=plugins",
+        "text": "Explorar nossos plugins →"
+      },
+      {
+        "href": "/?system=plugin-factory",
+        "text": "Conhecer a plataforma →"
+      },
+      {
+        "href": "/?view=radar",
+        "text": "Explorar o radar →"
+      },
+      {
+        "href": "https://speedbot.dev/jobs",
+        "text": "Explorar a fonte ↗"
+      },
+      {
+        "href": "https://basedagents.ai/docs/agents",
+        "text": "Explorar a fonte ↗"
+      },
+      {
+        "href": "https://github.com/Scottcjn/Rustchain",
+        "text": "Explorar a fonte ↗"
+      },
+      {
+        "href": "https://github.com/xpex-systems-ai/xpex-systems-ai",
+        "text": "Repositório corporativo ↗"
+      },
+      {
+        "href": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/main/docs/TRUST_CENTER.md",
+        "text": "Conhecer os controles ↗"
+      },
+      {
+        "href": "/?view=company",
+        "text": "Conhecer a XPeX →"
+      },
+      {
+        "href": "/?view=developers",
+        "text": "▤ Documentação →"
+      },
+      {
+        "href": "/api/agent-api",
+        "text": "⌘ API ↗"
+      },
+      {
+        "href": "/api/mcp/enterprise",
+        "text": "◇ MCP ↗"
+      },
+      {
+        "href": "/",
+        "text": "XPeX Systems AI"
+      },
+      {
+        "href": "/?view=company",
+        "text": "Empresa"
+      },
+      {
+        "href": "/?view=radar",
+        "text": "Radar de agentes"
+      },
+      {
+        "href": "/?view=brand",
+        "text": "Identidade visual"
+      },
+      {
+        "href": "/?view=developers",
+        "text": "Documentação"
+      },
+      {
+        "href": "https://www.linkedin.com/in/ceojuniorsena",
+        "text": "LinkedIn ↗"
+      },
+      {
+        "href": "https://github.com/xpex-systems-ai/xpex-systems-ai",
+        "text": "GitHub ↗"
+      },
+      {
+        "href": "/?view=privacy",
+        "text": "Privacidade"
+      },
+      {
+        "href": "/?view=terms",
+        "text": "Termos"
+      }
+    ],
+    "title": "XPeX Systems AI — Agentes especializados. Execução verificável.",
+    "width": 390
+  },
+  "limitation": "IAB viewport DOM changes but screenshot compositor returns stale desktop scaled image; mobile visual verification requires independent headless CI captures."
+}

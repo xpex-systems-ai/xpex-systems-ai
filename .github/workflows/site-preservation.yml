@@ -1,0 +1,49 @@
+name: Institutional Preservation
+on:
+  pull_request:
+    paths: ["site/**", "docs/omnix-ai/gx-02-0/**", ".github/workflows/site-preservation.yml"]
+permissions:
+  contents: read
+  deployments: read
+jobs:
+  preservation:
+    name: Institutional routes, interactions and real visual comparison
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v7.0.0
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+      - name: Frozen install and existing contracts
+        working-directory: site
+        run: |
+          npm ci --no-audit --no-fund
+          npm run test:ecosystem
+          npm run test:gx
+          npm run test:gx-mcp
+          npm run test:launch
+          npm run test:enterprise-agent-api
+          npm run test:preservation
+          npm run build
+      - name: Install pinned Chromium for isolated synthetic regression tests
+        working-directory: site
+        run: npx --no-install playwright install --with-deps chromium
+      - name: Resolve this HEAD's existing Git preview in read-only mode
+        working-directory: site
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          PRESERVATION_HEAD: ${{ github.event.pull_request.head.sha }}
+        run: node tests/browser/resolve-preview.mjs
+      - name: Verify institutional behavior, download, public contracts and live preservation
+        working-directory: site
+        run: npm run test:browser
+      - name: Retain public screenshots and synthetic test receipts
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: gx020-institutional-preservation
+          path: site/preservation-results/
+          retention-days: 14

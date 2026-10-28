@@ -1,0 +1,957 @@
+{
+  "capturedAt": "2026-10-28T13:57:53.382Z",
+  "repositories": [
+    {
+      "name": "xpex-systems-ai",
+      "head": "b4ab3bcba57f93410e372dfb59888131fd287236",
+      "base": "1ab659b8044684f7ad9a93a81399582f19bd6d45",
+      "branch": "codex/omnix-product-online-gx019",
+      "url": "https://github.com/xpex-systems-ai/xpex-systems-ai/pull/45",
+      "draft": true,
+      "merged": false,
+      "status": "",
+      "deployments": [
+        {
+          "id": 7374061734,
+          "sha": "b4ab3bcba57f93410e372dfb59888131fd287236",
+          "environment": "Preview",
+          "production": false,
+          "statuses": [
+            {
+              "state": "success",
+              "url": "https://xpex-systems-aggjdj7jx-xpex-neural.vercel.app",
+              "at": "2026-10-28T00:42:10Z"
+            }
+          ]
+        },
+        {
+          "id": 7373937383,
+          "sha": "bcb815932015982f7d85788f797c84c47b5be431",
+          "environment": "Preview",
+          "production": false,
+          "statuses": [
+            {
+              "state": "success",
+              "url": "https://xpex-systems-niseyondw-xpex-neural.vercel.app",
+              "at": "2026-10-28T00:33:34Z"
+            }
+          ]
+        },
+        {
+          "id": 7347019414,
+          "sha": "e6a52733ffbf40347dec85cf09e112c71a1c8c71",
+          "environment": "Preview",
+          "production": false,
+          "statuses": [
+            {
+              "state": "success",
+              "url": "https://xpex-systems-1l4tbcrkb-xpex-neural.vercel.app",
+              "at": "2026-10-27T00:24:44Z"
+            }
+          ]
+        },
+        {
+          "id": 7343889001,
+          "sha": "e965a85880ab8dc83a2459b37b987b434f0bc9ff",
+          "environment": "Preview",
+          "production": false,
+          "statuses": [
+            {
+              "state": "success",
+              "url": "https://xpex-systems-nr6sfgrax-xpex-neural.vercel.app",
+              "at": "2026-10-26T21:21:07Z"
+            }
+          ]
+        },
+        {
+          "id": 7133668350,
+          "sha": "1ab659b8044684f7ad9a93a81399582f19bd6d45",
+          "environment": "Production",
+          "production": false,
+          "statuses": [
+            {
+              "state": "success",
+              "url": "https://xpex-systems-lz4a8gd9x-xpex-neural.vercel.app",
+              "at": "2026-10-17T02:32:51Z"
+            }
+          ]
+        },
+        {
+          "id": 7133654258,
+          "sha": "a2ace4954151e5e98372a882026a36c824554d3a",
+          "environment": "Preview",
+          "production": false,
+          "statuses": [
+            {
+              "state": "success",
+              "url": "https://xpex-systems-o6s1u6gsb-xpex-neural.vercel.app",
+              "at": "2026-10-17T02:31:28Z"
+            }
+          ]
+        },
+        {
+          "id": 7133632926,
+          "sha": "a0d9a6401dc946d6aaceec055b399dc57934dc9b",
+          "environment": "Preview",
+          "production": false,
+          "statuses": [
+            {
+              "state": "success",
+              "url": "https://xpex-systems-6z3z17zfs-xpex-neural.vercel.app",
+              "at": "2026-10-17T02:29:20Z"
+            }
+          ]
+        },
+        {
+          "id": 7133460814,
+          "sha": "ff0364f224dedc167a8a1211039083c6bc245720",
+          "environment": "Production",
+          "production": false,
+          "statuses": [
+            {
+              "state": "success",
+              "url": "https://xpex-systems-4hraeplox-xpex-neural.vercel.app",
+              "at": "2026-10-17T02:12:06Z"
+            }
+          ]
+        }
+      ],
+      "files": {
+        "site/README.md": "d83a4dd2ebab653efee821bc9f2a25534b80f6db38236dfda8f93d5c369f5517",
+        "site/api/agent-api.js": "4df6091c25b99daf381b73140e5e339bcee2c8c1f2218cfcaa7c18d4449440c4",
+        "site/api/ecosystem.js": "686f0426a81b96877e219cd9e955fb9a799ebe319ffbaaea5561cb832e89e4b9",
+        "site/api/gx.js": "33008d2c3766747e7e4fc648dcb2b41c6e12d0554b599940134cb657a7d05316",
+        "site/api/mcp/enterprise.js": "147deb6172045ede325f115c8923dd118c61bb763348b4fa2a2e17cb162a553f",
+        "site/api/mcp/gx.js": "3c7ad2327a29ba0968607f58444865854beb18ed1155b059a785d1f53f777397",
+        "site/index.html": "c451b4a8722f429d4a51b49d7a7b4cae62392450804911a7c0c8ecdc5cfc3393",
+        "site/package-lock.json": "022e906a8116a1b8ca30b0012cf719e9f09fd427408f4edf88605ac71dd73561",
+        "site/package.json": "8b834869a775ad11f08e57290f68374a3037874c780767cff736ee297ec5bc39",
+        "site/public/.well-known/xpex-agent-api.json": "9b8907276d732e5ccb46335375cfd202cca7016b24ef6a3e83b3051831a055b2",
+        "site/public/brand/v2/academy-lockup.svg": "e7ee9be70ca81e96448de9b45e33b509798ad778dedd182aafaf2df9e89ed93e",
+        "site/public/brand/v2/academy-symbol-ink.svg": "21603123f20411b9eff798e03321980178d9276ccb8e79b16541b32122200937",
+        "site/public/brand/v2/academy-symbol-white.svg": "0750c4fd045c3f49cd6b9401e9a6e4b1aac6bf62a170832c846f70dcaf249476",
+        "site/public/brand/v2/academy-symbol.svg": "b00d6f4d31678ba3c350fb0f702922b9a852ab0b87319a0349d43a27cdf6a4de",
+        "site/public/brand/v2/api-fabric-lockup.svg": "aa402e8ed8d0f94c8f9dea61a1a37f749342b2b357aa37eb07828808f24fb224",
+        "site/public/brand/v2/api-fabric-symbol-ink.svg": "5b165f74dac58ba426273f054c6b2ce82feb2db3adc49f9884a24178f7613815",
+        "site/public/brand/v2/api-fabric-symbol-white.svg": "028664fa2e60adb34c2a9a63d78bcf960261b08fb70dd55f34230bb4cb9d1746",
+        "site/public/brand/v2/api-fabric-symbol.svg": "f666f8c793fdb61fed080c7fc7e792e227064cd474ab48e3c875ef3d695296be",
+        "site/public/brand/v2/audit-os-lockup.svg": "d6a0f55167cf9e265968f8bb0794fce81277e3713989670f4dae7c29d2d9c38c",
+        "site/public/brand/v2/audit-os-symbol-ink.svg": "1e4c3604f5e21c368b9578b2169ca7d317647fcd432abeedf8218a64029a9f87",
+        "site/public/brand/v2/audit-os-symbol-white.svg": "d02b73e6aef0b2e483affdaea924f6e7da1dd82ba72e6e503a9216fc551e78fc",
+        "site/public/brand/v2/audit-os-symbol.svg": "09d1fca71157dc6e900d21097f80f0b11486ec588205701ab23e0928662ab581",
+        "site/public/brand/v2/brand-guide.md": "553373e474ed8990aa30a2490904c1eebbd2450b75fbd9b818ebf4b32e2b4a17",
+        "site/public/brand/v2/favicon.svg": "17572168d5b8f17fcce174ef6b4187efea1317a4dab89ece14ed1f1653fe781f",
+        "site/public/brand/v2/gxeon-lockup.svg": "7d82e699b8c957c3a3a100bf4b46568f16707a371c48706f442300ebbc10d98f",
+        "site/public/brand/v2/gxeon-symbol-ink.svg": "92210685ba5111878e557f12bc0d26cdba357426488c35641d93181a22094562",
+        "site/public/brand/v2/gxeon-symbol-white.svg": "99141aa4ca5f93f7454f842aaacdbf1aa7cc4650943dff3fc21d65a0ac43a45a",
+        "site/public/brand/v2/gxeon-symbol.svg": "addb1a9a9b4e7c892f772bd637de6448dbe5617453536e2317e9f52d3b61c2fb",
+        "site/public/brand/v2/identity-sheet.svg": "0336a1dc702d76ef2a1f0b919094598a2f7f9af1cff163ff308de62054ad0fe3",
+        "site/public/brand/v2/manifest.json": "d9f89ee5f1e9f7b2f83313bf8bbe9278c9f034eca7fa2b86c4e473a6eb040b2e",
+        "site/public/brand/v2/plugin-factory-lockup.svg": "913ff0d351f3c969a3f5cc23960fa482c1d983002d8c407fdf9e6322a68286ca",
+        "site/public/brand/v2/plugin-factory-symbol-ink.svg": "3d759aff99a7be741f646387f856a87ba1f98af07f43fe203662fc07a87b4f86",
+        "site/public/brand/v2/plugin-factory-symbol-white.svg": "871f0674608cbd817185902f20089986bfa9ba41c1306b25c0a963830d59698b",
+        "site/public/brand/v2/plugin-factory-symbol.svg": "74de49b35127ca707e3286390b2dad220be47191bfa07c3ace1090285c99eb60",
+        "site/public/brand/v2/social-preview.png": "07d7eff8d84a38ed4695b8e90e24cc7ab3af7760b86fda1bc64ae693b7507a3f",
+        "site/public/brand/v2/social-preview.svg": "97b3c3a91af8b87d5136095b8bf3be57b1f907a7371249d155f9289e15da83ef",
+        "site/public/brand/v2/studio-ai-lockup.svg": "ceb871769cb6e58968ebfb419025e88ac2ef072f5c5a65d31cabc7dfbd45fc85",
+        "site/public/brand/v2/studio-ai-symbol-ink.svg": "430c6aad48587ae3765fed113fbc5f50409b510a00b54312c935c4637de5e2fa",
+        "site/public/brand/v2/studio-ai-symbol-white.svg": "78394d96a597e2d358ab3abf9f6641cd627924c16871651c7232590f4a526fba",
+        "site/public/brand/v2/studio-ai-symbol.svg": "9652902de4fac000f78f928ff8ea7526aafccde2c64a1b1e2d37e8d4530901f3",
+        "site/public/brand/v2/systems-command-lockup.svg": "be840482b8a6ebd8f50bf572a1bd2541374bf68c8192c8cf81238b5c768ab954",
+        "site/public/brand/v2/systems-command-symbol-ink.svg": "07ce52326716f750f7772e737a99e7bcb40f97d7c093b84ce213eb80c2110459",
+        "site/public/brand/v2/systems-command-symbol-white.svg": "6e0aca3f3a092e5134f60d7753e7f8e1abd3d0f44bcb892700dcae1afd9cbc11",
+        "site/public/brand/v2/systems-command-symbol.svg": "188c14dc753a8b9e43defb2ac3a7b268ef964866bf6db7ecea5ff01abb61c9ee",
+        "site/public/brand/v2/wallet-command-lockup.svg": "130f41f9660420701bc78085791e0926ec0ce0a343a6632888a440930f005bff",
+        "site/public/brand/v2/wallet-command-symbol-ink.svg": "48c0d8b14c0d80325829a5846d374ad31a1cb320729d8ad7a75051a863060467",
+        "site/public/brand/v2/wallet-command-symbol-white.svg": "653be30aeee39c5dd5b9f79e746a327204c3d4f50f1f289106a7bc505d6bfa98",
+        "site/public/brand/v2/wallet-command-symbol.svg": "0e0df35b69f4c367592644a3a50a7f2378d3f33162d1bdd4cf8048f1ef960991",
+        "site/public/brand/v2/xpex-brand-kit-v2.zip": "9877ac4e9fc8ec50e2877a42df06775455b4703c2eb467767fa1097e9d1de11c",
+        "site/public/brand/v2/xpex-lockup.svg": "4bdd881e634ce19ed5a7af092d949b85eee155a3921afdb8854fc8176abaf893",
+        "site/public/brand/v2/xpex-symbol-ink.svg": "6d157de4886026c113ec494acceb75fa5eec92ab3d1d551800a2829151b25599",
+        "site/public/brand/v2/xpex-symbol-white.svg": "8c28dfaa3dfc68a56c05227e2d56674370ebdd531a61f20a0d8b931cf00c0b58",
+        "site/public/brand/v2/xpex-symbol.svg": "52cdbd452ed45ca51d86a9ae4701fa33696e2d9cf75cd646050643631b885c9b",
+        "site/public/brand/v3/xpex-systems-ai-logo.png": "f302c564bcbd0e45a37d8a6b2c170c0f17f1609de322ed997a021daf6e454e82",
+        "site/public/data/enterprise-agent-catalog-v1.json": "d35a6916d605ab6e07da867328d474122af9d31328e8510f502a5f566e214840",
+        "site/public/data/global-launch-radar-v1.json": "e00a49c7276d5b32b7c195b909de1ff7af432f09f5836dcf006fc18894d28c83",
+        "site/public/data/portfolio-observations-v2.json": "79f52d201f9183b3c794362b7ea4bcfde26a867c8826e323133217c9df625a69",
+        "site/public/data/system-intelligence-v1.json": "d31b55fc15fa7a5bb21a2ebf5d96dd478da0f4843f40b4b968ebde9a47ea54d1",
+        "site/public/examples/omnix-synthetic-report.json": "86c87f8f879615afe538d4f567af96a9c26b95b7648dc37ca2bf4214d3b6dff2",
+        "site/public/llms.txt": "6ba19ea750ed6f9610a870f90747b8b886036ad3f140a40ee145b2c09687e766",
+        "site/public/media/gxeon-earth.jpg": "6ad37b5d7314899cf33e73bbe23575df0cb3c6afcad9d6032eae9a43cf6fe316",
+        "site/public/robots.txt": "1cbdbc6504be7abe1267d01d7f565bfcfe5851ba3f6a3754d1d61c8f8a2c6aa3",
+        "site/src/brand.css": "7779e05f8937dadc28b238918dc6ce8ad88c6cc7e6aafde923228b1aa32eb83a",
+        "site/src/brand.js": "a42d8437b7318a490e418da00d342ba1fe18ad0438e2afba469b326dd5f2cafb",
+        "site/src/data/enterprise-offerings.js": "67b80b47c5fa85d2ce84ee7e5cc853c198140e0b01eecbe06160310119955c05",
+        "site/src/data/enterprise-router.js": "b7a9bce86c066abed41b36830de1e6acb711d808098d427e993f1bccf087373a",
+        "site/src/data/gx-evidence.js": "35cf6a81d95d67db440405f67904a2ecf3ec7f157959bb3e36c5b7ecbf3cf4f7",
+        "site/src/data/system-intelligence.js": "883abd670767af541c068429534284f9e6d88a6ea98fce99da9aaeb4249352b9",
+        "site/src/ecosystem.css": "9201704493e2536a6e44521429b776e6171ad26fa755c7844a70e982969fd379",
+        "site/src/ecosystem.js": "dd9ff6b0953c99482363c466d61647a0ba9dc1076fe87cce179694b897e17cf2",
+        "site/src/enterprise-agent-api.css": "94bee6a234e5db48f40f6547be59ae3a26605df9ad62b1cbd8c7d19f1cbba610",
+        "site/src/enterprise-agent-api.js": "39f554df86fa4fe7ad452f9d6f2a257332e77f441c19ac1221fc05b400585b99",
+        "site/src/global-launch.css": "80c50f2491cb0ed93120366bdfaf672b11d3f49a4d7953e5ee44a54b3249cf9f",
+        "site/src/global-launch.js": "ded017b3913848f775b5dcdd4e40d14675a156ddf79f86fd19770154ebceb61c",
+        "site/src/gx.css": "df2436df10ab0d2e4131dea2443d7f2e9cfd93c7115b0496afce0da6371577d2",
+        "site/src/gx.js": "4e8433c503ff228d18755ee5b45398ce0a55c2984cf19f563ef2ea29dfb271e3",
+        "site/src/investor-brief.js": "34cc02c5bf9e9487ee6d52e810d8dd585ddceb4e532fe566b7f0e77ab189fbd3",
+        "site/src/main.js": "c8f18df6d951a647dd8a157c9552c9c8c728085082779419627ff51d3d404b44",
+        "site/src/omnix.css": "a418ebdd237a5c54d969d77c6fc89ae5f42c801641120e64933038dc58728350",
+        "site/src/omnix.js": "31932e846343736113670d4dc9baf6ace51930baf40ae09a3ef6b74205eb5f21",
+        "site/src/public-site.css": "ce1c65f8af5026480faaf59ed550187ced68c5f23aef87baf27ccc8ef2e81384",
+        "site/src/public-site.js": "75821af945d48ee7f4e45d3f0ce40df5eb92edd2e175ede180fe51633f6252f0",
+        "site/src/styles.css": "7a8108dfe08c5d81b5518c4711ee1b9a2441add3506233b960c54dc57fb8e602",
+        "site/src/system-page.css": "4f54c8f94e70bc9c32084cc11d883311e92a1bf70ebc6387c49060d22512a0e7",
+        "site/src/system-page.js": "192ba05b17c938dcf16fffa0a5d1d76cbdd480cc02b9fad31fccb839b01efdd5",
+        "site/tests/ecosystem.test.mjs": "3f1c5df53e54e5511f2e0bd906dee96ff5b25eb352201cd9b316c40085ecfeb6",
+        "site/tests/enterprise-agent-api.test.mjs": "ba504b6bff5d198d429a253b49598c100cac1eb7e85b808ae1a8e6413b3c7371",
+        "site/tests/global-launch.test.mjs": "43774db914ff060b7f8a7eb6df9b209a4ba181ff9d0bdcd9ba5602f000a7e1bb",
+        "site/tests/gx-evidence.test.mjs": "3a92140e9fb7f084f0756e9300ec71ab4bc56ede9e8ebba2a519f389a47b63d9",
+        "site/tests/gx-mcp.test.mjs": "c225c2e764fd402ac372a19335b90d7dcea5c7d09b4894b5fb93ba80938c395e",
+        "site/tests/system-intelligence.test.mjs": "63d8f675e999881f00efc624ada7c7ac05b8935e30fea3081ba2110e5cb8c37a"
+      },
+      "canonicalFiles": {
+        "site/README.md": "5befd913ad65aa1e0c4a538083af911784b74327e118f78059155e50de3911de",
+        "site/api/agent-api.js": "249c40ad4ae5d5d5c6b35be4d27704d537a3a7f87c18ecf3d241637e54eb2dca",
+        "site/api/ecosystem.js": "1a9e101e27afe4f7e15ac74875f06d11d910407df0f188cae811dad90983975a",
+        "site/api/gx.js": "974a94a08117263f4005b7384729c8ba7e78ef9a781a4f8c54079da9a16aab42",
+        "site/api/mcp/enterprise.js": "b258750c99048c7606203c4337584aa8d876660375e8cc156605ecab115ad634",
+        "site/api/mcp/gx.js": "aeb593621febc25310e3ea7f1dcca47eac53bd75b85440a70fc653d6ce294be6",
+        "site/index.html": "7a2bacab3a0984a27ed95639d7a00391e92ccd74e20db3310f116766cb9a23cd",
+        "site/package-lock.json": "5473b419ec93edfb807e07b252dd2b0d67f7501312089dc10356cb0d8a37290c",
+        "site/package.json": "9caee33777d02978e7b01d80f0d85bd2a6a8e54b6de6404beaeb8110d56522a2",
+        "site/public/.well-known/xpex-agent-api.json": "7a3581417ef78acfb0f696c200d9df42bd1539f3d0122aa47d0f6469bd9c06e1",
+        "site/public/brand/v2/academy-lockup.svg": "a91b90ebfc902d3203a3c6b3cfc770a078ff31bdb71aac03b970288397729463",
+        "site/public/brand/v2/academy-symbol-ink.svg": "44741d4101c6d75418ef863ec24c3f0a269c93502cd0b2665db2a85aeaeff62e",
+        "site/public/brand/v2/academy-symbol-white.svg": "a15f227ba63d19bef0c53c73a858ae33222a0a63e1cf7e1e7d221e4377084045",
+        "site/public/brand/v2/academy-symbol.svg": "ba9cf219c1b5f0ee4b591cc9724df38462ebbfb711aa80fbc22cb7d8e79f41f6",
+        "site/public/brand/v2/api-fabric-lockup.svg": "c8f3440d303c1746f51b8883b07caa48fc83e6385de547aea10fb81895633bd3",
+        "site/public/brand/v2/api-fabric-symbol-ink.svg": "072fd0f457aa49471ce37c182125a0af61ff4e87e5b74c20eb8299d3e00c00e4",
+        "site/public/brand/v2/api-fabric-symbol-white.svg": "4a60afda879b2f6bc05eabdfcd5c337fc8fb6781177186bf88e0538696e763f0",
+        "site/public/brand/v2/api-fabric-symbol.svg": "382b5abd6849c0db566c295403beb4a3601fe6efbb26da71fab6766b97c51f2b",
+        "site/public/brand/v2/audit-os-lockup.svg": "cea0eb4b40e0f02951e23e78bdc98946cab61932ebea44a409aede2a84cf34a4",
+        "site/public/brand/v2/audit-os-symbol-ink.svg": "4e1e1c0a83e1f0a14d8ab3b3304bcf4a90abe94bde2bef8b46e167c6c46e2941",
+        "site/public/brand/v2/audit-os-symbol-white.svg": "14c48b60d844aa95bb4fecc7d13193add9073afc47753f376db3ac0acf139c2e",
+        "site/public/brand/v2/audit-os-symbol.svg": "d83b815140709b0e50ad0d81017701096da1f04c73d7c994295de54f9ae50c10",
+        "site/public/brand/v2/brand-guide.md": "59afcc7a953e552d072f3a293e356dcdc417d12a762bb57011c2b6775801edf9",
+        "site/public/brand/v2/favicon.svg": "f6d1e824267c02e6db54d4335119a66a81bffad75edc46512ee545d26ab350b5",
+        "site/public/brand/v2/gxeon-lockup.svg": "bf69261478391d1eab1fc2d20f52fe5e130ce1befb9e0f6d5ab2820def3fbfef",
+        "site/public/brand/v2/gxeon-symbol-ink.svg": "46dac4f6387451b4387ff28eb7dc3b2759c82d4189f9595a679a4922388b20b9",
+        "site/public/brand/v2/gxeon-symbol-white.svg": "e8cadf50a3513e8e1973dad850b04dc26b5b5b5544b1ebcadbbfb3e8c72ec40a",
+        "site/public/brand/v2/gxeon-symbol.svg": "c4097bffa835aa75d2d15a1f06e101e321b86f6ca89a8004587fe86cf97c4235",
+        "site/public/brand/v2/identity-sheet.svg": "24811b97cf852f7cf269683bc91b95919e4d0dae3f57902517635ad29af89a72",
+        "site/public/brand/v2/manifest.json": "dd0fb9b72db6d5b9368baed0f2876a8008e0011d0c3fda2cd3975d66c7471d90",
+        "site/public/brand/v2/plugin-factory-lockup.svg": "1414eec3b65b0aed69b9e3660278732f4e8365b2bf5c6a0b11510e64e3a4b686",
+        "site/public/brand/v2/plugin-factory-symbol-ink.svg": "52637c968f53bf034576406f46e3b9af8aca43f3dae5e5728bb47bb16af6d14c",
+        "site/public/brand/v2/plugin-factory-symbol-white.svg": "c48d447d50c2a7fb533bf1a241ebfa77f140080ae83072ded7c48c91b0bb3a9a",
+        "site/public/brand/v2/plugin-factory-symbol.svg": "a2a6192de1609424b2e4380e2614c1e00ef1112edc64af134fce030b920f1674",
+        "site/public/brand/v2/social-preview.png": "07d7eff8d84a38ed4695b8e90e24cc7ab3af7760b86fda1bc64ae693b7507a3f",
+        "site/public/brand/v2/social-preview.svg": "d1b8023d3a646aa0a4cdd7c89d42ef32ff8dc5a29f790906ab6e11f6dfb94249",
+        "site/public/brand/v2/studio-ai-lockup.svg": "b92c292f974c5a7818eee0186993eb523855f2ae705006a81877b0682d4b37ea",
+        "site/public/brand/v2/studio-ai-symbol-ink.svg": "c83ec7de9e2cf31bddb25f5c6ae85ba4389f17e8a8c62f868cb506e6e0e19860",
+        "site/public/brand/v2/studio-ai-symbol-white.svg": "11e30bb4456e800bcf72e4cddffe8f5cb2aa0b18aba22f82645c28a0c2eb56f0",
+        "site/public/brand/v2/studio-ai-symbol.svg": "84d864ccf6d602bee75e4b3c527a1ae485476de790d33b0c45c28206621dfdca",
+        "site/public/brand/v2/systems-command-lockup.svg": "70ab9c303695cd9151663dc9d6cb55346171e3df78267d83f4d75cac5cdfb2c6",
+        "site/public/brand/v2/systems-command-symbol-ink.svg": "955845ca8eac3ae5a9598466d59dc6fd1db9ab067529a7c4f122e487512d65f2",
+        "site/public/brand/v2/systems-command-symbol-white.svg": "e52275e8bd7ebbb89244b446913a5c5079683276ea0b2a40bc53abdf4a773855",
+        "site/public/brand/v2/systems-command-symbol.svg": "b4322042b131081f7fab9db5a572c57d18b854d8257a8afc1ecb8d15be476967",
+        "site/public/brand/v2/wallet-command-lockup.svg": "103c983869fe610e548f77b5da79e0e9b03b677b35db886bfe194e4e819e3830",
+        "site/public/brand/v2/wallet-command-symbol-ink.svg": "5451713957fb97010b4a7dfaf55f91415fdde3124a9e5771635ba296e2cde2ed",
+        "site/public/brand/v2/wallet-command-symbol-white.svg": "ab5caeb3a264de45c4a46990896a7cd99b45445ba1bf310bfa850d5115806f16",
+        "site/public/brand/v2/wallet-command-symbol.svg": "081b742df47365d3ce44f6944aa7b54c8179d7cb43fa22fea3fd9b419a6d64cb",
+        "site/public/brand/v2/xpex-brand-kit-v2.zip": "9877ac4e9fc8ec50e2877a42df06775455b4703c2eb467767fa1097e9d1de11c",
+        "site/public/brand/v2/xpex-lockup.svg": "f74616d440557630c3e7285072519b0be7fcbe2cf806bdbfebf306509d619723",
+        "site/public/brand/v2/xpex-symbol-ink.svg": "4e392c617d2fd5e37c2b2565499a90b2ca8bf1b62e8081bb7a66061ced5e37bc",
+        "site/public/brand/v2/xpex-symbol-white.svg": "12f21c5a3ac669df23d0fb5c974d8dbb3da37f168d308435fb5dce1f79d49a49",
+        "site/public/brand/v2/xpex-symbol.svg": "5ef85b6f22be67d630c74f455aa7f3b70ee6773fec5c6f73ab24755e9ca9d6a3",
+        "site/public/brand/v3/xpex-systems-ai-logo.png": "f302c564bcbd0e45a37d8a6b2c170c0f17f1609de322ed997a021daf6e454e82",
+        "site/public/data/enterprise-agent-catalog-v1.json": "accd09975318afdf7f3171eace7a3cc91ceac8a6362ceb649b6abac80a220045",
+        "site/public/data/global-launch-radar-v1.json": "0c95a3fde1236f8fd9d91cc0843b636e03274c6469f9c39377f65e179a1a54e5",
+        "site/public/data/portfolio-observations-v2.json": "a1190373c8bd71223a7a1aee29596bf72dfa7162ea949a60a44010868abab114",
+        "site/public/data/system-intelligence-v1.json": "1e1a743fe683f9eb657f502a28bcc418fa3e0baeff18f7deef87be76c7252fbb",
+        "site/public/examples/omnix-synthetic-report.json": "86c87f8f879615afe538d4f567af96a9c26b95b7648dc37ca2bf4214d3b6dff2",
+        "site/public/llms.txt": "2de134150343d68731dc80cd5dc8598df91739b5c51b71884221ef0eb56a7356",
+        "site/public/media/gxeon-earth.jpg": "6ad37b5d7314899cf33e73bbe23575df0cb3c6afcad9d6032eae9a43cf6fe316",
+        "site/public/robots.txt": "16ceb5ee3e0dc13aa9adf31a3ebbe45a1d965b8c2b9f72eaf84e5911e140ed95",
+        "site/src/brand.css": "e99464ffcb5bd6fea1610a2b9c798a0b3f1f7c6fb1e8beafd012606502ad2de1",
+        "site/src/brand.js": "7e67f7b811d89450b0cd2ca64b53847ce608cbff5f1655cfffbaf259a1b11471",
+        "site/src/data/enterprise-offerings.js": "d579629b1ae394bd54363ff3a00a4e5b07e3f18a0c014caeddbe03ae6ab7437f",
+        "site/src/data/enterprise-router.js": "c24b6a6a522de4c27b913177f64afedc173c1fe15ed249a245e0d1b3237e01e8",
+        "site/src/data/gx-evidence.js": "15d6301a5269a917c7120eeddf98cb505f36f463b9ae01d18a1af9d6af3b2a65",
+        "site/src/data/system-intelligence.js": "dd33949e7016288d60f4fe69e29652c6d68954dabddb49b7ba9c999a88418dde",
+        "site/src/ecosystem.css": "77ba8d981502452926642599870579a8168ccb9d3098816a6a8c12a9d90fb865",
+        "site/src/ecosystem.js": "b81b1fc70dde5348cf5cb435d9117509f8e74b9ce3f35f80cd89bc84321a4b49",
+        "site/src/enterprise-agent-api.css": "94bee6a234e5db48f40f6547be59ae3a26605df9ad62b1cbd8c7d19f1cbba610",
+        "site/src/enterprise-agent-api.js": "03ae404fe5aad4073bffed7e1abeab03a460ba4e905462db779bd6755b523542",
+        "site/src/global-launch.css": "80c50f2491cb0ed93120366bdfaf672b11d3f49a4d7953e5ee44a54b3249cf9f",
+        "site/src/global-launch.js": "46ba89cd2b65b81ce86be6c245aeebb9ad7c0ce651d30b62f969658660874f49",
+        "site/src/gx.css": "535ad4ae50e93b740e25c004e5b7050a0af5673ec761c661fc807dcf34086526",
+        "site/src/gx.js": "4a309b4a283453eb31bc375ad80d41a0f36b3d34dbae7a2f5676188150c4998e",
+        "site/src/investor-brief.js": "e07a5d72b11285b12cd7c3574c04f912a59b7d860d09d0057cb9d516452bfc8f",
+        "site/src/main.js": "c2b924c51984e478b3e07151e52bf99c5e05b717b3ffd71227c3db73fdf2a9f5",
+        "site/src/omnix.css": "a418ebdd237a5c54d969d77c6fc89ae5f42c801641120e64933038dc58728350",
+        "site/src/omnix.js": "31932e846343736113670d4dc9baf6ace51930baf40ae09a3ef6b74205eb5f21",
+        "site/src/public-site.css": "4ee2add9635170ba05a32b4e824f6bbf646770c0c7cfad86af4072f05a555cf2",
+        "site/src/public-site.js": "41b4c67a8143b1eeb6aa3dcd1dc655cfbd1ec3857a12244232d3da3f5c5b6488",
+        "site/src/styles.css": "1288fec4b6bf067f550530d455913ca4e7b2489588d49584576b7a2100e71d89",
+        "site/src/system-page.css": "3564f84511cfeb5b1529dc4e6f08bf02f55d97b2b46950812b9c0b6b6ab18d7d",
+        "site/src/system-page.js": "3bd9d70c25df05e8c92f5ce00c23a4e232976600f044b2a71887cd6a1dd77768",
+        "site/tests/ecosystem.test.mjs": "8b7583650252053bbbbe4ee9f61882ee584f59517b273a9f73c4027b304d0763",
+        "site/tests/enterprise-agent-api.test.mjs": "21e4616813f9b2f0575f4fac468bf054e4d6f0f57009bfb4d31ae1264720d32a",
+        "site/tests/global-launch.test.mjs": "5f3e608d6c74b7fe2f15b2735e32e6e923946088194af21d73351a60c619324c",
+        "site/tests/gx-evidence.test.mjs": "3c62f36ad6e3fe9ebceb8754b1ad4e344df713958aad531a8de20262a9ae30cb",
+        "site/tests/gx-mcp.test.mjs": "528354d343697dd2ed10634207f2c7ea61ebcd05460318ad85fc82202e78d7a5",
+        "site/tests/system-intelligence.test.mjs": "ffe59417167aab1d71e01d93f3d5524ada1d3ded04de34d8e3e7d2b8986ed5dd"
+      }
+    },
+    {
+      "name": "GXEON-AI",
+      "head": "761be2762b358eadf9305533d5d2f24c1ebbcc9c",
+      "base": "dbc29fff9a2c55487f85a83db597f41c493af7a8",
+      "branch": "codex/gxeon-audit-os-v1-gx01",
+      "url": "https://github.com/xpex-systems-ai/GXEON-AI/pull/456",
+      "draft": true,
+      "merged": false,
+      "status": "M .github/PULL_REQUEST_TEMPLATE.md",
+      "deployments": [
+        {
+          "id": 7374312793,
+          "sha": "761be2762b358eadf9305533d5d2f24c1ebbcc9c",
+          "environment": "Preview – gxeon-audit-os",
+          "production": false,
+          "statuses": [
+            {
+              "state": "success",
+              "url": "https://gxeon-audit-fktafjt8i-gxeon.vercel.app",
+              "at": "2026-10-28T00:59:35Z"
+            }
+          ]
+        },
+        {
+          "id": 7374207296,
+          "sha": "30e0b00a219eb4c45d4fd57064b92f1165b1c739",
+          "environment": "Preview – gxeon-audit-os",
+          "production": false,
+          "statuses": [
+            {
+              "state": "success",
+              "url": "https://gxeon-audit-6n4rdgvk1-gxeon.vercel.app",
+              "at": "2026-10-28T00:52:10Z"
+            }
+          ]
+        },
+        {
+          "id": 7373939439,
+          "sha": "670449a2d384164cedc8e0449343219fa6b3a4ba",
+          "environment": "Preview – gxeon-audit-os",
+          "production": false,
+          "statuses": [
+            {
+              "state": "success",
+              "url": "https://gxeon-audit-omps4v5ln-gxeon.vercel.app",
+              "at": "2026-10-28T00:33:43Z"
+            }
+          ]
+        },
+        {
+          "id": 7347131167,
+          "sha": "4ccc84c917db8dc3b0bef67e8b703b7461397637",
+          "environment": "Preview – gxeon-audit-os",
+          "production": false,
+          "statuses": [
+            {
+              "state": "success",
+              "url": "https://gxeon-audit-3pea7jwxj-gxeon.vercel.app",
+              "at": "2026-10-27T00:32:26Z"
+            }
+          ]
+        },
+        {
+          "id": 7347072098,
+          "sha": "34fc177d2a51a2a3b158633a390690b1e82e6423",
+          "environment": "Preview – gxeon-audit-os",
+          "production": false,
+          "statuses": [
+            {
+              "state": "success",
+              "url": "https://gxeon-audit-mrj2172y9-gxeon.vercel.app",
+              "at": "2026-10-27T00:28:25Z"
+            }
+          ]
+        },
+        {
+          "id": 7346980117,
+          "sha": "30bdd5cd3b52697f10c0181ab019b79d8282b579",
+          "environment": "Preview – gxeon-audit-os",
+          "production": false,
+          "statuses": [
+            {
+              "state": "success",
+              "url": "https://gxeon-audit-q0hbpye0u-gxeon.vercel.app",
+              "at": "2026-10-27T00:21:58Z"
+            }
+          ]
+        },
+        {
+          "id": 7346949688,
+          "sha": "5432b1d3a8423e81b1be3a915edb828de64f70e0",
+          "environment": "Preview – gxeon-audit-os",
+          "production": false,
+          "statuses": [
+            {
+              "state": "success",
+              "url": "https://gxeon-audit-jmsrawexq-gxeon.vercel.app",
+              "at": "2026-10-27T00:19:47Z"
+            }
+          ]
+        }
+      ],
+      "files": {}
+    }
+  ],
+  "publicResponses": [
+    {
+      "url": "https://xpex-systems-ai.vercel.app/api/agent-api",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "sha256": "ea3021b9b0e3718a02fe8c221974326006ef52e2be0efc6087a2720796445d74",
+      "body": {
+        "schema_version": "1.0",
+        "name": "XPeX Enterprise Agent API",
+        "description": "Machine-readable enterprise discovery and solution-matching interface for XPeX Systems AI.",
+        "policy": "Evidence First",
+        "purpose": "Help companies, accelerators, agent platforms and enterprise AI teams discover which XPeX systems, platforms and agent capabilities match a real need.",
+        "endpoints": {
+          "rest": "https://xpex-systems-ai.vercel.app/api/agent-api",
+          "mcp": "https://xpex-systems-ai.vercel.app/api/mcp/enterprise",
+          "knowledge": "https://xpex-systems-ai.vercel.app/data/system-intelligence-v1.json",
+          "launch_radar": "https://xpex-systems-ai.vercel.app/data/global-launch-radar-v1.json"
+        },
+        "offerings": [
+          {
+            "id": "company-intelligence",
+            "name": "XPeX Company Intelligence",
+            "category": "enterprise-ai",
+            "maturity": "PILOT READY"
+          },
+          {
+            "id": "agentic-engineering",
+            "name": "XPeX Agentic Engineering",
+            "category": "agents",
+            "maturity": "DEMO + PILOT"
+          },
+          {
+            "id": "digital-worker-composition",
+            "name": "Neural Workforce / Digital Worker Composition",
+            "category": "neural-workforce",
+            "maturity": "DESIGN + WORKING BUILDING BLOCKS"
+          },
+          {
+            "id": "enterprise-audit",
+            "name": "GXEON Evidence Audit",
+            "category": "audit",
+            "maturity": "DEMO READY"
+          },
+          {
+            "id": "agent-distribution",
+            "name": "XPeX Agent & API Distribution",
+            "category": "distribution",
+            "maturity": "ADMISSION / PILOT"
+          },
+          {
+            "id": "ai-learning",
+            "name": "XPeX Applied AI Learning",
+            "category": "education",
+            "maturity": "RUNTIME CORRELATION"
+          },
+          {
+            "id": "ai-creation-control-plane",
+            "name": "XPeX AI Creation Control Plane",
+            "category": "creative-ai",
+            "maturity": "DEMO READY"
+          }
+        ],
+        "contact": {
+          "company": "XPeX Systems AI",
+          "website": "https://xpex-systems-ai.vercel.app",
+          "founder": "Junior Sena",
+          "founder_role": "Applied AI / Agentic Systems Engineer · Founder",
+          "linkedin": "https://www.linkedin.com/in/ceojuniorsena",
+          "github": "https://github.com/xpex-systems-ai/xpex-systems-ai",
+          "case_pack": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/main/docs/FLAGSHIP_CASES.md",
+          "application_pack": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/main/docs/ACCELERATOR_APPLICATION_PACK.md"
+        },
+        "privacy": "Stateless public discovery endpoint. Do not send secrets, credentials, private customer data or regulated data.",
+        "action_boundary": "The public Enterprise Agent API does not execute production changes, financial actions, outreach campaigns or account mutations."
+      }
+    },
+    {
+      "url": "https://xpex-systems-ai.vercel.app/api/mcp/enterprise",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "sha256": "864cab978ec4e310cfc1bb9378e84e46a9f1bddbd677604341776708f812503e",
+      "body": {
+        "name": "xpex-enterprise-agent-api",
+        "version": "1.0.0",
+        "status": "ready",
+        "transport": "streamable-http-json",
+        "scope": "enterprise-discovery-read-only",
+        "protocolVersion": "2025-03-26",
+        "tools": 8,
+        "offerings": 7,
+        "endpoint": "https://xpex-systems-ai.vercel.app/api/mcp/enterprise"
+      }
+    },
+    {
+      "url": "https://xpex-systems-ai.vercel.app/api/mcp/gx",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "sha256": "06e73eba5cac76aacdca0cde604e5ae19e35420efcbea8b5a757e8ec62146f32",
+      "body": {
+        "name": "xpex-gx-neural-copilot",
+        "version": "1.0.0",
+        "status": "ready",
+        "transport": "streamable-http-json",
+        "scope": "public-evidence-read-only",
+        "protocolVersion": "2025-03-26",
+        "tools": 11,
+        "knowledge": {
+          "systems": 7,
+          "materialLineages": 20,
+          "evidenceNodes": 20
+        },
+        "endpoint": "https://xpex-systems-ai.vercel.app/api/mcp/gx"
+      }
+    },
+    {
+      "url": "https://xpex-systems-ai.vercel.app/api/gx",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "sha256": "964a5318340ffab154ec331f28db38623d5cca15e020e8ea197232e712f8df82",
+      "body": {
+        "name": "GX Evidence Concierge",
+        "status": "ready",
+        "scope": "public-evidence-only",
+        "aiEnabled": false,
+        "model": null,
+        "evidenceItems": 20,
+        "knowledgeSystems": 7,
+        "materialLineages": 20
+      }
+    },
+    {
+      "url": "https://xpex-systems-ai.vercel.app/api/ecosystem",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "sha256": "496ab43fe87686ec28c032f4a4ba20913644ad1eca15f9d774500ff20a89a2c5",
+      "body": {
+        "schemaVersion": "1.0",
+        "mode": "PUBLIC_READ_ONLY",
+        "observedAt": "2026-10-28T13:58:17.945Z",
+        "status": "AVAILABLE",
+        "modules": {
+          "integrations": {
+            "status": "AVAILABLE",
+            "observedAt": "2026-10-28T13:58:20.348Z",
+            "coinbase": {
+              "status": "SETUP_REQUIRED",
+              "connectorVerifiedAt": "2026-10-09T05:52:02.385Z",
+              "balance": null,
+              "usdc": null,
+              "account": null,
+              "network": null,
+              "base": "PLANNED",
+              "mode": "READ_ONLY"
+            },
+            "command": {
+              "status": "STAGING_AVAILABLE",
+              "dataSync": "AUTHENTICATED_SESSION_REQUIRED"
+            },
+            "source": "https://gxeon-wallet-command-center.vercel.app/api/integration-status?view=ecosystem"
+          },
+          "revenue": {
+            "status": "AVAILABLE",
+            "observedAt": "2026-10-28T13:58:20.542Z",
+            "sources": [
+              {
+                "id": "unified",
+                "status": "STALE",
+                "observedAt": "2026-10-28T08:56:06.078Z",
+                "count": 11
+              },
+              {
+                "id": "basebounty",
+                "status": "AVAILABLE",
+                "observedAt": "2026-10-28T13:54:34.763Z",
+                "count": 0
+              }
+            ],
+            "ledger": "AUTHENTICATED_RECONCILIATION_REQUIRED",
+            "financials": {
+              "potential": null,
+              "contracted": null,
+              "pending": null,
+              "confirmed": null
+            },
+            "agenticTrade": "ACCOUNT_AND_PUBLICATION_NOT_VERIFIED",
+            "source": "https://gxeon-wallet-command-center.vercel.app/api/integration-status?view=revenue-operations"
+          },
+          "services": {
+            "status": "AVAILABLE",
+            "observedAt": "2026-10-28T13:58:17.945Z",
+            "count": 4,
+            "catalog": [
+              {
+                "id": "gxeon_json_validate_v1",
+                "name": "GXEON JSON Validate",
+                "unit": "payload",
+                "credits": 2,
+                "status": "CATALOG_LISTED",
+                "execution": "NOT_TESTED"
+              },
+              {
+                "id": "gxeon_csv_audit_v1",
+                "name": "GXEON CSV Audit",
+                "unit": "file",
+                "credits": 2,
+                "status": "CATALOG_LISTED",
+                "execution": "NOT_TESTED"
+              },
+              {
+                "id": "gxeon_url_verify_v1",
+                "name": "GXEON URL Verify",
+                "unit": "url",
+                "credits": 5,
+                "status": "CATALOG_LISTED",
+                "execution": "NOT_TESTED"
+              },
+              {
+                "id": "gxeon_api_health_v1",
+                "name": "GXEON API Health",
+                "unit": "endpoint",
+                "credits": 10,
+                "status": "CATALOG_LISTED",
+                "execution": "NOT_TESTED"
+              }
+            ],
+            "source": "https://gxeon-wallet-command-center.vercel.app/api/v1/services"
+          }
+        },
+        "truth": "Public metadata only. Catalog presence is not execution; connection is not balance; radar is not revenue."
+      }
+    },
+    {
+      "url": "https://xpex-systems-ai.vercel.app/.well-known/xpex-agent-api.json",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "sha256": "7a3581417ef78acfb0f696c200d9df42bd1539f3d0122aa47d0f6469bd9c06e1",
+      "body": {
+        "schema_version": "1.0",
+        "name": "XPeX Enterprise Agent API",
+        "company": "XPeX Systems AI",
+        "description": "Machine-readable discovery, solution matching and enterprise handoff for XPeX systems, platforms, agents, plugins and MCP capabilities.",
+        "policy": "Evidence First",
+        "endpoints": {
+          "rest": "https://xpex-systems-ai.vercel.app/api/agent-api",
+          "mcp": "https://xpex-systems-ai.vercel.app/api/mcp/enterprise",
+          "gx_mcp": "https://xpex-systems-ai.vercel.app/api/mcp/gx",
+          "system_intelligence": "https://xpex-systems-ai.vercel.app/data/system-intelligence-v1.json",
+          "launch_radar": "https://xpex-systems-ai.vercel.app/data/global-launch-radar-v1.json"
+        },
+        "discovery_intents": [
+          "enterprise AI systems",
+          "AI agents",
+          "MCP integration",
+          "plugin integration",
+          "digital workers",
+          "company intelligence",
+          "evidence audit",
+          "agent marketplace",
+          "AI workforce",
+          "applied AI learning",
+          "AI creation workflows"
+        ],
+        "contact": {
+          "website": "https://xpex-systems-ai.vercel.app",
+          "linkedin": "https://www.linkedin.com/in/ceojuniorsena",
+          "github": "https://github.com/xpex-systems-ai/xpex-systems-ai"
+        },
+        "privacy": "Public, stateless, read-only discovery. Never send credentials, secrets, private customer data or regulated data.",
+        "truth_boundary": "Discovery or fit output does not imply a customer, partner, investor, procurement, pilot or commercial relationship."
+      }
+    },
+    {
+      "url": "https://xpex-systems-aggjdj7jx-xpex-neural.vercel.app/api/agent-api",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "sha256": "ea3021b9b0e3718a02fe8c221974326006ef52e2be0efc6087a2720796445d74",
+      "body": {
+        "schema_version": "1.0",
+        "name": "XPeX Enterprise Agent API",
+        "description": "Machine-readable enterprise discovery and solution-matching interface for XPeX Systems AI.",
+        "policy": "Evidence First",
+        "purpose": "Help companies, accelerators, agent platforms and enterprise AI teams discover which XPeX systems, platforms and agent capabilities match a real need.",
+        "endpoints": {
+          "rest": "https://xpex-systems-ai.vercel.app/api/agent-api",
+          "mcp": "https://xpex-systems-ai.vercel.app/api/mcp/enterprise",
+          "knowledge": "https://xpex-systems-ai.vercel.app/data/system-intelligence-v1.json",
+          "launch_radar": "https://xpex-systems-ai.vercel.app/data/global-launch-radar-v1.json"
+        },
+        "offerings": [
+          {
+            "id": "company-intelligence",
+            "name": "XPeX Company Intelligence",
+            "category": "enterprise-ai",
+            "maturity": "PILOT READY"
+          },
+          {
+            "id": "agentic-engineering",
+            "name": "XPeX Agentic Engineering",
+            "category": "agents",
+            "maturity": "DEMO + PILOT"
+          },
+          {
+            "id": "digital-worker-composition",
+            "name": "Neural Workforce / Digital Worker Composition",
+            "category": "neural-workforce",
+            "maturity": "DESIGN + WORKING BUILDING BLOCKS"
+          },
+          {
+            "id": "enterprise-audit",
+            "name": "GXEON Evidence Audit",
+            "category": "audit",
+            "maturity": "DEMO READY"
+          },
+          {
+            "id": "agent-distribution",
+            "name": "XPeX Agent & API Distribution",
+            "category": "distribution",
+            "maturity": "ADMISSION / PILOT"
+          },
+          {
+            "id": "ai-learning",
+            "name": "XPeX Applied AI Learning",
+            "category": "education",
+            "maturity": "RUNTIME CORRELATION"
+          },
+          {
+            "id": "ai-creation-control-plane",
+            "name": "XPeX AI Creation Control Plane",
+            "category": "creative-ai",
+            "maturity": "DEMO READY"
+          }
+        ],
+        "contact": {
+          "company": "XPeX Systems AI",
+          "website": "https://xpex-systems-ai.vercel.app",
+          "founder": "Junior Sena",
+          "founder_role": "Applied AI / Agentic Systems Engineer · Founder",
+          "linkedin": "https://www.linkedin.com/in/ceojuniorsena",
+          "github": "https://github.com/xpex-systems-ai/xpex-systems-ai",
+          "case_pack": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/main/docs/FLAGSHIP_CASES.md",
+          "application_pack": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/main/docs/ACCELERATOR_APPLICATION_PACK.md"
+        },
+        "privacy": "Stateless public discovery endpoint. Do not send secrets, credentials, private customer data or regulated data.",
+        "action_boundary": "The public Enterprise Agent API does not execute production changes, financial actions, outreach campaigns or account mutations."
+      }
+    },
+    {
+      "url": "https://xpex-systems-aggjdj7jx-xpex-neural.vercel.app/api/mcp/enterprise",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "sha256": "864cab978ec4e310cfc1bb9378e84e46a9f1bddbd677604341776708f812503e",
+      "body": {
+        "name": "xpex-enterprise-agent-api",
+        "version": "1.0.0",
+        "status": "ready",
+        "transport": "streamable-http-json",
+        "scope": "enterprise-discovery-read-only",
+        "protocolVersion": "2025-03-26",
+        "tools": 8,
+        "offerings": 7,
+        "endpoint": "https://xpex-systems-ai.vercel.app/api/mcp/enterprise"
+      }
+    },
+    {
+      "url": "https://xpex-systems-aggjdj7jx-xpex-neural.vercel.app/api/mcp/gx",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "sha256": "06e73eba5cac76aacdca0cde604e5ae19e35420efcbea8b5a757e8ec62146f32",
+      "body": {
+        "name": "xpex-gx-neural-copilot",
+        "version": "1.0.0",
+        "status": "ready",
+        "transport": "streamable-http-json",
+        "scope": "public-evidence-read-only",
+        "protocolVersion": "2025-03-26",
+        "tools": 11,
+        "knowledge": {
+          "systems": 7,
+          "materialLineages": 20,
+          "evidenceNodes": 20
+        },
+        "endpoint": "https://xpex-systems-ai.vercel.app/api/mcp/gx"
+      }
+    },
+    {
+      "url": "https://xpex-systems-aggjdj7jx-xpex-neural.vercel.app/api/gx",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "sha256": "964a5318340ffab154ec331f28db38623d5cca15e020e8ea197232e712f8df82",
+      "body": {
+        "name": "GX Evidence Concierge",
+        "status": "ready",
+        "scope": "public-evidence-only",
+        "aiEnabled": false,
+        "model": null,
+        "evidenceItems": 20,
+        "knowledgeSystems": 7,
+        "materialLineages": 20
+      }
+    },
+    {
+      "url": "https://xpex-systems-aggjdj7jx-xpex-neural.vercel.app/api/ecosystem",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "sha256": "ce5eeea6b748a8cb296c093e282b3b29431bace9c2676c34230abb23fc341628",
+      "body": {
+        "schemaVersion": "1.0",
+        "mode": "PUBLIC_READ_ONLY",
+        "observedAt": "2026-10-28T13:58:24.171Z",
+        "status": "AVAILABLE",
+        "modules": {
+          "integrations": {
+            "status": "AVAILABLE",
+            "observedAt": "2026-10-28T13:58:24.424Z",
+            "coinbase": {
+              "status": "SETUP_REQUIRED",
+              "connectorVerifiedAt": "2026-10-09T05:52:02.385Z",
+              "balance": null,
+              "usdc": null,
+              "account": null,
+              "network": null,
+              "base": "PLANNED",
+              "mode": "READ_ONLY"
+            },
+            "command": {
+              "status": "STAGING_AVAILABLE",
+              "dataSync": "AUTHENTICATED_SESSION_REQUIRED"
+            },
+            "source": "https://gxeon-wallet-command-center.vercel.app/api/integration-status?view=ecosystem"
+          },
+          "revenue": {
+            "status": "AVAILABLE",
+            "observedAt": "2026-10-28T13:58:24.720Z",
+            "sources": [
+              {
+                "id": "unified",
+                "status": "STALE",
+                "observedAt": "2026-10-28T08:56:06.078Z",
+                "count": 11
+              },
+              {
+                "id": "basebounty",
+                "status": "AVAILABLE",
+                "observedAt": "2026-10-28T13:54:34.763Z",
+                "count": 0
+              }
+            ],
+            "ledger": "AUTHENTICATED_RECONCILIATION_REQUIRED",
+            "financials": {
+              "potential": null,
+              "contracted": null,
+              "pending": null,
+              "confirmed": null
+            },
+            "agenticTrade": "ACCOUNT_AND_PUBLICATION_NOT_VERIFIED",
+            "source": "https://gxeon-wallet-command-center.vercel.app/api/integration-status?view=revenue-operations"
+          },
+          "services": {
+            "status": "AVAILABLE",
+            "observedAt": "2026-10-28T13:58:24.171Z",
+            "count": 4,
+            "catalog": [
+              {
+                "id": "gxeon_json_validate_v1",
+                "name": "GXEON JSON Validate",
+                "unit": "payload",
+                "credits": 2,
+                "status": "CATALOG_LISTED",
+                "execution": "NOT_TESTED"
+              },
+              {
+                "id": "gxeon_csv_audit_v1",
+                "name": "GXEON CSV Audit",
+                "unit": "file",
+                "credits": 2,
+                "status": "CATALOG_LISTED",
+                "execution": "NOT_TESTED"
+              },
+              {
+                "id": "gxeon_url_verify_v1",
+                "name": "GXEON URL Verify",
+                "unit": "url",
+                "credits": 5,
+                "status": "CATALOG_LISTED",
+                "execution": "NOT_TESTED"
+              },
+              {
+                "id": "gxeon_api_health_v1",
+                "name": "GXEON API Health",
+                "unit": "endpoint",
+                "credits": 10,
+                "status": "CATALOG_LISTED",
+                "execution": "NOT_TESTED"
+              }
+            ],
+            "source": "https://gxeon-wallet-command-center.vercel.app/api/v1/services"
+          }
+        },
+        "truth": "Public metadata only. Catalog presence is not execution; connection is not balance; radar is not revenue."
+      }
+    },
+    {
+      "url": "https://xpex-systems-aggjdj7jx-xpex-neural.vercel.app/.well-known/xpex-agent-api.json",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "sha256": "7a3581417ef78acfb0f696c200d9df42bd1539f3d0122aa47d0f6469bd9c06e1",
+      "body": {
+        "schema_version": "1.0",
+        "name": "XPeX Enterprise Agent API",
+        "company": "XPeX Systems AI",
+        "description": "Machine-readable discovery, solution matching and enterprise handoff for XPeX systems, platforms, agents, plugins and MCP capabilities.",
+        "policy": "Evidence First",
+        "endpoints": {
+          "rest": "https://xpex-systems-ai.vercel.app/api/agent-api",
+          "mcp": "https://xpex-systems-ai.vercel.app/api/mcp/enterprise",
+          "gx_mcp": "https://xpex-systems-ai.vercel.app/api/mcp/gx",
+          "system_intelligence": "https://xpex-systems-ai.vercel.app/data/system-intelligence-v1.json",
+          "launch_radar": "https://xpex-systems-ai.vercel.app/data/global-launch-radar-v1.json"
+        },
+        "discovery_intents": [
+          "enterprise AI systems",
+          "AI agents",
+          "MCP integration",
+          "plugin integration",
+          "digital workers",
+          "company intelligence",
+          "evidence audit",
+          "agent marketplace",
+          "AI workforce",
+          "applied AI learning",
+          "AI creation workflows"
+        ],
+        "contact": {
+          "website": "https://xpex-systems-ai.vercel.app",
+          "linkedin": "https://www.linkedin.com/in/ceojuniorsena",
+          "github": "https://github.com/xpex-systems-ai/xpex-systems-ai"
+        },
+        "privacy": "Public, stateless, read-only discovery. Never send credentials, secrets, private customer data or regulated data.",
+        "truth_boundary": "Discovery or fit output does not imply a customer, partner, investor, procurement, pilot or commercial relationship."
+      }
+    }
+  ],
+  "hashSemantics": {
+    "files": "raw Windows working-tree bytes frozen before edit",
+    "canonicalFiles": "Git blob bytes at initial HEAD; normalize CRLF to LF for text when comparing working trees"
+  }
+}
