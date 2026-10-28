@@ -14,6 +14,14 @@ const ext = (href, label, cls='xp-link') => `<a class="${cls}" href="${esc(href)
 const pill = text => `<span class="xp-pill">${text}</span>`;
 const icon = id => `<span class="xp-icon">${brandMark(id)}</span>`;
 
+// Historical root anchors select existing views on initial load. A same-document
+// hash change must take that same route when its target is in another view.
+window.addEventListener('hashchange',()=>{
+  const params=new URLSearchParams(location.search);
+  const entries=['#top','#agents','#systems','#ecosystem','#gx','#trust','#investors','#contact','#founder','#agent-api'];
+  if(!params.has('view')&&!params.has('system')&&entries.includes(location.hash)&&!document.getElementById(location.hash.slice(1))) location.reload();
+});
+
 export function publicHeader() {
   return `<a class="xp-skip" href="#main-content">Ir para o conteúdo</a><header class="xp-header xp-shell">
     <a class="xp-brand" href="/" aria-label="XPeX Systems AI — início"><svg viewBox="430 80 700 510" aria-hidden="true"><image href="${LOGO}" width="1536" height="1024"/></svg><span><b>XPeX</b> Systems AI</span></a>

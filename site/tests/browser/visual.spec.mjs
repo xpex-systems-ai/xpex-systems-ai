@@ -28,6 +28,24 @@ async function dom(page){
     return {title:document.title,heading:document.querySelector('h1')?.textContent,text:norm(main.textContent),links:[...document.querySelectorAll('a[href]')].filter(a=>!a.closest('[data-omnix-context]')).map(a=>({href:a.getAttribute('href'),text:norm(a.textContent)})),width:innerWidth,documentWidth:document.documentElement.scrollWidth};
   },dynamic);
 }
+
+async function layout(locator){
+  return locator.evaluate(root=>{
+    const box=root.getBoundingClientRect(),norm=s=>s.replace(/\s+/g,' ').trim();
+    const styles=['fontFamily','fontSize','fontWeight','lineHeight','color','backgroundColor','padding','gap','borderRadius'];
+    return [root,...root.querySelectorAll('h2,h3,a,p,.xp-card,svg,img')].map(el=>{
+      const r=el.getBoundingClientRect(),s=getComputedStyle(el);
+      return {tag:el.tagName,text:norm(el.textContent),href:el.getAttribute('href'),styles:Object.fromEntries(styles.map(k=>[k,s[k]])),bounds:{x:r.x-box.x,y:r.y-box.y,width:r.width,height:r.height}};
+    });
+  });
+}
+function sameLayout(before,after,label){
+  expect(after.length,label+' element count').toBe(before.length);
+  for(let i=0;i<before.length;i++){
+    const {bounds:a,...contentA}=before[i],{bounds:b,...contentB}=after[i];expect(contentB,label+' content/styles '+i).toEqual(contentA);
+    for(const axis of ['x','y','width','height'])expect(Math.abs(a[axis]-b[axis]),label+' relative '+axis+' '+i).toBeLessThanOrEqual(1);
+  }
+}
 test.skip(!preview,'Remote visual gate needs the exact verified public Git preview URL; local rendering is not remote proof.');
 
 test('live public REST and MCP contracts remain JSON and retain discovery counts',async({request},info)=>{
@@ -74,7 +92,7 @@ test('all required live pages retain baseline content and links',async({browser}
 for(const width of widths)test(`real production / initial preview / candidate at ${width}px`,async({browser},info)=>{
   test.setTimeout(150_000);
   const context=await browser.newContext({viewport:{width,height:900},deviceScaleFactor:1,reducedMotion:'reduce'});
-  const page=await context.newPage(),records=[],errors=[];page.on('pageerror',e=>errors.push(e.message));
+  const page=await context.newPage(),records=[],errors=[],productionLayouts=new Map();page.on('pageerror',e=>errors.push(e.message));
   const regionSets={home:['.xp-hero','#agents','#systems','.xp-footer'],agents:['.xp-catalog-grid'],systems:['.xp-page>.xp-three'],ecosystem:['#integration-channels']};
   try{
     for(const [stage,origin]of [['production',production],['initialPreview',initial],['candidate',preview]])for(const [name,route]of [['home','/'],['agents','/?view=agents'],['systems','/?view=systems'],['ecosystem','/?view=ecosystem'],['omnix','/?view=omnix']]){
@@ -88,13 +106,20 @@ for(const width of widths)test(`real production / initial preview / candidate at
       if(name==='home')await page.locator('.xp-header').screenshot({path:info.outputPath(`${stage}-navbar-${width}.png`),animations:'disabled'});
       for(const [index,selector]of(regionSets[name]??[]).entries()){
         const locator=page.locator(selector);
+        const shiftedHome=name==='home'&&index>0;
+        if(shiftedHome){
+          const fingerprint=await layout(locator);
+          if(stage==='production')productionLayouts.set(selector,fingerprint);else sameLayout(productionLayouts.get(selector),fingerprint,stage+' '+selector);
+          records.push({stage,region:selector,layout:fingerprint,comparison:'Production content, styles and relative geometry (<=1 CSS pixel); initial-preview to candidate pixel equality. Home insertion deliberately changes absolute page origin.'});
+        }
         // Additive sections shift later regions by fractional CSS pixels. Align only
         // the capture origin, preserving all dimensions, content, fonts and styles.
         const alignment=await locator.evaluate(el=>{const r=el.getBoundingClientRect(),y=r.top+scrollY,x=r.left+scrollX;const previous=el.style.transform;const dx=Math.round(x)-x,dy=Math.round(y)-y;el.style.transform=`translate(${dx}px,${dy}px)`;return {previous,dx,dy};});
         let region;try{region=await locator.screenshot({path:info.outputPath(`${stage}-${name}-region-${index}-${width}.png`),animations:'disabled'});}finally{await locator.evaluate((el,previous)=>{el.style.transform=previous;},alignment.previous);}
         records.push({stage,region:selector,captureOriginAlignment:{dx:alignment.dx,dy:alignment.dy},width});
-        const key=`${name}-region-${index}-${width}.png`;
-        if(stage==='production'){
+        const key=`${shiftedHome?'initial-preview-':''}${name}-region-${index}-${width}.png`;
+        if(shiftedHome&&stage==='production')continue;
+        if(stage===(shiftedHome?'initialPreview':'production')){
           const target=info.snapshotPath(key);await fs.mkdir(path.dirname(target),{recursive:true});await fs.writeFile(target,region);
         }else expect.soft(region,`${stage} preserved ${selector} at ${width}`).toMatchSnapshot(key,{threshold:0.2,maxDiffPixelRatio:0.001});
       }
