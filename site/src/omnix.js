@@ -15,11 +15,37 @@ export function omnixPage() {
     ['03 / EVIDÊNCIA','Um relatório rastreável','Casos, achados, evidências, revisão e exportação JSON. Hashes ajudam a conferir integridade, sem certificação ou assinatura independente.']
   ].map(([n,title,copy])=>`<article class="xp-card"><p class="xp-kicker">${n}</p><h3>${title}</h3><p>${copy}</p></article>`).join('')}</div></section>
   <section class="xp-section ox-process"><p class="xp-kicker">DO ESCOPO AO RELATÓRIO</p><h2>Uma auditoria, em quatro passos.</h2><ol>${['Entre com uma identidade de teste autorizada.','Envie a configuração sintética e confirme o escopo.','Execute as verificações e consulte os achados persistidos.','Solicite revisão de teste distinta e exporte o relatório após o fechamento.'].map(x=>`<li>${x}</li>`).join('')}</ol></section>
-  <section id="omnix-example" class="xp-section"><div class="xp-section-head"><div><p class="xp-kicker">EXEMPLO SINTÉTICO / NÃO É UMA AUDITORIA DESTA SESSÃO</p><h2>Veja o tipo de resultado.</h2></div></div><div class="xp-card"><h3>Fallback SPA antes da API</h3><p>O arquivo de exemplo declara um catch-all que envia caminhos para index.html. Esse padrão pode interceptar /api quando não há rewrite anterior reconhecido.</p><pre class="ox-code"><code>{"rewrites":[{"source":"/(.*)","destination":"/index.html"}]}</code></pre><p>Recomendação delimitada: revisar a ordem das regras e verificar o backend separadamente. Headers entregues, disponibilidade, qualidade da CSP e infraestrutura não foram medidos por esses checks.</p><a class="xp-button" href="/examples/omnix-synthetic-report.json" download="omnix-exemplo-sintetico.json">Baixar exemplo JSON ↓</a><p class="xp-small-note">Arquivo congelado de teste, idêntico ao exemplo do portal. Não representa uma auditoria desta sessão, revisão humana ou disponibilidade da API online.</p></div></section>
+  <section id="omnix-example" class="xp-section"><div class="xp-section-head"><div><p class="xp-kicker">EXEMPLO SINTÉTICO / NÃO É UMA AUDITORIA DESTA SESSÃO</p><h2>Veja o tipo de resultado.</h2></div></div><div class="xp-card"><h3>Fallback SPA antes da API</h3><p>O arquivo de exemplo declara um catch-all que envia caminhos para index.html. Esse padrão pode interceptar /api quando não há rewrite anterior reconhecido.</p><pre class="ox-code"><code>{"rewrites":[{"source":"/(.*)","destination":"/index.html"}]}</code></pre><p>Recomendação delimitada: revisar a ordem das regras e verificar o backend separadamente. Headers entregues, disponibilidade, qualidade da CSP e infraestrutura não foram medidos por esses checks.</p><button type="button" class="xp-button" data-omnix-example>Preparar exemplo JSON ↓</button><a class="xp-button" data-omnix-example-download download="omnix-exemplo-sintetico.json" hidden>Baixar exemplo JSON ↓</a><p role="status" aria-live="polite" data-omnix-example-status></p><p class="xp-small-note">Arquivo congelado de teste, idêntico ao exemplo do portal. Não representa uma auditoria desta sessão, revisão humana ou disponibilidade da API online.</p></div></section>
   <section class="xp-section xp-two-paths"><article class="xp-card"><p class="xp-kicker">DADOS E LIMITES</p><h2>Controle desde a entrada.</h2><p>A prévia usa identidades sintéticas e não abre cadastro empresarial. Envie somente vercel.json de teste sem tokens, senhas, dados pessoais ou conteúdo de clientes. Limites: 16.000 caracteres de configuração e corpo de requisição de até32KB.</p><p>O portal informa falhas, estado do backend e revisão. Um exemplo estático nunca substitui resultados persistidos. Acesso real, retenção, revogação, suporte e contrato dependem da aprovação de abertura.</p><a class="xp-link" href="/?view=privacy">Política institucional de privacidade →</a></article><article class="xp-card"><p class="xp-kicker">O PRÓXIMO HORIZONTE</p><h2>Universal na visão.<br/>Delimitado hoje.</h2><p>Sites, APIs, infraestrutura, redes sociais, e-commerce, agentes, Mercado Livre e MCP fazem parte do roadmap. Não estão disponíveis como verificações do MVP atual.</p><p>Não oferecemos pentest, auditoria universal, certificação de segurança ou garantia de resultados comerciais. A prévia integrada com login, banco e exportação online aguarda a definição do servidor autorizado. O exemplo nesta página permanece disponível.</p></article></section>
   <section id="omnix-request" class="xp-section"><p class="xp-kicker">PRIMEIRA OFERTA CANDIDATA</p><h2>Configuration Integrity Audit.</h2><p>Um arquivo sanitizado, dois checks, achados, evidências e relatório. Escopo, aceite, prazo, revisão, suporte e pagamento precisam ser acordados antes da execução comercial. Preço sob aprovação; nenhuma cobrança automática.</p><div class="xp-card"><h3>Prepare uma conversa empresarial.</h3><p>Este formulário prepara um rascunho somente no seu navegador. Não envia um pedido, cria contrato ou registra pagamento.</p><form data-omnix-request><label for="omnix-kind">Objetivo</label><select id="omnix-kind" name="kind"><option>Solicitar auditoria</option><option>Solicitar proposta empresarial</option></select><label for="omnix-scope">Escopo pretendido, sem dados privados</label><textarea id="omnix-scope" name="scope" maxlength="1000" required placeholder="Descreva apenas a necessidade geral; não cole configurações ou credenciais."></textarea><button class="xp-button xp-gold" type="submit">Preparar rascunho →</button></form><pre data-omnix-draft class="ox-code" hidden></pre><p data-omnix-receipt role="status" aria-live="polite"></p><a class="xp-link" href="/?view=company#contact">Consultar o canal institucional →</a></div><div class="ox-commercial">${['SOLICITAÇÃO RECEBIDA — somente após confirmação da equipe','PROPOSTA PENDENTE — escopo e condições em análise','CONTRATO ACORDADO — após aceite das partes','PAGAMENTO CONFIRMADO — somente com comprovante'].map(t=>`<p>${t}</p>`).join('')}</div></section>`;
 }
 export function initOmnixRequest(root = document) {
+  const prepare = root.querySelector('[data-omnix-example]');
+  if (prepare) {
+    const link = root.querySelector('[data-omnix-example-download]');
+    const receipt = root.querySelector('[data-omnix-example-status]');
+    let url;
+    prepare.addEventListener('click', async () => {
+      if (prepare.disabled) return;
+      prepare.disabled = true;
+      link.hidden = true;
+      if (url) { URL.revokeObjectURL(url); url = undefined; }
+      receipt.textContent = 'Conferindo o exemplo congelado de teste…';
+      try {
+        const response = await fetch('/examples/omnix-synthetic-report.json', {cache:'no-store',signal:AbortSignal.timeout(10000)});
+        if (!response.ok || !response.headers.get('content-type')?.includes('application/json')) throw new Error('EXAMPLE_UNAVAILABLE');
+        const text = await response.text();
+        if (new TextEncoder().encode(text).length > 16384 || JSON.parse(text)?.report?.testData !== true) throw new Error('EXAMPLE_INVALID');
+        url = URL.createObjectURL(new Blob([text], {type:'application/json'}));
+        link.href = url;
+        link.hidden = false;
+        receipt.textContent = 'Exemplo de teste preparado. Use o link para baixar; não é uma auditoria desta sessão.';
+      } catch {
+        link.removeAttribute('href');
+        receipt.textContent = 'O exemplo não pôde ser preparado. Tente novamente; nenhum resultado de auditoria é declarado.';
+      } finally { prepare.disabled = false; }
+    });
+  }
   const form = root.querySelector('[data-omnix-request]');
   if (!form) return;
   form.addEventListener('submit', event => {
