@@ -4,16 +4,16 @@ Baseline frozen on 2026-10-28 before application changes. Production: `1ab659b80
 
 | Asset / behavior | Before | Increment / after verification |
 |---|---|---|
-| Robot, Earth, orbital SVG, logo, typography, colors, home layout | Production + initial preview present | Source assets/styles unchanged; real Chromium comparisons pending CI |
+| Robot, Earth, orbital SVG, logo, typography, colors, home layout | Production + initial preview present | PASS: source assets/styles unchanged; real Chromium pixel/layout comparison |
 | Seven canonical slugs, 20 material lineages | Present | Byte preservation + invariant tests PASS |
-| Four agent catalog entries and availability | Present | All retained; only Audit Engineer detail gains product reference; browser check pending |
+| Four agent catalog entries and availability | Present | PASS: catalog/details/filters retained; only Audit Engineer detail gains product reference |
 | Audit OS technical profile, evidence shelf, manifest | Present | All retained; contextual product section added |
 | Existing OMNIX home entry/menu/product/sample/draft | Present in initial preview | Reused; reciprocal technical link and Powered by wording added |
-| REST, enterprise MCP, GX MCP | Six public GETs return JSON in both baseline environments | Handlers unchanged; 8 enterprise tools / 11 GX tools / 7 offers enforced; deployed candidate pending |
+| REST, enterprise MCP, GX MCP | Six public GETs return JSON in both baseline environments | PASS: unchanged handlers; 24 live observations verify 8 enterprise tools / 11 GX tools / 7 offers |
 | Enterprise observatory, integrations, Revenue Operations, evidence | Present | Unchanged; actual read-only refresh tested in browser CI |
-| Fifteen required pages, footer, navigation, filters, URL copy, GX query | Present in source / baseline | Versioned browser regressions added; execution pending |
+| Fifteen required pages, footer, navigation, filters, URL copy, GX query | Present in source / baseline | PASS: 32 browser regressions; 15 live page preservation; same-document historical anchor repair |
 | Motion / reduced motion | Existing implementation | Unchanged; pause + media behavior regression added |
-| Visual widths | IAB DOM responds but mobile screenshot compositor is stale | CI captures actual production, immutable initial preview and current Git preview at 320,375,390,768,900,1024,1150,1440px |
+| Visual widths | IAB DOM responds but mobile screenshot compositor is stale | PASS: 304 real CI captures at 320,375,390,768,900,1024,1150,1440px; nav also tested at 901px |
 
 Visual comparisons normalize animation and live iframe content. Unchanged hero, agents, systems, integrations and footer regions are compared against production pixels in the same Chromium job. Full pages and navbars remain separately available for review; the intended OMNIX additions are not disguised as identical full-page pixels. PNG dimensions and DOM viewport widths are asserted. Dynamic ecosystem projections are retained as live data and excluded from static text comparisons. This does not certify accessibility or availability of every third-party destination.
 
@@ -24,6 +24,8 @@ Additional source inspection found old `#contact`, `#trust`, `#founder`, `#inves
 Second CI (`6248fe8`, [run 40705876405](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/runs/40705876405)): 23 passed / 9 failed. All required live page text/links, live JSON/MCP contracts and previous functional regressions passed. The remaining anchor test exposed same-document hash navigation: initial loading selected the correct view, but changing a root hash did not reload that view. A bounded hash listener now reloads only recognized historical entries whose target is absent and whose URL has no explicit view/system.
 
 Pixel origin alignment alone did not remove production-to-initial-preview subpixel raster differences in the three home regions below the earlier OMNIX insertion. Both preview candidates had identical differences. The final oracle therefore combines production content, exact computed styles and relative geometry (within one CSS pixel) for those home regions, plus strict initial-preview-to-candidate pixels. Production-to-candidate pixels still guard the hero and the dedicated agents/systems/integrations regions, using the original 0.001 pixel-difference ratio. Actual unmodified full-page screenshots for all three stages remain retained. This deliberately avoids claiming identical absolute pixels for a page with an additional section; it does not waive removed content, changed layout, missing links, changed styles or a candidate-only visual regression.
+
+Final functional execution `096e96a`: **32 passed / 0 failed / 0 skipped / 0 flaky**, [run 40707284226](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/runs/40707284226). [Artifact and per-image hash manifest](evidence/preservation-proof.json) includes 304 actual PNGs and eight viewport receipts. Full artifact: [screenshots + DOM/API/results](https://github.com/xpex-systems-ai/xpex-systems-ai/actions/runs/40707284226/artifacts/12824656547), retained by GitHub for 14 days; a complete local ZIP is retained independently. Representative real CI captures: [390px hero](evidence/hero-390.png), [1440px hero](evidence/hero-1440.png). The browser console sample is [recorded separately](evidence/browser-console.json); CI also asserts no page errors. External iframe content, all third-party destination availability and full accessibility conformance are outside the visual PASS scope.
 
 Reproduce: `cd site && npm ci --no-audit --no-fund && npm run test:preservation && npm run build`. Browser: `npx --no-install playwright install --with-deps chromium`, then `npm run test:browser`. Without `PRESERVATION_PREVIEW_URL`, live comparison tests explicitly skip and cannot close P09. CI resolves that URL from actual deployment records for the tested PR HEAD; it never guesses or removes protection.
 

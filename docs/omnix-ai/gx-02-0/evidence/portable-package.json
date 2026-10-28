@@ -1,0 +1,12 @@
+{
+  "generatedAt": "2026-10-28T14:29:08.864Z",
+  "sourceCommit": "23b981d3fd30d73e8351965d2762afca3aa07c45",
+  "zip": "C:\\Users\\P-c\\Documents\\Codex\\2026-10-19\\gxeon-handoff-mestre-gx-01-audit\\work\\gx019-independent-delivery\\23b981d3fd30\\omnix-private-23b981d3fd30.zip",
+  "bytes": 844187,
+  "sha256": "ad420f0d1cbde703707b619088f0eeb0869b8280122dc24bad370993151e620f",
+  "files": 12,
+  "privateFixtureValuesChecked": 88,
+  "testedCompiledArtifactsMatchProfile": "native8",
+  "credentialsIncluded": false,
+  "publicDeploymentPerformed": false
+}
