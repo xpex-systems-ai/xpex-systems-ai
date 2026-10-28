@@ -111,7 +111,7 @@ test('commercial receiver is actually unavailable by default: disabled synthetic
   const response=await statusResponse;expect(response.status()).toBe(503);expect(response.headers()['content-type']).toContain('application/json');
   const status=await response.json();expect(status.syntheticOnly).toBe(true);expect(status.customerDataAllowed).toBe(false);
   await expect(page.locator('[data-omnix-commercial-state]')).toContainText('Receptor indisponível ou não configurado');
-  await expect(page.locator('[data-omnix-commercial-fields]')).toBeDisabled();
+  await expect(page.locator('[data-omnix-commercial-fields]')).toHaveAttribute('disabled','');
   for(const selector of ['[name="name"]','[name="company"]','[name="email"]','[name="problem"]','[name="consent"]','button[type="submit"]']){
     await expect(page.locator('[data-omnix-commercial] '+selector)).toBeDisabled();
   }
