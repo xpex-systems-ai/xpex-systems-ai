@@ -4,7 +4,7 @@ import {emitOmnixPublicEvent} from '../src/omnix-events.js';
 
 test('public OMNIX event contract cannot forward draft fields or claim receipt/payment',()=>{
   const target = new EventTarget(), events=[];
-  target.addEventListener('omnix:public-event',event=>events.push(event.detail));
+  target.addEventListener('omnix:public-event',event=>{assert.equal(event.bubbles,true);events.push(event.detail);});
   assert.equal(emitOmnixPublicEvent(target,'product_visit'),true);
   assert.equal(emitOmnixPublicEvent(target,'commercial_click'),true);
   assert.equal(emitOmnixPublicEvent(target,'request_started'),true);

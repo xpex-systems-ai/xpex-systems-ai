@@ -6,6 +6,6 @@ export function emitOmnixPublicEvent(target, name) {
   if (!names.has(name)) return false;
   const detail = Object.freeze({name, product: 'omnix', stage: 'preview',
     outcome: name === 'request_started' ? 'local_draft' : 'interaction'});
-  target.dispatchEvent(new CustomEvent('omnix:public-event', {detail}));
+  target.dispatchEvent(new CustomEvent('omnix:public-event', {detail, bubbles: true}));
   return true;
 }
