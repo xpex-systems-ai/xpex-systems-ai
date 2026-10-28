@@ -8,6 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "test:preservation": "node --test tests/preservation.test.mjs tests/omnix-events.test.mjs",
+    "test:omnix-commercial": "node --test tests/omnix-commercial.test.mjs",
     "test:browser": "playwright test",
     "test:ecosystem": "node --test tests/ecosystem.test.mjs && node --check src/ecosystem.js",
     "test:gx": "node tests/gx-evidence.test.mjs && node tests/system-intelligence.test.mjs && node --check api/gx.js && node --check src/system-page.js",

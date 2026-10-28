@@ -103,6 +103,28 @@ test('orbital animation, pause and reduced motion retain their existing behavior
   expect(await page.locator('.xp-orbit').first().evaluate(el=>getComputedStyle(el).animationName)).toBe('none');
 });
 
+test('commercial receiver is actually unavailable by default: disabled synthetic form, no fabricated receipt or POST',async({page})=>{
+  const posted=[];page.on('request',request=>{if(request.method()==='POST'&&request.url().endsWith('/api/omnix-request'))posted.push(request.url());});
+  await page.setViewportSize({width:375,height:900});
+  const statusResponse=page.waitForResponse(response=>response.url().endsWith('/api/omnix-request'));
+  await page.goto('/?view=omnix');
+  const response=await statusResponse;expect(response.status()).toBe(503);expect(response.headers()['content-type']).toContain('application/json');
+  const status=await response.json();expect(status.syntheticOnly).toBe(true);expect(status.customerDataAllowed).toBe(false);
+  await expect(page.locator('[data-omnix-commercial-state]')).toContainText('Receptor indisponível ou não configurado');
+  await expect(page.locator('[data-omnix-commercial-fields]')).toBeDisabled();
+  for(const selector of ['[name="name"]','[name="company"]','[name="email"]','[name="problem"]','[name="consent"]','button[type="submit"]']){
+    await expect(page.locator('[data-omnix-commercial] '+selector)).toBeDisabled();
+  }
+  await expect(page.locator('[data-omnix-commercial] input[type="file"]')).toHaveCount(0);
+  await expect(page.locator('[data-omnix-commercial-receipt]')).toHaveText('');
+  await expect(page.locator('[data-omnix-commercial-section] a[href="/?view=company#contact"]')).toBeVisible();
+  await page.locator('[data-omnix-commercial]').evaluate(form=>form.dispatchEvent(new Event('submit',{bubbles:true,cancelable:true})));
+  expect(posted).toEqual([]);await expect(page.locator('[data-omnix-commercial-receipt]')).toHaveText('');
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+  await page.locator('#omnix-scope').fill('TEST DATA local draft remains available');await page.locator('[data-omnix-request] button').click();
+  await expect(page.locator('[data-omnix-draft]')).toContainText('RASCUNHO LOCAL — NÃO ENVIADO');expect(posted).toEqual([]);
+});
+
 test('institutional anchors and historical entry links reach their content',async({page})=>{
   for(const [route,target]of [['/#top','#top'],['/#systems','#systems'],['/#agents','#agents'],['/#ecosystem','#ecosystem'],['/#gx','#gx'],['/#investors','#investors'],['/#founder','#founder'],['/#trust','#trust'],['/#contact','#contact'],['/#agent-api','#agent-api'],['/?view=developers#agent-api','#agent-api'],['/?view=omnix#omnix-example','#omnix-example'],['/?view=omnix#omnix-request','#omnix-request']]){
     await page.goto(route);await expect(page.locator(target),route).toHaveCount(1);

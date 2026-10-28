@@ -27,6 +27,7 @@ jobs:
           npm run test:launch
           npm run test:enterprise-agent-api
           npm run test:preservation
+          npm run test:omnix-commercial
           npm run build
       - name: Install pinned Chromium for isolated synthetic regression tests
         working-directory: site
