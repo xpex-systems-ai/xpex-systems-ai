@@ -1,4 +1,6 @@
-// Committed portable runtime instructions; public hosting remains pending an identified XPeX host.
+import {emitOmnixPublicEvent} from './omnix-events.js';
+
+// Committed portable runtime instructions; remote activation remains gated.
 export const OMNIX_INSTALL_URL = 'https://github.com/xpex-systems-ai/GXEON-AI/blob/5432b1d3a8423e81b1be3a915edb828de64f70e0/deploy/self-hosted/README.md';
 
 export function omnixTechnologyReference() {
@@ -52,12 +54,16 @@ export function initOmnixRequest(root = document) {
   }
   const form = root.querySelector('[data-omnix-request]');
   if (!form) return;
+  emitOmnixPublicEvent(root, 'product_visit');
+  for (const link of root.querySelectorAll('a[href="#omnix-request"],a[href="/?view=company#contact"]'))
+    link.addEventListener('click', () => emitOmnixPublicEvent(root, 'commercial_click'));
   form.addEventListener('submit', event => {
     event.preventDefault();
     const values = new FormData(form), scope = String(values.get('scope') ?? '').trim().slice(0,1000);
     const draft = root.querySelector('[data-omnix-draft]');
     draft.textContent = `RASCUNHO LOCAL — NÃO ENVIADO\nOMNIX AI — ${values.get('kind')}\nEscopo: ${scope}\nAguardar proposta, contrato e instruções antes de enviar qualquer configuração.`;
     draft.hidden = false;
+    emitOmnixPublicEvent(root, 'request_started');
     root.querySelector('[data-omnix-receipt]').textContent = 'Rascunho preparado. Nada foi enviado ou contratado. Use o canal institucional para iniciar a conversa.';
   });
 }
