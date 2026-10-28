@@ -15,7 +15,10 @@ async function ready(page,url){
   await expect(page.locator('main h1').first()).toBeVisible();
   await page.evaluate(()=>document.fonts.ready);
   await page.addStyleTag({content:'*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important} iframe{visibility:hidden!important}'});
-  for(const image of await page.locator('img').all())expect(await image.evaluate(el=>el.complete&&el.naturalWidth>0)).toBe(true);
+  for(const image of await page.locator('img').all()){
+    await image.evaluate(async el=>{el.loading='eager';await el.decode();});
+    expect(await image.evaluate(el=>el.complete&&el.naturalWidth>0)).toBe(true);
+  }
 }
 async function dom(page){
   return page.evaluate(selector=>{
@@ -26,6 +29,24 @@ async function dom(page){
   },dynamic);
 }
 test.skip(!preview,'Remote visual gate needs the exact verified public Git preview URL; local rendering is not remote proof.');
+
+test('live public REST and MCP contracts remain JSON and retain discovery counts',async({request},info)=>{
+  test.setTimeout(120_000);const records=[];
+  try{
+    for(const origin of [production,initial,preview]){
+      for(const route of ['/api/agent-api','/api/mcp/enterprise','/api/mcp/gx','/api/gx','/api/ecosystem','/.well-known/xpex-agent-api.json']){
+        const response=await request.get(origin+route);expect(response.status()).toBe(200);expect(response.headers()['content-type']).toContain('application/json');
+        const json=await response.json();if(route==='/api/agent-api')expect(json.offerings).toHaveLength(7);
+        records.push({url:origin+route,status:response.status(),body:json});
+      }
+      for(const [route,count]of [['/api/mcp/enterprise',8],['/api/mcp/gx',11]]){
+        const response=await request.post(origin+route,{data:{jsonrpc:'2.0',id:1,method:'tools/list',params:{}}});
+        expect(response.status()).toBe(200);const json=await response.json();expect(json.result.tools).toHaveLength(count);
+        records.push({url:origin+route,method:'tools/list',status:response.status(),toolCount:json.result.tools.length});
+      }
+    }
+  }finally{await fs.writeFile(info.outputPath('public-contracts.json'),JSON.stringify({capturedAt:new Date().toISOString(),records},null,2));}
+});
 
 test('all required live pages retain baseline content and links',async({browser},info)=>{
   test.setTimeout(180_000);
@@ -66,7 +87,12 @@ for(const width of widths)test(`real production / initial preview / candidate at
       records.push({stage,url:origin+route,width,pngWidth:image.readUInt32BE(16),pngHeight:image.readUInt32BE(20),sha256:createHash('sha256').update(image).digest('hex'),...state});
       if(name==='home')await page.locator('.xp-header').screenshot({path:info.outputPath(`${stage}-navbar-${width}.png`),animations:'disabled'});
       for(const [index,selector]of(regionSets[name]??[]).entries()){
-        const region=await page.locator(selector).screenshot({path:info.outputPath(`${stage}-${name}-region-${index}-${width}.png`),animations:'disabled'});
+        const locator=page.locator(selector);
+        // Additive sections shift later regions by fractional CSS pixels. Align only
+        // the capture origin, preserving all dimensions, content, fonts and styles.
+        const alignment=await locator.evaluate(el=>{const r=el.getBoundingClientRect(),y=r.top+scrollY,x=r.left+scrollX;const previous=el.style.transform;const dx=Math.round(x)-x,dy=Math.round(y)-y;el.style.transform=`translate(${dx}px,${dy}px)`;return {previous,dx,dy};});
+        let region;try{region=await locator.screenshot({path:info.outputPath(`${stage}-${name}-region-${index}-${width}.png`),animations:'disabled'});}finally{await locator.evaluate((el,previous)=>{el.style.transform=previous;},alignment.previous);}
+        records.push({stage,region:selector,captureOriginAlignment:{dx:alignment.dx,dy:alignment.dy},width});
         const key=`${name}-region-${index}-${width}.png`;
         if(stage==='production'){
           const target=info.snapshotPath(key);await fs.mkdir(path.dirname(target),{recursive:true});await fs.writeFile(target,region);

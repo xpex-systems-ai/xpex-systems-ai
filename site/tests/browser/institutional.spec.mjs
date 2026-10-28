@@ -17,7 +17,7 @@ test('navigation opens, closes, Escape restores focus and all target widths fit'
   for(const width of [320,375,390,768,900,901,1024,1150,1440]){
     await page.setViewportSize({width,height:900});await page.goto('/');
     expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
-    const toggle=page.getByRole('button',{name:'Abrir menu',exact:true});
+    const toggle=page.locator('.xp-menu-toggle');
     if(await toggle.isVisible()){
       await toggle.click();await expect(toggle).toHaveAttribute('aria-expanded','true');
       await expect(page.locator('#xp-navigation a').first()).toBeVisible();
@@ -71,7 +71,7 @@ test('GX grounding, enterprise matching, URL copy and evidence refresh',async({p
   await expect(page.locator('.gx-sources a').first()).toBeVisible();
   await page.goto('/?view=ecosystem');const refresh=page.locator('[data-eco-refresh]');await expect(refresh).toBeEnabled({timeout:30_000});
   const response=page.waitForResponse(r=>r.url().endsWith('/api/ecosystem'));await refresh.click();expect((await response).status()).toBe(200);await expect(refresh).toBeEnabled({timeout:30_000});
-  await expect(page.locator('[data-eco-status]')).not.toContainText('Aguardando');await expect(page.locator('[data-eco-evidence]')).toContainText('Fonte');
+  await expect(page.locator('[data-eco-status]')).not.toContainText('Aguardando');await expect(page.locator('[data-eco-evidence] a')).toHaveCount(3);
 });
 
 test('OMNIX sample download matches frozen bytes; local draft stays inert and unsent',async({page})=>{
@@ -94,4 +94,11 @@ test('orbital animation, pause and reduced motion retain their existing behavior
   expect(await page.locator('.xp-orbit').first().evaluate(el=>getComputedStyle(el).animationPlayState)).toBe('paused');
   await page.emulateMedia({reducedMotion:'reduce'});await expect(motion).toHaveAttribute('aria-pressed','true');
   expect(await page.locator('.xp-orbit').first().evaluate(el=>getComputedStyle(el).animationName)).toBe('none');
+});
+
+test('institutional anchors and historical entry links reach their content',async({page})=>{
+  for(const [route,target]of [['/#top','#top'],['/#systems','#systems'],['/#agents','#agents'],['/#ecosystem','#ecosystem'],['/#gx','#gx'],['/#investors','#investors'],['/#founder','#founder'],['/#trust','#trust'],['/#contact','#contact'],['/#agent-api','#agent-api'],['/?view=developers#agent-api','#agent-api'],['/?view=omnix#omnix-example','#omnix-example'],['/?view=omnix#omnix-request','#omnix-request']]){
+    await page.goto(route);await expect(page.locator(target),route).toHaveCount(1);
+    if(target==='#contact')await expect(page.locator('.xp-founder a[href*="linkedin.com"]')).toBeVisible();
+  }
 });
