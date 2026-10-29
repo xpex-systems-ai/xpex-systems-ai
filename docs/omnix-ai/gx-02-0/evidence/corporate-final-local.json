@@ -1,0 +1,50 @@
+[
+  {
+    "command": "npm ci --no-audit --no-fund",
+    "exit": 0,
+    "ms": 13028,
+    "log": "gx020-evidence\\final-local\\install.log"
+  },
+  {
+    "command": "npm run test:gx",
+    "exit": 0,
+    "ms": 1508,
+    "log": "gx020-evidence\\final-local\\test-gx.log"
+  },
+  {
+    "command": "npm run test:gx-mcp",
+    "exit": 0,
+    "ms": 1079,
+    "log": "gx020-evidence\\final-local\\test-gx-mcp.log"
+  },
+  {
+    "command": "npm run test:launch",
+    "exit": 0,
+    "ms": 1401,
+    "log": "gx020-evidence\\final-local\\test-launch.log"
+  },
+  {
+    "command": "npm run test:enterprise-agent-api",
+    "exit": 0,
+    "ms": 2420,
+    "log": "gx020-evidence\\final-local\\test-enterprise-agent-api.log"
+  },
+  {
+    "command": "npm run test:ecosystem",
+    "exit": 0,
+    "ms": 2010,
+    "log": "gx020-evidence\\final-local\\test-ecosystem.log"
+  },
+  {
+    "command": "npm run build",
+    "exit": 0,
+    "ms": 5516,
+    "log": "gx020-evidence\\final-local\\build.log"
+  },
+  {
+    "command": "npm run test:preservation",
+    "exit": 0,
+    "ms": 3753,
+    "log": "gx020-evidence\\final-local\\test-preservation.log"
+  }
+]

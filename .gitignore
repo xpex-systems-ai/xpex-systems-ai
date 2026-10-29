@@ -1,5 +1,8 @@
 node_modules/
 dist/
+site/preservation-results/
+site/test-results/
+site/tests/browser/*-snapshots/
 .vercel/
 __pycache__/
 *.pyc

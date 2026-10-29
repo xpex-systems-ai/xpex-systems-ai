@@ -1,0 +1,6 @@
+{
+  "capturedAt": "2026-10-28T14:42:15.550Z",
+  "baselineProduction": [],
+  "candidate": [],
+  "scope": "Browser-captured warnings/errors on inspected production and candidate tabs; CI separately asserts pageerror absence across routes."
+}
