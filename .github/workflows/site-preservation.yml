@@ -38,7 +38,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
           PRESERVATION_HEAD: ${{ github.event.pull_request.head.sha }}
-        run: node tests/browser/resolve-preview.mjs
+        run: |
+          node --test tests/preview-source.test.mjs
+          node tests/browser/resolve-preview.mjs
       - name: Verify institutional behavior, download, public contracts and live preservation
         working-directory: site
         run: npm run test:browser
