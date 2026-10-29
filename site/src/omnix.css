@@ -1,18 +1,2 @@
 .ox-hero{padding:74px 0 40px;max-width:1050px}.ox-hero h1{font-size:clamp(2.7rem,5.7vw,5.8rem);line-height:1.08;letter-spacing:-.05em;margin:28px 0}.ox-lead{font-size:1.2rem;line-height:1.7;max-width:700px;color:#d4d0c5}.ox-entry{border-top:1px solid #695737;border-bottom:1px solid #695737;padding-top:54px;padding-bottom:54px}.ox-entry p{max-width:650px}.ox-code{white-space:pre-wrap;overflow-wrap:anywhere;background:#090b0c;border:1px solid #51452e;padding:22px;border-radius:14px;color:#e9d6a7;margin:24px 0}.ox-process ol{counter-reset:step;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;list-style:none;padding:0}.ox-process li{counter-increment:step;border-top:1px solid #625131;padding:24px 0;color:#d5d0c7}.ox-process li:before{content:'0' counter(step);display:block;font-size:2rem;color:#e0bc70;margin-bottom:18px}.ox-commercial{margin:32px 0;color:#b9b1a1;font-size:.8rem;letter-spacing:.04em}.ox-hero .xp-actions{margin:30px 0}.ox-entry h2 em,.ox-hero h1 em{color:#e7c47d;font-style:normal}form[data-omnix-request]{display:grid;gap:14px;max-width:720px}form[data-omnix-request] :is(select,textarea){padding:16px;border:1px solid #5b513c;background:#101112;color:#f8f3e8;border-radius:8px;font:inherit}form[data-omnix-request] textarea{min-height:120px}.ox-entry :focus-visible,.ox-hero :focus-visible,form[data-omnix-request] :focus-visible{outline:3px solid #e7c47d;outline-offset:4px}@media(max-width:760px){.ox-process ol{grid-template-columns:1fr 1fr}.ox-hero{padding-top:38px}}@media(max-width:440px){.ox-process ol{grid-template-columns:1fr}}
 .ox-code [hidden], #omnix-example [data-omnix-example-download][hidden] { display: none; }
-
-
-/* GX-05.1: specialists + existing seven-system evidence catalog; presentation only. */
-.ox-specialists,.ox-evidence{margin-block:32px 48px}.ox-specialists h2 em,.ox-evidence h2 em{font-style:normal;color:#e7c47d}
-.ox-specialists-grid,.ox-evidence-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:26px 0}
-.ox-specialist-card,.ox-proof-card{min-width:0;display:flex;flex-direction:column;gap:14px;border:1px solid #51452e;border-radius:18px;padding:24px;background:linear-gradient(135deg,#171715,#101112);color:#f8f3e8}
-.ox-specialist-card h3,.ox-proof-card h3{margin:0;font-size:1.35rem}.ox-specialist-card p,.ox-proof-card p{margin:0;line-height:1.55;color:#d4d0c5}
-.ox-specialist-state,.ox-proof-state{font-size:.73rem;line-height:1.4;color:#edca7d;letter-spacing:.045em;text-transform:uppercase}
-.ox-specialist-card .ox-specialist-note,.ox-proof-card .ox-proof-count{font-size:.78rem;color:#b6afa0}
-.ox-specialist-actions{margin-top:auto;display:flex;gap:12px;flex-wrap:wrap;align-items:stretch}
-.ox-specialist-actions .xp-button,.ox-proof-card>.xp-button{display:inline-flex;align-items:center;justify-content:center;text-align:center;text-decoration:none;min-height:43px}
-.ox-proof-card>.xp-button{margin-top:auto}
-.ox-specialist-actions button[disabled]{background:#222320;border:1px solid #5d5d55;color:#d4d0c5;border-radius:10px;padding:10px 13px;font:inherit;font-size:.83rem;cursor:not-allowed;opacity:.8}
-.ox-specialists :focus-visible,.ox-evidence :focus-visible{outline:3px solid #e7c47d;outline-offset:3px}
-@media(max-width:950px){.ox-specialists-grid,.ox-evidence-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:620px){.ox-specialists-grid,.ox-evidence-grid{grid-template-columns:minmax(0,1fr)}.ox-specialist-card,.ox-proof-card{padding:20px}}

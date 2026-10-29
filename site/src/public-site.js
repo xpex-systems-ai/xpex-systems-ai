@@ -4,6 +4,7 @@ import { initGX } from './gx.js';
 import { initEnterpriseAgentAPI } from './enterprise-agent-api.js';
 import { omnixEntry, omnixPage, initOmnixRequest, omnixTechnologyReference } from './omnix.js';
 import './omnix.css';
+import './omnix-specialists.css';
 import './public-site.css';
 
 const REPO = 'https://github.com/xpex-systems-ai/xpex-systems-ai';
