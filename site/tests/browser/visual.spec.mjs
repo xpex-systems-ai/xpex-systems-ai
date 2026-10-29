@@ -24,6 +24,10 @@ async function dom(page){
   return page.evaluate(selector=>{
     const main=document.querySelector('main').cloneNode(true);
     main.querySelectorAll(selector+',.ox-entry,[data-omnix-context],.ox-hero>.xp-small-note').forEach(el=>el.remove());
+    // GX-06 explicitly replaces only the OMNIX product heading and adds its
+    // product console. Preserve all original copy/actions below those additions.
+    if(new URLSearchParams(location.search).get('view')==='omnix')
+      main.querySelectorAll('.ox-hero h1,.of-public-brand,.of-public-tagline,.of-public').forEach(el=>el.remove());
     const norm=value=>value.replace(/\s+/g,' ').trim();
     return {title:document.title,heading:document.querySelector('h1')?.textContent,text:norm(main.textContent),links:[...document.querySelectorAll('a[href]')].filter(a=>!a.closest('[data-omnix-context]')).map(a=>({href:a.getAttribute('href'),text:norm(a.textContent)})),width:innerWidth,documentWidth:document.documentElement.scrollWidth};
   },dynamic);
@@ -78,7 +82,8 @@ test('all required live pages retain baseline content and links',async({browser}
       }
       const current=states.candidate;
       for(const [stage,before]of Object.entries(states))if(stage!=='candidate'){
-        expect(current.heading,route+' heading').toBe(before.heading);
+        if(route==='/?view=omnix')expect(current.heading,'authorized GX-06 product identity').toBe('OMNIX AI');
+        else expect(current.heading,route+' heading').toBe(before.heading);
         expect(current.text,route+' retained text').toContain(before.text);
         const links=new Set(current.links.map(x=>JSON.stringify(x)));
         for(const link of before.links)expect(links.has(JSON.stringify(link)),route+' retained '+link.href).toBe(true);
