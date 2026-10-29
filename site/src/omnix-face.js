@@ -20,7 +20,7 @@ function evidenceSnippet(system){
       <p><strong>Engenharia registrada:</strong> ${escape(system.built||'Sem descrição no inventário.')}</p>
       <p><strong>Tecnologias declaradas:</strong> ${technologies.map(escape).join(' · ')||'Não identificadas'}</p>
       <p><strong>Limitações publicáveis:</strong></p><ul>${limitations.map(item=>`<li>${escape(item)}</li>`).join('')||'<li>Limitações não detalhadas no inventário.</li>'}</ul>
-      <p class="xp-small-note">Resumo documental do inventário próprio. Não constitui certificação, resultado de uma nova auditoria OMNIX ou referência de cliente.</p>
+      <p class="xp-small-note">Resumo documental do inventário próprio; não constitui certificação, resultado de uma nova auditoria OMNIX ou referência de cliente.</p>
     </details>`;
   return `<p class="xp-small-note">Estado registrado: <strong>${escape(system.status)}</strong> · Ambiente declarado: ${escape(runtime.provider||'não identificado')}. Sem revalidação remota nesta página.</p>
     ${dossier}
