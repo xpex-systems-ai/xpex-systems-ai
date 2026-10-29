@@ -23,6 +23,14 @@ for(const width of [375,768,1440])test(`OMNIX official face is navigable and hon
   const canonical=await page.locator('#omnix-lab a[href^="/?system="]').evaluateAll(links=>links.map(a=>a.getAttribute('href')));
   expect(new Set(canonical).size).toBe(7);expect(canonical.every(href=>href.startsWith('/?system='))).toBe(true);
   await expect(page.locator('#omnix-lab .of-evidence-details')).toHaveCount(7);
+  await expect(page.locator('#omnix-lab .of-dossier-details')).toHaveCount(7);
+  await page.locator('#omnix-lab .of-dossier-details').first().locator('summary').click();
+  await expect(page.locator('#omnix-lab .of-dossier-details').first()).toContainText('Engenharia registrada');
+  await expect(page.locator('#omnix-lab .of-dossier-details').first()).toContainText('não constitui certificação');
+  await page.getByRole('navigation',{name:'Explorar OMNIX'}).getByRole('link',{name:'Como contratar'}).click();
+  await expect(page).toHaveURL(/#omnix-client-path$/);
+  await expect(page.locator('#omnix-client-path')).toContainText('não enviam uma contratação real');
+  await expect(page.locator('#omnix-client-path a[href="/?view=company#contact"]')).toHaveCount(1);
   await expect(page.locator('#omnix-lab')).toContainText('Sem revalidação remota nesta página');
   await page.locator('#omnix-lab .of-evidence-details').nth(1).locator('summary').click();
   const references=page.locator('#omnix-lab .of-evidence-details').nth(1).locator('a');

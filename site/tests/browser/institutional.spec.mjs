@@ -77,7 +77,7 @@ test('GX grounding, enterprise matching, URL copy and evidence refresh',async({p
 test('OMNIX sample download matches frozen bytes; local draft stays inert and unsent',async({page})=>{
   await page.addInitScript(()=>{window.__omnixPublicEvents=[];document.addEventListener('omnix:public-event',event=>window.__omnixPublicEvents.push(event.detail));});
   await page.goto('/?view=omnix');await expect(page.locator('.ox-hero')).toContainText('OMNIX AI — Powered by');
-  await page.getByRole('link',{name:'Solicite uma auditoria',exact:true}).click();
+  await page.getByRole('link',{name:'Preparar solicitação (sem envio)',exact:true}).click();
   await page.locator('[data-omnix-example]').click();await expect(page.locator('[data-omnix-example-download]')).toBeVisible();
   const event=page.waitForEvent('download');await page.locator('[data-omnix-example-download]').click();const download=await event;
   const bytes=await fs.readFile(await download.path());expect(createHash('sha256').update(bytes).digest('hex')).toBe('86c87f8f879615afe538d4f567af96a9c26b95b7648dc37ca2bf4214d3b6dff2');
