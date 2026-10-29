@@ -39,7 +39,7 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
           PRESERVATION_HEAD: ${{ github.event.pull_request.head.sha }}
         run: |
-          node --test tests/preview-source.test.mjs
+          node --test tests/preview-source.test.mjs tests/preview-source-attestation.test.mjs
           node tests/browser/resolve-preview.mjs
       - name: Verify institutional behavior, download, public contracts and live preservation
         working-directory: site

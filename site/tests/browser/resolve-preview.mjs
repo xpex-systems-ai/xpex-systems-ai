@@ -1,5 +1,5 @@
 import fs from 'node:fs';
-import {selectVercelBotPreview} from './preview-source.mjs';
+import {selectVercelBotPreview, selectVercelBotAlias, verifiedPreviewSource} from './preview-source.mjs';
 // Read-only discovery from this repository's actual deployment records. Never invent an origin.
 const sha=process.env.PRESERVATION_HEAD;
 if(!/^[a-f0-9]{40}$/.test(sha??''))throw Error('HEAD_REQUIRED');
@@ -30,7 +30,27 @@ async function officialBotPreview() {
   ]);
   return selectVercelBotPreview(sha,status,comments);
 }
+// GitHub statuses can lag behind a Vercel READY deployment. Resolve the
+// official PR branch alias, but trust it only if the deployed preview runtime
+// confirms this exact Git SHA, project, repository and branch.
+async function sourceAttestedPreview() {
+  if (!Number.isInteger(prNumber) || prNumber < 1) return;
+  const comments=await api('issues/'+prNumber+'/comments?per_page=100');
+  const url=selectVercelBotAlias(comments);
+  if (!url) return;
+  try {
+    const response=await fetch(url+'/api/omnix-preview-source',{redirect:'error',
+      headers:{Accept:'application/json','Cache-Control':'no-cache'},signal:AbortSignal.timeout(7000)});
+    if (!response.ok || !response.headers.get('content-type')?.includes('application/json') ||
+        Number(response.headers.get('content-length')??0)>2048) return;
+    const body=await response.text();
+    if (body.length>2048 || !verifiedPreviewSource(sha,JSON.parse(body))) return;
+    return {url,provenance:'Vercel-public-runtime-exact-source',status:'success',sourceCommitVerified:true};
+  } catch { return; }
+}
 for(let attempt=0;attempt<24;attempt++){
+  const source = await sourceAttestedPreview();
+  if (source) record(source);
   const official = await officialBotPreview();
   if (official) record({...official,status:'success',source:'commit-bound-Vercel-bot'});
   const deployments=await api(`deployments?ref=${sha}&per_page=100`);
