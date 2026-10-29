@@ -20,8 +20,20 @@ for(const width of [375,768,1440])test(`OMNIX official face is navigable and hon
   await expect(page.locator('#omnix-engineer li')).toHaveCount(8);
   await page.getByRole('navigation',{name:'Explorar OMNIX'}).getByRole('link',{name:'Evidence Lab'}).click();
   await expect(page.locator('#omnix-lab article')).toHaveCount(7);
-  const hrefs=await page.locator('#omnix-lab a').evaluateAll(links=>links.map(a=>a.getAttribute('href')));
-  expect(new Set(hrefs).size).toBe(7);expect(hrefs.every(href=>href.startsWith('/?system='))).toBe(true);
+  const canonical=await page.locator('#omnix-lab a[href^="/?system="]').evaluateAll(links=>links.map(a=>a.getAttribute('href')));
+  expect(new Set(canonical).size).toBe(7);expect(canonical.every(href=>href.startsWith('/?system='))).toBe(true);
+  await expect(page.locator('#omnix-lab .of-evidence-details')).toHaveCount(7);
+  await expect(page.locator('#omnix-lab')).toContainText('Sem revalidação remota nesta página');
+  await page.locator('#omnix-lab .of-evidence-details').nth(1).locator('summary').click();
+  const references=page.locator('#omnix-lab .of-evidence-details').nth(1).locator('a');
+  expect(await references.count()).toBeGreaterThan(0);
+  for(const href of await references.evaluateAll(links=>links.map(a=>a.getAttribute('href')))) {
+    expect(new URL(href).protocol).toBe('https:');
+  }
+  // The private Systems Command repo and its private source docs must not be linked publicly.
+  await page.locator('#omnix-lab .of-evidence-details').first().locator('summary').click();
+  const firstLinks=await page.locator('#omnix-lab .of-evidence-details').first().locator('a').evaluateAll(a=>a.map(x=>x.href));
+  expect(firstLinks.some(x=>x.includes('/xpex-systems-ai/xpex-systems-command/'))).toBe(false);
   await expect(page.locator('#omnix-lab')).toContainText('não são casos de clientes');
   await page.locator('#omnix-connections summary').click();
   await expect(page.locator('#omnix-connections details')).toContainText('não verificada');
