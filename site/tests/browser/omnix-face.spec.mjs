@@ -1,0 +1,32 @@
+import {test,expect} from '@playwright/test';
+
+for(const width of [375,768,1440])test(`OMNIX official face is navigable and honest at ${width}px`,async({page},testInfo)=>{
+  await page.setViewportSize({width,height:1000});
+  const errors=[];page.on('pageerror',error=>errors.push(error.message));
+  await page.goto('/?view=omnix');
+  await expect(page.locator('.of-public-brand img')).toBeVisible();
+  expect(await page.locator('.of-public-brand img').evaluate(img=>img.complete&&img.naturalWidth>0)).toBe(true);
+  await expect(page.locator('#omnix-specialists article')).toHaveCount(6);
+  await expect(page.locator('#omnix-specialists')).toContainText('RELEASE_BLOCKED');
+  expect(await page.locator('#omnix-specialists .xp-pill').allTextContents()).toEqual(['RELEASE_BLOCKED','PLANNED','PLANNED','PLANNED','PLANNED','PLANNED']);
+  await page.getByRole('navigation',{name:'Explorar OMNIX'}).getByRole('link',{name:'Especialistas'}).click();
+  await expect(page).toHaveURL(/#omnix-specialists$/);
+  const planned=page.locator('#omnix-specialists article').nth(1);
+  await planned.locator('summary').click();await expect(planned.locator('details')).toHaveAttribute('open','');
+  await expect(planned.locator('details')).toContainText('não concede acesso');
+  await page.locator('#omnix-specialists').getByRole('link',{name:'Verificar exemplo de configuração'}).click();
+  await expect(page).toHaveURL(/#omnix-example$/);
+  await expect(page.locator('#omnix-example')).toContainText(/sintético/i);
+  await expect(page.locator('#omnix-engineer li')).toHaveCount(8);
+  await page.getByRole('navigation',{name:'Explorar OMNIX'}).getByRole('link',{name:'Evidence Lab'}).click();
+  await expect(page.locator('#omnix-lab article')).toHaveCount(7);
+  const hrefs=await page.locator('#omnix-lab a').evaluateAll(links=>links.map(a=>a.getAttribute('href')));
+  expect(new Set(hrefs).size).toBe(7);expect(hrefs.every(href=>href.startsWith('/?system='))).toBe(true);
+  await expect(page.locator('#omnix-lab')).toContainText('não são casos de clientes');
+  await page.locator('#omnix-connections summary').click();
+  await expect(page.locator('#omnix-connections details')).toContainText('não verificada');
+  expect(await page.locator('.of-public input').count()).toBe(0);
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+  expect(errors).toEqual([]);
+  await page.screenshot({path:testInfo.outputPath(`omnix-official-${width}.png`),fullPage:true});
+});
