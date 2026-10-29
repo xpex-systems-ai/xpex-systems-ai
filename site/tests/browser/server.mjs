@@ -8,9 +8,10 @@ import gxMcp from '../../api/mcp/gx.js';
 import gx from '../../api/gx.js';
 import ecosystem from '../../api/ecosystem.js';
 import omnixRequest from '../../api/omnix-request.js';
+import omnixLead from '../../api/omnix-lead.js';
 
 process.env.GX_AI_ENABLED='false';
-const handlers=new Map([['/api/agent-api',agent],['/api/mcp/enterprise',enterprise],['/api/mcp/gx',gxMcp],['/api/gx',gx],['/api/ecosystem',ecosystem],['/api/omnix-request',omnixRequest]]);
+const handlers=new Map([['/api/agent-api',agent],['/api/mcp/enterprise',enterprise],['/api/mcp/gx',gxMcp],['/api/gx',gx],['/api/ecosystem',ecosystem],['/api/omnix-request',omnixRequest],['/api/omnix-lead',omnixLead]]);
 const dist=path.resolve('dist');
 const mime={'.html':'text/html','.js':'application/javascript','.css':'text/css','.json':'application/json','.png':'image/png','.jpg':'image/jpeg','.svg':'image/svg+xml','.woff2':'font/woff2'};
 const server=http.createServer(async(req,res)=>{

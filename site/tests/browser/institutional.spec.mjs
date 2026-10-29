@@ -131,3 +131,24 @@ test('institutional anchors and historical entry links reach their content',asyn
     if(target==='#contact')await expect(page.locator('.xp-founder a[href*="linkedin.com"]')).toBeVisible();
   }
 });
+
+test('separate lead intake stays closed by actual handler: no approval, contact POST, upload or invented receipt',async({page})=>{
+  const posted=[];page.on('request',request=>{if(request.method()==='POST'&&request.url().endsWith('/api/omnix-lead'))posted.push(request.url());});
+  await page.setViewportSize({width:375,height:900});
+  const statusResponse=page.waitForResponse(response=>response.url().endsWith('/api/omnix-lead'));
+  await page.goto('/?view=omnix');const response=await statusResponse;
+  expect(response.status()).toBe(503);expect(response.headers()['content-type']).toContain('application/json');
+  expect(await response.json()).toEqual({ok:false,code:'LEAD_ADMISSION_CLOSED',leadDataAllowed:false,auditCustomerDataAllowed:false,humanDeliveryVerified:false});
+  await expect(page.locator('[data-omnix-lead-state]')).toContainText('Coleta de leads reais fechada');
+  await expect(page.locator('[data-omnix-lead-fields]')).toHaveAttribute('disabled','');
+  for(const selector of ['[name="name"]','[name="company"]','[name="email"]','[name="needType"]','[name="description"]','[name="consent"]','button[type="submit"]']){
+    await expect(page.locator('[data-omnix-lead] '+selector)).toBeDisabled();
+  }
+  await expect(page.locator('[data-omnix-lead] input[type="file"]')).toHaveCount(0);
+  await expect(page.locator('[data-omnix-lead-receipt]')).toHaveText('');
+  await expect(page.locator('[data-omnix-lead-privacy]')).toHaveAttribute('href','/?view=privacy');
+  await page.locator('[data-omnix-lead]').evaluate(form=>form.dispatchEvent(new Event('submit',{bubbles:true,cancelable:true})));
+  expect(posted).toEqual([]);await expect(page.locator('[data-omnix-lead-receipt]')).toHaveText('');
+  await expect(page.locator('[data-omnix-commercial-fields]')).toHaveAttribute('disabled','');
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+});
