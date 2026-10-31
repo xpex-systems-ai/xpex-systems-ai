@@ -46,6 +46,20 @@ export function portfolioLabMarkup(){
     <div class="xp-ev-count" aria-label="7 sistemas no catálogo"><strong>07</strong><span>DOSSIÊS<br>CANÔNICOS</span></div>
   </header>
   <div class="xp-ev-integrity" role="note"><span aria-hidden="true">◇</span> Diagramas são ilustrativos e não mostram resultados ao vivo. Nenhuma credencial, dado de cliente ou arquivo privado de Drive/ChatGPT é disponibilizado aqui.</div>
+  <section class="xp-ev-featured" aria-labelledby="xp-ev-featured-title">
+    <div class="xp-ev-featured-copy"><p class="xp-kicker">XPEX / PRINCIPAL PRODUTO EM EVOLUÇÃO</p>
+      <h3 id="xp-ev-featured-title">OMNIX <em>AI.</em></h3>
+      <p>Auditoria técnica baseada em escopo autorizado, evidência e revisão humana. A demonstração atual apresenta dois checks estáticos de <code>vercel.json</code> com dados sintéticos — não é auditoria automática de clientes.</p>
+      <div class="xp-ev-featured-facts"><span>01 · ESCOPO DELIMITADO</span><span>02 · DADOS SINTÉTICOS</span><span>03 · REVISÃO HUMANA</span></div>
+      <div class="xp-ev-featured-actions"><a class="xp-button xp-gold" href="#omnix-example">Ver demonstração sintética →</a><a class="xp-ev-featured-link" href="#omnix-client-path">Entender a contratação ↗</a></div>
+    </div>
+    <div class="xp-ev-featured-art" role="img" aria-label="Diagrama estilizado do fluxo OMNIX: escopo autorizado, verificação, evidências e revisão. Arte ilustrativa, sem métricas reais.">
+      <div class="xp-ev-art-top"><span>OMNIX / AUDIT ENGINEER</span><span>PREVIEW · SYNTHETIC</span></div>
+      <div class="xp-ev-art-glow" aria-hidden="true">◇</div>
+      <div class="xp-ev-art-steps" aria-hidden="true"><span>AUTHORIZE</span><i>→</i><span>VERIFY</span><i>→</i><span>EVIDENCE</span><i>→</i><span>REVIEW</span></div>
+      <div class="xp-ev-art-bottom">EVIDENCE FIRST <span>•</span> HUMAN APPROVAL</div>
+    </div>
+  </section>
   <div class="xp-ev-toolbar" role="group" aria-label="Filtrar sistemas por especialidade">
     ${PORTFOLIO_GROUPS.map((name,i)=>`<button type="button" class="xp-ev-filter${i===0?' is-active':''}" data-portfolio-filter="${esc(name)}" aria-pressed="${i===0?'true':'false'}">${esc(name)}</button>`).join('')}
   </div>
