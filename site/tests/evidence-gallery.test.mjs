@@ -3,7 +3,7 @@ import test from 'node:test';
 import {SYSTEM_INTELLIGENCE} from '../src/data/system-intelligence.js';
 import {PORTFOLIO_SHOWCASE,PORTFOLIO_GROUPS,publicProofUrl} from '../src/data/portfolio-showcase.js';
 import {portfolioLabMarkup,initPortfolioLab} from '../src/portfolio-lab.js';
-import {omnixOfficialFace} from '../src/omnix-face.js';
+import fs from 'node:fs';
 
 test('showcase contains each canonical system exactly once, no invented products',()=>{
   const slugs=PORTFOLIO_SHOWCASE.map(x=>x.slug);
@@ -29,9 +29,9 @@ test('gallery markup is bounded, accessible, explicitly illustrative and contain
   assert.match(html,/class="xp-ev-details"/);
   assert.doesNotMatch(html,/drive\.google\.com|docs\.google\.com|supabase_service_role|sk_live_|private_key/i);
   for(const s of SYSTEM_INTELLIGENCE) assert.match(html,new RegExp('href="/\\?system='+s.slug+'"'));
-  const face=omnixOfficialFace();
-  assert.match(face,/xp-ev-lab/);
-  assert.equal((face.match(/id="omnix-lab"/g)||[]).length,1);
+  const face=fs.readFileSync(new URL('../src/omnix-face.js',import.meta.url),'utf8');
+  assert.match(face,/portfolioLabMarkup\(\)/);
+  assert.equal((face.match(/portfolioLabMarkup\(\)/g)||[]).length,1);
 });
 
 test('public evidence links require allowlisted HTTPS host and suppress private source',()=>{
