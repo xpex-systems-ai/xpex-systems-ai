@@ -1,4 +1,5 @@
 import {omnixOfficialFace} from './omnix-face.js';
+import {initPortfolioLab} from './portfolio-lab.js';
 import {emitOmnixPublicEvent} from './omnix-events.js';
 import {commercialIntakeMarkup,initCommercialIntake} from './omnix-commercial.js';
 import {leadIntakeMarkup,initLeadIntake} from './omnix-lead.js';
@@ -29,6 +30,7 @@ export function omnixPage() {
   <section id="omnix-request" class="xp-section"><p class="xp-kicker">PRIMEIRA OFERTA CANDIDATA</p><h2>Configuration Integrity Audit.</h2><p>Um arquivo sanitizado, dois checks, achados, evidências e relatório. Escopo, aceite, prazo, revisão, suporte e pagamento precisam ser acordados antes da execução comercial. Preço sob aprovação; nenhuma cobrança automática.</p><div class="xp-card"><h3>Prepare uma conversa empresarial.</h3><p>Este formulário prepara um rascunho somente no seu navegador. Não envia um pedido, cria contrato ou registra pagamento.</p><form data-omnix-request><label for="omnix-kind">Objetivo</label><select id="omnix-kind" name="kind"><option>Solicitar auditoria</option><option>Solicitar proposta empresarial</option></select><label for="omnix-scope">Escopo pretendido, sem dados privados</label><textarea id="omnix-scope" name="scope" maxlength="1000" required placeholder="Descreva apenas a necessidade geral; não cole configurações ou credenciais."></textarea><button class="xp-button xp-gold" type="submit">Preparar rascunho →</button></form><pre data-omnix-draft class="ox-code" hidden></pre><p data-omnix-receipt role="status" aria-live="polite"></p><a class="xp-link" href="/?view=company#contact">Consultar o canal institucional →</a></div><div class="ox-commercial">${['SOLICITAÇÃO RECEBIDA — somente após confirmação da equipe','PROPOSTA PENDENTE — escopo e condições em análise','CONTRATO ACORDADO — após aceite das partes','PAGAMENTO CONFIRMADO — somente com comprovante'].map(t=>`<p>${t}</p>`).join('')}</div></section>${commercialIntakeMarkup()}${leadIntakeMarkup()}`;
 }
 export function initOmnixRequest(root = document) {
+  initPortfolioLab(root);
   void initCommercialIntake(root);
   void initLeadIntake(root);
   const prepare = root.querySelector('[data-omnix-example]');
