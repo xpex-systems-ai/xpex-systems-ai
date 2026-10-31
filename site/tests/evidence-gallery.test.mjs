@@ -25,6 +25,9 @@ test('gallery markup is bounded, accessible, explicitly illustrative and contain
   assert.match(html,/id="omnix-lab"/);
   assert.match(html,/role="status" aria-live="polite"/);
   assert.match(html,/ESQUEMA ILUSTRATIVO/);
+  assert.match(html,/xp-ev-featured/);
+  assert.match(html,/href="#omnix-example"/);
+  assert.match(html,/PREVIEW · SYNTHETIC/);
   assert.match(html,/capturas originais e vídeos/);
   assert.match(html,/class="xp-ev-details"/);
   assert.doesNotMatch(html,/drive\.google\.com|docs\.google\.com|supabase_service_role|sk_live_|private_key/i);
