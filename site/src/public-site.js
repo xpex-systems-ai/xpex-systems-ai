@@ -116,7 +116,7 @@ export function renderPublicSite(app) {
   const params=new URLSearchParams(location.search);
   let view=params.get('view')||'home';
   if(!params.has('view')&&(params.has('ask')||['#gx','#trust','#investors','#contact','#founder'].includes(location.hash))) view='company';
-  if(params.has('system')||!['home','agents','systems','plugins','developers','radar','company','privacy','terms'].includes(view)) return false;
+  if(params.has('system')||!['home','agents','systems','plugins','developers','connectors','radar','company','privacy','terms'].includes(view)) return false;
   const titles={home:'Agentes especializados. Execução verificável.',agents:'Agentes e capacidades',systems:'Nossos sistemas',plugins:'Plugins para OpenAI',developers:'Desenvolvedores',connectors:'Conectores Enterprise',radar:'Radar da economia de agentes',company:'Empresa e fundador',privacy:'Privacidade',terms:'Termos de uso'};
   document.documentElement.lang='pt-BR';
   document.title=`XPeX Systems AI — ${titles[view]}`;
