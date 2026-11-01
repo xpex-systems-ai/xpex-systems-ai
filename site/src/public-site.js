@@ -1,4 +1,5 @@
 import { brandMark } from './brand.js';
+import {connectorsPage} from './connectors-page.js';
 import { SYSTEM_INTELLIGENCE } from './data/system-intelligence.js';
 import { initGX } from './gx.js';
 import { initEnterpriseAgentAPI } from './enterprise-agent-api.js';
@@ -16,7 +17,7 @@ export function publicHeader() {
   return `<a class="xp-skip" href="#main-content">Ir para o conteúdo</a><header class="xp-header xp-shell">
     <a class="xp-brand" href="/" aria-label="XPeX Systems AI — início"><svg viewBox="430 80 700 510" aria-hidden="true"><image href="${LOGO}" width="1536" height="1024"/></svg><span><b>XPeX</b> Systems AI</span></a>
     <button class="xp-menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="xp-navigation">Menu <span aria-hidden="true">☰</span></button>
-    <nav id="xp-navigation" aria-label="Navegação principal"><a href="/?view=agents">Agentes</a><a href="/?view=ecosystem">Ecossistema</a><a href="/#systems">Sistemas</a><a href="/?view=plugins">Plugins</a><a href="/?view=developers">Desenvolvedores</a></nav>
+    <nav id="xp-navigation" aria-label="Navegação principal"><a href="/?view=agents">Agentes</a><a href="/?view=ecosystem">Ecossistema</a><a href="/#systems">Sistemas</a><a href="/?view=plugins">Plugins</a><a href="/?view=developers">Desenvolvedores</a><a href="/?view=connectors">Conectores</a></nav>
     <a class="xp-button xp-gold xp-demo-link" href="/?view=ecosystem">Explorar demo <span aria-hidden="true">→</span></a>
   </header>`;
 }
@@ -115,13 +116,13 @@ export function renderPublicSite(app) {
   const params=new URLSearchParams(location.search);
   let view=params.get('view')||'home';
   if(!params.has('view')&&(params.has('ask')||['#gx','#trust','#investors','#contact','#founder'].includes(location.hash))) view='company';
-  if(params.has('system')||!['home','agents','systems','plugins','developers','radar','company','privacy','terms'].includes(view)) return false;
-  const titles={home:'Agentes especializados. Execução verificável.',agents:'Agentes e capacidades',systems:'Nossos sistemas',plugins:'Plugins para OpenAI',developers:'Desenvolvedores',radar:'Radar da economia de agentes',company:'Empresa e fundador',privacy:'Privacidade',terms:'Termos de uso'};
+  if(params.has('system')||!['home','agents','systems','plugins','developers','connectors','radar','company','privacy','terms'].includes(view)) return false;
+  const titles={home:'Agentes especializados. Execução verificável.',agents:'Agentes e capacidades',systems:'Nossos sistemas',plugins:'Plugins para OpenAI',developers:'Desenvolvedores',connectors:'Conectores Enterprise',radar:'Radar da economia de agentes',company:'Empresa e fundador',privacy:'Privacidade',terms:'Termos de uso'};
   document.documentElement.lang='pt-BR';
   document.title=`XPeX Systems AI — ${titles[view]}`;
   document.body.classList.add('xpex-public');
   let content;
-  switch(view){case 'agents':content=agentsPage(params);break;case 'systems':content=pageIntro('ECOSSISTEMA / PORTFÓLIO','Sistemas que se conectam.<br/><em>Identidades que permanecem.</em>','Explore os sete sistemas do portfólio e confira arquitetura, acessos e evidências de cada um.')+`<div class="xp-three">${Object.keys(systemCopy).map(systemCard).join('')}</div>`;break;case 'plugins':content=pluginsPage();break;case 'developers':content=developersPage();break;case 'radar':content=radarPage();break;case 'company':content=companyPage();break;case 'privacy':content=policyPage(true);break;case 'terms':content=policyPage(false);break;default:content=home();}
+  switch(view){case 'agents':content=agentsPage(params);break;case 'systems':content=pageIntro('ECOSSISTEMA / PORTFÓLIO','Sistemas que se conectam.<br/><em>Identidades que permanecem.</em>','Explore os sete sistemas do portfólio e confira arquitetura, acessos e evidências de cada um.')+`<div class="xp-three">${Object.keys(systemCopy).map(systemCard).join('')}</div>`;break;case 'plugins':content=pluginsPage();break;case 'developers':content=developersPage();break;case 'connectors':content=connectorsPage();break;case 'radar':content=radarPage();break;case 'company':content=companyPage();break;case 'privacy':content=policyPage(true);break;case 'terms':content=policyPage(false);break;default:content=home();}
   app.innerHTML=`${publicHeader()}<main id="main-content" class="${view==='home'?'xp-home':'xp-shell xp-page'}">${content}</main>${publicFooter()}<div class="xp-toast" role="status" aria-live="polite"></div>`;
   initPublicNavigation();
   initGX();initEnterpriseAgentAPI();
