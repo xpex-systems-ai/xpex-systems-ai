@@ -30,6 +30,7 @@ test('public page has exactly five cards, no secret or real billing claims',()=>
 test('route and navigation are present without replacing existing pages',()=>{
   const src=readFileSync(new URL('../src/public-site.js',import.meta.url),'utf8');
   assert.match(src,/case 'connectors':content=connectorsPage\(\)/);
+  assert.match(src,/\['home','agents','systems','plugins','developers','connectors','radar'/);
   assert.match(src,/view=developers/);
   assert.match(src,/view=plugins/);
   assert.match(src,/view=connectors/);
