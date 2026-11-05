@@ -4,10 +4,10 @@ import fs from 'node:fs';
 
 const source = fs.readFileSync(new URL('../src/public-site.js', import.meta.url), 'utf8');
 
-test('GX-10 public branding is Agents AI while historic system identities remain', () => {
-  assert.match(source, /<b>XPeX<\/b> Agents AI/);
-  assert.match(source, /document\.title=`XPeX Agents AI/);
-  assert.match(source, /marca empresarial em transição da XPeX Systems AI/);
+test('GX-10 stages Agents AI offering and retains legacy public identity', () => {
+  assert.match(source, /XPeX AGENTS AI \/ SERVIÇOS B2B/);
+  assert.match(source, /<b>XPeX<\/b> Systems AI/);
+  assert.match(source, /document\.title=`XPeX Systems AI/);
   assert.match(source, /systems-command/);
   assert.match(source, /wallet-command/);
 });
