@@ -1,4 +1,4 @@
-# NORMARIS — Regulatory Intelligence Agent (working name)
+# COSIVANT — Regulatory Intelligence Agent (working name)
 Status: TECHNICAL PREVIEW. Name pending INPI/trademark clearance; not endorsed by Receita Federal.
 Standalone dashboard + bounded evidence reference search API + MCP JSON-RPC.
 Currently includes 4 hand-reviewed links to official reference pages. NO full COSIT ingestion, live legal conclusions, commercial tenants or proven OMNIX RAG. This version is suitable for architecture review only; NOT for paid professional fiscal advice.
