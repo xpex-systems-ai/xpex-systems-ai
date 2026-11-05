@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0.0",
+  "brand": "XPeX Agents AI",
+  "product_family": "Agent Engineering, Audit & Intelligent Operations",
+  "source": "GX-10 public offer registry (not availability or completed contracts)",
+  "status": "PRE_COMMERCIAL_REVIEW",
+  "pricing": "SCOPE_BASED_QUOTE_REQUIRED",
+  "sales_route": {
+    "type": "manual_business_email",
+    "recipient": "gxeon.ai@gmail.com",
+    "contracting": "human_review_required",
+    "lead_import": "not_automated"
+  },
+  "products": [
+    {
+      "id": "agent-engineering",
+      "name": "Agent Engineering",
+      "stage": "SCOPED_SERVICE_OFFER",
+      "description": "Integração delimitada de agentes empresariais com MCP/APIs mediante autorização",
+      "requires_contract": true
+    },
+    {
+      "id": "agent-audit-security",
+      "name": "Agent Audit & Security",
+      "stage": "SCOPED_SERVICE_OFFER",
+      "description": "Verificações de configurações, integrações e evidências dentro do escopo aprovado; não é certificação",
+      "requires_contract": true
+    },
+    {
+      "id": "agent-operations",
+      "name": "Agent Operations",
+      "stage": "CAPABILITY_ASSESSMENT",
+      "description": "Governança e operações assistidas após validação técnica e comercial",
+      "requires_contract": true
+    }
+  ],
+  "channels": {
+    "coinbase": {
+      "role": "USDC_BASE_TREASURY",
+      "state": "READ_ONLY_CONNECTOR_OBSERVED",
+      "checkout_live": false
+    },
+    "mercadopago": {
+      "role": "BRL_PIX_TREASURY",
+      "state": "ADAPTER_FOUND_LIVE_NOT_VERIFIED",
+      "checkout_live": false
+    },
+    "mercadolivre": {
+      "role": "THIRD_PARTY_MARKETPLACE",
+      "state": "OAUTH_AND_ELIGIBILITY_NOT_VERIFIED",
+      "listing_active": false
+    }
+  }
+}

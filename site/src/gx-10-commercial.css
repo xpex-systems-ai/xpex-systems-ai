@@ -1,0 +1,24 @@
+/* GX-10 enterprise layer: scoped to the additive company-service region.
+   Never restyle the institutional Earth hero, orbit, global cards or footer. */
+.gx10-enterprise{--gx10-gold:#d6a33f;--gx10-champagne:#f0cc79;--gx10-ink:#07090d;border:1px solid #d6a33f4d;border-radius:22px;background:radial-gradient(circle at 10% 0%,#d6a33f12,transparent 42%),#090b0e;padding:clamp(20px,4vw,46px);margin-top:32px}
+.gx10-enterprise .gx10-enterprise-brand{display:flex;align-items:center;gap:24px;border-bottom:1px solid #d6a33f33;padding-bottom:28px;margin-bottom:28px}
+.gx10-enterprise-brand img{width:104px;height:104px;object-fit:cover;flex:none;border:1px solid #d6a33f70;border-radius:18px;background:#07090d}
+.gx10-enterprise-overline{display:block;font-size:10px;letter-spacing:.16em;color:var(--gx10-champagne);font-weight:650}
+.gx10-enterprise-brand h2{margin:8px 0;font-size:clamp(25px,3vw,37px);letter-spacing:-.04em;color:#f5f6f8}
+.gx10-enterprise-brand p{margin:0;color:#b9c0c8;font-size:13px;line-height:1.6}
+.gx10-channel-heading{margin-top:35px}
+.gx10-channel-heading h3{font-size:22px;margin:0 0 8px;color:var(--gx10-champagne)}
+.gx10-channel-heading p{font-size:13px;color:#b8bdc4;line-height:1.6}
+.gx10-channel-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:18px}
+.gx10-channel{padding:23px;border-radius:12px;border:1px solid #d6a33f33;background:#101217}
+.gx10-channel-state{font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:var(--gx10-champagne)}
+.gx10-channel h4{font-size:16px;margin:13px 0 10px;color:#f5f6f8}
+.gx10-channel p{margin:0;font-size:12px;line-height:1.7;color:#b8bdc4}
+.gx10-channel-links{margin-top:20px;display:flex;flex-wrap:wrap;gap:18px}
+.gx10-channel-links a{color:var(--gx10-champagne);font-size:12px;text-underline-offset:4px}
+.gx10-channel-links a:hover{text-decoration:underline}
+@media(max-width:800px){.gx10-channel-grid{grid-template-columns:1fr}.gx10-enterprise .gx10-enterprise-brand{align-items:flex-start;gap:15px}.gx10-enterprise-brand img{width:70px;height:70px}}
+@media(max-width:480px){.gx10-enterprise-brand h2{font-size:24px}.gx10-enterprise-overline{font-size:9px}.gx10-enterprise-brand img{width:60px;height:60px}}
+
+.gx10-enterprise .gx10-product{border-color:#d6a33f45;background:linear-gradient(135deg,#d6a33f10,#101217)}
+.gx10-product img{display:block;width:48px;height:48px;object-fit:cover;background:#07090d;border:1px solid #d6a33f55;border-radius:10px;margin-bottom:14px}
