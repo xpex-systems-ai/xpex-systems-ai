@@ -54,3 +54,15 @@ test('GX-10 public catalog does not advertise live payment or listings', () => {
   assert.equal(catalog.channels.mercadolivre.listing_active, false);
   assert.ok(catalog.products.every(item => item.requires_contract));
 });
+
+test('GX-10 standalone Growth OS landing serves product badges and manual contact without modifying Earth hero', () => {
+  const html = fs.readFileSync(new URL('../public/enterprise.html', import.meta.url), 'utf8');
+  assert.match(html, /XPeX Agents AI — Engenharia e Auditoria de Agentes/);
+  assert.match(html, /src="\/brand\/v4\/xpex-agents-ai-lion.webp"/);
+  assert.match(html, /Agent Engineering/);
+  assert.match(html, /Agent Audit & Security/);
+  assert.match(html, /Agent Operations/);
+  assert.match(html, /mailto:gxeon\.ai@gmail\.com\?subject=/);
+  assert.match(html, /Não existe checkout ou anúncio ativo/);
+  assert.doesNotMatch(html, /<form\b/i);
+});
