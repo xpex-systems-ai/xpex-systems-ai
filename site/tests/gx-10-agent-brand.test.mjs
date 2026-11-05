@@ -44,3 +44,13 @@ test('GX-10 financially honest Coinbase, Mercado Pago and Mercado Livre discover
   assert.match(source, /Cobrança live ainda não comprovada/);
   assert.match(source, /não confirma pagamento/);
 });
+
+test('GX-10 public catalog does not advertise live payment or listings', () => {
+  const catalog = JSON.parse(fs.readFileSync(new URL('../public/data/gx10-enterprise-services.json', import.meta.url), 'utf8'));
+  assert.equal(catalog.products.length, 3);
+  assert.equal(catalog.sales_route.lead_import, 'not_automated');
+  assert.equal(catalog.channels.coinbase.checkout_live, false);
+  assert.equal(catalog.channels.mercadopago.checkout_live, false);
+  assert.equal(catalog.channels.mercadolivre.listing_active, false);
+  assert.ok(catalog.products.every(item => item.requires_contract));
+});
