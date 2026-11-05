@@ -28,3 +28,19 @@ test('GX-10 preserves Earth robot and animated orbit source without modification
   assert.match(source, /xp-orbit-trail/);
   assert.match(source, /data-motion/);
 });
+
+test('GX-10 approved lion asset appears in enterprise service products only, preserving the Earth hero', () => {
+  assert.equal((source.match(/class="xp-card gx10-product"/g) || []).length, 3);
+  assert.equal((source.match(/src="\/brand\/v4\/xpex-agents-ai-lion.webp"/g) || []).length, 4);
+  assert.match(source, /src="\/media\/gxeon-earth\.jpg"/);
+  assert.match(source, /function orbitSVG\(\)/);
+});
+
+test('GX-10 financially honest Coinbase, Mercado Pago and Mercado Livre discovery', () => {
+  assert.match(source, /Coinbase · USDC \/ Base/);
+  assert.match(source, /Mercado Pago · PIX \/ BRL/);
+  assert.match(source, /Mercado Livre · Canal de vendas/);
+  assert.match(source, /Integração a homologar/);
+  assert.match(source, /Cobrança live ainda não comprovada/);
+  assert.match(source, /não confirma pagamento/);
+});
