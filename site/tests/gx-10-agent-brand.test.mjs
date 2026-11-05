@@ -17,9 +17,9 @@ test('GX-10 commercial presentation cannot be mistaken for a live checkout or su
   for (const name of ['Agent Engineering','Agent Audit & Security','Agent Operations']) {
     assert.ok(source.includes(name), name);
   }
-  assert.match(source, /Contato conduz ao canal institucional existente/);
-  assert.match(source, /Não é formulário de contratação, checkout/);
-  assert.match(source, /href="\/\?view=company#contact"/);
+  assert.match(source, /mailto:gxeon\.ai@gmail\.com\?subject=/);
+  assert.match(source, /Não envia dados automaticamente, não cria contrato/);
+  assert.match(source, /não confirma pagamento/);
 });
 
 test('GX-10 preserves Earth robot and animated orbit source without modifications', () => {
