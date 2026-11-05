@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0.0",
+  "updated_at": "2026-11-05",
+  "company": "XPeX Systems AI",
+  "proposed_trade_brand": "XPeX Agents AI",
+  "currency": "BRL",
+  "status": "proposal_only",
+  "verified_production_clients": 0,
+  "offers": [
+    {
+      "id": "xpex-agent-integration-pilot",
+      "title": "Agent Integration & MCP Pilot",
+      "status": "available_for_scoping_not_committed",
+      "customer_problem": "An enterprise has an approved integration need for an AI agent and existing APIs.",
+      "deliverables": [
+        "Read-only integration feasibility and API permission matrix",
+        "One scoped agent/MCP integration proof of concept using authorized test data",
+        "Reproducible integration tests and technical runbook",
+        "Evidence-based delivery report with limitations"
+      ],
+      "acceptance": [
+        "Client approves written scope and commercial terms before build",
+        "At least one documented authorized end-to-end test",
+        "Unauthorized actions and secrets are excluded from evidence",
+        "Client reviews and accepts measurable deliverables"
+      ],
+      "commercial": {
+        "price": null,
+        "pricing_rule": "Quoted after scope; no binding public price",
+        "billing": "By individually signed agreement; no automatic payment"
+      }
+    },
+    {
+      "id": "xpex-data-integrity-audit",
+      "title": "Robotics & AI Dataset Integrity Audit",
+      "status": "planned_requires_proof_of_concept",
+      "customer_problem": "A dataset owner needs format, metadata and integrity checks before using robotics data.",
+      "deliverables": [
+        "Small, bounded, authorized dataset manifest validation",
+        "File integrity and duplicate analysis",
+        "Format and metadata compatibility findings",
+        "Human-reviewed rights and redistribution limitations",
+        "Reproducible evidence report"
+      ],
+      "acceptance": [
+        "A test dataset is authorized for analysis",
+        "Exact supported formats are confirmed in a demo before contract",
+        "No rehosting or redistribution of third-party data without rights",
+        "Client agrees to dataset volume, scope, price and acceptance criteria"
+      ],
+      "commercial": {
+        "price": null,
+        "pricing_rule": "Pilot quotation only after technical demonstration",
+        "billing": "No automatic payment"
+      }
+    }
+  ],
+  "intake_contract": {
+    "fields": ["company", "contact_role", "source_url", "evidence_of_demand", "requested_outcome", "budget_signal", "authorization_status", "stage", "next_action"],
+    "stages": ["discovered", "evidence_verified", "qualified", "contacted", "response_received", "scoping", "proposal_sent", "accepted", "delivery_in_progress", "accepted_delivery", "payment_verified", "closed_lost"],
+    "anti_claims": ["no automatic contract", "no guaranteed payment", "no partner badge without approval", "no actual API integration before credentials and validation"]
+  }
+}
