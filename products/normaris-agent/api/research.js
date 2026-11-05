@@ -1,0 +1,2 @@
+import {search} from "../lib/core.js";
+export default function handler(req,res){res.setHeader("Cache-Control","no-store");if(req.method!=="POST")return res.status(405).json({error:"Método não permitido"});try{return res.status(200).json(search(req.body?.query));}catch(e){return res.status(e.status||500).json({error:e.status?e.message:"Erro interno."});}}
