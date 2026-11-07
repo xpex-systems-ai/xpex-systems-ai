@@ -1,6 +1,6 @@
 {
   "name": "cosivant-agent-intelligence",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": true,
   "type": "module",
   "engines": {
@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "node --test tests/*.test.js",
-    "check": "node --check lib/core.js && node --check lib/evidence.js && node --check lib/commerce.js && node --check api/research.js && node --check api/audit.js && node --check api/offers.js && node --check api/checkout.js && node --check api/mcp.js && node --check api/health.js && node --check api/sources.js",
+    "check": "node --check lib/core.js && node --check lib/evidence.js && node --check lib/commerce.js && node --check lib/agent-contract.js && node --check api/agent-check.js && node --check api/research.js && node --check api/audit.js && node --check api/offers.js && node --check api/checkout.js && node --check api/mcp.js && node --check api/health.js && node --check api/sources.js",
     "build": "npm test && npm run check && mkdir -p public && cp index.html public/index.html"
   }
 }

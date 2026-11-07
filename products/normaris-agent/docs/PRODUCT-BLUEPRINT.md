@@ -33,3 +33,9 @@ E. Independent accountant review and B2B contract; then invite André to review 
 
 ## Safety invariant
 No evidence => no recommendation. No confirmation from payment provider => no recognized revenue. Executors do not approve their own delivery.
+
+## New in v0.2.1: agent contract analysis
+- POST /api/agent-check takes a public manifest without credentials; rejects local/private endpoint declarations and weak permission contracts.
+- MCP adds gxeon_audit_agent_contract, a sixth read-only tool.
+- This is strictly a declarative evaluation: no network probes, no identity verification, no external certification or API access.
+- The same Agent Commerce Gateway can later expose this as a metered service after proper x402 settlement verification.

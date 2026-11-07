@@ -26,6 +26,7 @@ code.inline{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size
 <button class="active" data-view="intelligence"><span>◈</span> Centro de inteligência</button>
 <button data-view="sources"><span>▤</span> Fontes verificadas</button>
 <button data-view="trust"><span>◈</span> Evidence Trust Engine</button>
+<button data-view="agentAudit"><span>⌘</span> Auditoria de agentes</button>
 <button data-view="commerce"><span>◉</span> Agent Commerce</button>
 <button data-view="integrations"><span>⌘</span> API e MCP Gateway</button>
 <button data-view="governance"><span>◉</span> Governança & segurança</button>
@@ -61,6 +62,23 @@ code.inline{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size
 <div class="twocol"><div class="panel"><div class="panel-head"><h3>Matriz de afirmações</h3><small id="auditReportId"></small></div><div class="panel-body"><div class="finding-list" id="auditFindings"></div></div></div>
 <div class="panel"><div class="panel-head"><h3>Identificação da prova</h3><small>Metadados canônicos</small></div><div class="panel-body"><p style="color:#acb9ce;font-size:12px">Hash local SHA-256 (não verifica documentos remotos):</p><div class="codebox" id="auditHash"></div><p style="color:#b2c3d7;font-size:12px;margin-top:15px">Documento para revisão técnica. Nenhuma conclusão tributária é autorizada com base neste relatório isolado.</p><button id="exportAudit" class="ghostbtn" style="margin-top:10px">↓ Exportar relatório JSON</button></div></div></div></div>
 </div>
+<div class="view" id="view-agentAudit">
+<section class="hero" style="min-height:155px"><div style="position:relative;z-index:1"><span class="eyebrow">GXEON / AGENT VERIFICATION</span><h1>Agentes confiáveis começam <span style="color:var(--gold2)">com contratos verificáveis.</span></h1><p>Avaliação declarativa do manifesto de outro agente MCP/API. Sem acessar terceiros, sem exigir credenciais e sem certificar ambientes remotos.</p></div></section>
+<div class="info-banner">Este módulo analisa APENAS a configuração informada. Um resultado aprovado para revisão NÃO é certificação, prova de titularidade, segurança da infraestrutura ou homologação da Coinbase.</div>
+<div class="section-head"><div><h2>Auditoria de manifesto MCP / API</h2><p>Valide autenticação declarada, permissão de escrita, exigência de revisão e formato das ferramentas.</p></div><span class="state">SEM ACESSO REMOTO</span></div>
+<div class="twocol">
+<div class="panel"><div class="panel-head"><h3>Contrato de agente (JSON)</h3><small>Somente metadados públicos</small></div>
+<div class="panel-body"><label for="agentManifest" style="font-size:12px;color:#acbdd1">Exemplo de manifesto — não utilize senhas ou tokens</label><textarea id="agentManifest" spellcheck="false" style="width:100%;height:260px;resize:vertical;background:#0b1523;color:#c7dcf5;border:1px solid #37465c;border-radius:11px;padding:15px;margin:10px 0;font:12px/1.7 ui-monospace,Consolas,monospace">{
+  "name": "example_readonly_agent",
+  "endpoint": "https://api.example.com/mcp",
+  "auth": "oauth2",
+  "writeActions": false,
+  "requiresHumanApproval": true,
+  "sensitiveData": false,
+  "tools": ["search_public"]
+}</textarea><button class="primarybtn" id="agentAuditButton">◈ Auditar contrato</button></div></div>
+<div class="panel"><div class="panel-head"><h3>Relatório técnico</h3><small id="agentAuditStatus">Pronto para análise</small></div><div class="panel-body"><div id="agentAuditEmpty" class="result-placeholder"><div class="radar-art">⌘</div><b>Execute uma auditoria</b><span style="font-size:12px;max-width:260px">O GXEON sinaliza controles faltantes, não faz sondagem de endpoints.</span></div><div id="agentAuditReport" style="display:none"><div class="row-between"><strong id="agentAuditDecision" style="color:#e2bf80"></strong><span id="agentAuditScore" class="state"></span></div><div id="agentAuditFindings" class="finding-list" style="margin-top:18px"></div><p style="color:#91a8c0;font-size:11px;margin-top:20px">Medição de características declaradas. A verificação de segurança e disponibilidade reais exige teste autorizado independente.</p><div id="agentAuditDigest" class="codebox"></div></div></div></div>
+</div></div>
 <div class="view" id="view-commerce">
 <section class="hero" style="min-height:165px"><div style="position:relative;z-index:1"><span class="eyebrow">GXEON / AGENT ECONOMY</span><h1>Uma inteligência. <span style="color:var(--gold2)">Múltiplos modelos de receita.</span></h1><p>Consumível por empresas, plataformas e agentes autorizados. A camada financeira fica isolada da precisão da pesquisa e das decisões fiscais.</p></div></section>
 <div class="info-banner">x402 / USDC ainda não configurados. Os valores abaixo são hipóteses comerciais; não é possível comprar nem pagar nesta prévia.</div>
@@ -91,8 +109,8 @@ initialize · tools/list · tools/call</div></div>
 <footer class="foot"><div class="links"><span>© 2026 XPeX Systems AI · COSIVANT (nome provisório)</span><a href="https://github.com/xpex-systems-ai/xpex-systems-ai" target="_blank" rel="noopener">GitHub</a><a href="https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/legislacao/solucoes-de-consultas-e-de-divergencias" target="_blank" rel="noopener">Fonte COSIT ↗</a></div><div style="margin-top:7px">Projeto independente. Não afiliado nem endossado pela Receita Federal ou pelo Tesouro Nacional.</div></footer>
 </main></div>
 <script>
-const views=["intelligence","sources","trust","commerce","integrations","governance"];
-const label={intelligence:"CENTRO DE INTELIGÊNCIA",sources:"FONTES VERIFICADAS",trust:"EVIDENCE TRUST",commerce:"AGENT COMMERCE",integrations:"INTEGRAÇÕES",governance:"GOVERNANÇA"};
+const views=["intelligence","sources","trust","agentAudit","commerce","integrations","governance"];
+const label={intelligence:"CENTRO DE INTELIGÊNCIA",sources:"FONTES VERIFICADAS",trust:"EVIDENCE TRUST",agentAudit:"AUDITORIA DE AGENTES",commerce:"AGENT COMMERCE",integrations:"INTEGRAÇÕES",governance:"GOVERNANÇA"};
 document.querySelectorAll("[data-view]").forEach(b=>b.addEventListener("click",()=>{let v=b.dataset.view;if(!views.includes(v))return;document.querySelectorAll(".view").forEach(x=>x.classList.toggle("active",x.id==="view-"+v));document.querySelectorAll("[data-view]").forEach(x=>x.classList.toggle("active",x.dataset.view===v));document.getElementById("crumbLabel").textContent=label[v];document.getElementById("sidebar").classList.remove("open");scrollTo(0,0)}));
 document.getElementById("toggleMenu").addEventListener("click",()=>document.getElementById("sidebar").classList.toggle("open"));
 const query=document.getElementById("query");query.addEventListener("input",()=>document.getElementById("counter").textContent=query.value.length);
@@ -147,6 +165,23 @@ async function loadOffers(){
  }catch(e){target.textContent="Catálogo indisponível: "+e.message;}
 }
 loadOffers();
+
+
+document.getElementById("agentAuditButton").addEventListener("click",async()=>{
+ const btn=document.getElementById("agentAuditButton");btn.disabled=true;btn.textContent="Avaliando contrato...";
+ try{
+  const manifest=JSON.parse(document.getElementById("agentManifest").value);
+  const d=await readJson(await fetch("/api/agent-check",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({manifest})}));
+  document.getElementById("agentAuditEmpty").style.display="none";document.getElementById("agentAuditReport").style.display="block";
+  document.getElementById("agentAuditStatus").textContent="Avaliação declarativa concluída";
+  document.getElementById("agentAuditDecision").textContent=d.status==="REVIEW_CANDIDATE"?"ELEGÍVEL PARA REVISÃO":"CORREÇÕES NECESSÁRIAS";
+  document.getElementById("agentAuditScore").textContent=d.score.passed+"/"+d.score.total+" CONTROLES";
+  const box=document.getElementById("agentAuditFindings");box.replaceChildren();
+  for(const c of d.checks){let div=document.createElement("div");div.className="finding";let strong=document.createElement("strong");strong.textContent=c.detail;let badge=document.createElement("span");badge.textContent=c.passed?"PASSOU":"AJUSTAR";div.append(strong,badge);box.append(div);}
+  document.getElementById("agentAuditDigest").textContent="Hash local de metadados: "+d.sha256;
+ }catch(e){alert("Não foi possível auditar. Informe JSON válido sem segredos. "+e.message)}
+ finally{btn.disabled=false;btn.textContent="◈ Auditar contrato";}
+});
 
 loadHealth();loadSources();
 </script></body></html>

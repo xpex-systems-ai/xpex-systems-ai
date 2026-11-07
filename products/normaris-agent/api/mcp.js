@@ -1,12 +1,14 @@
 import {search,health} from "../lib/core.js";
 import {evidencePack,inspectSource} from "../lib/evidence.js";
 import {commerce} from "../lib/commerce.js";
+import {auditAgentContract} from "../lib/agent-contract.js";
 const protocol="2025-03-26";
 const tools=[
  {name:"cosivant_search_official_references",description:"Busca links oficiais catalogados. Não consulta acervo COSIT integral nem oferece parecer.",inputSchema:{type:"object",properties:{query:{type:"string",minLength:4,maxLength:500}},required:["query"],additionalProperties:false}},
  {name:"cosivant_evidence_audit",description:"Relatório de referências catalogadas, lacunas e hash local de metadados. Não verifica documento remoto, vigência ou pagamento.",inputSchema:{type:"object",properties:{query:{type:"string",minLength:4,maxLength:500}},required:["query"],additionalProperties:false}},
  {name:"cosivant_inspect_source",description:"Inspeciona os limites da referência catalogada sem buscar URL arbitrária.",inputSchema:{type:"object",properties:{sourceId:{type:"string"}},required:["sourceId"],additionalProperties:false}},
  {name:"cosivant_list_offers",description:"Propostas de serviços com preços hipotéticos, sem cobrança ativa.",inputSchema:{type:"object",properties:{},additionalProperties:false}},
+ {name:"gxeon_audit_agent_contract",description:"Valida manifesto declarado de agente API/MCP sem fazer network probe, sem certificação e sem cobranças.",inputSchema:{type:"object",properties:{manifest:{type:"object"}},required:["manifest"],additionalProperties:false}},
  {name:"cosivant_get_demo_status",description:"Saúde da demonstração, sem afirmar RAG ou pagamento homologado.",inputSchema:{type:"object",properties:{},additionalProperties:false}}
 ];
 const ok=(id,result)=>({jsonrpc:"2.0",id,result});
@@ -29,6 +31,7 @@ export default function handler(req,res){
    if(name==="cosivant_evidence_audit")r=evidencePack(args.query);
    if(name==="cosivant_inspect_source")r=inspectSource(args.sourceId);
    if(name==="cosivant_list_offers")r=commerce();
+   if(name==="gxeon_audit_agent_contract")r=auditAgentContract(args.manifest);
    if(name==="cosivant_get_demo_status")r=health();
    return res.status(200).json(ok(id,{content:[{type:"text",text:JSON.stringify(r)}],isError:false}));
   }catch(e){return res.status(e.status||500).json(fail(id,-32602,e.status?e.message:"Internal error"));}
