@@ -1,5 +1,5 @@
 # COSIVANT — Regulatory Intelligence Agent (working name)
-Status: TECHNICAL PREVIEW. Name pending INPI/trademark clearance; not endorsed by Receita Federal.
+Status: TECHNICAL PREVIEW v0.2 (research + GXEON evidence trust + x402 commerce planning). Name pending INPI/trademark clearance; not endorsed by Receita Federal.
 Standalone dashboard + bounded evidence reference search API + MCP JSON-RPC.
 Currently includes 4 hand-reviewed links to official reference pages. NO full COSIT ingestion, live legal conclusions, commercial tenants or proven OMNIX RAG. This version is suitable for architecture review only; NOT for paid professional fiscal advice.
 
@@ -18,3 +18,6 @@ POST /api/mcp — JSON-RPC initialize, ping, tools/list, tools/call; read-only p
 - Paid contract only after scope, acceptance and verified payment.
 
 From this app folder: npm test; npm run check.
+
+## V0.2 extensions
+See docs/PRODUCT-BLUEPRINT.md, /api/audit, /api/offers and the five read-only MCP tools. /api/checkout rejects all charges with HTTP 503. No OMNIX model nor Supabase runtime credentials have been connected.
