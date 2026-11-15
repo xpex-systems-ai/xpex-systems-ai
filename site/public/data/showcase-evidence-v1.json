@@ -1,0 +1,120 @@
+{
+  "schemaVersion": "1.0.0",
+  "scope": "HTTP observations and editorial image provenance. Independent publication approval is recorded through PR review.",
+  "observations": {
+    "xpex-company": {
+      "url": "https://xpex-systems-ai.vercel.app/",
+      "httpStatus": 200,
+      "observedAt": "2026-11-15T22:10:39.808Z",
+      "scope": "public page"
+    },
+    "ecosystem": {
+      "url": "https://xpex-systems-ai.vercel.app/?view=ecosystem",
+      "httpStatus": 200,
+      "observedAt": "2026-11-15T22:10:39.864Z",
+      "scope": "public page"
+    },
+    "audit-os": {
+      "url": "https://gxeon-audit-os.vercel.app/",
+      "httpStatus": 200,
+      "observedAt": "2026-11-15T22:10:40.136Z",
+      "scope": "public page"
+    },
+    "studio-ai": {
+      "url": "https://xpex-studio-ai.vercel.app/",
+      "httpStatus": 200,
+      "observedAt": "2026-11-15T22:10:39.864Z",
+      "scope": "public page"
+    },
+    "academy": {
+      "url": "https://xpex-academy-mmpzzek1w-xpex-neural.vercel.app/academia",
+      "httpStatus": 200,
+      "observedAt": "2026-11-15T22:10:40.011Z",
+      "scope": "unauthenticated pilot entry"
+    },
+    "wallet-command": {
+      "url": "https://gxeon-wallet-command-center.vercel.app/market",
+      "httpStatus": 200,
+      "observedAt": "2026-11-15T22:10:40.008Z",
+      "scope": "public marketplace"
+    },
+    "plugin-factory": {
+      "url": "https://xpex-plugin-factory-production.up.railway.app/health",
+      "httpStatus": 404,
+      "observedAt": "2026-11-15T22:10:28.200Z",
+      "scope": "public health endpoint"
+    },
+    "systems-command": {
+      "url": "https://xpex-systems-command-staging-web-production.up.railway.app/api/health",
+      "httpStatus": 404,
+      "observedAt": "2026-11-15T22:10:28.630Z",
+      "scope": "public health endpoint"
+    }
+  },
+  "media": {
+    "academy": {
+      "path": "/media/showcase/academy.webp",
+      "kind": "REAL_SCREENSHOT",
+      "classification": "E1",
+      "sourceUrl": "https://xpex-academy-mmpzzek1w-xpex-neural.vercel.app/academia",
+      "capturedAt": "2026-11-15T22:10:40.011Z",
+      "width": 960,
+      "height": 567,
+      "alt": "Formulário público de entrada da XPeX Academy, sem campos preenchidos.",
+      "caption": "Entrada pública de autenticação do piloto. A jornada acadêmica autenticada aguarda homologação.",
+      "review": "Captura anônima; nenhum dado inserido.",
+      "publication": "REVIEWED_FOR_PR"
+    },
+    "studio-ai": {
+      "path": "/media/showcase/studio-ai.webp",
+      "kind": "REAL_SCREENSHOT",
+      "classification": "E1",
+      "sourceUrl": "https://xpex-studio-ai.vercel.app/",
+      "capturedAt": "2026-11-15T22:10:39.864Z",
+      "width": 960,
+      "height": 567,
+      "alt": "Interface pública do XPeX Studio AI com módulos Genesis, Agent Core e Memory Core.",
+      "caption": "Página pública do Studio. A captura documenta somente a interface observada.",
+      "review": "Captura anônima da página pública.",
+      "publication": "REVIEWED_FOR_PR"
+    },
+    "wallet-command": {
+      "path": "/media/showcase/wallet-command.webp",
+      "kind": "REAL_SCREENSHOT",
+      "classification": "E1",
+      "sourceUrl": "https://gxeon-wallet-command-center.vercel.app/market",
+      "capturedAt": "2026-11-15T22:10:40.008Z",
+      "width": 960,
+      "height": 567,
+      "alt": "Página pública do GXEON Agent Market com introdução ao catálogo e servidor MCP.",
+      "caption": "Catálogo público do Agent Market. Condições atuais estão na fonte.",
+      "review": "Captura separada do painel Wallet, sem endereços, saldo ou dados de conta.",
+      "publication": "REVIEWED_FOR_PR"
+    },
+    "audit-os": {
+      "path": "/media/showcase/audit-os.webp",
+      "kind": "REAL_SCREENSHOT",
+      "classification": "E2",
+      "sourceUrl": "https://gxeon-audit-os.vercel.app/",
+      "capturedAt": "2026-11-15T22:10:40.136Z",
+      "width": 960,
+      "height": 567,
+      "alt": "Interface pública do GXEON Audit OS mostrando Mission Control e o estado do espelho de dados.",
+      "caption": "Interface pública do Audit OS na data da captura. Identificação e contadores foram cobertos.",
+      "review": "Redação visual dos contadores superiores, da identificação do operador e dos valores do painel principal.",
+      "publication": "REVIEWED_FOR_PR"
+    },
+    "xpex-company": {
+      "path": "/media/gxeon-earth.jpg",
+      "kind": "OFFICIAL_ASSET",
+      "classification": "D1",
+      "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/f587585911ecad8b317fd9fa947f1de64b1bc3a7/site/public/media/gxeon-earth.jpg",
+      "width": 1536,
+      "height": 1024,
+      "alt": "Robô oficial GXEON segurando o planeta Terra.",
+      "caption": "Arte institucional GXEON.",
+      "review": "Asset oficial existente no baseline.",
+      "publication": "EXISTING_OFFICIAL"
+    }
+  }
+}

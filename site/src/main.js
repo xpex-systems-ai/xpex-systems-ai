@@ -10,6 +10,8 @@ import { initEnterpriseAgentAPI } from './enterprise-agent-api.js';
 import './ecosystem.css';
 import { ecosystemEntry, maybeRenderEcosystem } from './ecosystem.js';
 import './brand.css';
+import './public-site.css';
+import './showcase.css';
 import { brandMark, brandLockup, maybeRenderBrandPage } from './brand.js';
 import { SYSTEM_INTELLIGENCE } from './data/system-intelligence.js';
 import { investorBrief, brandEntry } from './investor-brief.js';
@@ -37,7 +39,8 @@ const checks = [
 
 const app = document.querySelector('#app');
 
-app.innerHTML = `
+function renderLegacyPage() {
+  app.innerHTML = `
   <div class="noise"></div>
   <header class="nav shell">
     <a class="brand" href="#top" aria-label="XPeX Systems AI home">
@@ -313,6 +316,7 @@ app.innerHTML = `
     <p>© 2026 XPeX Systems AI</p>
   </footer>
 `;
+}
 
 const observer = new IntersectionObserver((entries) => {
   for (const entry of entries) {
@@ -320,23 +324,29 @@ const observer = new IntersectionObserver((entries) => {
   }
 }, { threshold: 0.12 });
 
-const existingPageActive = maybeRenderBrandPage(app) || maybeRenderEcosystem(app) || maybeRenderSystemPage(app);
+const ecosystemActive = maybeRenderEcosystem(app);
+const existingPageActive = ecosystemActive || maybeRenderBrandPage(app) || maybeRenderSystemPage(app);
 const publicPageActive = !existingPageActive && renderPublicSite(app);
 const systemPageActive = existingPageActive || publicPageActive;
 
-if (existingPageActive) {
+if (existingPageActive && !ecosystemActive) {
   document.body.classList.add('xpex-public');
   const oldHeader = app.querySelector('header');
   const oldFooter = app.querySelector('footer');
   if (oldHeader) oldHeader.outerHTML = publicHeader();
   if (oldFooter) oldFooter.outerHTML = publicFooter();
   const main = app.querySelector('main');
-  if (main) main.id = 'main-content';
-  if (main && new URLSearchParams(location.search).get('view') === 'ecosystem') main.insertAdjacentHTML('beforeend', publicIntegrations());
+  if (main) {
+    main.id = 'main-content';
+    main.tabIndex = -1;
+  }
   initPublicNavigation();
 }
 
+if (ecosystemActive) app.querySelector('main').insertAdjacentHTML('beforeend', publicIntegrations());
+
 if (!systemPageActive) {
+  renderLegacyPage();
   rewriteSystemLinks();
   document.querySelectorAll('.system-card, .manifesto, .section-head, .trust-layout, .founder, .gx-intro, .launch-head').forEach(el => observer.observe(el));
   initGX();

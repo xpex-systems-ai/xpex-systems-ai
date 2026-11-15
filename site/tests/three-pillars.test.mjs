@@ -5,14 +5,14 @@ import { ecosystemThreePillars } from '../src/ecosystem.js';
 
 test('three entry points have explicit destinations and truthful access states', () => {
   const html = ecosystemThreePillars();
-  assert.match(html, /data-three-pillars/);
+  assert.match(html, /id="eco-three-pillars"/);
   assert.match(html, /href="\/"[^>]*>Explorar a empresa/);
   assert.match(html, /https:\/\/xpex-portfolio-evidencias\.juniorsenax\.chatgpt\.site\/cases/);
   assert.match(html, /https:\/\/xpex-academy-mmpzzek1w-xpex-neural\.vercel\.app\/academia/);
-  assert.match(html, /LOGIN CHATGPT/);
-  assert.match(html, /PREVIEW RESTRITO/);
-  assert.match(html, /não cria login compartilhado/);
-  assert.match(html, /sem homologação para alunos reais/);
+  assert.match(html, /Login ChatGPT/);
+  assert.match(html, /Preview restrito/);
+  assert.match(html, /acessos independentes/);
+  assert.match(html, /validação pendente/);
   assert.doesNotMatch(html, /<form|<input|service_role|secret_key/i);
 });
 
