@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "1.0.0",
+  "snapshotAt": "2026-11-15",
+  "mode": "PUBLIC_STATUS_SNAPSHOT",
+  "policy": "EVIDENCE_FIRST",
+  "company": {
+    "id": "xpex-systems-ai",
+    "name": "XPeX Systems AI",
+    "url": "https://xpex-systems-ai.vercel.app",
+    "source": "https://github.com/xpex-systems-ai/xpex-systems-ai",
+    "access": "public",
+    "status": "site_http_200",
+    "proof": "https://xpex-systems-ai.vercel.app",
+    "claim": "Corporate site visibly accessible, not proof of all services"
+  },
+  "pillars": [
+    {
+      "id": "xpex-company",
+      "role": "public-discovery",
+      "url": "https://xpex-systems-ai.vercel.app",
+      "access": "public",
+      "status": "PUBLIC_SITE_ACCESSIBLE",
+      "integration": "LINK_ONLY",
+      "sourceRepo": "xpex-systems-ai/xpex-systems-ai"
+    },
+    {
+      "id": "xpex-evidence",
+      "role": "evidence-and-commercial-radar",
+      "url": "https://xpex-portfolio-evidencias.juniorsenax.chatgpt.site/cases",
+      "access": "chatgpt-authenticated",
+      "status": "LOGIN_GATE_VERIFIED_CONTENT_PRIVATE",
+      "integration": "LINK_ONLY",
+      "sourceRepo": null,
+      "notes": "A separate Vercel portfolio deployment is protected by Vercel SSO; not a shared identity provider"
+    },
+    {
+      "id": "xpex-academy",
+      "role": "education-and-projects",
+      "url": "https://xpex-academy-mmpzzek1w-xpex-neural.vercel.app/academia",
+      "access": "invited-supabase-preview",
+      "status": "PREVIEW_LOGIN_PAGE_ACCESSIBLE_E2E_PENDING",
+      "integration": "LINK_ONLY",
+      "sourceRepo": "xpex-systems-ai/XPEX-ACADEMY",
+      "notes": "Supabase pilot is separate from legacy Railway records; no authenticated enrollment, progress or payment claim"
+    }
+  ],
+  "sourceOfTruth": {
+    "sourceCode": "GitHub",
+    "publicClaims": "Corporate system registry; independently verified claims only",
+    "academicRecords": "XPeX Academy Supabase pilot; legacy Railway not imported",
+    "commercialReceipts": "XPeX Cash Engine after external payment proof",
+    "identity": "Independent accounts; no cross-domain SSO verified"
+  },
+  "noAutomaticWrites": true,
+  "noFinancialTransfer": true,
+  "monetizationVerified": false
+}
