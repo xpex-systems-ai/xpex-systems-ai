@@ -64,7 +64,7 @@ test('public journeys, carousel accessibility and failures', { timeout: 120000 }
       await page.getByRole('link', { name: 'Explorar ecossistema' }).click();
       assert.equal(new URL(page.url()).searchParams.get('view'), 'ecosystem');
       assert.equal(await page.locator('#eco-three-pillars [data-showcase-item]').count(), 3);
-      await page.locator('[data-eco-status]').filter({ hasText: 'consulta' }).waitFor({ timeout: 22000 });
+      await page.locator('[data-eco-status]').filter({ hasText: /^(CONSULTADO|CONSULTA PARCIAL|INDISPONÍVEL) · consulta / }).waitFor({ timeout: 22000 });
       assert.equal(await page.locator('[data-eco-refresh]').isEnabled(), true);
       await snapshot(page, 'depois-ecossistema-desktop');
 
@@ -100,6 +100,8 @@ test('public journeys, carousel accessibility and failures', { timeout: 120000 }
       }
       await page.setViewportSize({ width: 390, height: 844 });
       await page.goto(root);
+      await page.locator('.xp-hero-scene img').evaluate(image => image.decode());
+      assert.match(await page.locator('.xp-hero-scene img').evaluate(image => image.currentSrc), /gxeon-earth-mobile\.webp$/);
       await snapshot(page, 'depois-home-mobile');
       const menu = page.getByRole('button', { name: 'Abrir menu' });
       await menu.focus();

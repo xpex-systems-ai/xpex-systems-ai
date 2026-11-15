@@ -13,7 +13,7 @@
 
 ## Implementação
 
-A home e o gateway usam `showcaseRail` e `showcaseCard` no shell Vite existente. A home organiza plataformas, sistemas, agentes, evidências, Academy e canais. O gateway mantém o observatório e a projeção GET pública. Os sete perfis mantêm as rotas `?system=` e exibem mídia estática e links de origem. O logo do cabeçalho é um recorte WebP de 5.636 bytes do PNG oficial; o arquivo original continua disponível no kit de marca.
+A home e o gateway usam `showcaseRail` e `showcaseCard` no shell Vite existente. A home organiza plataformas, sistemas, agentes, evidências, Academy e canais. O gateway mantém o observatório e a projeção GET pública. Os sete perfis mantêm as rotas `?system=` e exibem mídia estática e links de origem. O logo do cabeçalho é um recorte WebP de 5.636 bytes do PNG oficial. A partir do mesmo JPG orbital, a home carrega uma variante WebP de 63.988 bytes em telas de até 600 px, frente aos 235.456 bytes do original. O preload prioriza a variante da tela. As prateleiras fazem uma leitura de layout em lote no ResizeObserver.
 
 `site/src/data/showcase.js` projeta os registros técnico e institucional com texto editorial. [O registro de curadoria](../site/public/data/showcase-evidence-v1.json) acrescenta observações HTTP, URL, horário, classificação, dimensões e nota da mídia. As quatro capturas WebP foram feitas no Chrome com sessão anônima. A Academy mostra somente a tela de entrada; o Wallet mostra a superfície pública do marketplace. A captura do Audit OS tem redação de identificação e contadores. O status `REVIEWED_FOR_PR` representa revisão técnica da imagem para esta PR; a decisão de publicação cabe à revisão independente.
 

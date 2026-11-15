@@ -68,20 +68,26 @@ export function showcaseRail({ id, title, label, summary, items, more, shell = t
   </section>`;
 }
 
+function trackPosition(track) {
+  return { max: track.scrollWidth - track.clientWidth, left: track.scrollLeft };
+}
+
 export function initShowcase(root) {
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+  const controls = new Map();
+  const observer = new ResizeObserver(entries => {
+    const measurements = entries.map(({ target }) => [controls.get(target), trackPosition(target)]);
+    for (const [update, position] of measurements) update(position);
+  });
   root.querySelectorAll('[data-showcase-rail]').forEach(rail => {
     const track = rail.querySelector('[data-showcase-track]');
     const list = track.firstElementChild;
     const buttons = rail.querySelector('[data-showcase-buttons]');
     const previous = rail.querySelector('[data-showcase-prev]');
     const next = rail.querySelector('[data-showcase-next]');
-    const update = () => {
-      const max = track.scrollWidth - track.clientWidth;
-      buttons.hidden = max <= 2;
-      track.tabIndex = max > 2 ? 0 : -1;
-      previous.setAttribute('aria-disabled', String(track.scrollLeft <= 2));
-      next.setAttribute('aria-disabled', String(track.scrollLeft >= max - 2));
+    const updateButtons = ({ max, left }) => {
+      previous.setAttribute('aria-disabled', String(left <= 2));
+      next.setAttribute('aria-disabled', String(left >= max - 2));
     };
     const scroll = (direction, edge = false) => {
       const behavior = reducedMotion.matches ? 'instant' : 'smooth';
@@ -95,7 +101,7 @@ export function initShowcase(root) {
 
     previous.addEventListener('click', () => { if (previous.getAttribute('aria-disabled') === 'false') scroll(-1); });
     next.addEventListener('click', () => { if (next.getAttribute('aria-disabled') === 'false') scroll(1); });
-    track.addEventListener('scroll', update, { passive: true });
+    track.addEventListener('scroll', () => updateButtons(trackPosition(track)), { passive: true });
     track.addEventListener('keydown', event => {
       if (event.target !== track || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
       const keys = { ArrowLeft: [-1], ArrowRight: [1], Home: [-1, true], End: [1, true] };
@@ -103,8 +109,12 @@ export function initShowcase(root) {
       event.preventDefault();
       scroll(...keys[event.key]);
     });
-    new ResizeObserver(update).observe(track);
-    update();
+    controls.set(track, position => {
+      buttons.hidden = position.max <= 2;
+      track.tabIndex = position.max > 2 ? 0 : -1;
+      updateButtons(position);
+    });
+    observer.observe(track);
   });
   root.querySelectorAll('[data-showcase-image]').forEach(image => {
     const fallback = () => {

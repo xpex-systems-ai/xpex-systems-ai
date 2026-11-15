@@ -60,7 +60,10 @@ function orbitSVG() {
 function hero() {
   return `<section class="xp-hero xp-enterprise-hero" aria-labelledby="hero-heading">
     <div class="xp-hero-scene" aria-hidden="true">
-      <img src="/media/gxeon-earth.jpg" width="1536" height="1024" alt="" fetchpriority="high">
+      <picture>
+        <source media="(max-width: 600px)" srcset="/media/gxeon-earth-mobile.webp">
+        <img src="/media/gxeon-earth.jpg" width="1536" height="1024" alt="" fetchpriority="high">
+      </picture>
       ${orbitSVG()}
     </div>
     <div class="xp-shell xp-hero-inner">
