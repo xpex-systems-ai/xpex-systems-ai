@@ -46,7 +46,15 @@ test('public journeys, carousel accessibility and failures', { timeout: 120000 }
       assert.equal(await page.locator('#systems [data-showcase-item]').count(), 7);
       assert.equal(await page.locator('#agents [data-showcase-item]').count(), 4);
       assert.equal(await page.locator('#ecosystem [data-showcase-item]').count(), 3);
-      assert.equal(await page.locator('[data-motion]').getAttribute('aria-pressed'), 'true');
+      const motion = page.locator('[data-motion]');
+      const orbit = page.locator('.xp-orbit').first();
+      assert.equal(await motion.getAttribute('aria-pressed'), 'true');
+      assert.equal(await orbit.evaluate(node => getComputedStyle(node).animationName), 'none');
+      assert.equal(await motion.isHidden(), true);
+      await page.emulateMedia({ reducedMotion: 'no-preference' });
+      await page.getByRole('button', { name: 'Pausar animação' }).click();
+      assert.equal(await orbit.evaluate(node => getComputedStyle(node).animationPlayState), 'paused');
+      await page.emulateMedia({ reducedMotion: 'reduce' });
       assert.equal(await page.locator('h1').innerText(), 'XPeX Systems AI');
       await snapshot(page, 'depois-home-desktop');
       await page.locator('#ecosystem').scrollIntoViewIfNeeded();
