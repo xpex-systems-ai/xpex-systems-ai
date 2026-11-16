@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "updatedAt": "2026-11-16T01:59:11.960Z",
-  "scope": "Editorial media for preview review. Operational state remains in the system and pillars registries.",
+  "scope": "Editorial media for preview review. 24 decorative SVG art layers are concept artwork, not real system captures. The four previously approved screenshots retain separate provenance; operational state remains in the system and pillars registries.",
   "items": [
     {
       "id": "xpex-company",
@@ -20,7 +20,13 @@
             "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/ba20c129c4385ed653551dc549fc468b94349b06/site/public/media/gxeon-earth-mobile.webp"
           }
         ],
-        "publication": "REVIEWED_FOR_PR"
+        "publication": "REVIEWED_FOR_PR",
+        "artOverlay": {
+          "path": "/media/showcase/art/xpex-company-editorial-v1.svg",
+          "kind": "EDITORIAL_VECTOR_ART",
+          "evidence": false,
+          "source": "Original deterministic vector concept artwork in the XPeX media repository; not a screenshot and not proof of runtime"
+        }
       }
     },
     {
@@ -40,7 +46,13 @@
             "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/ba20c129c4385ed653551dc549fc468b94349b06/site/public/brand/v2/audit-os-symbol.svg"
           }
         ],
-        "publication": "REVIEWED_FOR_PR"
+        "publication": "REVIEWED_FOR_PR",
+        "artOverlay": {
+          "path": "/media/showcase/art/xpex-evidence-editorial-v1.svg",
+          "kind": "EDITORIAL_VECTOR_ART",
+          "evidence": false,
+          "source": "Original deterministic vector concept artwork in the XPeX media repository; not a screenshot and not proof of runtime"
+        }
       }
     },
     {
@@ -65,7 +77,13 @@
             "redacted": false
           }
         ],
-        "publication": "REVIEWED_FOR_PR"
+        "publication": "REVIEWED_FOR_PR",
+        "artOverlay": {
+          "path": "/media/showcase/art/xpex-academy-editorial-v1.svg",
+          "kind": "EDITORIAL_VECTOR_ART",
+          "evidence": false,
+          "source": "Original deterministic vector concept artwork in the XPeX media repository; not a screenshot and not proof of runtime"
+        }
       }
     },
     {
@@ -85,7 +103,13 @@
             "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/ba20c129c4385ed653551dc549fc468b94349b06/site/public/brand/v2/systems-command-symbol.svg"
           }
         ],
-        "publication": "REVIEWED_FOR_PR"
+        "publication": "REVIEWED_FOR_PR",
+        "artOverlay": {
+          "path": "/media/showcase/art/systems-command-editorial-v1.svg",
+          "kind": "EDITORIAL_VECTOR_ART",
+          "evidence": false,
+          "source": "Original deterministic vector concept artwork in the XPeX media repository; not a screenshot and not proof of runtime"
+        }
       }
     },
     {
@@ -110,7 +134,13 @@
             "redacted": true
           }
         ],
-        "publication": "REVIEWED_FOR_PR"
+        "publication": "REVIEWED_FOR_PR",
+        "artOverlay": {
+          "path": "/media/showcase/art/audit-os-editorial-v1.svg",
+          "kind": "EDITORIAL_VECTOR_ART",
+          "evidence": false,
+          "source": "Original deterministic vector concept artwork in the XPeX media repository; not a screenshot and not proof of runtime"
+        }
       }
     },
     {
@@ -130,7 +160,13 @@
             "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/ba20c129c4385ed653551dc549fc468b94349b06/site/public/brand/v2/plugin-factory-symbol.svg"
           }
         ],
-        "publication": "REVIEWED_FOR_PR"
+        "publication": "REVIEWED_FOR_PR",
+        "artOverlay": {
+          "path": "/media/showcase/art/plugin-factory-editorial-v1.svg",
+          "kind": "EDITORIAL_VECTOR_ART",
+          "evidence": false,
+          "source": "Original deterministic vector concept artwork in the XPeX media repository; not a screenshot and not proof of runtime"
+        }
       }
     },
     {
@@ -155,7 +191,13 @@
             "redacted": false
           }
         ],
-        "publication": "REVIEWED_FOR_PR"
+        "publication": "REVIEWED_FOR_PR",
+        "artOverlay": {
+          "path": "/media/showcase/art/wallet-command-editorial-v1.svg",
+          "kind": "EDITORIAL_VECTOR_ART",
+          "evidence": false,
+          "source": "Original deterministic vector concept artwork in the XPeX media repository; not a screenshot and not proof of runtime"
+        }
       }
     },
     {
@@ -180,7 +222,13 @@
             "redacted": false
           }
         ],
-        "publication": "REVIEWED_FOR_PR"
+        "publication": "REVIEWED_FOR_PR",
+        "artOverlay": {
+          "path": "/media/showcase/art/studio-ai-editorial-v1.svg",
+          "kind": "EDITORIAL_VECTOR_ART",
+          "evidence": false,
+          "source": "Original deterministic vector concept artwork in the XPeX media repository; not a screenshot and not proof of runtime"
+        }
       }
     },
     {
@@ -200,7 +248,13 @@
             "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/ba20c129c4385ed653551dc549fc468b94349b06/site/public/brand/v2/api-fabric-symbol.svg"
           }
         ],
-        "publication": "REVIEWED_FOR_PR"
+        "publication": "REVIEWED_FOR_PR",
+        "artOverlay": {
+          "path": "/media/showcase/art/api-fabric-editorial-v1.svg",
+          "kind": "EDITORIAL_VECTOR_ART",
+          "evidence": false,
+          "source": "Original deterministic vector concept artwork in the XPeX media repository; not a screenshot and not proof of runtime"
+        }
       }
     },
     {
@@ -225,7 +279,13 @@
             "redacted": false
           }
         ],
-        "publication": "REVIEWED_FOR_PR"
+        "publication": "REVIEWED_FOR_PR",
+        "artOverlay": {
+          "path": "/media/showcase/art/academy-editorial-v1.svg",
+          "kind": "EDITORIAL_VECTOR_ART",
+          "evidence": false,
+          "source": "Original deterministic vector concept artwork in the XPeX media repository; not a screenshot and not proof of runtime"
+        }
       }
     },
     {
@@ -245,7 +305,13 @@
             "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/ba20c129c4385ed653551dc549fc468b94349b06/site/public/brand/v2/gxeon-symbol.svg"
           }
         ],
-        "publication": "REVIEWED_FOR_PR"
+        "publication": "REVIEWED_FOR_PR",
+        "artOverlay": {
+          "path": "/media/showcase/art/neural-copilot-editorial-v1.svg",
+          "kind": "EDITORIAL_VECTOR_ART",
+          "evidence": false,
+          "source": "Original deterministic vector concept artwork in the XPeX media repository; not a screenshot and not proof of runtime"
+        }
       }
     },
     {
@@ -266,7 +332,13 @@
             "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/ba20c129c4385ed653551dc549fc468b94349b06/site/public/brand/v2/gxeon-symbol.svg"
           }
         ],
-        "publication": "REVIEWED_FOR_PR"
+        "publication": "REVIEWED_FOR_PR",
+        "artOverlay": {
+          "path": "/media/showcase/art/evidence-concierge-editorial-v1.svg",
+          "kind": "EDITORIAL_VECTOR_ART",
+          "evidence": false,
+          "source": "Original deterministic vector concept artwork in the XPeX media repository; not a screenshot and not proof of runtime"
+        }
       }
     },
     {
@@ -286,7 +358,13 @@
             "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/ba20c129c4385ed653551dc549fc468b94349b06/site/public/brand/v2/audit-os-symbol.svg"
           }
         ],
-        "publication": "REVIEWED_FOR_PR"
+        "publication": "REVIEWED_FOR_PR",
+        "artOverlay": {
+          "path": "/media/showcase/art/audit-engineer-editorial-v1.svg",
+          "kind": "EDITORIAL_VECTOR_ART",
+          "evidence": false,
+          "source": "Original deterministic vector concept artwork in the XPeX media repository; not a screenshot and not proof of runtime"
+        }
       }
     },
     {
@@ -306,7 +384,13 @@
             "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/ba20c129c4385ed653551dc549fc468b94349b06/site/public/brand/v2/plugin-factory-symbol.svg"
           }
         ],
-        "publication": "REVIEWED_FOR_PR"
+        "publication": "REVIEWED_FOR_PR",
+        "artOverlay": {
+          "path": "/media/showcase/art/plugin-factory-agent-editorial-v1.svg",
+          "kind": "EDITORIAL_VECTOR_ART",
+          "evidence": false,
+          "source": "Original deterministic vector concept artwork in the XPeX media repository; not a screenshot and not proof of runtime"
+        }
       }
     },
     {
@@ -326,7 +410,13 @@
             "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/ba20c129c4385ed653551dc549fc468b94349b06/site/public/brand/v2/api-fabric-symbol.svg"
           }
         ],
-        "publication": "REVIEWED_FOR_PR"
+        "publication": "REVIEWED_FOR_PR",
+        "artOverlay": {
+          "path": "/media/showcase/art/api-mcp-editorial-v1.svg",
+          "kind": "EDITORIAL_VECTOR_ART",
+          "evidence": false,
+          "source": "Original deterministic vector concept artwork in the XPeX media repository; not a screenshot and not proof of runtime"
+        }
       }
     },
     {
@@ -347,7 +437,13 @@
             "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/ba20c129c4385ed653551dc549fc468b94349b06/site/public/brand/v2/gxeon-symbol.svg"
           }
         ],
-        "publication": "REVIEWED_FOR_PR"
+        "publication": "REVIEWED_FOR_PR",
+        "artOverlay": {
+          "path": "/media/showcase/art/enterprise-evidence-editorial-v1.svg",
+          "kind": "EDITORIAL_VECTOR_ART",
+          "evidence": false,
+          "source": "Original deterministic vector concept artwork in the XPeX media repository; not a screenshot and not proof of runtime"
+        }
       }
     },
     {
@@ -367,7 +463,13 @@
             "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/ba20c129c4385ed653551dc549fc468b94349b06/site/public/brand/v2/academy-symbol.svg"
           }
         ],
-        "publication": "REVIEWED_FOR_PR"
+        "publication": "REVIEWED_FOR_PR",
+        "artOverlay": {
+          "path": "/media/showcase/art/academy-support-editorial-v1.svg",
+          "kind": "EDITORIAL_VECTOR_ART",
+          "evidence": false,
+          "source": "Original deterministic vector concept artwork in the XPeX media repository; not a screenshot and not proof of runtime"
+        }
       }
     },
     {
@@ -387,7 +489,13 @@
             "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/ba20c129c4385ed653551dc549fc468b94349b06/site/public/brand/v2/plugin-factory-symbol.svg"
           }
         ],
-        "publication": "REVIEWED_FOR_PR"
+        "publication": "REVIEWED_FOR_PR",
+        "artOverlay": {
+          "path": "/media/showcase/art/three-pillars-pr-editorial-v1.svg",
+          "kind": "EDITORIAL_VECTOR_ART",
+          "evidence": false,
+          "source": "Original deterministic vector concept artwork in the XPeX media repository; not a screenshot and not proof of runtime"
+        }
       }
     },
     {
@@ -407,7 +515,13 @@
             "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/ba20c129c4385ed653551dc549fc468b94349b06/site/public/brand/v2/xpex-symbol.svg"
           }
         ],
-        "publication": "REVIEWED_FOR_PR"
+        "publication": "REVIEWED_FOR_PR",
+        "artOverlay": {
+          "path": "/media/showcase/art/enterprise-v2-editorial-v1.svg",
+          "kind": "EDITORIAL_VECTOR_ART",
+          "evidence": false,
+          "source": "Original deterministic vector concept artwork in the XPeX media repository; not a screenshot and not proof of runtime"
+        }
       }
     },
     {
@@ -427,7 +541,13 @@
             "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/ba20c129c4385ed653551dc549fc468b94349b06/site/public/brand/v2/audit-os-symbol.svg"
           }
         ],
-        "publication": "REVIEWED_FOR_PR"
+        "publication": "REVIEWED_FOR_PR",
+        "artOverlay": {
+          "path": "/media/showcase/art/trust-center-editorial-v1.svg",
+          "kind": "EDITORIAL_VECTOR_ART",
+          "evidence": false,
+          "source": "Original deterministic vector concept artwork in the XPeX media repository; not a screenshot and not proof of runtime"
+        }
       }
     },
     {
@@ -447,7 +567,13 @@
             "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/ba20c129c4385ed653551dc549fc468b94349b06/site/public/brand/v2/systems-command-symbol.svg"
           }
         ],
-        "publication": "REVIEWED_FOR_PR"
+        "publication": "REVIEWED_FOR_PR",
+        "artOverlay": {
+          "path": "/media/showcase/art/system-registry-editorial-v1.svg",
+          "kind": "EDITORIAL_VECTOR_ART",
+          "evidence": false,
+          "source": "Original deterministic vector concept artwork in the XPeX media repository; not a screenshot and not proof of runtime"
+        }
       }
     },
     {
@@ -467,7 +593,13 @@
             "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/ba20c129c4385ed653551dc549fc468b94349b06/site/public/brand/v2/xpex-symbol.svg"
           }
         ],
-        "publication": "REVIEWED_FOR_PR"
+        "publication": "REVIEWED_FOR_PR",
+        "artOverlay": {
+          "path": "/media/showcase/art/system-editorial-v1.svg",
+          "kind": "EDITORIAL_VECTOR_ART",
+          "evidence": false,
+          "source": "Original deterministic vector concept artwork in the XPeX media repository; not a screenshot and not proof of runtime"
+        }
       }
     },
     {
@@ -487,7 +619,13 @@
             "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/ba20c129c4385ed653551dc549fc468b94349b06/site/public/brand/v2/gxeon-symbol.svg"
           }
         ],
-        "publication": "REVIEWED_FOR_PR"
+        "publication": "REVIEWED_FOR_PR",
+        "artOverlay": {
+          "path": "/media/showcase/art/agent-editorial-v1.svg",
+          "kind": "EDITORIAL_VECTOR_ART",
+          "evidence": false,
+          "source": "Original deterministic vector concept artwork in the XPeX media repository; not a screenshot and not proof of runtime"
+        }
       }
     },
     {
@@ -507,7 +645,13 @@
             "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/ba20c129c4385ed653551dc549fc468b94349b06/site/public/brand/v2/audit-os-symbol.svg"
           }
         ],
-        "publication": "REVIEWED_FOR_PR"
+        "publication": "REVIEWED_FOR_PR",
+        "artOverlay": {
+          "path": "/media/showcase/art/evidence-editorial-v1.svg",
+          "kind": "EDITORIAL_VECTOR_ART",
+          "evidence": false,
+          "source": "Original deterministic vector concept artwork in the XPeX media repository; not a screenshot and not proof of runtime"
+        }
       }
     }
   ]
