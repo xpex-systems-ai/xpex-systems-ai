@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { test } from 'node:test';
 import { ACADEMY, INTEGRATIONS, PLATFORMS, SYSTEMS, TRUST, agentShowcase, mediaFor, runtimeObservation } from '../src/data/showcase.js';
-import { showcaseCard, showcaseRail } from '../src/showcase.js';
+import { showcaseCard, showcaseRail, coverPalette } from '../src/showcase.js';
 import { SYSTEM_INTELLIGENCE } from '../src/data/system-intelligence.js';
 import { ecosystemThreePillars } from '../src/ecosystem.js';
 import { agents } from '../src/public-site.js';
@@ -76,6 +76,22 @@ test('public machine-readable sources and every public visual file are traceable
       assert.equal(asset.publication, 'REVIEWED_FOR_PR');
     }
   }
+});
+
+test('every approved cover has a distinct editorial signature without falsifying screenshot evidence', async () => {
+  const pack = await readJson('/data/showcase-media-pack-v1.json');
+  const expected = pack.items.map(item => item.id).sort();
+  assert.deepEqual(Object.keys(coverPalette).sort(), expected);
+  assert.equal(new Set(expected).size, 24);
+  const academy = showcaseCard(PLATFORMS.find(item => item.id === 'xpex-academy'));
+  assert.match(academy, /data-cover-id="xpex-academy"/);
+  assert.match(academy, /Capa com captura real/);
+  assert.match(academy, /class="xp-cover-signature"/);
+  const agent = agents.find(item => item.id === 'neural-copilot');
+  const agentCover = showcaseCard(agentShowcase(agent));
+  assert.match(agentCover, /data-cover-id="neural-copilot"/);
+  assert.match(agentCover, /Capa editorial/);
+  assert.doesNotMatch(agentCover, /Captura real/);
 });
 
 test('media pack covers the requested catalog and preserves image provenance', async () => {
