@@ -76,6 +76,7 @@ test('public journeys, carousel accessibility and failures', { timeout: 120000 }
           assert.equal(await page.getByRole('link', { name: 'Open public surface' }).count(), 0);
         }
       }
+      await page.goto(root);
       const gxCard = page.locator('#agents [data-showcase-item="neural-copilot"] h3');
       assert.equal(await gxCard.innerText(), 'GX Neural Copilot');
       await page.goto(root + '/?view=agents&agent=neural-copilot');
@@ -124,9 +125,10 @@ test('public journeys, carousel accessibility and failures', { timeout: 120000 }
       await page.waitForFunction(() => document.querySelector('#systems [data-showcase-next]').getAttribute('aria-disabled') === 'true');
       await page.keyboard.press('Home');
       await page.waitForFunction(() => document.querySelector('#systems-items').scrollLeft === 0);
+      await page.waitForFunction(() => document.querySelector('#systems [data-showcase-next]').getAttribute('aria-disabled') === 'false');
       await next.focus();
       await page.keyboard.press('Enter');
-      assert.ok(await track.evaluate(element => element.scrollLeft) > 0);
+      await page.waitForFunction(() => document.querySelector('#systems-items').scrollLeft > 2);
       await prev.click();
       await page.waitForFunction(() => document.querySelector('#systems-items').scrollLeft < 3);
       await snapshot(page, 'depois-sistemas-mobile');
