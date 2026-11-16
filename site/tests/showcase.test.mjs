@@ -109,10 +109,12 @@ test('media pack covers the requested catalog and preserves image provenance', a
     const bytes = await readFile(file(asset.path));
     assert.equal(asset.artOverlay.kind, 'EDITORIAL_VECTOR_ART');
     assert.equal(asset.artOverlay.evidence, false);
-    assert.match(asset.artOverlay.path, /^\\/media\\/showcase\\/art\\/[a-z0-9-]+\\.svg$/);
+    assert.ok(asset.artOverlay.path.startsWith('/media/showcase/art/'));
+    assert.ok(asset.artOverlay.path.endsWith('-editorial-v1.svg'));
     const vector = (await readFile(file(asset.artOverlay.path))).toString('utf8');
     assert.match(vector, /<svg /);
-    assert.doesNotMatch(vector, /<(?:script|foreignObject)\\b/i);
+    assert.equal(vector.includes('<script'), false);
+    assert.equal(vector.includes('<foreignObject'), false);
     assert.equal(bytes.toString('ascii', 8, 12), 'WEBP');
     assert.ok(bytes.length < 100_000);
     if (aliasOf) assert.ok(ids.has(aliasOf));
