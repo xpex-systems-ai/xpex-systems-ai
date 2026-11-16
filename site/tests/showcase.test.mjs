@@ -1,10 +1,11 @@
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { test } from 'node:test';
-import { ACADEMY, INTEGRATIONS, PLATFORMS, SYSTEMS, TRUST, mediaFor, runtimeObservation } from '../src/data/showcase.js';
+import { ACADEMY, INTEGRATIONS, PLATFORMS, SYSTEMS, TRUST, agentShowcase, mediaFor, runtimeObservation } from '../src/data/showcase.js';
 import { showcaseCard, showcaseRail } from '../src/showcase.js';
 import { SYSTEM_INTELLIGENCE } from '../src/data/system-intelligence.js';
 import { ecosystemThreePillars } from '../src/ecosystem.js';
+import { agents } from '../src/public-site.js';
 
 const file = path => new URL('../public' + path, import.meta.url);
 const safeUrl = /^(?:\/(?!\/)|https:\/\/)/;
@@ -43,6 +44,18 @@ test('system projection retains canonical identities and distinguishes public an
   assert.equal(ACADEMY.access, 'Login por convite');
   assert.match(ACADEMY.summary, /aguardam homologação/);
   assert.match(ecosystemThreePillars(), /cada ambiente|acessos independentes/);
+});
+
+test('the GX agent shelf and detail share one canonical title', () => {
+  for (const agent of agents) {
+    const card = agentShowcase(agent);
+    assert.equal(card.title, agent.name, 'card and detail must use the same name');
+    assert.equal(card.href, '/?view=agents&agent=' + agent.id);
+    assert.ok(showcaseCard(card).includes('<h3>' + agent.name + '</h3>'));
+  }
+  const copilot = agents.find(agent => agent.id === 'neural-copilot');
+  assert.equal(copilot.name, 'GX Neural Copilot');
+  assert.match(copilot.delivery, /GX Evidence Concierge/);
 });
 
 test('public machine-readable sources and every public visual file are traceable', async () => {
