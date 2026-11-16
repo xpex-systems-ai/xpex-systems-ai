@@ -68,10 +68,15 @@ export function showcaseCover(item, heading = false) {
   const fallback = `<div class="xp-showcase-fallback xp-cover-${group}">${brandMark(item.symbol)}</div>`;
   const image = asset ? `<img class="xp-showcase-image" data-showcase-image src="${escape(asset.path)}"
     width="${asset.width}" height="${asset.height}" alt="${escape(asset.alt)}" loading="lazy" decoding="async">` : '';
+  // Decorative vector art adds depth only where a verified public screenshot is not already displayed.
+  const artPath = record?.image?.artOverlay?.path;
+  const art = heading && !hasScreenshot && artPath?.startsWith('/media/showcase/art/')
+    ? `<img class="xp-cover-artwork" src="${escape(artPath)}" width="800" height="450"
+        loading="lazy" decoding="async" alt="" aria-hidden="true">` : '';
   return `<div class="xp-showcase-cover${heading ? ' xp-cover-editorial' : ''}${hasScreenshot ? ' xp-cover-has-screen' : ''}"
     data-cover-id="${escape(visualId)}" data-cover-group="${escape(editorialKind)}"
     style="--xp-cover-accent:${accent}" data-fallback-label="${pending}">
-    ${fallback}${image}
+    ${fallback}${image}${art}
     ${heading ? `<div class="xp-cover-foil" aria-hidden="true"></div>
       <div class="xp-cover-signature" aria-hidden="true"><span>XPEX <b>◆</b> ${escape(signature)}</span><span>${coverSerials.get(visualId) || '00'} / 24</span></div>` : ''}
     <span class="xp-showcase-media-label" data-showcase-media-label>${label}</span>
