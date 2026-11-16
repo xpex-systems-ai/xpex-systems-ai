@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { test } from 'node:test';
 import { ACADEMY, INTEGRATIONS, PLATFORMS, SYSTEMS, TRUST, agentShowcase, mediaFor, runtimeObservation } from '../src/data/showcase.js';
-import { showcaseCard, showcaseRail } from '../src/showcase.js';
+import { showcaseCard, showcaseRail, coverPalette } from '../src/showcase.js';
 import { SYSTEM_INTELLIGENCE } from '../src/data/system-intelligence.js';
 import { ecosystemThreePillars } from '../src/ecosystem.js';
 import { agents } from '../src/public-site.js';
@@ -51,7 +51,7 @@ test('the GX agent shelf and detail share one canonical title', () => {
     const card = agentShowcase(agent);
     assert.equal(card.title, agent.name, 'card and detail must use the same name');
     assert.equal(card.href, '/?view=agents&agent=' + agent.id);
-    if (agent.id === 'neural-copilot') assert.ok(showcaseCard(card).includes('<h3>GX Neural Copilot</h3>'));
+    if (agent.id === 'neural-copilot') assert.ok(showcaseCard(card).includes('<h3 class="xp-cover-title">GX Neural Copilot</h3>'));
   }
   const copilot = agents.find(agent => agent.id === 'neural-copilot');
   assert.equal(copilot.name, 'GX Neural Copilot');
@@ -76,4 +76,53 @@ test('public machine-readable sources and every public visual file are traceable
       assert.equal(asset.publication, 'REVIEWED_FOR_PR');
     }
   }
+});
+
+test('every approved cover has a distinct editorial signature without falsifying screenshot evidence', async () => {
+  const pack = await readJson('/data/showcase-media-pack-v1.json');
+  const expected = pack.items.map(item => item.id).sort();
+  assert.deepEqual(Object.keys(coverPalette).sort(), expected);
+  assert.equal(new Set(expected).size, 24);
+  const academy = showcaseCard(PLATFORMS.find(item => item.id === 'xpex-academy'));
+  assert.match(academy, /data-cover-id="xpex-academy"/);
+  assert.match(academy, /Capa com captura real/);
+  assert.match(academy, /class="xp-cover-signature"/);
+  const agent = agents.find(item => item.id === 'neural-copilot');
+  const agentCover = showcaseCard(agentShowcase(agent));
+  assert.match(agentCover, /data-cover-id="neural-copilot"/);
+  assert.match(agentCover, /Capa editorial/);
+  assert.doesNotMatch(agentCover, /Captura real/);
+  assert.match(agentCover, /class="xp-cover-artwork"/);
+  assert.doesNotMatch(academy, /class="xp-cover-artwork"/);
+});
+
+test('media pack covers the requested catalog and preserves image provenance', async () => {
+  const pack = await readJson('/data/showcase-media-pack-v1.json');
+  assert.equal(pack.schemaVersion, '1.0.0');
+  assert.equal(pack.items.length, 24);
+  const ids = new Map(pack.items.map(item => [item.id, item]));
+  assert.equal(ids.size, pack.items.length);
+  assert.equal(ids.get('academy-support').image.kind, 'CONCEPT_COVER');
+  for (const { image: asset, aliasOf } of pack.items) {
+    assert.ok(asset.alt);
+    assert.equal(asset.width / asset.height, 16 / 9);
+    const bytes = await readFile(file(asset.path));
+    assert.equal(asset.artOverlay.kind, 'EDITORIAL_VECTOR_ART');
+    assert.equal(asset.artOverlay.evidence, false);
+    assert.ok(asset.artOverlay.path.startsWith('/media/showcase/art/'));
+    assert.ok(asset.artOverlay.path.endsWith('-editorial-v1.svg'));
+    const vector = (await readFile(file(asset.artOverlay.path))).toString('utf8');
+    assert.match(vector, /<svg /);
+    assert.equal(vector.includes('<script'), false);
+    assert.equal(vector.includes('<foreignObject'), false);
+    assert.equal(bytes.toString('ascii', 8, 12), 'WEBP');
+    assert.ok(bytes.length < 100_000);
+    if (aliasOf) assert.ok(ids.has(aliasOf));
+    for (const source of asset.derivedFrom) {
+      await readFile(file(source.path));
+      if (source.kind === 'REAL_SCREENSHOT') assert.ok(Number.isFinite(Date.parse(source.capturedAt)));
+    }
+  }
+  assert.match(showcaseCard(PLATFORMS[2]), /Capa com captura real/);
+  assert.match(showcaseCard(PLATFORMS[2]), /loading="lazy"/);
 });

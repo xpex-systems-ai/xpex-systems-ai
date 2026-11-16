@@ -1,3 +1,4 @@
+import mediaPack from '../public/data/showcase-media-pack-v1.json' with { type: 'json' };
 import { brandMark } from './brand.js';
 
 const escape = value => String(value ?? '').replace(/[&<>"']/g, char => ({
@@ -16,15 +17,70 @@ function link(url, text, className) {
   return `<a class="${className}" href="${escape(url)}"${external ? ' target="_blank" rel="noopener noreferrer"' : ''}>${escape(text)} <span aria-hidden="true">${external ? '↗' : '→'}</span></a>`;
 }
 
-export function showcaseCover(item) {
-  const asset = item.media;
-  const fallback = `<div class="xp-showcase-fallback">${brandMark(item.symbol)}</div>`;
+const covers = new Map(mediaPack.items.map(item => [item.id, item]));
+
+// Media art direction: stable editorial signatures, never runtime or verification claims.
+export const coverPalette = Object.freeze({
+  'xpex-company': ['#e7bd74','CORPORATE'],
+  'xpex-evidence': ['#87b5f2','EVIDENCE OS'],
+  'xpex-academy': ['#dfb16d','ACADEMY'],
+  'systems-command': ['#7ac5f4','SYSTEMS COMMAND'],
+  'audit-os': ['#80d7c8','AUDIT OS'],
+  'plugin-factory': ['#aa93f9','PLUGIN FACTORY'],
+  'wallet-command': ['#eac17c','WALLET COMMAND'],
+  'studio-ai': ['#f3a0bb','STUDIO AI'],
+  'api-fabric': ['#8bb2ff','API FABRIC'],
+  'academy': ['#d8b773','POLO KELLE'],
+  'neural-copilot': ['#99b9ff','GX NEURAL'],
+  'evidence-concierge': ['#71d6ce','GX CONCIERGE'],
+  'audit-engineer': ['#9adace','AUDIT ENGINEER'],
+  'plugin-factory-agent': ['#bd9bf2','PLUGIN ENGINEER'],
+  'api-mcp': ['#97c1fc','API / MCP'],
+  'enterprise-evidence': ['#e0bd82','EVIDENCE CONCIERGE'],
+  'academy-support': ['#edc794','ACADEMY CONCEPT'],
+  'three-pillars-pr': ['#d7b57a','THREE PILLARS'],
+  'enterprise-v2': ['#89c0ef','ENTERPRISE V2'],
+  'trust-center': ['#8fd7cc','TRUST CENTER'],
+  'system-registry': ['#abc0f5','SYSTEM REGISTRY'],
+  'system': ['#d9ba82','SYSTEM PREVIEW'],
+  'agent': ['#a9c8ed','AGENT CONCEPT'],
+  'evidence': ['#a6decb','EVIDENCE PREVIEW']
+});
+const coverSerials = new Map(mediaPack.items.map((item, index) => [item.id, String(index + 1).padStart(2, '0')]));
+
+
+export function showcaseCover(item, heading = false) {
+  const record = heading ? covers.get(item.id === 'polo-kelle' ? 'academy' : item.id) : undefined;
+  const asset = record?.image || item.media;
+  const group = record?.group === 'agents' ? 'agent' : item.previewExpected ? 'system' : 'evidence';
+  const pending = item.previewExpected ? 'Prévia visual pendente de verificação' :
+    group === 'agent' ? 'Prévia conceitual' : 'Identidade oficial';
   const label = asset?.kind === 'REAL_SCREENSHOT' ? 'Captura real' :
-    asset?.kind === 'OFFICIAL_ASSET' || !item.previewExpected ? 'Identidade oficial' : 'Prévia visual pendente de verificação';
+    asset?.kind === 'CONCEPT_COVER' ? 'Prévia conceitual' :
+    asset?.derivedFrom?.some(source => source.kind === 'REAL_SCREENSHOT') ? 'Capa com captura real' :
+    asset?.kind === 'CURATED_COVER' && (!item.previewExpected || item.id === 'xpex-company') ? 'Capa editorial' :
+    asset?.kind === 'OFFICIAL_ASSET' ? 'Identidade oficial' : pending;
+  const visualId = record?.id || item.id;
+  const [accent, signature] = coverPalette[visualId] || ['#d9ba82', 'XPEX'];
+  const hasScreenshot = Boolean(asset?.kind === 'REAL_SCREENSHOT' ||
+    asset?.derivedFrom?.some(source => source.kind === 'REAL_SCREENSHOT'));
+  const editorialKind = record?.group || (item.previewExpected ? 'systems' : 'evidence');
+  const fallback = `<div class="xp-showcase-fallback xp-cover-${group}">${brandMark(item.symbol)}</div>`;
   const image = asset ? `<img class="xp-showcase-image" data-showcase-image src="${escape(asset.path)}"
     width="${asset.width}" height="${asset.height}" alt="${escape(asset.alt)}" loading="lazy" decoding="async">` : '';
-  return `<div class="xp-showcase-cover">
-    ${fallback}${image}<span class="xp-showcase-media-label" data-showcase-media-label>${label}</span>
+  // Decorative vector art adds depth only where a verified public screenshot is not already displayed.
+  const artPath = record?.image?.artOverlay?.path;
+  const art = heading && !hasScreenshot && artPath?.startsWith('/media/showcase/art/')
+    ? `<img class="xp-cover-artwork" src="${escape(artPath)}" width="800" height="450"
+        loading="lazy" decoding="async" alt="" aria-hidden="true">` : '';
+  return `<div class="xp-showcase-cover${heading ? ' xp-cover-editorial' : ''}${hasScreenshot ? ' xp-cover-has-screen' : ''}"
+    data-cover-id="${escape(visualId)}" data-cover-group="${escape(editorialKind)}"
+    style="--xp-cover-accent:${accent}" data-fallback-label="${pending}">
+    ${fallback}${image}${art}
+    ${heading ? `<div class="xp-cover-foil" aria-hidden="true"></div>
+      <div class="xp-cover-signature" aria-hidden="true"><span>XPEX <b>◆</b> ${escape(signature)}</span><span>${coverSerials.get(visualId) || '00'} / 24</span></div>` : ''}
+    <span class="xp-showcase-media-label" data-showcase-media-label>${label}</span>
+    ${heading ? `<h3 class="xp-cover-title">${escape(item.title)}</h3>` : ''}
   </div>`;
 }
 
@@ -32,10 +88,9 @@ export function showcaseCard(item) {
   const snapshot = item.verifiedAt ? ` · ${dateLabel(item.verifiedAt)}` : '';
   const tag = item.status ? `<span class="xp-showcase-state${item.tone === 'public' ? ' is-public' : ''}">${escape(item.status)}</span>` : '';
   return `<article class="xp-showcase-card" data-showcase-item="${escape(item.id)}">
-    ${showcaseCover(item)}
+    ${showcaseCover(item, true)}
     <div class="xp-showcase-body">
       <div class="xp-showcase-meta"><span>${escape(item.category)}</span>${tag}</div>
-      <h3>${escape(item.title)}</h3>
       <p>${escape(item.summary)}</p>
       ${item.access ? `<p class="xp-showcase-access">${escape(item.access)}${item.environment ? ' · ' + escape(item.environment) : ''}${snapshot}</p>` : ''}
       <div class="xp-showcase-links">
@@ -119,7 +174,7 @@ export function initShowcase(root) {
   root.querySelectorAll('[data-showcase-image]').forEach(image => {
     const fallback = () => {
       image.hidden = true;
-      image.parentElement.querySelector('[data-showcase-media-label]').textContent = 'Prévia visual pendente de verificação';
+      image.parentElement.querySelector('[data-showcase-media-label]').textContent = image.parentElement.dataset.fallbackLabel;
     };
     image.addEventListener('error', fallback, { once: true });
     if (image.complete && !image.naturalWidth) fallback();
