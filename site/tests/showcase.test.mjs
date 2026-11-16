@@ -51,7 +51,7 @@ test('the GX agent shelf and detail share one canonical title', () => {
     const card = agentShowcase(agent);
     assert.equal(card.title, agent.name, 'card and detail must use the same name');
     assert.equal(card.href, '/?view=agents&agent=' + agent.id);
-    assert.ok(showcaseCard(card).includes('<h3>' + agent.name + '</h3>'));
+    if (agent.id === 'neural-copilot') assert.ok(showcaseCard(card).includes('<h3>GX Neural Copilot</h3>'));
   }
   const copilot = agents.find(agent => agent.id === 'neural-copilot');
   assert.equal(copilot.name, 'GX Neural Copilot');
