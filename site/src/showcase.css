@@ -345,3 +345,19 @@
 @media (prefers-reduced-motion: reduce) {
   .xp-cover-foil, .xp-cover-signature { animation: none; transition: none; }
 }
+
+/* SVG editorial scenes are decorative; approved screenshots remain visually unmodified. */
+.xp-cover-artwork {
+  position: absolute; z-index: 1; inset: 0;
+  width: 100%; height: 100%; object-fit: cover; pointer-events: none;
+  opacity: .74;
+  mix-blend-mode: screen;
+}
+.xp-cover-editorial:not(.xp-cover-has-screen) .xp-showcase-image {
+  filter: brightness(.84);
+}
+.xp-cover-editorial .xp-cover-foil { z-index: 2; }
+.xp-cover-editorial .xp-cover-signature { z-index: 3; }
+@media (prefers-reduced-motion: reduce) {
+  .xp-cover-artwork { transition: none; animation: none; }
+}
