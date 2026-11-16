@@ -109,6 +109,12 @@ try {
           path, width: 800, height: 450,
           kind: concept || group === 'fallbacks' ? 'CONCEPT_COVER' : 'CURATED_COVER',
           alt: (base ? 'Composição com captura pública de ' : 'Capa editorial com identidade XPeX para ') + title,
+          artOverlay: {
+            path: '/media/showcase/art/' + id + '-editorial-v1.svg',
+            kind: 'EDITORIAL_VECTOR_ART',
+            evidence: false,
+            source: 'Original deterministic vector concept artwork in the XPeX media repository; not a screenshot and not proof of runtime',
+          },
           derivedFrom: [{
             kind: base?.kind || 'OFFICIAL_ASSET', path: sourcePath,
             sourceUrl: base?.sourceUrl || repo + '/blob/ba20c129c4385ed653551dc549fc468b94349b06/site/public' + sourcePath,
@@ -124,7 +130,7 @@ try {
   await writeFile(publicFile('/data/showcase-media-pack-v1.json'), JSON.stringify({
     schemaVersion: '1.0.0',
     updatedAt: new Date().toISOString(),
-    scope: 'Editorial media for preview review. Operational state remains in the system and pillars registries.',
+    scope: 'Editorial media for preview review. 24 decorative SVG art layers are concept artwork, not real system captures. The four previously approved screenshots retain separate provenance; operational state remains in the system and pillars registries.',
     items,
   }, null, 2) + '\n');
 } finally {
