@@ -20,7 +20,7 @@ function link(url, text, className) {
 const covers = new Map(mediaPack.items.map(item => [item.id, item]));
 
 // Media art direction: stable editorial signatures, never runtime or verification claims.
-const coverPalette = Object.freeze({
+export const coverPalette = Object.freeze({
   'xpex-company': ['#e7bd74','CORPORATE'],
   'xpex-evidence': ['#87b5f2','EVIDENCE OS'],
   'xpex-academy': ['#dfb16d','ACADEMY'],
