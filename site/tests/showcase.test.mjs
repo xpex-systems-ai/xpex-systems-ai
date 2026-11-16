@@ -92,6 +92,8 @@ test('every approved cover has a distinct editorial signature without falsifying
   assert.match(agentCover, /data-cover-id="neural-copilot"/);
   assert.match(agentCover, /Capa editorial/);
   assert.doesNotMatch(agentCover, /Captura real/);
+  assert.match(agentCover, /class="xp-cover-artwork"/);
+  assert.doesNotMatch(academy, /class="xp-cover-artwork"/);
 });
 
 test('media pack covers the requested catalog and preserves image provenance', async () => {
@@ -105,6 +107,12 @@ test('media pack covers the requested catalog and preserves image provenance', a
     assert.ok(asset.alt);
     assert.equal(asset.width / asset.height, 16 / 9);
     const bytes = await readFile(file(asset.path));
+    assert.equal(asset.artOverlay.kind, 'EDITORIAL_VECTOR_ART');
+    assert.equal(asset.artOverlay.evidence, false);
+    assert.match(asset.artOverlay.path, /^\\/media\\/showcase\\/art\\/[a-z0-9-]+\\.svg$/);
+    const vector = (await readFile(file(asset.artOverlay.path))).toString('utf8');
+    assert.match(vector, /<svg /);
+    assert.doesNotMatch(vector, /<(?:script|foreignObject)\\b/i);
     assert.equal(bytes.toString('ascii', 8, 12), 'WEBP');
     assert.ok(bytes.length < 100_000);
     if (aliasOf) assert.ok(ids.has(aliasOf));
