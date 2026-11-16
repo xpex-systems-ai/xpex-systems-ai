@@ -76,6 +76,8 @@ test('public journeys, carousel accessibility and failures', { timeout: 120000 }
           assert.equal(await page.getByRole('link', { name: 'Open public surface' }).count(), 0);
         }
       }
+      const gxCard = page.locator('#agents [data-showcase-item="neural-copilot"] h3');
+      assert.equal(await gxCard.innerText(), 'GX Neural Copilot');
       await page.goto(root + '/?view=agents&agent=neural-copilot');
       assert.equal(await page.locator('h1').innerText(), 'GX Neural Copilot');
       await page.goto(root + '/#agent-api');
