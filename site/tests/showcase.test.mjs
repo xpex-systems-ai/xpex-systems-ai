@@ -51,7 +51,7 @@ test('the GX agent shelf and detail share one canonical title', () => {
     const card = agentShowcase(agent);
     assert.equal(card.title, agent.name, 'card and detail must use the same name');
     assert.equal(card.href, '/?view=agents&agent=' + agent.id);
-    if (agent.id === 'neural-copilot') assert.ok(showcaseCard(card).includes('<h3>GX Neural Copilot</h3>'));
+    if (agent.id === 'neural-copilot') assert.ok(showcaseCard(card).includes('<h3 class="xp-cover-title">GX Neural Copilot</h3>'));
   }
   const copilot = agents.find(agent => agent.id === 'neural-copilot');
   assert.equal(copilot.name, 'GX Neural Copilot');
@@ -76,4 +76,27 @@ test('public machine-readable sources and every public visual file are traceable
       assert.equal(asset.publication, 'REVIEWED_FOR_PR');
     }
   }
+});
+
+test('media pack covers the requested catalog and preserves image provenance', async () => {
+  const pack = await readJson('/data/showcase-media-pack-v1.json');
+  assert.equal(pack.schemaVersion, '1.0.0');
+  assert.equal(pack.items.length, 24);
+  const ids = new Map(pack.items.map(item => [item.id, item]));
+  assert.equal(ids.size, pack.items.length);
+  assert.equal(ids.get('academy-support').image.kind, 'CONCEPT_COVER');
+  for (const { image: asset, aliasOf } of pack.items) {
+    assert.ok(asset.alt);
+    assert.equal(asset.width / asset.height, 16 / 9);
+    const bytes = await readFile(file(asset.path));
+    assert.equal(bytes.toString('ascii', 8, 12), 'WEBP');
+    assert.ok(bytes.length < 100_000);
+    if (aliasOf) assert.ok(ids.has(aliasOf));
+    for (const source of asset.derivedFrom) {
+      await readFile(file(source.path));
+      if (source.kind === 'REAL_SCREENSHOT') assert.ok(Number.isFinite(Date.parse(source.capturedAt)));
+    }
+  }
+  assert.match(showcaseCard(PLATFORMS[2]), /Capa com captura real/);
+  assert.match(showcaseCard(PLATFORMS[2]), /loading="lazy"/);
 });

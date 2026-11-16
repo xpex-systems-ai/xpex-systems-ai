@@ -103,7 +103,9 @@ const reference = (id, title, category, summary, href, action, symbol = 'audit-o
 
 export const TRUST = [
   reference('flagship-cases', 'Cases dos sistemas', 'Cases', 'Contexto, arquitetura e limites dos sistemas do portfólio.', doc('FLAGSHIP_CASES.md'), 'Ler os cases'),
-  reference('trust-center', 'Trust Center', 'Governança', 'Controles de engenharia e critérios de divulgação pública.', doc('TRUST_CENTER.md'), 'Ver controles'),
+  reference('enterprise-v2', 'Enterprise Experience V2', 'Pull request', 'Implementação da vitrine institucional e evidências de validação.', REPOSITORY + '/pull/58', 'Inspecionar a PR', 'xpex'),
+  reference('system-registry', 'System Registry / Public Truth', 'Registro', 'Perfis canônicos e estados registrados dos sistemas.', '/data/system-intelligence-v1.json', 'Consultar registro', 'systems-command'),
+  reference('trust-center', 'Trust / Evidence Layer', 'Governança', 'Controles de engenharia e critérios de divulgação pública.', doc('TRUST_CENTER.md'), 'Ver controles'),
   reference('three-pillars-pr', 'Integração dos três pilares', 'Pull request', 'Diff e discussão da PR #57, que publicou as três entradas.', REPOSITORY + '/pull/57', 'Inspecionar a PR', 'plugin-factory'),
   reference('checks', 'Validação do código', 'CI', 'Resultados de checagens por commit no GitHub Actions.', REPOSITORY + '/actions', 'Abrir o CI', 'api-fabric'),
   reference('deploy', 'Observações de runtime', 'Deploys', 'Ambientes, URLs e limites das verificações de disponibilidade.', '/data/portfolio-observations-v2.json', 'Ler snapshot', 'systems-command'),
@@ -137,4 +139,18 @@ export function agentShowcase(agent) {
     evidenceLabel: 'Ver fonte',
     symbol: agent.icon
   };
+}
+
+export function agentShowcaseItems(agents) {
+  const catalogItems = agents.map(agentShowcase);
+  const copilot = catalogItems.find(item => item.id === 'neural-copilot');
+  return [
+    ...catalogItems.map(item => item.id === 'plugin-factory' ? { ...item, id: 'plugin-factory-agent', title: 'XPeX Plugin Factory Agent' } :
+      item.id === 'api-mcp' ? { ...item, title: 'API & MCP Runtime' } : item),
+    { ...copilot, id: 'evidence-concierge', title: 'GX Evidence Concierge', summary: 'Experiência pública de consulta do GX Neural Copilot.', href: '/?view=company#gx' },
+    { ...copilot, id: 'enterprise-evidence', title: 'Enterprise Evidence Concierge', status: 'Mesmo núcleo GX',
+      summary: 'Apresentação editorial do GX Neural Copilot para diligência empresarial.', href: '/?view=company#gx' },
+    { id: 'academy-support', title: 'Academy Support Agent', category: 'Educação', status: 'Conceito', access: 'Disponibilidade pendente',
+      summary: 'Proposta editorial de suporte ao piloto da Academy.', href: '/?system=academy', action: 'Ver perfil da Academy', symbol: 'academy' }
+  ];
 }

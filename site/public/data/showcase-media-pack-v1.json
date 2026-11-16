@@ -1,0 +1,514 @@
+{
+  "schemaVersion": "1.0.0",
+  "updatedAt": "2026-11-16T01:59:11.960Z",
+  "scope": "Editorial media for preview review. Operational state remains in the system and pillars registries.",
+  "items": [
+    {
+      "id": "xpex-company",
+      "title": "XPeX Systems AI",
+      "group": "systems",
+      "image": {
+        "path": "/media/showcase/systems/xpex-company-cover-v1.webp",
+        "width": 800,
+        "height": 450,
+        "kind": "CURATED_COVER",
+        "alt": "Capa editorial com identidade XPeX para XPeX Systems AI",
+        "derivedFrom": [
+          {
+            "kind": "OFFICIAL_ASSET",
+            "path": "/media/gxeon-earth-mobile.webp",
+            "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/ba20c129c4385ed653551dc549fc468b94349b06/site/public/media/gxeon-earth-mobile.webp"
+          }
+        ],
+        "publication": "REVIEWED_FOR_PR"
+      }
+    },
+    {
+      "id": "xpex-evidence",
+      "title": "Portfólio de Evidências",
+      "group": "systems",
+      "image": {
+        "path": "/media/showcase/systems/xpex-evidence-cover-v1.webp",
+        "width": 800,
+        "height": 450,
+        "kind": "CURATED_COVER",
+        "alt": "Capa editorial com identidade XPeX para Portfólio de Evidências",
+        "derivedFrom": [
+          {
+            "kind": "OFFICIAL_ASSET",
+            "path": "/brand/v2/audit-os-symbol.svg",
+            "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/ba20c129c4385ed653551dc549fc468b94349b06/site/public/brand/v2/audit-os-symbol.svg"
+          }
+        ],
+        "publication": "REVIEWED_FOR_PR"
+      }
+    },
+    {
+      "id": "xpex-academy",
+      "title": "XPeX Academy",
+      "group": "systems",
+      "image": {
+        "path": "/media/showcase/systems/xpex-academy-cover-v1.webp",
+        "width": 800,
+        "height": 450,
+        "kind": "CURATED_COVER",
+        "alt": "Composição com captura pública de XPeX Academy",
+        "derivedFrom": [
+          {
+            "kind": "REAL_SCREENSHOT",
+            "path": "/media/showcase/academy.webp",
+            "sourceUrl": "https://xpex-academy-mmpzzek1w-xpex-neural.vercel.app/academia",
+            "capturedAt": "2026-11-15T22:10:40.011Z",
+            "classification": "E1",
+            "review": "Captura anônima; nenhum dado inserido.",
+            "environment": "PREVIEW",
+            "redacted": false
+          }
+        ],
+        "publication": "REVIEWED_FOR_PR"
+      }
+    },
+    {
+      "id": "systems-command",
+      "title": "XPeX Systems Command",
+      "group": "systems",
+      "image": {
+        "path": "/media/showcase/systems/systems-command-cover-v1.webp",
+        "width": 800,
+        "height": 450,
+        "kind": "CURATED_COVER",
+        "alt": "Capa editorial com identidade XPeX para XPeX Systems Command",
+        "derivedFrom": [
+          {
+            "kind": "OFFICIAL_ASSET",
+            "path": "/brand/v2/systems-command-symbol.svg",
+            "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/ba20c129c4385ed653551dc549fc468b94349b06/site/public/brand/v2/systems-command-symbol.svg"
+          }
+        ],
+        "publication": "REVIEWED_FOR_PR"
+      }
+    },
+    {
+      "id": "audit-os",
+      "title": "GXEON Audit OS",
+      "group": "systems",
+      "image": {
+        "path": "/media/showcase/systems/audit-os-cover-v1.webp",
+        "width": 800,
+        "height": 450,
+        "kind": "CURATED_COVER",
+        "alt": "Composição com captura pública de GXEON Audit OS",
+        "derivedFrom": [
+          {
+            "kind": "REAL_SCREENSHOT",
+            "path": "/media/showcase/audit-os.webp",
+            "sourceUrl": "https://gxeon-audit-os.vercel.app/",
+            "capturedAt": "2026-11-15T22:10:40.136Z",
+            "classification": "E2",
+            "review": "Redação visual dos contadores superiores, da identificação do operador e dos valores do painel principal.",
+            "environment": "PUBLIC_SURFACE",
+            "redacted": true
+          }
+        ],
+        "publication": "REVIEWED_FOR_PR"
+      }
+    },
+    {
+      "id": "plugin-factory",
+      "title": "XPeX Plugin Factory",
+      "group": "systems",
+      "image": {
+        "path": "/media/showcase/systems/plugin-factory-cover-v1.webp",
+        "width": 800,
+        "height": 450,
+        "kind": "CURATED_COVER",
+        "alt": "Capa editorial com identidade XPeX para XPeX Plugin Factory",
+        "derivedFrom": [
+          {
+            "kind": "OFFICIAL_ASSET",
+            "path": "/brand/v2/plugin-factory-symbol.svg",
+            "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/ba20c129c4385ed653551dc549fc468b94349b06/site/public/brand/v2/plugin-factory-symbol.svg"
+          }
+        ],
+        "publication": "REVIEWED_FOR_PR"
+      }
+    },
+    {
+      "id": "wallet-command",
+      "title": "GXEON Wallet Command Center",
+      "group": "systems",
+      "image": {
+        "path": "/media/showcase/systems/wallet-command-cover-v1.webp",
+        "width": 800,
+        "height": 450,
+        "kind": "CURATED_COVER",
+        "alt": "Composição com captura pública de GXEON Wallet Command Center",
+        "derivedFrom": [
+          {
+            "kind": "REAL_SCREENSHOT",
+            "path": "/media/showcase/wallet-command.webp",
+            "sourceUrl": "https://gxeon-wallet-command-center.vercel.app/market",
+            "capturedAt": "2026-11-15T22:10:40.008Z",
+            "classification": "E1",
+            "review": "Captura separada do painel Wallet, sem endereços, saldo ou dados de conta.",
+            "environment": "PUBLIC_SURFACE",
+            "redacted": false
+          }
+        ],
+        "publication": "REVIEWED_FOR_PR"
+      }
+    },
+    {
+      "id": "studio-ai",
+      "title": "XPeX Studio AI",
+      "group": "systems",
+      "image": {
+        "path": "/media/showcase/systems/studio-ai-cover-v1.webp",
+        "width": 800,
+        "height": 450,
+        "kind": "CURATED_COVER",
+        "alt": "Composição com captura pública de XPeX Studio AI",
+        "derivedFrom": [
+          {
+            "kind": "REAL_SCREENSHOT",
+            "path": "/media/showcase/studio-ai.webp",
+            "sourceUrl": "https://xpex-studio-ai.vercel.app/",
+            "capturedAt": "2026-11-15T22:10:39.864Z",
+            "classification": "E1",
+            "review": "Captura anônima da página pública.",
+            "environment": "PUBLIC_SURFACE",
+            "redacted": false
+          }
+        ],
+        "publication": "REVIEWED_FOR_PR"
+      }
+    },
+    {
+      "id": "api-fabric",
+      "title": "XPeX API Fabric",
+      "group": "systems",
+      "image": {
+        "path": "/media/showcase/systems/api-fabric-cover-v1.webp",
+        "width": 800,
+        "height": 450,
+        "kind": "CURATED_COVER",
+        "alt": "Capa editorial com identidade XPeX para XPeX API Fabric",
+        "derivedFrom": [
+          {
+            "kind": "OFFICIAL_ASSET",
+            "path": "/brand/v2/api-fabric-symbol.svg",
+            "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/ba20c129c4385ed653551dc549fc468b94349b06/site/public/brand/v2/api-fabric-symbol.svg"
+          }
+        ],
+        "publication": "REVIEWED_FOR_PR"
+      }
+    },
+    {
+      "id": "academy",
+      "title": "XPeX Academy · Polo Kelle",
+      "group": "systems",
+      "image": {
+        "path": "/media/showcase/systems/academy-cover-v1.webp",
+        "width": 800,
+        "height": 450,
+        "kind": "CURATED_COVER",
+        "alt": "Composição com captura pública de XPeX Academy · Polo Kelle",
+        "derivedFrom": [
+          {
+            "kind": "REAL_SCREENSHOT",
+            "path": "/media/showcase/academy.webp",
+            "sourceUrl": "https://xpex-academy-mmpzzek1w-xpex-neural.vercel.app/academia",
+            "capturedAt": "2026-11-15T22:10:40.011Z",
+            "classification": "E1",
+            "review": "Captura anônima; nenhum dado inserido.",
+            "environment": "PREVIEW",
+            "redacted": false
+          }
+        ],
+        "publication": "REVIEWED_FOR_PR"
+      }
+    },
+    {
+      "id": "neural-copilot",
+      "title": "GX Neural Copilot",
+      "group": "agents",
+      "image": {
+        "path": "/media/showcase/agents/neural-copilot-cover-v1.webp",
+        "width": 800,
+        "height": 450,
+        "kind": "CURATED_COVER",
+        "alt": "Capa editorial com identidade XPeX para GX Neural Copilot",
+        "derivedFrom": [
+          {
+            "kind": "OFFICIAL_ASSET",
+            "path": "/brand/v2/gxeon-symbol.svg",
+            "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/ba20c129c4385ed653551dc549fc468b94349b06/site/public/brand/v2/gxeon-symbol.svg"
+          }
+        ],
+        "publication": "REVIEWED_FOR_PR"
+      }
+    },
+    {
+      "id": "evidence-concierge",
+      "title": "GX Evidence Concierge",
+      "group": "agents",
+      "aliasOf": "neural-copilot",
+      "image": {
+        "path": "/media/showcase/agents/evidence-concierge-cover-v1.webp",
+        "width": 800,
+        "height": 450,
+        "kind": "CURATED_COVER",
+        "alt": "Capa editorial com identidade XPeX para GX Evidence Concierge",
+        "derivedFrom": [
+          {
+            "kind": "OFFICIAL_ASSET",
+            "path": "/brand/v2/gxeon-symbol.svg",
+            "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/ba20c129c4385ed653551dc549fc468b94349b06/site/public/brand/v2/gxeon-symbol.svg"
+          }
+        ],
+        "publication": "REVIEWED_FOR_PR"
+      }
+    },
+    {
+      "id": "audit-engineer",
+      "title": "GXEON Audit Engineer",
+      "group": "agents",
+      "image": {
+        "path": "/media/showcase/agents/audit-engineer-cover-v1.webp",
+        "width": 800,
+        "height": 450,
+        "kind": "CURATED_COVER",
+        "alt": "Capa editorial com identidade XPeX para GXEON Audit Engineer",
+        "derivedFrom": [
+          {
+            "kind": "OFFICIAL_ASSET",
+            "path": "/brand/v2/audit-os-symbol.svg",
+            "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/ba20c129c4385ed653551dc549fc468b94349b06/site/public/brand/v2/audit-os-symbol.svg"
+          }
+        ],
+        "publication": "REVIEWED_FOR_PR"
+      }
+    },
+    {
+      "id": "plugin-factory-agent",
+      "title": "XPeX Plugin Factory Agent",
+      "group": "agents",
+      "image": {
+        "path": "/media/showcase/agents/plugin-factory-agent-cover-v1.webp",
+        "width": 800,
+        "height": 450,
+        "kind": "CURATED_COVER",
+        "alt": "Capa editorial com identidade XPeX para XPeX Plugin Factory Agent",
+        "derivedFrom": [
+          {
+            "kind": "OFFICIAL_ASSET",
+            "path": "/brand/v2/plugin-factory-symbol.svg",
+            "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/ba20c129c4385ed653551dc549fc468b94349b06/site/public/brand/v2/plugin-factory-symbol.svg"
+          }
+        ],
+        "publication": "REVIEWED_FOR_PR"
+      }
+    },
+    {
+      "id": "api-mcp",
+      "title": "API & MCP Runtime",
+      "group": "agents",
+      "image": {
+        "path": "/media/showcase/agents/api-mcp-cover-v1.webp",
+        "width": 800,
+        "height": 450,
+        "kind": "CURATED_COVER",
+        "alt": "Capa editorial com identidade XPeX para API & MCP Runtime",
+        "derivedFrom": [
+          {
+            "kind": "OFFICIAL_ASSET",
+            "path": "/brand/v2/api-fabric-symbol.svg",
+            "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/ba20c129c4385ed653551dc549fc468b94349b06/site/public/brand/v2/api-fabric-symbol.svg"
+          }
+        ],
+        "publication": "REVIEWED_FOR_PR"
+      }
+    },
+    {
+      "id": "enterprise-evidence",
+      "title": "Enterprise Evidence Concierge",
+      "group": "agents",
+      "aliasOf": "neural-copilot",
+      "image": {
+        "path": "/media/showcase/agents/enterprise-evidence-cover-v1.webp",
+        "width": 800,
+        "height": 450,
+        "kind": "CURATED_COVER",
+        "alt": "Capa editorial com identidade XPeX para Enterprise Evidence Concierge",
+        "derivedFrom": [
+          {
+            "kind": "OFFICIAL_ASSET",
+            "path": "/brand/v2/gxeon-symbol.svg",
+            "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/ba20c129c4385ed653551dc549fc468b94349b06/site/public/brand/v2/gxeon-symbol.svg"
+          }
+        ],
+        "publication": "REVIEWED_FOR_PR"
+      }
+    },
+    {
+      "id": "academy-support",
+      "title": "Academy Support Agent",
+      "group": "agents",
+      "image": {
+        "path": "/media/showcase/agents/academy-support-cover-v1.webp",
+        "width": 800,
+        "height": 450,
+        "kind": "CONCEPT_COVER",
+        "alt": "Capa editorial com identidade XPeX para Academy Support Agent",
+        "derivedFrom": [
+          {
+            "kind": "OFFICIAL_ASSET",
+            "path": "/brand/v2/academy-symbol.svg",
+            "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/ba20c129c4385ed653551dc549fc468b94349b06/site/public/brand/v2/academy-symbol.svg"
+          }
+        ],
+        "publication": "REVIEWED_FOR_PR"
+      }
+    },
+    {
+      "id": "three-pillars-pr",
+      "title": "PR #57 · Three Pillars Blueprint",
+      "group": "evidence",
+      "image": {
+        "path": "/media/showcase/evidence/three-pillars-pr-cover-v1.webp",
+        "width": 800,
+        "height": 450,
+        "kind": "CURATED_COVER",
+        "alt": "Capa editorial com identidade XPeX para PR #57 · Three Pillars Blueprint",
+        "derivedFrom": [
+          {
+            "kind": "OFFICIAL_ASSET",
+            "path": "/brand/v2/plugin-factory-symbol.svg",
+            "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/ba20c129c4385ed653551dc549fc468b94349b06/site/public/brand/v2/plugin-factory-symbol.svg"
+          }
+        ],
+        "publication": "REVIEWED_FOR_PR"
+      }
+    },
+    {
+      "id": "enterprise-v2",
+      "title": "Enterprise Experience V2",
+      "group": "evidence",
+      "image": {
+        "path": "/media/showcase/evidence/enterprise-v2-cover-v1.webp",
+        "width": 800,
+        "height": 450,
+        "kind": "CURATED_COVER",
+        "alt": "Capa editorial com identidade XPeX para Enterprise Experience V2",
+        "derivedFrom": [
+          {
+            "kind": "OFFICIAL_ASSET",
+            "path": "/brand/v2/xpex-symbol.svg",
+            "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/ba20c129c4385ed653551dc549fc468b94349b06/site/public/brand/v2/xpex-symbol.svg"
+          }
+        ],
+        "publication": "REVIEWED_FOR_PR"
+      }
+    },
+    {
+      "id": "trust-center",
+      "title": "Trust / Evidence Layer",
+      "group": "evidence",
+      "image": {
+        "path": "/media/showcase/evidence/trust-center-cover-v1.webp",
+        "width": 800,
+        "height": 450,
+        "kind": "CURATED_COVER",
+        "alt": "Capa editorial com identidade XPeX para Trust / Evidence Layer",
+        "derivedFrom": [
+          {
+            "kind": "OFFICIAL_ASSET",
+            "path": "/brand/v2/audit-os-symbol.svg",
+            "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/ba20c129c4385ed653551dc549fc468b94349b06/site/public/brand/v2/audit-os-symbol.svg"
+          }
+        ],
+        "publication": "REVIEWED_FOR_PR"
+      }
+    },
+    {
+      "id": "system-registry",
+      "title": "System Registry / Public Truth",
+      "group": "evidence",
+      "image": {
+        "path": "/media/showcase/evidence/system-registry-cover-v1.webp",
+        "width": 800,
+        "height": 450,
+        "kind": "CURATED_COVER",
+        "alt": "Capa editorial com identidade XPeX para System Registry / Public Truth",
+        "derivedFrom": [
+          {
+            "kind": "OFFICIAL_ASSET",
+            "path": "/brand/v2/systems-command-symbol.svg",
+            "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/ba20c129c4385ed653551dc549fc468b94349b06/site/public/brand/v2/systems-command-symbol.svg"
+          }
+        ],
+        "publication": "REVIEWED_FOR_PR"
+      }
+    },
+    {
+      "id": "system",
+      "title": "Prévia de sistema",
+      "group": "fallbacks",
+      "image": {
+        "path": "/media/showcase/fallbacks/fallback-system-premium-v1.webp",
+        "width": 800,
+        "height": 450,
+        "kind": "CONCEPT_COVER",
+        "alt": "Capa editorial com identidade XPeX para Prévia de sistema",
+        "derivedFrom": [
+          {
+            "kind": "OFFICIAL_ASSET",
+            "path": "/brand/v2/xpex-symbol.svg",
+            "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/ba20c129c4385ed653551dc549fc468b94349b06/site/public/brand/v2/xpex-symbol.svg"
+          }
+        ],
+        "publication": "REVIEWED_FOR_PR"
+      }
+    },
+    {
+      "id": "agent",
+      "title": "Prévia conceitual de agente",
+      "group": "fallbacks",
+      "image": {
+        "path": "/media/showcase/fallbacks/fallback-agent-premium-v1.webp",
+        "width": 800,
+        "height": 450,
+        "kind": "CONCEPT_COVER",
+        "alt": "Capa editorial com identidade XPeX para Prévia conceitual de agente",
+        "derivedFrom": [
+          {
+            "kind": "OFFICIAL_ASSET",
+            "path": "/brand/v2/gxeon-symbol.svg",
+            "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/ba20c129c4385ed653551dc549fc468b94349b06/site/public/brand/v2/gxeon-symbol.svg"
+          }
+        ],
+        "publication": "REVIEWED_FOR_PR"
+      }
+    },
+    {
+      "id": "evidence",
+      "title": "Documento de evidência",
+      "group": "fallbacks",
+      "image": {
+        "path": "/media/showcase/fallbacks/fallback-evidence-premium-v1.webp",
+        "width": 800,
+        "height": 450,
+        "kind": "CONCEPT_COVER",
+        "alt": "Capa editorial com identidade XPeX para Documento de evidência",
+        "derivedFrom": [
+          {
+            "kind": "OFFICIAL_ASSET",
+            "path": "/brand/v2/audit-os-symbol.svg",
+            "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/ba20c129c4385ed653551dc549fc468b94349b06/site/public/brand/v2/audit-os-symbol.svg"
+          }
+        ],
+        "publication": "REVIEWED_FOR_PR"
+      }
+    }
+  ]
+}

@@ -44,7 +44,7 @@ test('public journeys, carousel accessibility and failures', { timeout: 120000 }
       assert.equal(response.status(), 200);
       assert.deepEqual(await page.locator('[data-showcase-rail]').evaluateAll(rails => rails.map(rail => rail.id)), railIds);
       assert.equal(await page.locator('#systems [data-showcase-item]').count(), 7);
-      assert.equal(await page.locator('#agents [data-showcase-item]').count(), 4);
+      assert.equal(await page.locator('#agents [data-showcase-item]').count(), 7);
       assert.equal(await page.locator('#ecosystem [data-showcase-item]').count(), 3);
       const motion = page.locator('[data-motion]');
       const orbit = page.locator('.xp-orbit').first();
@@ -95,7 +95,7 @@ test('public journeys, carousel accessibility and failures', { timeout: 120000 }
   await t.test('fits desktop, tablet and phone widths and operates by keyboard', async () => {
     const page = await browser.newPage({ reducedMotion: 'reduce' });
     try {
-      for (const width of [1920, 1440, 768, 390, 320]) {
+      for (const width of [1920, 1440, 1024, 768, 430, 390, 320]) {
         await page.setViewportSize({ width, height: 844 });
         await page.goto(root);
         const bodyWidth = await page.evaluate(() => document.documentElement.scrollWidth);
@@ -140,7 +140,7 @@ test('public journeys, carousel accessibility and failures', { timeout: 120000 }
   await t.test('shows a brand fallback for failed media and recovers the refresh control after API failure', async () => {
     const page = await browser.newPage({ viewport: { width: 1440, height: 850 } });
     try {
-      await page.route('**/media/showcase/academy.webp', route => route.abort());
+      await page.route('**/media/showcase/systems/xpex-academy-cover-v1.webp', route => route.abort());
       await page.goto(root);
       const card = page.locator('#ecosystem [data-showcase-item="xpex-academy"]');
       await card.scrollIntoViewIfNeeded();

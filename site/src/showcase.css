@@ -254,3 +254,32 @@
     background: linear-gradient(180deg, #05090c 3%, #05090c48 24%, transparent 45%), linear-gradient(0deg, #05090c, transparent 18%);
   }
 }
+
+.xp-showcase-card .xp-showcase-cover { aspect-ratio: 16 / 9; background: #0b1221; }
+.xp-showcase-card .xp-showcase-cover::after {
+  content: ''; position: absolute; inset: 30% 0 0; pointer-events: none;
+  background: linear-gradient(transparent, #070b13e8 95%);
+}
+.xp-showcase-card .xp-showcase-media-label {
+  inset: 10px auto auto 10px; z-index: 1;
+}
+.xp-cover-title {
+  position: absolute; z-index: 1; margin: 0; inset: auto 14px 13px;
+  color: #f5f2e9; font-size: clamp(16px, 1.7vw, 24px);
+  line-height: 1.15; font-weight: 650; text-wrap: balance;
+}
+.xp-showcase-card .xp-showcase-image { transition: transform 240ms ease; }
+.xp-showcase-card:is(:hover,:focus-within) .xp-showcase-image { transform: scale(1.04); }
+.xp-showcase-card:is(:hover,:focus-within) { box-shadow: 0 7px 14px #0007; }
+.xp-showcase-fallback:has(~ img:not([hidden])) { visibility: hidden; }
+.xp-showcase-card .xp-showcase-fallback:not(:has(~ img:not([hidden]))) {
+  background-size: cover; background-position: center;
+}
+.xp-cover-system:not(:has(~ img:not([hidden]))) { background-image: url('/media/showcase/fallbacks/fallback-system-premium-v1.webp'); }
+.xp-cover-agent:not(:has(~ img:not([hidden]))) { background-image: url('/media/showcase/fallbacks/fallback-agent-premium-v1.webp'); }
+.xp-cover-evidence:not(:has(~ img:not([hidden]))) { background-image: url('/media/showcase/fallbacks/fallback-evidence-premium-v1.webp'); }
+.xp-showcase-card .xp-showcase-fallback .brand-symbol { visibility: hidden; }
+@media (prefers-reduced-motion: reduce) {
+  .xp-showcase-card .xp-showcase-image { transition: none; }
+  .xp-showcase-card:is(:hover,:focus-within) .xp-showcase-image { transform: none; }
+}

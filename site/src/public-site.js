@@ -1,5 +1,5 @@
 import { brandMark } from './brand.js';
-import { PLATFORMS, SYSTEMS, ACADEMY, TRUST, INTEGRATIONS, CONTACT_URL, agentShowcase } from './data/showcase.js';
+import { PLATFORMS, SYSTEMS, ACADEMY, TRUST, INTEGRATIONS, CONTACT_URL, agentShowcaseItems } from './data/showcase.js';
 import { showcaseRail, initShowcase } from './showcase.js';
 import { initGX } from './gx.js';
 import { initEnterpriseAgentAPI } from './enterprise-agent-api.js';
@@ -107,7 +107,7 @@ function home() {
     })}
     ${systemsRail()}
     ${showcaseRail({
-      id: 'agents', label: 'Capacidades', title: 'Agentes especializados', items: agents.map(agentShowcase),
+      id: 'agents', label: 'Capacidades', title: 'Agentes especializados', items: agentShowcaseItems(agents),
       more: { href: '/?view=agents', label: 'Catálogo de agentes' }
     })}
     ${showcaseRail({
