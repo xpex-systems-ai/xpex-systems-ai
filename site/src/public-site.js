@@ -1,6 +1,7 @@
+import { MODULES, ROLES, MORE_INTEGRATIONS, MORE_EVIDENCE, PLUGINS } from './data/media-directory.js';
 import { brandMark } from './brand.js';
 import { PLATFORMS, SYSTEMS, ACADEMY, TRUST, INTEGRATIONS, CONTACT_URL, agentShowcaseItems } from './data/showcase.js';
-import { showcaseRail, initShowcase } from './showcase.js';
+import { showcaseCard, showcaseCover, showcaseRail, initShowcase } from './showcase.js';
 import { initGX } from './gx.js';
 import { initEnterpriseAgentAPI } from './enterprise-agent-api.js';
 
@@ -53,7 +54,6 @@ const roadmap = [
   ['GXEON Payment Reconciler','Conciliação de pedidos, entregas e pagamentos.']
 ];
 function sectionHead(kicker, title, href, label) { return `<div class="xp-section-head"><div><p class="xp-kicker">${kicker}</p><h2>${title}</h2></div>${href?`<a class="xp-link" href="${href}">${label} <span aria-hidden="true">→</span></a>`:''}</div>`; }
-function agentCard(a) { return `<a class="xp-card xp-agent-card" href="/?view=agents&agent=${a.id}">${icon(a.icon)}<div><div class="xp-card-title"><h3>${a.name}</h3></div>${pill(a.state)}<p>${a.summary}</p></div><span class="xp-card-arrow" aria-hidden="true">↗</span></a>`; }
 function orbitSVG() {
   return `<svg class="xp-orbit-art" viewBox="0 0 1536 1024" fill="none" aria-hidden="true"><defs><filter id="orbit-glow"><feGaussianBlur stdDeviation="2"/></filter></defs><g class="xp-orbit xp-orbit-a"><ellipse cx="780" cy="410" rx="242" ry="102" stroke="#e9c77b" stroke-opacity=".65" stroke-width="1"/><ellipse class="xp-orbit-trail" cx="780" cy="410" rx="242" ry="102" stroke="#ffe1a0" stroke-width="2" stroke-dasharray="24 1100"/><circle cx="1022" cy="410" r="4" fill="#ffe3a6"/><circle cx="1022" cy="410" r="10" fill="#f5cf79" opacity=".5" filter="url(#orbit-glow)"/></g><g class="xp-orbit xp-orbit-b"><ellipse cx="780" cy="410" rx="226" ry="120" stroke="#e9c77b" stroke-opacity=".5"/><circle cx="554" cy="410" r="4" fill="#ffe3a6"/></g><g class="xp-orbit xp-orbit-c"><ellipse cx="780" cy="410" rx="240" ry="92" stroke="#e9c77b" stroke-opacity=".4"/><circle cx="1020" cy="410" r="3" fill="#fff0cb"/></g></svg>`;
 }
@@ -94,7 +94,7 @@ function radarCards() { return `<div class="xp-radar-cards">${[
 ].map(([n,name,type,copy,url])=>`<article class="xp-card xp-radar-card"><div class="xp-radar-top"><span>${n}</span>${pill(type)}</div><h3>${name}</h3><p>${copy}</p>${ext(url,'Explorar a fonte')}</article>`).join('')}</div>`; }
 function systemsRail(shell = true) {
   return showcaseRail({
-    id: 'systems', title: 'Sistemas em destaque', label: 'Produtos', items: SYSTEMS, shell
+    id: 'systems', title: 'Sistemas em destaque', label: 'Produtos', items: [...SYSTEMS, ...MODULES], shell
   });
 }
 
@@ -107,18 +107,18 @@ function home() {
     })}
     ${systemsRail()}
     ${showcaseRail({
-      id: 'agents', label: 'Capacidades', title: 'Agentes especializados', items: agentShowcaseItems(agents),
+      id: 'agents', label: 'Capacidades', title: 'Agentes especializados', items: [...agentShowcaseItems(agents), ...ROLES],
       more: { href: '/?view=agents', label: 'Catálogo de agentes' }
     })}
     ${showcaseRail({
-      id: 'evidencias', label: 'Evidence First', title: 'Cases e evidências', items: TRUST,
+      id: 'evidencias', label: 'Evidence First', title: 'Cases e evidências', items: [...TRUST, ...MORE_EVIDENCE],
       more: { href: '/?view=radar', label: 'Radar de agentes' }
     })}
     ${showcaseRail({
       id: 'academy', label: 'Aprendizagem aplicada', title: 'XPeX Academy', items: [ACADEMY]
     })}
     ${showcaseRail({
-      id: 'integration-channels', label: 'APIs e distribuição', title: 'Integrações e canais', items: INTEGRATIONS,
+      id: 'integration-channels', label: 'APIs e distribuição', title: 'Integrações e canais', items: [...INTEGRATIONS, ...MORE_INTEGRATIONS],
       more: { href: '/?view=developers', label: 'Documentação' }
     })}
     <section id="enterprise-contact" class="xp-shell xp-developer-cta xp-enterprise-contact" aria-labelledby="enterprise-contact-title">
@@ -130,15 +130,10 @@ function home() {
 function pageIntro(kicker,title,copy) {return `<div class="xp-page-intro"><p class="xp-kicker">${kicker}</p><h1>${title}</h1><p>${copy}</p></div>`;}
 function agentsPage(params) {
   const a=agents.find(x=>x.id===params.get('agent'));
-  if(a) return `${pageIntro('AGENTE / '+a.kind,a.name,a.summary)}<div class="xp-detail-layout"><div class="xp-card xp-detail-main">${icon(a.icon)}${pill(a.state)}<h2>Para quem é</h2><p>${a.for}</p><h2>O que entrega</h2><p>${a.delivery}</p><h2>Disponibilidade e escopo</h2><p>${a.limits}</p><div class="xp-actions"><a class="xp-button xp-gold" href="${a.id==='api-mcp'?'/?view=developers':a.id==='neural-copilot'?'/?view=company#gx':'/?system='+a.system}">${a.action} →</a><a class="xp-button" href="/?view=agents">Voltar ao catálogo</a></div></div><aside class="xp-card xp-detail-aside"><p class="xp-kicker">COMO FUNCIONA</p><ol><li>Entenda a capacidade e o estágio.</li><li>Explore a demonstração disponível.</li><li>Confira documentação e evidências.</li><li>Defina o escopo antes de contratar.</li></ol><p>Preço e contratação serão exibidos quando o fluxo correspondente estiver validado.</p></aside></div>`;
-  return `${pageIntro('CATÁLOGO / GXEON','Agentes especializados.<br/><em>Capacidades com propósito.</em>','Conheça o que cada capacidade faz, para quem serve e qual é seu estágio de disponibilidade.')}<div class="xp-filters" role="group" aria-label="Filtrar agentes">${['Todos','Auditoria','Integração','Conhecimento'].map((f,i)=>`<button class="xp-filter${!i?' active':''}" type="button" data-agent-filter="${f}" aria-pressed="${!i}">${f}</button>`).join('')}</div><div class="xp-catalog-grid">${agents.map(a=>`<div data-agent-kind="${a.kind}">${agentCard(a)}</div>`).join('')}</div><div class="xp-notice">Cada página apresenta o estágio e os limites da capacidade. Uma demonstração não representa contratação ou execução automática.</div>${developerCTA()}`;
+  if(a) return `${pageIntro('AGENTE / '+a.kind,a.name,a.summary)}<div class="xp-media-detail">${showcaseCover(agentShowcaseItems(agents).find(item => item.href.endsWith('agent='+a.id)), false, true)}<a class="xp-link" href="/data/showcase-media-pack-v2.json">Origem da capa →</a></div><div class="xp-detail-layout"><div class="xp-card xp-detail-main">${icon(a.icon)}${pill(a.state)}<h2>Para quem é</h2><p>${a.for}</p><h2>O que entrega</h2><p>${a.delivery}</p><h2>Disponibilidade e escopo</h2><p>${a.limits}</p><div class="xp-actions"><a class="xp-button xp-gold" href="${a.id==='api-mcp'?'/?view=developers':a.id==='neural-copilot'?'/?view=company#gx':'/?system='+a.system}">${a.action} →</a><a class="xp-button" href="/?view=agents">Voltar ao catálogo</a></div></div><aside class="xp-card xp-detail-aside"><p class="xp-kicker">COMO FUNCIONA</p><ol><li>Entenda a capacidade e o estágio.</li><li>Explore a demonstração disponível.</li><li>Confira documentação e evidências.</li><li>Defina o escopo antes de contratar.</li></ol><p>Preço e contratação serão exibidos quando o fluxo correspondente estiver validado.</p></aside></div>`;
+  return `${pageIntro('CATÁLOGO / GXEON','Agentes especializados.<br/><em>Capacidades com propósito.</em>','Conheça o que cada capacidade faz, para quem serve e qual é seu estágio de disponibilidade.')}<div class="xp-filters" role="group" aria-label="Filtrar agentes">${['Todos','Auditoria','Integração','Conhecimento'].map((f,i)=>`<button class="xp-filter${!i?' active':''}" type="button" data-agent-filter="${f}" aria-pressed="${!i}">${f}</button>`).join('')}</div><div class="xp-catalog-grid">${[...agentShowcaseItems(agents), ...ROLES].map(a=>`<div data-agent-kind="${a.category}">${showcaseCard(a)}</div>`).join('')}</div><div class="xp-notice">Cada página apresenta o estágio e os limites da capacidade. Uma demonstração não representa contratação ou execução automática.</div>${developerCTA()}`;
 }
-function pluginsPage() { return `${pageIntro('PLUGINS PARA OPENAI','Ferramentas que<br/><em>ampliam possibilidades.</em>','Uma linha de produtos próprios para conectar conhecimento, sistemas e execução verificável ao trabalho com agentes.')}<div class="xp-catalog-grid">${[
- ['plugin-factory','XPeX Plugin Factory','Demonstração','Prepare e valide blueprints, ferramentas MCP e pacotes para revisão.','/?system=plugin-factory'],
- ['gxeon','GX Neural Copilot','Consulta pública','Consulte a arquitetura e as evidências públicas da XPeX no GX.','/?view=company#gx'],
- ['audit-os','GXEON Audit Engineer','Em validação','Verificações de APIs e integrações com diagnóstico e evidências.','/?view=agents&agent=audit-engineer'],
- ['api-fabric','GXEON Capability Market','Catálogo existente','Explore os serviços e pacotes declarados no ecossistema GXEON.','/?view=ecosystem']
-].map(([id,name,state,copy,url])=>`<article class="xp-card xp-plugin-card">${icon(id)}${pill(state)}<h2>${name}</h2><p>${copy}</p><a class="xp-link" href="${url}">Ferramentas e disponibilidade →</a></article>`).join('')}</div><section class="xp-section">${sectionHead('PORTFÓLIO EM FORMAÇÃO','O próximo horizonte.')}<div class="xp-roadmap">${roadmap.map(([name,copy])=>`<article><div><h3>${name}</h3><p>${copy}</p></div>${pill('Planejado')}</article>`).join('')}</div></section><div class="xp-notice">Produtos independentes da XPeX. Os estados acima não indicam parceria, publicação ou aprovação oficial da OpenAI. Instalação privada, permissões e instruções dependem da validação de cada pacote.</div>`; }
+function pluginsPage() { return `${pageIntro('PLUGINS PARA OPENAI','Ferramentas que<br/><em>ampliam possibilidades.</em>','Uma linha de produtos próprios para conectar conhecimento, sistemas e execução verificável ao trabalho com agentes.')}${showcaseRail({id:'plugin-catalog', title:'Plugins e capacidades', label:'Catálogo XPeX', items:PLUGINS, shell:false})}<section class="xp-section">${sectionHead('PORTFÓLIO EM FORMAÇÃO','O próximo horizonte.')}<div class="xp-roadmap">${roadmap.map(([name,copy])=>`<article><div><h3>${name}</h3><p>${copy}</p></div>${pill('Planejado')}</article>`).join('')}</div></section><div class="xp-notice">Produtos independentes da XPeX. Os estados acima não indicam parceria, publicação ou aprovação oficial da OpenAI. Instalação privada, permissões e instruções dependem da validação de cada pacote.</div>`; }
 function developersPage() { return `${pageIntro('DEVELOPER PLATFORM','Sua próxima conexão<br/><em>começa aqui.</em>','Explore as interfaces públicas da XPeX e encontre capacidades para integrar aos seus agentes e aplicações.')}<div class="xp-developer-grid"><article class="xp-card"><p class="xp-kicker">01 / REST</p><h2>Descoberta empresarial</h2><p>Consulte o catálogo público e descubra como necessidades se relacionam com as capacidades da XPeX.</p><div class="xp-code"><code>GET /api/agent-api</code><button type="button" data-copy="https://xpex-systems-ai.vercel.app/api/agent-api" aria-label="Copiar URL da API">Copiar</button></div><pre><code>curl https://xpex-systems-ai.vercel.app/api/agent-api</code></pre>${ext('/api/agent-api','Abrir resposta JSON')}<p class="xp-small-note">Descoberta pública sem credenciais. Outros serviços podem exigir autenticação e condições próprias.</p></article><article class="xp-card"><p class="xp-kicker">02 / MCP</p><h2>Conecte um agente</h2><p>A interface empresarial permite descobrir sistemas e capacidades por ferramentas MCP.</p><div class="xp-code"><code>/api/mcp/enterprise</code><button type="button" data-copy="https://xpex-systems-ai.vercel.app/api/mcp/enterprise" aria-label="Copiar URL do MCP">Copiar</button></div><pre><code>{
   "mcpServers": {
     "xpex-enterprise": {

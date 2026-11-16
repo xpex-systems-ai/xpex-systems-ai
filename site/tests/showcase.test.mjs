@@ -92,7 +92,7 @@ test('every approved cover has a distinct editorial signature without falsifying
   assert.match(agentCover, /data-cover-id="neural-copilot"/);
   assert.match(agentCover, /Capa editorial/);
   assert.doesNotMatch(agentCover, /Captura real/);
-  assert.match(agentCover, /class="xp-cover-artwork"/);
+  assert.match(agentCover, /neural-copilot-icon\.svg/);
   assert.doesNotMatch(academy, /class="xp-cover-artwork"/);
 });
 
