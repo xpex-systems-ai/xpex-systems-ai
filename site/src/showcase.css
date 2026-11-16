@@ -275,9 +275,9 @@
 .xp-showcase-card .xp-showcase-fallback:not(:has(~ img:not([hidden]))) {
   background-size: cover; background-position: center;
 }
-.xp-cover-system:not(:has(~ img:not([hidden]))) { background-image: url('/media/showcase/fallbacks/fallback-system-premium-v1.webp'); }
-.xp-cover-agent:not(:has(~ img:not([hidden]))) { background-image: url('/media/showcase/fallbacks/fallback-agent-premium-v1.webp'); }
-.xp-cover-evidence:not(:has(~ img:not([hidden]))) { background-image: url('/media/showcase/fallbacks/fallback-evidence-premium-v1.webp'); }
+.xp-cover-system:not(:has(~ img:not([hidden]))) { background-image: url('/media/showcase/fallbacks/fallback-system-premium-v2.webp'); }
+.xp-cover-agent:not(:has(~ img:not([hidden]))) { background-image: url('/media/showcase/fallbacks/fallback-agent-premium-v2.webp'); }
+.xp-cover-evidence:not(:has(~ img:not([hidden]))) { background-image: url('/media/showcase/fallbacks/fallback-evidence-premium-v2.webp'); }
 .xp-showcase-card .xp-showcase-fallback .brand-symbol { visibility: hidden; }
 @media (prefers-reduced-motion: reduce) {
   .xp-showcase-card .xp-showcase-image { transition: none; }
@@ -360,4 +360,19 @@
 .xp-cover-editorial .xp-cover-signature { z-index: 3; }
 @media (prefers-reduced-motion: reduce) {
   .xp-cover-artwork { transition: none; animation: none; }
+}
+
+.xp-media-badge { flex: none; object-fit: contain; }
+.xp-media-detail { max-width: 680px; margin: 0 0 24px; }
+.xp-media-detail .xp-showcase-cover { aspect-ratio: 16 / 9; border-radius: 14px; }
+.xp-media-detail .xp-link { margin-top: 10px; }
+.xp-showcase-card .xp-cover-foil { pointer-events: none; }
+@media (prefers-reduced-motion: no-preference) {
+  .xp-cover-foil::before {
+    content: ''; position: absolute; inset: 0 -45%;
+    background: linear-gradient(116deg, transparent 42%, #ceecff27 50%, transparent 57%);
+    transform: translateX(-52%);
+    transition: transform 650ms cubic-bezier(.2,.6,.3,1);
+  }
+  .xp-showcase-card:is(:hover,:focus-within) .xp-cover-foil::before { transform: translateX(52%); }
 }

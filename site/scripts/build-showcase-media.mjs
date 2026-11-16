@@ -1,3 +1,5 @@
+import { MODULES, ROLES, MORE_INTEGRATIONS, MORE_EVIDENCE, PLUGINS } from '../src/data/media-directory.js';
+import { SYSTEMS, PLATFORMS, TRUST, INTEGRATIONS } from '../src/data/showcase.js';
 import { chromium } from 'playwright';
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 
@@ -38,6 +40,20 @@ const groups = {
     ['evidence','Documento de evidência','audit-os'],
   ],
 };
+const v2 = process.argv.includes('--v2');
+const fromItem = item => [item.id,item.title,item.symbol,null,null,null,item.concept];
+const inventory = [...PLATFORMS,...SYSTEMS,...TRUST,...INTEGRATIONS,...MODULES,...ROLES,...MORE_INTEGRATIONS,...MORE_EVIDENCE,...PLUGINS];
+const providerSlugs = {github:'github',vercel:'vercel',supabase:'supabase',firebase:'firebase',railway:'railway',
+  'google-ai-studio':'google',chatgpt:'openai',coinbase:'coinbase','mercado-pago':'mercadopago',stripe:'stripe',mcp:'modelcontextprotocol'};
+if (v2) {
+  groups.systems.push(...MODULES.map(fromItem));
+  groups.agents.push(...ROLES.map(fromItem));
+  groups.evidence.push(...[...TRUST,...MORE_EVIDENCE].filter(item => !groups.evidence.some(([id]) => id === item.id)).map(fromItem));
+  groups.integrations = [...INTEGRATIONS,...MORE_INTEGRATIONS].map(fromItem);
+  groups.plugins = PLUGINS.map(fromItem);
+  await mkdir(publicFile('/media/showcase/icons'), {recursive:true});
+}
+const index = new Map(inventory.map(item => [item.id,item]));
 const browser = await chromium.launch({ channel: process.env.SHOWCASE_CHROME_CHANNEL || undefined });
 const items = [];
 try {
@@ -47,13 +63,33 @@ try {
     await mkdir(publicFile(folder), { recursive: true });
     for (const [id, title, symbol, artwork, screenshot, aliasOf, concept] of rows) {
       const base = screenshot && evidence.media[screenshot];
-      const symbolPath = '/brand/v2/' + symbol + '-symbol.svg';
+      const originalSymbol = '/brand/v2/' + symbol + '-symbol.svg';
+      const vendor = group === 'integrations' && providerSlugs[id];
+      const vendorPath = vendor && '/media/showcase/icons/providers/' + vendor + '.svg';
+      const vendorArt = vendorPath && await readFile(publicFile(vendorPath), 'utf8').catch(error => {
+        if (error.code !== 'ENOENT') throw error;
+        return '';
+      });
+      const symbolPath = vendorArt ? vendorPath : originalSymbol;
+      const iconPath = '/media/showcase/icons/' + id + '-icon.svg';
+      const monoPath = '/media/showcase/icons/' + id + '-icon-mono.svg';
+      let icon;
+      if (v2) {
+        const raw = vendorArt || await readFile(publicFile(originalSymbol), 'utf8');
+        const viewBox = raw.match(/viewBox="([^"]+)"/)[1];
+        const glyph = raw.slice(raw.indexOf('>') + 1, raw.lastIndexOf('</svg>')).replace(/<title>.*?<\/title>/g, '');
+        const framed = color => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="${color}" color="${color}"><rect x="2" y="2" width="60" height="60" rx="16" fill="#111d33" stroke="${color}" stroke-opacity=".55"/><svg x="14" y="14" width="36" height="36" viewBox="${viewBox}">${glyph}</svg></svg>\n`;
+        icon = framed(group === 'integrations' ? '#d5e8ff' : '#ead19a');
+        await writeFile(publicFile(iconPath), icon);
+        await writeFile(publicFile(monoPath), framed('#f3f6fa'));
+      }
       const sourcePath = base?.path || artwork || symbolPath;
       const mime = sourcePath.endsWith('.svg') ? 'image/svg+xml' : 'image/webp';
-      const source = 'data:' + mime + ';base64,' + (await readFile(publicFile(sourcePath))).toString('base64');
-      const path = folder + '/' + (group === 'fallbacks' ? 'fallback-' + id + '-premium-v1' : id + '-cover-v1') + '.webp';
-      const hue = {systems:221,agents:210,evidence:235,fallbacks:221}[group];
-      const data = await page.evaluate(async ({ source, isCapture, isPhoto, index, hue, group }) => {
+      const source = 'data:' + mime + ';base64,' + (v2 && !base && !artwork ? Buffer.from(icon) : await readFile(publicFile(sourcePath))).toString('base64');
+      const version = v2 ? 'v2' : 'v1';
+      const path = folder + '/' + (group === 'fallbacks' ? 'fallback-' + id + '-premium-' : id + '-cover-') + version + '.webp';
+      const hue = {systems:221,agents:210,evidence:235,fallbacks:221,integrations:213,plugins:230}[group];
+      const data = await page.evaluate(async ({ source, isCapture, isPhoto, index, hue, group, v2 }) => {
         const image = new Image();
         image.src = source;
         await image.decode();
@@ -67,6 +103,19 @@ try {
         ctx.fillStyle = light;
         ctx.fillRect(0, 0, 800, 450);
         ctx.strokeStyle = '#8ea9d235';
+        if (v2) {
+          ctx.save();
+          ctx.translate(432,210);
+          ctx.rotate(-.2);
+          for (let offset = -120; offset <= 125; offset += 44) {
+            ctx.fillStyle = '#799ac613';
+            ctx.beginPath();
+            ctx.roundRect(-294 + offset, -115 + offset / 5, 460, 220, 18);
+            ctx.fill();
+            ctx.stroke();
+          }
+          ctx.restore();
+        }
         for (let radius = 96; radius < 460; radius += 43) {
           ctx.beginPath();
           ctx.ellipse(470, 208, radius, radius * .59, -.29, 0, Math.PI * 2);
@@ -101,8 +150,32 @@ try {
         ctx.fillStyle = '#d6b57340';
         ctx.fillRect(99, 408, 663, 1);
         return canvas.toDataURL('image/webp', .86).split(',')[1];
-      }, { source, isCapture: Boolean(base), isPhoto: Boolean(artwork), index: items.length % 5, hue, group });
+      }, { source, isCapture: Boolean(base), isPhoto: Boolean(artwork), index: items.length % 5, hue, group, v2 });
       await writeFile(publicFile(path), Buffer.from(data, 'base64'));
+      const entry = index.get(id);
+      if (v2) {
+        const kind = group === 'fallbacks' ? 'FALLBACK_OFFICIAL' : concept ? 'CONCEPT_PREVIEW' : base || artwork ? 'CURATED_COVER' : 'EDITORIAL_ART';
+        items.push({
+          id, title, kind: group, category: entry?.category || ({agents:'Capacidade',fallbacks:'Fallback'}[group] || 'Catálogo'),
+          statusBadge: entry?.status || (concept ? 'Prévia conceitual' : group === 'agents' ? 'Capacidade catalogada' : 'Referência editorial'),
+          runtimeStatus: entry?.status || 'UNSPECIFIED',
+          access: entry?.access || 'Referência pública',
+          ...(aliasOf && { aliasOf }),
+          cover: { src:path, kind, width:800, height:450, alt:(base ? 'Composição com captura pública de ' : 'Composição editorial para ') + title },
+          icon: { src:iconPath, mono:monoPath, simplified: symbolPath, kind:vendorArt ? 'VENDOR_MARK_IN_XPEX_FRAME' : 'XPEX_GLYPH' },
+          derivedFrom: [{
+            kind:base?.kind || 'OFFICIAL_ASSET',
+            path:sourcePath,
+            sourceUrl:base?.sourceUrl || (vendorArt ? 'https://github.com/simple-icons/simple-icons/blob/17cd4ee07612198a1d8777a060d4100423762a8b/icons/' + vendor + '.svg' :
+              repo + '/blob/617edfa/site/public' + sourcePath),
+            ...(base && {capturedAt:base.capturedAt,classification:base.classification,review:base.review,redacted:screenshot === 'audit-os'})
+          }],
+          approvedForPublicUse: false,
+          notes: concept ? 'Papel ou módulo conceitual. Disponibilidade operacional pendente de comprovação.' :
+            vendorArt ? 'Marca do provedor via Simple Icons. Presença editorial sem declaração de parceria.' : 'Composição revisável no preview. Aprovação pública pendente.'
+        });
+        continue;
+      }
       items.push({
         id, title, group, ...(aliasOf && { aliasOf }),
         image: {
@@ -127,7 +200,14 @@ try {
       });
     }
   }
-  await writeFile(publicFile('/data/showcase-media-pack-v1.json'), JSON.stringify({
+  if (v2) {
+    await writeFile(publicFile('/data/showcase-media-pack-v2.json'), JSON.stringify({
+      schemaVersion:'2.0.0', scope:'Preview editorial sujeito a revisão independente do GXEON', items
+    }, null, 2) + '\n');
+    await writeFile(new URL('../src/data/media-index-v2.json', import.meta.url), JSON.stringify(
+      items.map(({id,kind,cover,icon,derivedFrom}) => [id,kind,cover.kind,cover.alt,Number(derivedFrom.some(source => source.kind === 'REAL_SCREENSHOT'))])
+    ) + '\n');
+  } else await writeFile(publicFile('/data/showcase-media-pack-v1.json'), JSON.stringify({
     schemaVersion: '1.0.0',
     updatedAt: new Date().toISOString(),
     scope: 'Editorial media for preview review. 24 decorative SVG art layers are concept artwork, not real system captures. The four previously approved screenshots retain separate provenance; operational state remains in the system and pillars registries.',

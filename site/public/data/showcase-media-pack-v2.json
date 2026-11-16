@@ -1,0 +1,1981 @@
+{
+  "schemaVersion": "2.0.0",
+  "scope": "Preview editorial sujeito a revisão independente do GXEON",
+  "items": [
+    {
+      "id": "xpex-company",
+      "title": "XPeX Systems AI",
+      "kind": "systems",
+      "category": "Empresa",
+      "statusBadge": "Site público acessível",
+      "runtimeStatus": "Site público acessível",
+      "access": "Público",
+      "cover": {
+        "src": "/media/showcase/systems/xpex-company-cover-v2.webp",
+        "kind": "CURATED_COVER",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para XPeX Systems AI"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/xpex-company-icon.svg",
+        "mono": "/media/showcase/icons/xpex-company-icon-mono.svg",
+        "simplified": "/brand/v2/xpex-symbol.svg",
+        "kind": "XPEX_GLYPH"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/media/gxeon-earth-mobile.webp",
+          "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/617edfa/site/public/media/gxeon-earth-mobile.webp"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Composição revisável no preview. Aprovação pública pendente."
+    },
+    {
+      "id": "xpex-evidence",
+      "title": "Portfólio de Evidências",
+      "kind": "systems",
+      "category": "Cases e Radar",
+      "statusBadge": "Acesso autenticado",
+      "runtimeStatus": "Acesso autenticado",
+      "access": "Login ChatGPT",
+      "cover": {
+        "src": "/media/showcase/systems/xpex-evidence-cover-v2.webp",
+        "kind": "EDITORIAL_ART",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para Portfólio de Evidências"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/xpex-evidence-icon.svg",
+        "mono": "/media/showcase/icons/xpex-evidence-icon-mono.svg",
+        "simplified": "/brand/v2/audit-os-symbol.svg",
+        "kind": "XPEX_GLYPH"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/brand/v2/audit-os-symbol.svg",
+          "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/617edfa/site/public/brand/v2/audit-os-symbol.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Composição revisável no preview. Aprovação pública pendente."
+    },
+    {
+      "id": "xpex-academy",
+      "title": "XPeX Academy",
+      "kind": "systems",
+      "category": "Educação",
+      "statusBadge": "Preview restrito",
+      "runtimeStatus": "Preview restrito",
+      "access": "Login por convite",
+      "cover": {
+        "src": "/media/showcase/systems/xpex-academy-cover-v2.webp",
+        "kind": "CURATED_COVER",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição com captura pública de XPeX Academy"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/xpex-academy-icon.svg",
+        "mono": "/media/showcase/icons/xpex-academy-icon-mono.svg",
+        "simplified": "/brand/v2/academy-symbol.svg",
+        "kind": "XPEX_GLYPH"
+      },
+      "derivedFrom": [
+        {
+          "kind": "REAL_SCREENSHOT",
+          "path": "/media/showcase/academy.webp",
+          "sourceUrl": "https://xpex-academy-mmpzzek1w-xpex-neural.vercel.app/academia",
+          "capturedAt": "2026-11-15T22:10:40.011Z",
+          "classification": "E1",
+          "review": "Captura anônima; nenhum dado inserido.",
+          "redacted": false
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Composição revisável no preview. Aprovação pública pendente."
+    },
+    {
+      "id": "systems-command",
+      "title": "XPeX Systems Command",
+      "kind": "systems",
+      "category": "Gestão e governança",
+      "statusBadge": "Runtime indisponível",
+      "runtimeStatus": "Runtime indisponível",
+      "access": "Acesso do operador",
+      "cover": {
+        "src": "/media/showcase/systems/systems-command-cover-v2.webp",
+        "kind": "EDITORIAL_ART",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para XPeX Systems Command"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/systems-command-icon.svg",
+        "mono": "/media/showcase/icons/systems-command-icon-mono.svg",
+        "simplified": "/brand/v2/systems-command-symbol.svg",
+        "kind": "XPEX_GLYPH"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/brand/v2/systems-command-symbol.svg",
+          "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/617edfa/site/public/brand/v2/systems-command-symbol.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Composição revisável no preview. Aprovação pública pendente."
+    },
+    {
+      "id": "audit-os",
+      "title": "GXEON Audit OS",
+      "kind": "systems",
+      "category": "Auditoria",
+      "statusBadge": "Demonstração",
+      "runtimeStatus": "Demonstração",
+      "access": "Público",
+      "cover": {
+        "src": "/media/showcase/systems/audit-os-cover-v2.webp",
+        "kind": "CURATED_COVER",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição com captura pública de GXEON Audit OS"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/audit-os-icon.svg",
+        "mono": "/media/showcase/icons/audit-os-icon-mono.svg",
+        "simplified": "/brand/v2/audit-os-symbol.svg",
+        "kind": "XPEX_GLYPH"
+      },
+      "derivedFrom": [
+        {
+          "kind": "REAL_SCREENSHOT",
+          "path": "/media/showcase/audit-os.webp",
+          "sourceUrl": "https://gxeon-audit-os.vercel.app/",
+          "capturedAt": "2026-11-15T22:10:40.136Z",
+          "classification": "E2",
+          "review": "Redação visual dos contadores superiores, da identificação do operador e dos valores do painel principal.",
+          "redacted": true
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Composição revisável no preview. Aprovação pública pendente."
+    },
+    {
+      "id": "plugin-factory",
+      "title": "XPeX Plugin Factory",
+      "kind": "systems",
+      "category": "Integração",
+      "statusBadge": "Runtime indisponível",
+      "runtimeStatus": "Runtime indisponível",
+      "access": "Fonte pública",
+      "cover": {
+        "src": "/media/showcase/systems/plugin-factory-cover-v2.webp",
+        "kind": "EDITORIAL_ART",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para XPeX Plugin Factory"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/plugin-factory-icon.svg",
+        "mono": "/media/showcase/icons/plugin-factory-icon-mono.svg",
+        "simplified": "/brand/v2/plugin-factory-symbol.svg",
+        "kind": "XPEX_GLYPH"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/brand/v2/plugin-factory-symbol.svg",
+          "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/617edfa/site/public/brand/v2/plugin-factory-symbol.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Composição revisável no preview. Aprovação pública pendente."
+    },
+    {
+      "id": "wallet-command",
+      "title": "GXEON Wallet Command Center",
+      "kind": "systems",
+      "category": "Operações",
+      "statusBadge": "Em aprimoramento",
+      "runtimeStatus": "Em aprimoramento",
+      "access": "Catálogo público",
+      "cover": {
+        "src": "/media/showcase/systems/wallet-command-cover-v2.webp",
+        "kind": "CURATED_COVER",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição com captura pública de GXEON Wallet Command Center"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/wallet-command-icon.svg",
+        "mono": "/media/showcase/icons/wallet-command-icon-mono.svg",
+        "simplified": "/brand/v2/wallet-command-symbol.svg",
+        "kind": "XPEX_GLYPH"
+      },
+      "derivedFrom": [
+        {
+          "kind": "REAL_SCREENSHOT",
+          "path": "/media/showcase/wallet-command.webp",
+          "sourceUrl": "https://gxeon-wallet-command-center.vercel.app/market",
+          "capturedAt": "2026-11-15T22:10:40.008Z",
+          "classification": "E1",
+          "review": "Captura separada do painel Wallet, sem endereços, saldo ou dados de conta.",
+          "redacted": false
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Composição revisável no preview. Aprovação pública pendente."
+    },
+    {
+      "id": "studio-ai",
+      "title": "XPeX Studio AI",
+      "kind": "systems",
+      "category": "Criação",
+      "statusBadge": "Demonstração",
+      "runtimeStatus": "Demonstração",
+      "access": "Público",
+      "cover": {
+        "src": "/media/showcase/systems/studio-ai-cover-v2.webp",
+        "kind": "CURATED_COVER",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição com captura pública de XPeX Studio AI"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/studio-ai-icon.svg",
+        "mono": "/media/showcase/icons/studio-ai-icon-mono.svg",
+        "simplified": "/brand/v2/studio-ai-symbol.svg",
+        "kind": "XPEX_GLYPH"
+      },
+      "derivedFrom": [
+        {
+          "kind": "REAL_SCREENSHOT",
+          "path": "/media/showcase/studio-ai.webp",
+          "sourceUrl": "https://xpex-studio-ai.vercel.app/",
+          "capturedAt": "2026-11-15T22:10:39.864Z",
+          "classification": "E1",
+          "review": "Captura anônima da página pública.",
+          "redacted": false
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Composição revisável no preview. Aprovação pública pendente."
+    },
+    {
+      "id": "api-fabric",
+      "title": "XPeX API Fabric",
+      "kind": "systems",
+      "category": "Distribuição",
+      "statusBadge": "Em admissão",
+      "runtimeStatus": "Em admissão",
+      "access": "Fonte pública",
+      "cover": {
+        "src": "/media/showcase/systems/api-fabric-cover-v2.webp",
+        "kind": "EDITORIAL_ART",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para XPeX API Fabric"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/api-fabric-icon.svg",
+        "mono": "/media/showcase/icons/api-fabric-icon-mono.svg",
+        "simplified": "/brand/v2/api-fabric-symbol.svg",
+        "kind": "XPEX_GLYPH"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/brand/v2/api-fabric-symbol.svg",
+          "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/617edfa/site/public/brand/v2/api-fabric-symbol.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Composição revisável no preview. Aprovação pública pendente."
+    },
+    {
+      "id": "academy",
+      "title": "XPeX Academy · Polo Kelle",
+      "kind": "systems",
+      "category": "Educação",
+      "statusBadge": "Preview restrito",
+      "runtimeStatus": "Preview restrito",
+      "access": "Login por convite",
+      "cover": {
+        "src": "/media/showcase/systems/academy-cover-v2.webp",
+        "kind": "CURATED_COVER",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição com captura pública de XPeX Academy · Polo Kelle"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/academy-icon.svg",
+        "mono": "/media/showcase/icons/academy-icon-mono.svg",
+        "simplified": "/brand/v2/academy-symbol.svg",
+        "kind": "XPEX_GLYPH"
+      },
+      "derivedFrom": [
+        {
+          "kind": "REAL_SCREENSHOT",
+          "path": "/media/showcase/academy.webp",
+          "sourceUrl": "https://xpex-academy-mmpzzek1w-xpex-neural.vercel.app/academia",
+          "capturedAt": "2026-11-15T22:10:40.011Z",
+          "classification": "E1",
+          "review": "Captura anônima; nenhum dado inserido.",
+          "redacted": false
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Composição revisável no preview. Aprovação pública pendente."
+    },
+    {
+      "id": "enterprise-experience",
+      "title": "XPeX Enterprise Experience",
+      "kind": "systems",
+      "category": "Vitrine",
+      "statusBadge": "Site institucional",
+      "runtimeStatus": "Site institucional",
+      "access": "Referência pública",
+      "cover": {
+        "src": "/media/showcase/systems/enterprise-experience-cover-v2.webp",
+        "kind": "EDITORIAL_ART",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para XPeX Enterprise Experience"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/enterprise-experience-icon.svg",
+        "mono": "/media/showcase/icons/enterprise-experience-icon-mono.svg",
+        "simplified": "/brand/v2/xpex-symbol.svg",
+        "kind": "XPEX_GLYPH"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/brand/v2/xpex-symbol.svg",
+          "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/617edfa/site/public/brand/v2/xpex-symbol.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Composição revisável no preview. Aprovação pública pendente."
+    },
+    {
+      "id": "universal-auditor",
+      "title": "XPeX Command / Universal Asset Auditor",
+      "kind": "systems",
+      "category": "Auditoria",
+      "statusBadge": "Escopo de referência",
+      "runtimeStatus": "Escopo de referência",
+      "access": "Referência pública",
+      "cover": {
+        "src": "/media/showcase/systems/universal-auditor-cover-v2.webp",
+        "kind": "EDITORIAL_ART",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para XPeX Command / Universal Asset Auditor"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/universal-auditor-icon.svg",
+        "mono": "/media/showcase/icons/universal-auditor-icon-mono.svg",
+        "simplified": "/brand/v2/systems-command-symbol.svg",
+        "kind": "XPEX_GLYPH"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/brand/v2/systems-command-symbol.svg",
+          "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/617edfa/site/public/brand/v2/systems-command-symbol.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Composição revisável no preview. Aprovação pública pendente."
+    },
+    {
+      "id": "cash-engine",
+      "title": "XPeX Cash Engine",
+      "kind": "systems",
+      "category": "Finanças",
+      "statusBadge": "Runtime não verificado",
+      "runtimeStatus": "Runtime não verificado",
+      "access": "Referência pública",
+      "cover": {
+        "src": "/media/showcase/systems/cash-engine-cover-v2.webp",
+        "kind": "EDITORIAL_ART",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para XPeX Cash Engine"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/cash-engine-icon.svg",
+        "mono": "/media/showcase/icons/cash-engine-icon-mono.svg",
+        "simplified": "/brand/v2/wallet-command-symbol.svg",
+        "kind": "XPEX_GLYPH"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/brand/v2/wallet-command-symbol.svg",
+          "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/617edfa/site/public/brand/v2/wallet-command-symbol.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Composição revisável no preview. Aprovação pública pendente."
+    },
+    {
+      "id": "xpex-radar",
+      "title": "XPeX Radar",
+      "kind": "systems",
+      "category": "Pesquisa",
+      "statusBadge": "Diretório público",
+      "runtimeStatus": "Diretório público",
+      "access": "Referência pública",
+      "cover": {
+        "src": "/media/showcase/systems/xpex-radar-cover-v2.webp",
+        "kind": "EDITORIAL_ART",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para XPeX Radar"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/xpex-radar-icon.svg",
+        "mono": "/media/showcase/icons/xpex-radar-icon-mono.svg",
+        "simplified": "/brand/v2/gxeon-symbol.svg",
+        "kind": "XPEX_GLYPH"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/brand/v2/gxeon-symbol.svg",
+          "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/617edfa/site/public/brand/v2/gxeon-symbol.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Composição revisável no preview. Aprovação pública pendente."
+    },
+    {
+      "id": "learning-os",
+      "title": "XPeX Academy Learning OS",
+      "kind": "systems",
+      "category": "Educação",
+      "statusBadge": "Preview",
+      "runtimeStatus": "Preview",
+      "access": "Referência pública",
+      "cover": {
+        "src": "/media/showcase/systems/learning-os-cover-v2.webp",
+        "kind": "EDITORIAL_ART",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para XPeX Academy Learning OS"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/learning-os-icon.svg",
+        "mono": "/media/showcase/icons/learning-os-icon-mono.svg",
+        "simplified": "/brand/v2/academy-symbol.svg",
+        "kind": "XPEX_GLYPH"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/brand/v2/academy-symbol.svg",
+          "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/617edfa/site/public/brand/v2/academy-symbol.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Composição revisável no preview. Aprovação pública pendente."
+    },
+    {
+      "id": "certificate-hub",
+      "title": "XPeX Certificate Hub",
+      "kind": "systems",
+      "category": "Academy",
+      "statusBadge": "Prévia conceitual",
+      "runtimeStatus": "Prévia conceitual",
+      "access": "Referência pública",
+      "cover": {
+        "src": "/media/showcase/systems/certificate-hub-cover-v2.webp",
+        "kind": "CONCEPT_PREVIEW",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para XPeX Certificate Hub"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/certificate-hub-icon.svg",
+        "mono": "/media/showcase/icons/certificate-hub-icon-mono.svg",
+        "simplified": "/brand/v2/academy-symbol.svg",
+        "kind": "XPEX_GLYPH"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/brand/v2/academy-symbol.svg",
+          "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/617edfa/site/public/brand/v2/academy-symbol.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Papel ou módulo conceitual. Disponibilidade operacional pendente de comprovação."
+    },
+    {
+      "id": "profile-hub",
+      "title": "XPeX Profile Hub",
+      "kind": "systems",
+      "category": "Academy",
+      "statusBadge": "Prévia conceitual",
+      "runtimeStatus": "Prévia conceitual",
+      "access": "Referência pública",
+      "cover": {
+        "src": "/media/showcase/systems/profile-hub-cover-v2.webp",
+        "kind": "CONCEPT_PREVIEW",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para XPeX Profile Hub"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/profile-hub-icon.svg",
+        "mono": "/media/showcase/icons/profile-hub-icon-mono.svg",
+        "simplified": "/brand/v2/academy-symbol.svg",
+        "kind": "XPEX_GLYPH"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/brand/v2/academy-symbol.svg",
+          "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/617edfa/site/public/brand/v2/academy-symbol.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Papel ou módulo conceitual. Disponibilidade operacional pendente de comprovação."
+    },
+    {
+      "id": "course-hub",
+      "title": "XPeX Course Hub",
+      "kind": "systems",
+      "category": "Academy",
+      "statusBadge": "Prévia conceitual",
+      "runtimeStatus": "Prévia conceitual",
+      "access": "Referência pública",
+      "cover": {
+        "src": "/media/showcase/systems/course-hub-cover-v2.webp",
+        "kind": "CONCEPT_PREVIEW",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para XPeX Course Hub"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/course-hub-icon.svg",
+        "mono": "/media/showcase/icons/course-hub-icon-mono.svg",
+        "simplified": "/brand/v2/academy-symbol.svg",
+        "kind": "XPEX_GLYPH"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/brand/v2/academy-symbol.svg",
+          "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/617edfa/site/public/brand/v2/academy-symbol.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Papel ou módulo conceitual. Disponibilidade operacional pendente de comprovação."
+    },
+    {
+      "id": "super-admin",
+      "title": "XPeX Super Admin",
+      "kind": "systems",
+      "category": "Academy",
+      "statusBadge": "Interno",
+      "runtimeStatus": "Interno",
+      "access": "Restrito",
+      "cover": {
+        "src": "/media/showcase/systems/super-admin-cover-v2.webp",
+        "kind": "CONCEPT_PREVIEW",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para XPeX Super Admin"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/super-admin-icon.svg",
+        "mono": "/media/showcase/icons/super-admin-icon-mono.svg",
+        "simplified": "/brand/v2/academy-symbol.svg",
+        "kind": "XPEX_GLYPH"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/brand/v2/academy-symbol.svg",
+          "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/617edfa/site/public/brand/v2/academy-symbol.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Papel ou módulo conceitual. Disponibilidade operacional pendente de comprovação."
+    },
+    {
+      "id": "home-hub",
+      "title": "XPeX Home Hub",
+      "kind": "systems",
+      "category": "Academy",
+      "statusBadge": "Prévia conceitual",
+      "runtimeStatus": "Prévia conceitual",
+      "access": "Referência pública",
+      "cover": {
+        "src": "/media/showcase/systems/home-hub-cover-v2.webp",
+        "kind": "CONCEPT_PREVIEW",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para XPeX Home Hub"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/home-hub-icon.svg",
+        "mono": "/media/showcase/icons/home-hub-icon-mono.svg",
+        "simplified": "/brand/v2/academy-symbol.svg",
+        "kind": "XPEX_GLYPH"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/brand/v2/academy-symbol.svg",
+          "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/617edfa/site/public/brand/v2/academy-symbol.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Papel ou módulo conceitual. Disponibilidade operacional pendente de comprovação."
+    },
+    {
+      "id": "neural-copilot",
+      "title": "GX Neural Copilot",
+      "kind": "agents",
+      "category": "Capacidade",
+      "statusBadge": "Capacidade catalogada",
+      "runtimeStatus": "UNSPECIFIED",
+      "access": "Referência pública",
+      "cover": {
+        "src": "/media/showcase/agents/neural-copilot-cover-v2.webp",
+        "kind": "EDITORIAL_ART",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para GX Neural Copilot"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/neural-copilot-icon.svg",
+        "mono": "/media/showcase/icons/neural-copilot-icon-mono.svg",
+        "simplified": "/brand/v2/gxeon-symbol.svg",
+        "kind": "XPEX_GLYPH"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/brand/v2/gxeon-symbol.svg",
+          "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/617edfa/site/public/brand/v2/gxeon-symbol.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Composição revisável no preview. Aprovação pública pendente."
+    },
+    {
+      "id": "evidence-concierge",
+      "title": "GX Evidence Concierge",
+      "kind": "agents",
+      "category": "Capacidade",
+      "statusBadge": "Capacidade catalogada",
+      "runtimeStatus": "UNSPECIFIED",
+      "access": "Referência pública",
+      "aliasOf": "neural-copilot",
+      "cover": {
+        "src": "/media/showcase/agents/evidence-concierge-cover-v2.webp",
+        "kind": "EDITORIAL_ART",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para GX Evidence Concierge"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/evidence-concierge-icon.svg",
+        "mono": "/media/showcase/icons/evidence-concierge-icon-mono.svg",
+        "simplified": "/brand/v2/gxeon-symbol.svg",
+        "kind": "XPEX_GLYPH"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/brand/v2/gxeon-symbol.svg",
+          "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/617edfa/site/public/brand/v2/gxeon-symbol.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Composição revisável no preview. Aprovação pública pendente."
+    },
+    {
+      "id": "audit-engineer",
+      "title": "GXEON Audit Engineer",
+      "kind": "agents",
+      "category": "Capacidade",
+      "statusBadge": "Capacidade catalogada",
+      "runtimeStatus": "UNSPECIFIED",
+      "access": "Referência pública",
+      "cover": {
+        "src": "/media/showcase/agents/audit-engineer-cover-v2.webp",
+        "kind": "EDITORIAL_ART",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para GXEON Audit Engineer"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/audit-engineer-icon.svg",
+        "mono": "/media/showcase/icons/audit-engineer-icon-mono.svg",
+        "simplified": "/brand/v2/audit-os-symbol.svg",
+        "kind": "XPEX_GLYPH"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/brand/v2/audit-os-symbol.svg",
+          "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/617edfa/site/public/brand/v2/audit-os-symbol.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Composição revisável no preview. Aprovação pública pendente."
+    },
+    {
+      "id": "plugin-factory-agent",
+      "title": "XPeX Plugin Factory Agent",
+      "kind": "agents",
+      "category": "Capacidade",
+      "statusBadge": "Capacidade catalogada",
+      "runtimeStatus": "UNSPECIFIED",
+      "access": "Referência pública",
+      "cover": {
+        "src": "/media/showcase/agents/plugin-factory-agent-cover-v2.webp",
+        "kind": "EDITORIAL_ART",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para XPeX Plugin Factory Agent"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/plugin-factory-agent-icon.svg",
+        "mono": "/media/showcase/icons/plugin-factory-agent-icon-mono.svg",
+        "simplified": "/brand/v2/plugin-factory-symbol.svg",
+        "kind": "XPEX_GLYPH"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/brand/v2/plugin-factory-symbol.svg",
+          "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/617edfa/site/public/brand/v2/plugin-factory-symbol.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Composição revisável no preview. Aprovação pública pendente."
+    },
+    {
+      "id": "api-mcp",
+      "title": "API & MCP Runtime",
+      "kind": "agents",
+      "category": "Capacidade",
+      "statusBadge": "Capacidade catalogada",
+      "runtimeStatus": "UNSPECIFIED",
+      "access": "Referência pública",
+      "cover": {
+        "src": "/media/showcase/agents/api-mcp-cover-v2.webp",
+        "kind": "EDITORIAL_ART",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para API & MCP Runtime"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/api-mcp-icon.svg",
+        "mono": "/media/showcase/icons/api-mcp-icon-mono.svg",
+        "simplified": "/brand/v2/api-fabric-symbol.svg",
+        "kind": "XPEX_GLYPH"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/brand/v2/api-fabric-symbol.svg",
+          "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/617edfa/site/public/brand/v2/api-fabric-symbol.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Composição revisável no preview. Aprovação pública pendente."
+    },
+    {
+      "id": "enterprise-evidence",
+      "title": "Enterprise Evidence Concierge",
+      "kind": "agents",
+      "category": "Capacidade",
+      "statusBadge": "Capacidade catalogada",
+      "runtimeStatus": "UNSPECIFIED",
+      "access": "Referência pública",
+      "aliasOf": "neural-copilot",
+      "cover": {
+        "src": "/media/showcase/agents/enterprise-evidence-cover-v2.webp",
+        "kind": "EDITORIAL_ART",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para Enterprise Evidence Concierge"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/enterprise-evidence-icon.svg",
+        "mono": "/media/showcase/icons/enterprise-evidence-icon-mono.svg",
+        "simplified": "/brand/v2/gxeon-symbol.svg",
+        "kind": "XPEX_GLYPH"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/brand/v2/gxeon-symbol.svg",
+          "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/617edfa/site/public/brand/v2/gxeon-symbol.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Composição revisável no preview. Aprovação pública pendente."
+    },
+    {
+      "id": "academy-support",
+      "title": "Academy Support Agent",
+      "kind": "agents",
+      "category": "Capacidade",
+      "statusBadge": "Prévia conceitual",
+      "runtimeStatus": "UNSPECIFIED",
+      "access": "Referência pública",
+      "cover": {
+        "src": "/media/showcase/agents/academy-support-cover-v2.webp",
+        "kind": "CONCEPT_PREVIEW",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para Academy Support Agent"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/academy-support-icon.svg",
+        "mono": "/media/showcase/icons/academy-support-icon-mono.svg",
+        "simplified": "/brand/v2/academy-symbol.svg",
+        "kind": "XPEX_GLYPH"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/brand/v2/academy-symbol.svg",
+          "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/617edfa/site/public/brand/v2/academy-symbol.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Papel ou módulo conceitual. Disponibilidade operacional pendente de comprovação."
+    },
+    {
+      "id": "wallet-agent",
+      "title": "Wallet Command Agent",
+      "kind": "agents",
+      "category": "Operações",
+      "statusBadge": "Prévia conceitual",
+      "runtimeStatus": "Prévia conceitual",
+      "access": "Referência pública",
+      "cover": {
+        "src": "/media/showcase/agents/wallet-agent-cover-v2.webp",
+        "kind": "CONCEPT_PREVIEW",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para Wallet Command Agent"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/wallet-agent-icon.svg",
+        "mono": "/media/showcase/icons/wallet-agent-icon-mono.svg",
+        "simplified": "/brand/v2/wallet-command-symbol.svg",
+        "kind": "XPEX_GLYPH"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/brand/v2/wallet-command-symbol.svg",
+          "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/617edfa/site/public/brand/v2/wallet-command-symbol.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Papel ou módulo conceitual. Disponibilidade operacional pendente de comprovação."
+    },
+    {
+      "id": "radar-agent",
+      "title": "Radar Intelligence Agent",
+      "kind": "agents",
+      "category": "Pesquisa",
+      "statusBadge": "Prévia conceitual",
+      "runtimeStatus": "Prévia conceitual",
+      "access": "Referência pública",
+      "cover": {
+        "src": "/media/showcase/agents/radar-agent-cover-v2.webp",
+        "kind": "CONCEPT_PREVIEW",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para Radar Intelligence Agent"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/radar-agent-icon.svg",
+        "mono": "/media/showcase/icons/radar-agent-icon-mono.svg",
+        "simplified": "/brand/v2/gxeon-symbol.svg",
+        "kind": "XPEX_GLYPH"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/brand/v2/gxeon-symbol.svg",
+          "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/617edfa/site/public/brand/v2/gxeon-symbol.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Papel ou módulo conceitual. Disponibilidade operacional pendente de comprovação."
+    },
+    {
+      "id": "portfolio-agent",
+      "title": "Portfolio Evidence Agent",
+      "kind": "agents",
+      "category": "Evidências",
+      "statusBadge": "Prévia conceitual",
+      "runtimeStatus": "Prévia conceitual",
+      "access": "Referência pública",
+      "cover": {
+        "src": "/media/showcase/agents/portfolio-agent-cover-v2.webp",
+        "kind": "CONCEPT_PREVIEW",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para Portfolio Evidence Agent"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/portfolio-agent-icon.svg",
+        "mono": "/media/showcase/icons/portfolio-agent-icon-mono.svg",
+        "simplified": "/brand/v2/audit-os-symbol.svg",
+        "kind": "XPEX_GLYPH"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/brand/v2/audit-os-symbol.svg",
+          "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/617edfa/site/public/brand/v2/audit-os-symbol.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Papel ou módulo conceitual. Disponibilidade operacional pendente de comprovação."
+    },
+    {
+      "id": "three-pillars-pr",
+      "title": "PR #57 · Three Pillars Blueprint",
+      "kind": "evidence",
+      "category": "Pull request",
+      "statusBadge": "Referência editorial",
+      "runtimeStatus": "UNSPECIFIED",
+      "access": "Referência pública",
+      "cover": {
+        "src": "/media/showcase/evidence/three-pillars-pr-cover-v2.webp",
+        "kind": "EDITORIAL_ART",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para PR #57 · Three Pillars Blueprint"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/three-pillars-pr-icon.svg",
+        "mono": "/media/showcase/icons/three-pillars-pr-icon-mono.svg",
+        "simplified": "/brand/v2/plugin-factory-symbol.svg",
+        "kind": "XPEX_GLYPH"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/brand/v2/plugin-factory-symbol.svg",
+          "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/617edfa/site/public/brand/v2/plugin-factory-symbol.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Composição revisável no preview. Aprovação pública pendente."
+    },
+    {
+      "id": "enterprise-v2",
+      "title": "Enterprise Experience V2",
+      "kind": "evidence",
+      "category": "Pull request",
+      "statusBadge": "Referência editorial",
+      "runtimeStatus": "UNSPECIFIED",
+      "access": "Referência pública",
+      "cover": {
+        "src": "/media/showcase/evidence/enterprise-v2-cover-v2.webp",
+        "kind": "EDITORIAL_ART",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para Enterprise Experience V2"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/enterprise-v2-icon.svg",
+        "mono": "/media/showcase/icons/enterprise-v2-icon-mono.svg",
+        "simplified": "/brand/v2/xpex-symbol.svg",
+        "kind": "XPEX_GLYPH"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/brand/v2/xpex-symbol.svg",
+          "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/617edfa/site/public/brand/v2/xpex-symbol.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Composição revisável no preview. Aprovação pública pendente."
+    },
+    {
+      "id": "trust-center",
+      "title": "Trust / Evidence Layer",
+      "kind": "evidence",
+      "category": "Governança",
+      "statusBadge": "Referência editorial",
+      "runtimeStatus": "UNSPECIFIED",
+      "access": "Referência pública",
+      "cover": {
+        "src": "/media/showcase/evidence/trust-center-cover-v2.webp",
+        "kind": "EDITORIAL_ART",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para Trust / Evidence Layer"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/trust-center-icon.svg",
+        "mono": "/media/showcase/icons/trust-center-icon-mono.svg",
+        "simplified": "/brand/v2/audit-os-symbol.svg",
+        "kind": "XPEX_GLYPH"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/brand/v2/audit-os-symbol.svg",
+          "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/617edfa/site/public/brand/v2/audit-os-symbol.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Composição revisável no preview. Aprovação pública pendente."
+    },
+    {
+      "id": "system-registry",
+      "title": "System Registry / Public Truth",
+      "kind": "evidence",
+      "category": "Registro",
+      "statusBadge": "Referência editorial",
+      "runtimeStatus": "UNSPECIFIED",
+      "access": "Referência pública",
+      "cover": {
+        "src": "/media/showcase/evidence/system-registry-cover-v2.webp",
+        "kind": "EDITORIAL_ART",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para System Registry / Public Truth"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/system-registry-icon.svg",
+        "mono": "/media/showcase/icons/system-registry-icon-mono.svg",
+        "simplified": "/brand/v2/systems-command-symbol.svg",
+        "kind": "XPEX_GLYPH"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/brand/v2/systems-command-symbol.svg",
+          "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/617edfa/site/public/brand/v2/systems-command-symbol.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Composição revisável no preview. Aprovação pública pendente."
+    },
+    {
+      "id": "flagship-cases",
+      "title": "Cases dos sistemas",
+      "kind": "evidence",
+      "category": "Cases",
+      "statusBadge": "Referência editorial",
+      "runtimeStatus": "UNSPECIFIED",
+      "access": "Referência pública",
+      "cover": {
+        "src": "/media/showcase/evidence/flagship-cases-cover-v2.webp",
+        "kind": "EDITORIAL_ART",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para Cases dos sistemas"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/flagship-cases-icon.svg",
+        "mono": "/media/showcase/icons/flagship-cases-icon-mono.svg",
+        "simplified": "/brand/v2/audit-os-symbol.svg",
+        "kind": "XPEX_GLYPH"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/brand/v2/audit-os-symbol.svg",
+          "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/617edfa/site/public/brand/v2/audit-os-symbol.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Composição revisável no preview. Aprovação pública pendente."
+    },
+    {
+      "id": "checks",
+      "title": "Validação do código",
+      "kind": "evidence",
+      "category": "CI",
+      "statusBadge": "Referência editorial",
+      "runtimeStatus": "UNSPECIFIED",
+      "access": "Referência pública",
+      "cover": {
+        "src": "/media/showcase/evidence/checks-cover-v2.webp",
+        "kind": "EDITORIAL_ART",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para Validação do código"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/checks-icon.svg",
+        "mono": "/media/showcase/icons/checks-icon-mono.svg",
+        "simplified": "/brand/v2/api-fabric-symbol.svg",
+        "kind": "XPEX_GLYPH"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/brand/v2/api-fabric-symbol.svg",
+          "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/617edfa/site/public/brand/v2/api-fabric-symbol.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Composição revisável no preview. Aprovação pública pendente."
+    },
+    {
+      "id": "deploy",
+      "title": "Observações de runtime",
+      "kind": "evidence",
+      "category": "Deploys",
+      "statusBadge": "Referência editorial",
+      "runtimeStatus": "UNSPECIFIED",
+      "access": "Referência pública",
+      "cover": {
+        "src": "/media/showcase/evidence/deploy-cover-v2.webp",
+        "kind": "EDITORIAL_ART",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para Observações de runtime"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/deploy-icon.svg",
+        "mono": "/media/showcase/icons/deploy-icon-mono.svg",
+        "simplified": "/brand/v2/systems-command-symbol.svg",
+        "kind": "XPEX_GLYPH"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/brand/v2/systems-command-symbol.svg",
+          "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/617edfa/site/public/brand/v2/systems-command-symbol.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Composição revisável no preview. Aprovação pública pendente."
+    },
+    {
+      "id": "system-pack",
+      "title": "System Packs",
+      "kind": "evidence",
+      "category": "Documentação",
+      "statusBadge": "Referência editorial",
+      "runtimeStatus": "UNSPECIFIED",
+      "access": "Referência pública",
+      "cover": {
+        "src": "/media/showcase/evidence/system-pack-cover-v2.webp",
+        "kind": "EDITORIAL_ART",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para System Packs"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/system-pack-icon.svg",
+        "mono": "/media/showcase/icons/system-pack-icon-mono.svg",
+        "simplified": "/brand/v2/systems-command-symbol.svg",
+        "kind": "XPEX_GLYPH"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/brand/v2/systems-command-symbol.svg",
+          "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/617edfa/site/public/brand/v2/systems-command-symbol.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Composição revisável no preview. Aprovação pública pendente."
+    },
+    {
+      "id": "trust-passport",
+      "title": "Trust Passport do Command",
+      "kind": "evidence",
+      "category": "Registro",
+      "statusBadge": "Referência editorial",
+      "runtimeStatus": "UNSPECIFIED",
+      "access": "Referência pública",
+      "cover": {
+        "src": "/media/showcase/evidence/trust-passport-cover-v2.webp",
+        "kind": "EDITORIAL_ART",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para Trust Passport do Command"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/trust-passport-icon.svg",
+        "mono": "/media/showcase/icons/trust-passport-icon-mono.svg",
+        "simplified": "/brand/v2/audit-os-symbol.svg",
+        "kind": "XPEX_GLYPH"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/brand/v2/audit-os-symbol.svg",
+          "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/617edfa/site/public/brand/v2/audit-os-symbol.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Composição revisável no preview. Aprovação pública pendente."
+    },
+    {
+      "id": "architecture",
+      "title": "Arquitetura do ecossistema",
+      "kind": "evidence",
+      "category": "Arquitetura",
+      "statusBadge": "Referência editorial",
+      "runtimeStatus": "UNSPECIFIED",
+      "access": "Referência pública",
+      "cover": {
+        "src": "/media/showcase/evidence/architecture-cover-v2.webp",
+        "kind": "EDITORIAL_ART",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para Arquitetura do ecossistema"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/architecture-icon.svg",
+        "mono": "/media/showcase/icons/architecture-icon-mono.svg",
+        "simplified": "/brand/v2/systems-command-symbol.svg",
+        "kind": "XPEX_GLYPH"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/brand/v2/systems-command-symbol.svg",
+          "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/617edfa/site/public/brand/v2/systems-command-symbol.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Composição revisável no preview. Aprovação pública pendente."
+    },
+    {
+      "id": "capture-provenance",
+      "title": "Proveniência de capturas",
+      "kind": "evidence",
+      "category": "Mídia",
+      "statusBadge": "Registro público",
+      "runtimeStatus": "Registro público",
+      "access": "Referência pública",
+      "cover": {
+        "src": "/media/showcase/evidence/capture-provenance-cover-v2.webp",
+        "kind": "EDITORIAL_ART",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para Proveniência de capturas"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/capture-provenance-icon.svg",
+        "mono": "/media/showcase/icons/capture-provenance-icon-mono.svg",
+        "simplified": "/brand/v2/audit-os-symbol.svg",
+        "kind": "XPEX_GLYPH"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/brand/v2/audit-os-symbol.svg",
+          "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/617edfa/site/public/brand/v2/audit-os-symbol.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Composição revisável no preview. Aprovação pública pendente."
+    },
+    {
+      "id": "institutional-blueprint",
+      "title": "Blueprint institucional",
+      "kind": "evidence",
+      "category": "Arquitetura",
+      "statusBadge": "Documento público",
+      "runtimeStatus": "Documento público",
+      "access": "Referência pública",
+      "cover": {
+        "src": "/media/showcase/evidence/institutional-blueprint-cover-v2.webp",
+        "kind": "EDITORIAL_ART",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para Blueprint institucional"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/institutional-blueprint-icon.svg",
+        "mono": "/media/showcase/icons/institutional-blueprint-icon-mono.svg",
+        "simplified": "/brand/v2/plugin-factory-symbol.svg",
+        "kind": "XPEX_GLYPH"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/brand/v2/plugin-factory-symbol.svg",
+          "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/617edfa/site/public/brand/v2/plugin-factory-symbol.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Composição revisável no preview. Aprovação pública pendente."
+    },
+    {
+      "id": "evidence-showroom",
+      "title": "Showroom de evidências",
+      "kind": "evidence",
+      "category": "Vitrine",
+      "statusBadge": "Catálogo público",
+      "runtimeStatus": "Catálogo público",
+      "access": "Referência pública",
+      "cover": {
+        "src": "/media/showcase/evidence/evidence-showroom-cover-v2.webp",
+        "kind": "EDITORIAL_ART",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para Showroom de evidências"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/evidence-showroom-icon.svg",
+        "mono": "/media/showcase/icons/evidence-showroom-icon-mono.svg",
+        "simplified": "/brand/v2/audit-os-symbol.svg",
+        "kind": "XPEX_GLYPH"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/brand/v2/audit-os-symbol.svg",
+          "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/617edfa/site/public/brand/v2/audit-os-symbol.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Composição revisável no preview. Aprovação pública pendente."
+    },
+    {
+      "id": "data-lineage",
+      "title": "Data lineage / rastreabilidade",
+      "kind": "evidence",
+      "category": "Governança",
+      "statusBadge": "Documento público",
+      "runtimeStatus": "Documento público",
+      "access": "Referência pública",
+      "cover": {
+        "src": "/media/showcase/evidence/data-lineage-cover-v2.webp",
+        "kind": "EDITORIAL_ART",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para Data lineage / rastreabilidade"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/data-lineage-icon.svg",
+        "mono": "/media/showcase/icons/data-lineage-icon-mono.svg",
+        "simplified": "/brand/v2/systems-command-symbol.svg",
+        "kind": "XPEX_GLYPH"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/brand/v2/systems-command-symbol.svg",
+          "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/617edfa/site/public/brand/v2/systems-command-symbol.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Composição revisável no preview. Aprovação pública pendente."
+    },
+    {
+      "id": "system",
+      "title": "Prévia de sistema",
+      "kind": "fallbacks",
+      "category": "Fallback",
+      "statusBadge": "Referência editorial",
+      "runtimeStatus": "UNSPECIFIED",
+      "access": "Referência pública",
+      "cover": {
+        "src": "/media/showcase/fallbacks/fallback-system-premium-v2.webp",
+        "kind": "FALLBACK_OFFICIAL",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para Prévia de sistema"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/system-icon.svg",
+        "mono": "/media/showcase/icons/system-icon-mono.svg",
+        "simplified": "/brand/v2/xpex-symbol.svg",
+        "kind": "XPEX_GLYPH"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/brand/v2/xpex-symbol.svg",
+          "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/617edfa/site/public/brand/v2/xpex-symbol.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Composição revisável no preview. Aprovação pública pendente."
+    },
+    {
+      "id": "agent",
+      "title": "Prévia conceitual de agente",
+      "kind": "fallbacks",
+      "category": "Fallback",
+      "statusBadge": "Referência editorial",
+      "runtimeStatus": "UNSPECIFIED",
+      "access": "Referência pública",
+      "cover": {
+        "src": "/media/showcase/fallbacks/fallback-agent-premium-v2.webp",
+        "kind": "FALLBACK_OFFICIAL",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para Prévia conceitual de agente"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/agent-icon.svg",
+        "mono": "/media/showcase/icons/agent-icon-mono.svg",
+        "simplified": "/brand/v2/gxeon-symbol.svg",
+        "kind": "XPEX_GLYPH"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/brand/v2/gxeon-symbol.svg",
+          "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/617edfa/site/public/brand/v2/gxeon-symbol.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Composição revisável no preview. Aprovação pública pendente."
+    },
+    {
+      "id": "evidence",
+      "title": "Documento de evidência",
+      "kind": "fallbacks",
+      "category": "Fallback",
+      "statusBadge": "Referência editorial",
+      "runtimeStatus": "UNSPECIFIED",
+      "access": "Referência pública",
+      "cover": {
+        "src": "/media/showcase/fallbacks/fallback-evidence-premium-v2.webp",
+        "kind": "FALLBACK_OFFICIAL",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para Documento de evidência"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/evidence-icon.svg",
+        "mono": "/media/showcase/icons/evidence-icon-mono.svg",
+        "simplified": "/brand/v2/audit-os-symbol.svg",
+        "kind": "XPEX_GLYPH"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/brand/v2/audit-os-symbol.svg",
+          "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/617edfa/site/public/brand/v2/audit-os-symbol.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Composição revisável no preview. Aprovação pública pendente."
+    },
+    {
+      "id": "github",
+      "title": "GitHub",
+      "kind": "integrations",
+      "category": "Código e CI",
+      "statusBadge": "Referência editorial",
+      "runtimeStatus": "UNSPECIFIED",
+      "access": "Referência pública",
+      "cover": {
+        "src": "/media/showcase/integrations/github-cover-v2.webp",
+        "kind": "EDITORIAL_ART",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para GitHub"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/github-icon.svg",
+        "mono": "/media/showcase/icons/github-icon-mono.svg",
+        "simplified": "/media/showcase/icons/providers/github.svg",
+        "kind": "VENDOR_MARK_IN_XPEX_FRAME"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/media/showcase/icons/providers/github.svg",
+          "sourceUrl": "https://github.com/simple-icons/simple-icons/blob/17cd4ee07612198a1d8777a060d4100423762a8b/icons/github.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Marca do provedor via Simple Icons. Presença editorial sem declaração de parceria."
+    },
+    {
+      "id": "vercel",
+      "title": "Vercel",
+      "kind": "integrations",
+      "category": "Hospedagem",
+      "statusBadge": "Referência editorial",
+      "runtimeStatus": "UNSPECIFIED",
+      "access": "Referência pública",
+      "cover": {
+        "src": "/media/showcase/integrations/vercel-cover-v2.webp",
+        "kind": "EDITORIAL_ART",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para Vercel"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/vercel-icon.svg",
+        "mono": "/media/showcase/icons/vercel-icon-mono.svg",
+        "simplified": "/media/showcase/icons/providers/vercel.svg",
+        "kind": "VENDOR_MARK_IN_XPEX_FRAME"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/media/showcase/icons/providers/vercel.svg",
+          "sourceUrl": "https://github.com/simple-icons/simple-icons/blob/17cd4ee07612198a1d8777a060d4100423762a8b/icons/vercel.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Marca do provedor via Simple Icons. Presença editorial sem declaração de parceria."
+    },
+    {
+      "id": "supabase",
+      "title": "Supabase",
+      "kind": "integrations",
+      "category": "Autenticação no piloto",
+      "statusBadge": "Referência editorial",
+      "runtimeStatus": "UNSPECIFIED",
+      "access": "Referência pública",
+      "cover": {
+        "src": "/media/showcase/integrations/supabase-cover-v2.webp",
+        "kind": "EDITORIAL_ART",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para Supabase"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/supabase-icon.svg",
+        "mono": "/media/showcase/icons/supabase-icon-mono.svg",
+        "simplified": "/media/showcase/icons/providers/supabase.svg",
+        "kind": "VENDOR_MARK_IN_XPEX_FRAME"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/media/showcase/icons/providers/supabase.svg",
+          "sourceUrl": "https://github.com/simple-icons/simple-icons/blob/17cd4ee07612198a1d8777a060d4100423762a8b/icons/supabase.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Marca do provedor via Simple Icons. Presença editorial sem declaração de parceria."
+    },
+    {
+      "id": "firebase",
+      "title": "Firebase",
+      "kind": "integrations",
+      "category": "Linhagem documentada",
+      "statusBadge": "Referência editorial",
+      "runtimeStatus": "UNSPECIFIED",
+      "access": "Referência pública",
+      "cover": {
+        "src": "/media/showcase/integrations/firebase-cover-v2.webp",
+        "kind": "EDITORIAL_ART",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para Firebase"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/firebase-icon.svg",
+        "mono": "/media/showcase/icons/firebase-icon-mono.svg",
+        "simplified": "/media/showcase/icons/providers/firebase.svg",
+        "kind": "VENDOR_MARK_IN_XPEX_FRAME"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/media/showcase/icons/providers/firebase.svg",
+          "sourceUrl": "https://github.com/simple-icons/simple-icons/blob/17cd4ee07612198a1d8777a060d4100423762a8b/icons/firebase.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Marca do provedor via Simple Icons. Presença editorial sem declaração de parceria."
+    },
+    {
+      "id": "api",
+      "title": "API empresarial",
+      "kind": "integrations",
+      "category": "Descoberta pública",
+      "statusBadge": "Referência editorial",
+      "runtimeStatus": "UNSPECIFIED",
+      "access": "Referência pública",
+      "cover": {
+        "src": "/media/showcase/integrations/api-cover-v2.webp",
+        "kind": "EDITORIAL_ART",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para API empresarial"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/api-icon.svg",
+        "mono": "/media/showcase/icons/api-icon-mono.svg",
+        "simplified": "/brand/v2/api-fabric-symbol.svg",
+        "kind": "XPEX_GLYPH"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/brand/v2/api-fabric-symbol.svg",
+          "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/617edfa/site/public/brand/v2/api-fabric-symbol.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Composição revisável no preview. Aprovação pública pendente."
+    },
+    {
+      "id": "mcp",
+      "title": "MCP empresarial",
+      "kind": "integrations",
+      "category": "Descoberta pública",
+      "statusBadge": "Referência editorial",
+      "runtimeStatus": "UNSPECIFIED",
+      "access": "Referência pública",
+      "cover": {
+        "src": "/media/showcase/integrations/mcp-cover-v2.webp",
+        "kind": "EDITORIAL_ART",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para MCP empresarial"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/mcp-icon.svg",
+        "mono": "/media/showcase/icons/mcp-icon-mono.svg",
+        "simplified": "/media/showcase/icons/providers/modelcontextprotocol.svg",
+        "kind": "VENDOR_MARK_IN_XPEX_FRAME"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/media/showcase/icons/providers/modelcontextprotocol.svg",
+          "sourceUrl": "https://github.com/simple-icons/simple-icons/blob/17cd4ee07612198a1d8777a060d4100423762a8b/icons/modelcontextprotocol.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Marca do provedor via Simple Icons. Presença editorial sem declaração de parceria."
+    },
+    {
+      "id": "coinbase",
+      "title": "Coinbase",
+      "kind": "integrations",
+      "category": "Integração registrada",
+      "statusBadge": "Referência editorial",
+      "runtimeStatus": "UNSPECIFIED",
+      "access": "Referência pública",
+      "cover": {
+        "src": "/media/showcase/integrations/coinbase-cover-v2.webp",
+        "kind": "EDITORIAL_ART",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para Coinbase"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/coinbase-icon.svg",
+        "mono": "/media/showcase/icons/coinbase-icon-mono.svg",
+        "simplified": "/media/showcase/icons/providers/coinbase.svg",
+        "kind": "VENDOR_MARK_IN_XPEX_FRAME"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/media/showcase/icons/providers/coinbase.svg",
+          "sourceUrl": "https://github.com/simple-icons/simple-icons/blob/17cd4ee07612198a1d8777a060d4100423762a8b/icons/coinbase.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Marca do provedor via Simple Icons. Presença editorial sem declaração de parceria."
+    },
+    {
+      "id": "railway",
+      "title": "Railway",
+      "kind": "integrations",
+      "category": "Infraestrutura",
+      "statusBadge": "Ambiente registrado",
+      "runtimeStatus": "Ambiente registrado",
+      "access": "Referência pública",
+      "cover": {
+        "src": "/media/showcase/integrations/railway-cover-v2.webp",
+        "kind": "EDITORIAL_ART",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para Railway"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/railway-icon.svg",
+        "mono": "/media/showcase/icons/railway-icon-mono.svg",
+        "simplified": "/media/showcase/icons/providers/railway.svg",
+        "kind": "VENDOR_MARK_IN_XPEX_FRAME"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/media/showcase/icons/providers/railway.svg",
+          "sourceUrl": "https://github.com/simple-icons/simple-icons/blob/17cd4ee07612198a1d8777a060d4100423762a8b/icons/railway.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Marca do provedor via Simple Icons. Presença editorial sem declaração de parceria."
+    },
+    {
+      "id": "google-ai-studio",
+      "title": "Google / Google AI Studio",
+      "kind": "integrations",
+      "category": "Desenvolvimento",
+      "statusBadge": "Referência de provedor",
+      "runtimeStatus": "Referência de provedor",
+      "access": "Referência pública",
+      "cover": {
+        "src": "/media/showcase/integrations/google-ai-studio-cover-v2.webp",
+        "kind": "EDITORIAL_ART",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para Google / Google AI Studio"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/google-ai-studio-icon.svg",
+        "mono": "/media/showcase/icons/google-ai-studio-icon-mono.svg",
+        "simplified": "/media/showcase/icons/providers/google.svg",
+        "kind": "VENDOR_MARK_IN_XPEX_FRAME"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/media/showcase/icons/providers/google.svg",
+          "sourceUrl": "https://github.com/simple-icons/simple-icons/blob/17cd4ee07612198a1d8777a060d4100423762a8b/icons/google.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Marca do provedor via Simple Icons. Presença editorial sem declaração de parceria."
+    },
+    {
+      "id": "chatgpt",
+      "title": "ChatGPT",
+      "kind": "integrations",
+      "category": "Distribuição",
+      "statusBadge": "Login no Portfólio",
+      "runtimeStatus": "Login no Portfólio",
+      "access": "Referência pública",
+      "cover": {
+        "src": "/media/showcase/integrations/chatgpt-cover-v2.webp",
+        "kind": "EDITORIAL_ART",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para ChatGPT"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/chatgpt-icon.svg",
+        "mono": "/media/showcase/icons/chatgpt-icon-mono.svg",
+        "simplified": "/brand/v2/gxeon-symbol.svg",
+        "kind": "XPEX_GLYPH"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/brand/v2/gxeon-symbol.svg",
+          "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/617edfa/site/public/brand/v2/gxeon-symbol.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Composição revisável no preview. Aprovação pública pendente."
+    },
+    {
+      "id": "mercado-pago",
+      "title": "Mercado Pago",
+      "kind": "integrations",
+      "category": "Pagamentos",
+      "statusBadge": "Integração não verificada",
+      "runtimeStatus": "Integração não verificada",
+      "access": "Referência pública",
+      "cover": {
+        "src": "/media/showcase/integrations/mercado-pago-cover-v2.webp",
+        "kind": "EDITORIAL_ART",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para Mercado Pago"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/mercado-pago-icon.svg",
+        "mono": "/media/showcase/icons/mercado-pago-icon-mono.svg",
+        "simplified": "/media/showcase/icons/providers/mercadopago.svg",
+        "kind": "VENDOR_MARK_IN_XPEX_FRAME"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/media/showcase/icons/providers/mercadopago.svg",
+          "sourceUrl": "https://github.com/simple-icons/simple-icons/blob/17cd4ee07612198a1d8777a060d4100423762a8b/icons/mercadopago.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Marca do provedor via Simple Icons. Presença editorial sem declaração de parceria."
+    },
+    {
+      "id": "stripe",
+      "title": "Stripe",
+      "kind": "integrations",
+      "category": "Pagamentos",
+      "statusBadge": "Integração não verificada",
+      "runtimeStatus": "Integração não verificada",
+      "access": "Referência pública",
+      "cover": {
+        "src": "/media/showcase/integrations/stripe-cover-v2.webp",
+        "kind": "EDITORIAL_ART",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para Stripe"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/stripe-icon.svg",
+        "mono": "/media/showcase/icons/stripe-icon-mono.svg",
+        "simplified": "/media/showcase/icons/providers/stripe.svg",
+        "kind": "VENDOR_MARK_IN_XPEX_FRAME"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/media/showcase/icons/providers/stripe.svg",
+          "sourceUrl": "https://github.com/simple-icons/simple-icons/blob/17cd4ee07612198a1d8777a060d4100423762a8b/icons/stripe.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Marca do provedor via Simple Icons. Presença editorial sem declaração de parceria."
+    },
+    {
+      "id": "plugin-factory-extension",
+      "title": "XPeX Plugin Factory",
+      "kind": "plugins",
+      "category": "Plugin XPeX",
+      "statusBadge": "Fonte disponível",
+      "runtimeStatus": "Fonte disponível",
+      "access": "Referência pública",
+      "cover": {
+        "src": "/media/showcase/plugins/plugin-factory-extension-cover-v2.webp",
+        "kind": "EDITORIAL_ART",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para XPeX Plugin Factory"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/plugin-factory-extension-icon.svg",
+        "mono": "/media/showcase/icons/plugin-factory-extension-icon-mono.svg",
+        "simplified": "/brand/v2/plugin-factory-symbol.svg",
+        "kind": "XPEX_GLYPH"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/brand/v2/plugin-factory-symbol.svg",
+          "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/617edfa/site/public/brand/v2/plugin-factory-symbol.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Composição revisável no preview. Aprovação pública pendente."
+    },
+    {
+      "id": "gx-copilot-extension",
+      "title": "GX Neural Copilot",
+      "kind": "plugins",
+      "category": "Plugin XPeX",
+      "statusBadge": "Consulta pública",
+      "runtimeStatus": "Consulta pública",
+      "access": "Referência pública",
+      "cover": {
+        "src": "/media/showcase/plugins/gx-copilot-extension-cover-v2.webp",
+        "kind": "EDITORIAL_ART",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para GX Neural Copilot"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/gx-copilot-extension-icon.svg",
+        "mono": "/media/showcase/icons/gx-copilot-extension-icon-mono.svg",
+        "simplified": "/brand/v2/gxeon-symbol.svg",
+        "kind": "XPEX_GLYPH"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/brand/v2/gxeon-symbol.svg",
+          "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/617edfa/site/public/brand/v2/gxeon-symbol.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Composição revisável no preview. Aprovação pública pendente."
+    },
+    {
+      "id": "audit-engineer-extension",
+      "title": "GXEON Audit Engineer",
+      "kind": "plugins",
+      "category": "Plugin XPeX",
+      "statusBadge": "Em validação",
+      "runtimeStatus": "Em validação",
+      "access": "Referência pública",
+      "cover": {
+        "src": "/media/showcase/plugins/audit-engineer-extension-cover-v2.webp",
+        "kind": "EDITORIAL_ART",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para GXEON Audit Engineer"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/audit-engineer-extension-icon.svg",
+        "mono": "/media/showcase/icons/audit-engineer-extension-icon-mono.svg",
+        "simplified": "/brand/v2/audit-os-symbol.svg",
+        "kind": "XPEX_GLYPH"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/brand/v2/audit-os-symbol.svg",
+          "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/617edfa/site/public/brand/v2/audit-os-symbol.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Composição revisável no preview. Aprovação pública pendente."
+    },
+    {
+      "id": "capability-market",
+      "title": "GXEON Capability Market",
+      "kind": "plugins",
+      "category": "Plugin XPeX",
+      "statusBadge": "Catálogo existente",
+      "runtimeStatus": "Catálogo existente",
+      "access": "Referência pública",
+      "cover": {
+        "src": "/media/showcase/plugins/capability-market-cover-v2.webp",
+        "kind": "EDITORIAL_ART",
+        "width": 800,
+        "height": 450,
+        "alt": "Composição editorial para GXEON Capability Market"
+      },
+      "icon": {
+        "src": "/media/showcase/icons/capability-market-icon.svg",
+        "mono": "/media/showcase/icons/capability-market-icon-mono.svg",
+        "simplified": "/brand/v2/api-fabric-symbol.svg",
+        "kind": "XPEX_GLYPH"
+      },
+      "derivedFrom": [
+        {
+          "kind": "OFFICIAL_ASSET",
+          "path": "/brand/v2/api-fabric-symbol.svg",
+          "sourceUrl": "https://github.com/xpex-systems-ai/xpex-systems-ai/blob/617edfa/site/public/brand/v2/api-fabric-symbol.svg"
+        }
+      ],
+      "approvedForPublicUse": false,
+      "notes": "Composição revisável no preview. Aprovação pública pendente."
+    }
+  ]
+}

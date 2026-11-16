@@ -1,4 +1,4 @@
-import mediaPack from '../public/data/showcase-media-pack-v1.json' with { type: 'json' };
+import mediaIndex from './data/media-index-v2.json' with { type: 'json' };
 import { brandMark } from './brand.js';
 
 const escape = value => String(value ?? '').replace(/[&<>"']/g, char => ({
@@ -17,7 +17,11 @@ function link(url, text, className) {
   return `<a class="${className}" href="${escape(url)}"${external ? ' target="_blank" rel="noopener noreferrer"' : ''}>${escape(text)} <span aria-hidden="true">${external ? '↗' : '→'}</span></a>`;
 }
 
-const covers = new Map(mediaPack.items.map(item => [item.id, item]));
+const covers = new Map(mediaIndex.map(([id, group, kind, alt, captured]) => [id, {
+  id, group, captured, icon: '/media/showcase/icons/' + id + '-icon.svg',
+  image: { path: '/media/showcase/' + group + '/' + id + '-cover-v2.webp', alt, kind, width: 800, height: 450 }
+}]));
+const coverFor = id => covers.get(id === 'polo-kelle' ? 'academy' : id);
 
 // Media art direction: stable editorial signatures, never runtime or verification claims.
 export const coverPalette = Object.freeze({
@@ -46,39 +50,35 @@ export const coverPalette = Object.freeze({
   'agent': ['#a9c8ed','AGENT CONCEPT'],
   'evidence': ['#a6decb','EVIDENCE PREVIEW']
 });
-const coverSerials = new Map(mediaPack.items.map((item, index) => [item.id, String(index + 1).padStart(2, '0')]));
 
 
-export function showcaseCover(item, heading = false) {
-  const record = heading ? covers.get(item.id === 'polo-kelle' ? 'academy' : item.id) : undefined;
+
+export function showcaseCover(item, heading = false, detail = false) {
+  const record = heading || detail ? coverFor(item.id) : undefined;
   const asset = record?.image || item.media;
   const group = record?.group === 'agents' ? 'agent' : item.previewExpected ? 'system' : 'evidence';
   const pending = item.previewExpected ? 'Prévia visual pendente de verificação' :
     group === 'agent' ? 'Prévia conceitual' : 'Identidade oficial';
   const label = asset?.kind === 'REAL_SCREENSHOT' ? 'Captura real' :
-    asset?.kind === 'CONCEPT_COVER' ? 'Prévia conceitual' :
-    asset?.derivedFrom?.some(source => source.kind === 'REAL_SCREENSHOT') ? 'Capa com captura real' :
+    asset?.kind === 'CONCEPT_PREVIEW' ? 'Prévia conceitual' :
+    record?.captured ? 'Capa com captura real' :
     asset?.kind === 'CURATED_COVER' && (!item.previewExpected || item.id === 'xpex-company') ? 'Capa editorial' :
-    asset?.kind === 'OFFICIAL_ASSET' ? 'Identidade oficial' : pending;
+    asset?.kind === 'OFFICIAL_ASSET' ? 'Identidade oficial' :
+    asset?.kind === 'EDITORIAL_ART' && !item.previewExpected ? 'Capa editorial' : pending;
   const visualId = record?.id || item.id;
   const [accent, signature] = coverPalette[visualId] || ['#d9ba82', 'XPEX'];
   const hasScreenshot = Boolean(asset?.kind === 'REAL_SCREENSHOT' ||
-    asset?.derivedFrom?.some(source => source.kind === 'REAL_SCREENSHOT'));
+    record?.captured);
   const editorialKind = record?.group || (item.previewExpected ? 'systems' : 'evidence');
   const fallback = `<div class="xp-showcase-fallback xp-cover-${group}">${brandMark(item.symbol)}</div>`;
   const image = asset ? `<img class="xp-showcase-image" data-showcase-image src="${escape(asset.path)}"
     width="${asset.width}" height="${asset.height}" alt="${escape(asset.alt)}" loading="lazy" decoding="async">` : '';
-  // Decorative vector art adds depth only where a verified public screenshot is not already displayed.
-  const artPath = record?.image?.artOverlay?.path;
-  const art = heading && !hasScreenshot && artPath?.startsWith('/media/showcase/art/')
-    ? `<img class="xp-cover-artwork" src="${escape(artPath)}" width="800" height="450"
-        loading="lazy" decoding="async" alt="" aria-hidden="true">` : '';
   return `<div class="xp-showcase-cover${heading ? ' xp-cover-editorial' : ''}${hasScreenshot ? ' xp-cover-has-screen' : ''}"
     data-cover-id="${escape(visualId)}" data-cover-group="${escape(editorialKind)}"
-    style="--xp-cover-accent:${accent}" data-fallback-label="${pending}">
-    ${fallback}${image}${art}
+    style="--xp-cover-accent:${accent}" data-fallback-label="${asset?.kind === 'CONCEPT_PREVIEW' ? 'Prévia conceitual' : pending}">
+    ${fallback}${image}
     ${heading ? `<div class="xp-cover-foil" aria-hidden="true"></div>
-      <div class="xp-cover-signature" aria-hidden="true"><span>XPEX <b>◆</b> ${escape(signature)}</span><span>${coverSerials.get(visualId) || '00'} / 24</span></div>` : ''}
+      <div class="xp-cover-signature" aria-hidden="true"><span>XPEX <b>◆</b> ${escape(signature)}</span></div>` : ''}
     <span class="xp-showcase-media-label" data-showcase-media-label>${label}</span>
     ${heading ? `<h3 class="xp-cover-title">${escape(item.title)}</h3>` : ''}
   </div>`;
@@ -86,11 +86,13 @@ export function showcaseCover(item, heading = false) {
 
 export function showcaseCard(item) {
   const snapshot = item.verifiedAt ? ` · ${dateLabel(item.verifiedAt)}` : '';
+  const record = coverFor(item.id);
+  const titleIcon = record ? `<img class="xp-media-badge" src="${record.icon}" width="32" height="32" alt="" loading="lazy" decoding="async">` : brandMark(item.symbol);
   const tag = item.status ? `<span class="xp-showcase-state${item.tone === 'public' ? ' is-public' : ''}">${escape(item.status)}</span>` : '';
   return `<article class="xp-showcase-card" data-showcase-item="${escape(item.id)}">
     ${showcaseCover(item, true)}
     <div class="xp-showcase-body">
-      <div class="xp-showcase-meta"><span>${escape(item.category)}</span>${tag}</div>
+      <div class="xp-showcase-meta">${titleIcon}<span>${escape(item.category)}</span>${tag || '<span class="xp-showcase-state">Referência pública</span>'}</div>
       <p>${escape(item.summary)}</p>
       ${item.access ? `<p class="xp-showcase-access">${escape(item.access)}${item.environment ? ' · ' + escape(item.environment) : ''}${snapshot}</p>` : ''}
       <div class="xp-showcase-links">

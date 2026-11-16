@@ -43,8 +43,8 @@ test('public journeys, carousel accessibility and failures', { timeout: 120000 }
       const response = await page.goto(root);
       assert.equal(response.status(), 200);
       assert.deepEqual(await page.locator('[data-showcase-rail]').evaluateAll(rails => rails.map(rail => rail.id)), railIds);
-      assert.equal(await page.locator('#systems [data-showcase-item]').count(), 7);
-      assert.equal(await page.locator('#agents [data-showcase-item]').count(), 7);
+      assert.equal(await page.locator('#systems [data-showcase-item]').count(), 17);
+      assert.equal(await page.locator('#agents [data-showcase-item]').count(), 10);
       assert.equal(await page.locator('#ecosystem [data-showcase-item]').count(), 3);
       const motion = page.locator('[data-motion]');
       const orbit = page.locator('.xp-orbit').first();
@@ -60,6 +60,17 @@ test('public journeys, carousel accessibility and failures', { timeout: 120000 }
       await page.locator('#ecosystem').scrollIntoViewIfNeeded();
       await page.locator('#ecosystem [data-showcase-image]').evaluateAll(images => Promise.all(images.map(image => image.decode())));
       await snapshot(page, 'depois-plataformas-desktop');
+      const sampleCard = page.locator('#ecosystem [data-showcase-item="xpex-company"]');
+      await sampleCard.locator('.xp-media-badge').evaluate(image => image.decode());
+      const foil = sampleCard.locator('.xp-cover-foil');
+      const sweep = () => foil.evaluate(node => getComputedStyle(node, '::before').content);
+      assert.equal(await sweep(), 'none');
+      await page.emulateMedia({ reducedMotion: 'no-preference' });
+      assert.equal(await sweep(), '""');
+      const originalWidth = await sampleCard.evaluate(card => card.offsetWidth);
+      await sampleCard.hover();
+      assert.equal(await sampleCard.evaluate(card => card.offsetWidth), originalWidth);
+      await page.emulateMedia({ reducedMotion: 'reduce' });
 
       await page.getByRole('link', { name: 'Explorar ecossistema' }).click();
       assert.equal(new URL(page.url()).searchParams.get('view'), 'ecosystem');
@@ -140,12 +151,12 @@ test('public journeys, carousel accessibility and failures', { timeout: 120000 }
   await t.test('shows a brand fallback for failed media and recovers the refresh control after API failure', async () => {
     const page = await browser.newPage({ viewport: { width: 1440, height: 850 } });
     try {
-      await page.route('**/media/showcase/systems/xpex-academy-cover-v1.webp', route => route.abort());
+      await page.route('**/media/showcase/systems/xpex-academy-cover-v2.webp', route => route.abort());
       await page.goto(root);
       const card = page.locator('#ecosystem [data-showcase-item="xpex-academy"]');
       await card.scrollIntoViewIfNeeded();
       await card.getByText('Prévia visual pendente de verificação').waitFor();
-      assert.equal(await card.locator('img').isHidden(), true);
+      assert.equal(await card.locator('[data-showcase-image]').isHidden(), true);
       assert.equal(await card.locator('.xp-showcase-fallback').isVisible(), true);
       await page.route('**/api/ecosystem', route => route.abort());
       await page.goto(root + '/?view=ecosystem');
