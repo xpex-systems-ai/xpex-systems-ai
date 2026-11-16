@@ -1,0 +1,94 @@
+name: XPeX Showcase V2 E2E and Lighthouse Evidence
+
+on:
+  pull_request:
+    paths:
+      - 'site/**'
+      - '.github/workflows/showcase-v2-evidence.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: showcase-evidence-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  browser-and-lighthouse:
+    name: Browser E2E / mobile Lighthouse / immutable artifacts
+    runs-on: ubuntu-latest
+    timeout-minutes: 24
+    defaults:
+      run:
+        working-directory: site
+        shell: bash
+    env:
+      SHOWCASE_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+    steps:
+      - name: Checkout exact pull request head
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+
+      - name: Use Node 22
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+
+      - name: Install locked dependencies
+        run: npm ci
+
+      - name: Build site at exact source commit
+        run: npm run build
+
+      - name: Install Playwright Chromium and Linux dependencies
+        run: npx playwright install --with-deps chromium
+
+      - name: Browser E2E and visual screenshots (320–1920 px)
+        env:
+          SHOWCASE_SCREENSHOTS: artifacts/screenshots
+        run: |
+          mkdir -p artifacts
+          set -o pipefail
+          npm run test:showcase:browser 2>&1 | tee artifacts/playwright.log
+          printf '%s\n' "$SHOWCASE_SHA" > artifacts/source-commit.txt
+
+      - name: Lighthouse audit on local build (mobile; informational scores)
+        run: |
+          mkdir -p artifacts
+          npm run preview -- --host 127.0.0.1 --port 4174 > artifacts/vite-preview.log 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid" 2>/dev/null || true' EXIT
+          ready=0
+          for attempt in $(seq 1 40); do
+            if curl -fsS http://127.0.0.1:4174/ >/dev/null; then
+              ready=1
+              break
+            fi
+            sleep 1
+          done
+          if [ "$ready" -ne 1 ]; then
+            echo "Vite preview failed to start" >&2
+            exit 1
+          fi
+          npx --yes lighthouse@13.6.0 http://127.0.0.1:4174/ \
+            --chrome-flags="--headless --no-sandbox --disable-dev-shm-usage" \
+            --form-factor=mobile \
+            --only-categories=performance,accessibility,best-practices,seo \
+            --output=json \
+            --output-path=artifacts/lighthouse-mobile.json \
+            --quiet
+          node scripts/summarize-showcase-lighthouse.mjs
+
+      - name: Upload screenshot, browser and raw Lighthouse evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: showcase-evidence-${{ github.event.pull_request.head.sha || github.sha }}
+          path: site/artifacts/
+          if-no-files-found: warn
+          retention-days: 30
