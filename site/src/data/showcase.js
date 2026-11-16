@@ -125,7 +125,8 @@ export const INTEGRATIONS = [
 export function agentShowcase(agent) {
   return {
     id: agent.id,
-    title: agent.id === 'neural-copilot' ? 'GX Evidence Concierge' : agent.name,
+    // Canonical catalog title matches the agent detail page. Evidence Concierge is the backing capability.
+    title: agent.name,
     category: agent.kind,
     summary: agent.summary,
     status: agent.state,
