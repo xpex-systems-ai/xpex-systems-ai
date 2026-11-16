@@ -38,3 +38,34 @@ Para atualizar o pack, verificar a URL pública sem autenticação, revisar priv
 ## Revisão e rollback
 
 O preview e os resultados ficam vinculados na PR. Command, Factory, API Fabric e Portfólio usam capas de marca enquanto a captura pública permanece pendente. A Academy ainda depende de homologação da jornada autenticada. Antes do merge, fechar a PR ou ajustar a branch. Após aprovação e eventual merge, validar um revert em preview.
+
+
+## Evolução editorial V1.1 — revisão GXEON da PR #59
+
+A revisão adicionou **24 camadas vetoriais leves**, uma por registro, em
+`site/public/media/showcase/art/{id}-editorial-v1.svg`, com assinatura visual,
+paleta própria e ornamentos técnicos que diferenciam Command, Plugin Factory,
+API Fabric, GX Neural Copilot, agentes, evidências e fallbacks. Os arquivos
+SVG contêm **arte conceitual original**, sem interface simulada, dados financeiros,
+telas de alunos ou afirmação de funcionamento operacional.
+
+As 24 capas WebP de 800×450 são preservadas, inclusive os quatro recortes
+baseados em captura pública revisada. A composição em `showcase.js` aplica
+as ilustrações somente quando não há screenshot verificado; a classificação
+de cada item continua `CURATED_COVER` ou `CONCEPT_COVER`, e o registro
+de proveniência contém `image.artOverlay.evidence = false`.
+
+**Critérios de aceite para merge:**
+- Conferir em preview o resultado editorial sem obstruir título, status ou botão.
+- Confirmar 24 SVGs válidos e 24 WebPs com fallback.
+- Confirmar Playwright, validação corporativa e ausência de novas falhas de segurança.
+- Analisar Lighthouse com contexto de CPU; não inferir melhora de performance
+  apenas de diferenças entre execuções em hardware distinto.
+- Não apresentar conceitos como capturas de tela nem agências/serviços
+  ainda não operacionais como produtos publicados.
+- Manter revisão humana antes do merge para produção.
+
+**Rollback:** desfazer a PR #59 completa, ou em revisão retirar as referências
+`artOverlay` e a camada `.xp-cover-artwork`; o site regressa ao Media Pack
+WebP de base sem alteração em banco, login, Radar, Academy ou pagamentos.
+
