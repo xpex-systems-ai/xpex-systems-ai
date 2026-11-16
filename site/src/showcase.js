@@ -19,6 +19,36 @@ function link(url, text, className) {
 
 const covers = new Map(mediaPack.items.map(item => [item.id, item]));
 
+// Media art direction: stable editorial signatures, never runtime or verification claims.
+const coverPalette = Object.freeze({
+  'xpex-company': ['#e7bd74','CORPORATE'],
+  'xpex-evidence': ['#87b5f2','EVIDENCE OS'],
+  'xpex-academy': ['#dfb16d','ACADEMY'],
+  'systems-command': ['#7ac5f4','SYSTEMS COMMAND'],
+  'audit-os': ['#80d7c8','AUDIT OS'],
+  'plugin-factory': ['#aa93f9','PLUGIN FACTORY'],
+  'wallet-command': ['#eac17c','WALLET COMMAND'],
+  'studio-ai': ['#f3a0bb','STUDIO AI'],
+  'api-fabric': ['#8bb2ff','API FABRIC'],
+  'academy': ['#d8b773','POLO KELLE'],
+  'neural-copilot': ['#99b9ff','GX NEURAL'],
+  'evidence-concierge': ['#71d6ce','GX CONCIERGE'],
+  'audit-engineer': ['#9adace','AUDIT ENGINEER'],
+  'plugin-factory-agent': ['#bd9bf2','PLUGIN ENGINEER'],
+  'api-mcp': ['#97c1fc','API / MCP'],
+  'enterprise-evidence': ['#e0bd82','EVIDENCE CONCIERGE'],
+  'academy-support': ['#edc794','ACADEMY CONCEPT'],
+  'three-pillars-pr': ['#d7b57a','THREE PILLARS'],
+  'enterprise-v2': ['#89c0ef','ENTERPRISE V2'],
+  'trust-center': ['#8fd7cc','TRUST CENTER'],
+  'system-registry': ['#abc0f5','SYSTEM REGISTRY'],
+  'system': ['#d9ba82','SYSTEM PREVIEW'],
+  'agent': ['#a9c8ed','AGENT CONCEPT'],
+  'evidence': ['#a6decb','EVIDENCE PREVIEW']
+});
+const coverSerials = new Map(mediaPack.items.map((item, index) => [item.id, String(index + 1).padStart(2, '0')]));
+
+
 export function showcaseCover(item, heading = false) {
   const record = heading ? covers.get(item.id === 'polo-kelle' ? 'academy' : item.id) : undefined;
   const asset = record?.image || item.media;
@@ -30,11 +60,21 @@ export function showcaseCover(item, heading = false) {
     asset?.derivedFrom?.some(source => source.kind === 'REAL_SCREENSHOT') ? 'Capa com captura real' :
     asset?.kind === 'CURATED_COVER' && (!item.previewExpected || item.id === 'xpex-company') ? 'Capa editorial' :
     asset?.kind === 'OFFICIAL_ASSET' ? 'Identidade oficial' : pending;
+  const visualId = record?.id || item.id;
+  const [accent, signature] = coverPalette[visualId] || ['#d9ba82', 'XPEX'];
+  const hasScreenshot = Boolean(asset?.kind === 'REAL_SCREENSHOT' ||
+    asset?.derivedFrom?.some(source => source.kind === 'REAL_SCREENSHOT'));
+  const editorialKind = record?.group || (item.previewExpected ? 'systems' : 'evidence');
   const fallback = `<div class="xp-showcase-fallback xp-cover-${group}">${brandMark(item.symbol)}</div>`;
   const image = asset ? `<img class="xp-showcase-image" data-showcase-image src="${escape(asset.path)}"
     width="${asset.width}" height="${asset.height}" alt="${escape(asset.alt)}" loading="lazy" decoding="async">` : '';
-  return `<div class="xp-showcase-cover" data-fallback-label="${pending}">
-    ${fallback}${image}<span class="xp-showcase-media-label" data-showcase-media-label>${label}</span>
+  return `<div class="xp-showcase-cover${heading ? ' xp-cover-editorial' : ''}${hasScreenshot ? ' xp-cover-has-screen' : ''}"
+    data-cover-id="${escape(visualId)}" data-cover-group="${escape(editorialKind)}"
+    style="--xp-cover-accent:${accent}" data-fallback-label="${pending}">
+    ${fallback}${image}
+    ${heading ? `<div class="xp-cover-foil" aria-hidden="true"></div>
+      <div class="xp-cover-signature" aria-hidden="true"><span>XPEX <b>◆</b> ${escape(signature)}</span><span>${coverSerials.get(visualId) || '00'} / 24</span></div>` : ''}
+    <span class="xp-showcase-media-label" data-showcase-media-label>${label}</span>
     ${heading ? `<h3 class="xp-cover-title">${escape(item.title)}</h3>` : ''}
   </div>`;
 }
