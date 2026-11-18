@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://xpex-systems-ai.vercel.app/sitemap.xml
