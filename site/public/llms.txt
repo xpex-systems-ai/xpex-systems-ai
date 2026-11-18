@@ -27,6 +27,12 @@ https://xpex-systems-ai.vercel.app/data/enterprise-agent-catalog-v1.json
 Global Launch Radar:
 https://xpex-systems-ai.vercel.app/data/global-launch-radar-v1.json
 
+Business discovery profile (public facts and verification boundaries):
+https://xpex-systems-ai.vercel.app/data/xpex-company-discovery-v1.json
+
+Public website sitemap:
+https://xpex-systems-ai.vercel.app/sitemap.xml
+
 ## Core capabilities
 
 Corporate GXEON public demonstration:

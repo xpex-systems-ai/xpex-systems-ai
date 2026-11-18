@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://xpex-systems-ai.vercel.app/#organization",
+  "name": "XPeX Systems AI",
+  "url": "https://xpex-systems-ai.vercel.app/",
+  "description": "Engenharia de agentes e sistemas de inteligência artificial, auditoria orientada por evidências, integrações API/MCP e educação tecnológica. Diferencia demonstrado, piloto, conteúdo privado e operação comercial comprovada.",
+  "logo": "https://xpex-systems-ai.vercel.app/brand/v3/xpex-systems-ai-logo.png",
+  "sameAs": [
+    "https://github.com/xpex-systems-ai",
+    "https://www.linkedin.com/in/ceojuniorsena"
+  ],
+  "founder": {
+    "@type": "Person",
+    "name": "Junior Sena"
+  },
+  "knowsAbout": [
+    "Agentic AI",
+    "AI agents",
+    "MCP",
+    "API integration",
+    "system audits",
+    "evidence-based software engineering",
+    "AI education"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Soluções técnicas da XPeX (escopo e contratação sob revisão)",
+    "itemListElement": [
+      {
+        "@type": "OfferCatalog",
+        "name": "Auditorias técnicas orientadas por evidências",
+        "url": "https://xpex-systems-ai.vercel.app/?view=company"
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Integração de agentes e APIs/MCP",
+        "url": "https://xpex-systems-ai.vercel.app/?view=developers"
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Ferramentas GXEON por execução (condições no marketplace)",
+        "url": "https://gxeon-wallet-command-center.vercel.app/market"
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "XPeX Academy (piloto restrito; não ofertado publicamente como matrícula homologada)",
+        "url": "https://xpex-academy-mmpzzek1w-xpex-neural.vercel.app/academia"
+      }
+    ]
+  }
+}

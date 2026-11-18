@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "1.0.0",
+  "snapshotDate": "2026-11-18",
+  "companyName": "XPeX Systems AI",
+  "website": "https://xpex-systems-ai.vercel.app/",
+  "industry": "Software & Technology",
+  "country": "BR",
+  "scope": "Public evidence-based company discovery only; this is NOT an OpenAI-verified Business Hub listing or Partner Network approval.",
+  "publicStatus": "institutional_site_live",
+  "officialSources": {
+    "corporateRepo": "https://github.com/xpex-systems-ai/xpex-systems-ai",
+    "corporateSite": "https://xpex-systems-ai.vercel.app/",
+    "companyIndex": "https://xpex-systems-ai.vercel.app/llms.txt",
+    "enterpriseApi": "https://xpex-systems-ai.vercel.app/api/agent-api",
+    "marketplace": "https://gxeon-wallet-command-center.vercel.app/market",
+    "academyPilot": "https://xpex-academy-mmpzzek1w-xpex-neural.vercel.app/academia",
+    "portfolio": "https://xpex-portfolio-evidencias.juniorsenax.chatgpt.site/cases"
+  },
+  "services": [
+    {
+      "id": "api-integration",
+      "label": "Integração de agentes e APIs/MCP",
+      "status": "scoped_consulting_requires_contract"
+    },
+    {
+      "id": "evidence-audit",
+      "label": "Auditorias e diagnóstico de software",
+      "status": "scoped_consulting_requires_contract"
+    },
+    {
+      "id": "gxeon-json-validate",
+      "label": "GXEON JSON Validate",
+      "status": "marketplace_lists_available",
+      "purchaseInfo": "https://gxeon-wallet-command-center.vercel.app/market"
+    },
+    {
+      "id": "gxeon-csv-audit",
+      "label": "GXEON CSV Audit",
+      "status": "marketplace_lists_available",
+      "purchaseInfo": "https://gxeon-wallet-command-center.vercel.app/market"
+    },
+    {
+      "id": "academy",
+      "label": "XPeX Academy",
+      "status": "restricted_pilot_not_commercially_released"
+    }
+  ],
+  "contact": {
+    "website": "https://xpex-systems-ai.vercel.app/",
+    "linkedin": "https://www.linkedin.com/in/ceojuniorsena"
+  },
+  "facts": {
+    "hasOpenAICommercialPartnership": "not_verified",
+    "hasPublicChatGPTPlugin": "not_verified",
+    "hasBusinessHubVerifiedProfile": "not_verified",
+    "hasUnifiedChatGPTSSO": "not_verified"
+  },
+  "policy": "Do not infer customer contracts, official OpenAI endorsement, settlement, certification, or partner status from this catalog."
+}
